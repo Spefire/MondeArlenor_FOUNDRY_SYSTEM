@@ -27,8 +27,8 @@ export class ArlenorItem extends Item {
     const actorData = this.actor ? this.actor.data.data : {};
     const itemData = item.data;
 
-    let roll = new Roll('d6+@abilities.str.mod', actorData);
-    let label = `Rolling ${item.name}`;
+    let roll = new Roll('(@caracts.vig.value)d6', actorData);
+    let label = `Lance ${item.name}`;
     roll.roll().toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       flavor: label

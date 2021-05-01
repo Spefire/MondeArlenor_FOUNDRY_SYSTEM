@@ -112,7 +112,7 @@ export class ArlenorActorSheet extends ActorSheet {
       li.slideUp(200, () => this.render(false));
     });
 
-    // Rollable abilities.
+    // Rollable caracts.
     html.find('.rollable').click(this._onRoll.bind(this));
 
     // Drag events for macros.
@@ -165,7 +165,7 @@ export class ArlenorActorSheet extends ActorSheet {
 
     if (dataset.roll) {
       let roll = new Roll(dataset.roll, this.actor.data.data);
-      let label = dataset.label ? `Rolling ${dataset.label}` : '';
+      let label = dataset.label ? `Lance ${dataset.label}` : '';
       roll.roll().toMessage({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         flavor: label

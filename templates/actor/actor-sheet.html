@@ -7,12 +7,12 @@
             <!-- The grid classes are defined in scss/global/_grid.scss. To use,
             use both the "grid" and "grid-Ncol" class where "N" can be any number
             from 1 to 12 and will create that number of columns.  -->
-            <div class="resources grid grid-2col">
+            <div class="resources grid grid-1col">
               <!-- "flex-group-center" is also defined in the _grid.scss file
               and it will add a small amount of padding, a border, and will
               center all of its child elements content and text. -->
               <div class="resource flex-group-center">
-                  <label for="data.health.value" class="resource-label">Health</label>
+                  <label for="data.health.value" class="resource-label">Vie et blessures</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>
                     <span> / </span>
@@ -20,23 +20,21 @@
                   </div>
               </div>
               <div class="resource flex-group-center">
-                  <label for="data.power.value" class="resource-label">Power</label>
+                  <label for="data.level.value" class="resource-label">Niveau</label>
                   <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number"/>
-                    <span> / </span>
-                    <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number"/>
+                    <input type="text" name="data.level.value" value="{{data.level.value}}" data-dtype="Number"/>
                   </div>
               </div>
           </div>
           <!-- The grid classes are defined in scss/global/_grid.scss. To use,
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  -->
-          <div class="abilities grid grid-3col">
-            {{#each data.abilities as |ability key|}}
-              <div class="ability flexrow flex-group-center">
-                <label for="data.abilities.{{key}}.value" class="resource-label">{{key}}</label>
-                <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+          <div class="caracts grid grid-3col">
+            {{#each data.caracts as |caract key|}}
+              <div class="caract flexrow flex-group-center">
+                <label for="data.caracts.{{key}}.value" class="resource-label rollable"
+                data-roll="(@caracts.{{key}}.value)d6" data-label="{{caract.name}}">{{key}}</label>
+                <input type="text" name="data.caracts.{{key}}.value" value="{{caract.value}}" data-dtype="Number"/>
               </div>
             {{/each}}
           </div>
