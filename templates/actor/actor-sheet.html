@@ -1,6 +1,7 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
+
   <!-- Sheet Header -->
-  <header class="sheet-header">
+  <div class="sheet-header">
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
@@ -34,21 +35,25 @@
         </div>
       </div>
       {{/if}}
-      <div class="caracts grid grid-3col">
-        {{#each data.caracts as |caract key|}}
-        <div class="caract flexrow flex-group-center">
-          <label for="data.caracts.{{key}}.value" class="resource-label rollable" data-roll="(@caracts.{{key}}.value)d6"
-            data-label="{{caract.name}}">{{key}}</label>
-          <input type="text" name="data.caracts.{{key}}.value" value="{{caract.value}}" data-dtype="Number" />
-        </div>
-        {{/each}}
-        <div class="caract flexrow flex-group-center">
-          <label for="data.attributes.level" class="resource-label" data-label="Niveau">Niveau</label>
-          <input type="text" name="data.attributes.level" value="{{data.attributes.level}}" data-dtype="Number" />
-        </div>
+    </div>
+  </div>
+
+  <!-- Sheet Mid-Header -->
+  <div class="sheet-header mid-header">
+    <div class="caracts grid grid-3col">
+      {{#each data.caracts as |caract key|}}
+      <div class="caract flexrow flex-group-center">
+        <label for="data.caracts.{{key}}.value" class="resource-label rollable" data-roll="(@caracts.{{key}}.value)d6"
+          data-label="{{caract.name}}">{{caract.name}}</label>
+        <input type="text" name="data.caracts.{{key}}.value" value="{{caract.value}}" data-dtype="Number" />
+      </div>
+      {{/each}}
+      <div class="caract flexrow flex-group-center">
+        <label for="data.attributes.level" class="resource-label" data-label="Niveau">Niveau</label>
+        <input type="text" name="data.attributes.level" value="{{data.attributes.level}}" data-dtype="Number" />
       </div>
     </div>
-  </header>
+  </div>
 
   <!-- Sheet Tab Navigation -->
   <nav class="sheet-tabs tabs" data-group="primary">
@@ -60,7 +65,6 @@
 
   <!-- Sheet Body -->
   <section class="sheet-body">
-
 
     <!-- Owned Items Tab -->
     <div class="tab items" data-group="primary" data-tab="items">

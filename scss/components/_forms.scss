@@ -3,7 +3,7 @@
 }
 
 .sheet-header {
-  flex: 0 0 210px;
+  flex: 0 0 115px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -11,9 +11,13 @@
   justify-content: flex-start;
   margin-bottom: 10px;
 
+  &.mid-header {
+    flex: 0 0 90px;
+  }
+
   .profile-img {
-    flex: 0 0 100px;
-    height: 100px;
+    flex: 0 0 110px;
+    height: 110px;
     margin-right: 10px;
   }
 

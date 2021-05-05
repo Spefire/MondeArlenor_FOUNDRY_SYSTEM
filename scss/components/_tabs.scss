@@ -18,7 +18,9 @@
 // }
 
 .tabs {
-  height: 40px;
+  height: auto !important;
+  flex: 0 !important;
+  line-height: normal !important;
   border-top: 1px solid #AAA;
   border-bottom: 1px solid #AAA;
 
