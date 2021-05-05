@@ -9,7 +9,7 @@ export class ArlenorActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["arlenor", "sheet", "actor"],
       template: "systems/arlenor/templates/actor/actor-sheet.html",
-      width: 600,
+      width: 700,
       height: 600,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
     });

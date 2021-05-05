@@ -55,6 +55,26 @@
     </div>
   </div>
 
+  <!-- Sheet Mid-Header -->
+  <div class="sheet-header mid-header">
+    <div class="healths grid grid-2col grid-full-width">
+      {{#each data.health as |health key|}}
+      <div class="health flexrow flex-group-center">
+        <label class="resource-label" data-label="{{health.name}}">{{health.name}}</label>
+        {{#if (gte health.value 1)}}
+        <input type='checkbox' {{#if true}}checked{{/if}}>
+        {{/if}}
+        {{#if (gte health.value 2)}}
+        <input type='checkbox' {{#if true}}checked{{/if}}>
+        {{/if}}
+        {{#if (gte health.value 3)}}
+        <input type='checkbox' {{#if true}}checked{{/if}}>
+        {{/if}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
   <!-- Sheet Tab Navigation -->
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="items">Items</a>

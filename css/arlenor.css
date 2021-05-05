@@ -70,6 +70,10 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
+.grid-full-width {
+  width: 100%;
+}
+
 .flex-group-center,
 .flex-group-left,
 .flex-group-right {
@@ -136,7 +140,6 @@
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 10px;
 }
 
 .arlenor .sheet-header.mid-header {

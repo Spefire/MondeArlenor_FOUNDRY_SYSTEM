@@ -58,6 +58,10 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
+.grid-full-width {
+  width: 100%;
+}
+
 .flex-group-center,
 .flex-group-left,
 .flex-group-right {
