@@ -1,67 +1,215 @@
 {
   "Actor": {
-    "types": ["character"],
+    "types": [
+      "character",
+      "creature",
+      "pnj"
+    ],
     "templates": {
-      "base": {
+      "commun": {
         "health": {
-          "value": 10,
-          "min": 0,
-          "max": 10
+          "safe": {
+            "name": "Indemme",
+            "value": 3,
+            "max": 3
+          },
+          "injured": {
+            "name": "Touché",
+            "value": 3,
+            "max": 3
+          },
+          "seriously": {
+            "name": "Gravement atteint",
+            "value": 3,
+            "max": 3
+          },
+          "underdeath": {
+            "name": "Au seuil de la mort",
+            "value": 3,
+            "max": 3
+          }
         },
-        "level": {
-          "value": 1
+        "caracts": {
+          "vig": {
+            "name": "Vigueur",
+            "value": 1
+          },
+          "hab": {
+            "name": "Habileté",
+            "value": 1
+          },
+          "int": {
+            "name": "Intellect",
+            "value": 1
+          },
+          "cha": {
+            "name": "Charisme",
+            "value": 1
+          },
+          "pou": {
+            "name": "Pouvoir",
+            "value": 1
+          }
         }
       }
     },
     "character": {
-      "templates": ["base"],
+      "templates": [
+        "commun"
+      ],
       "biography": "",
       "attributes": {
-        "level": {
-          "value": 1
-        }
+        "race": "",
+        "divinity": "",
+        "level": 1
       },
-      "caracts": {
-        "vig": {
-          "name": "Vigueur",
-          "value": 1
+      "races": [
+        {
+          "name": "Humain",
+          "code": "HUMAN"
         },
-        "hab": {
-          "name": "Habileté",
-          "value": 1
+        {
+          "name": "Elfe",
+          "code": "ELFE"
         },
-        "int": {
-          "name": "Intellect",
-          "value": 1
+        {
+          "name": "Nain",
+          "code": "NAIN"
         },
-        "cha": {
-          "name": "Charisme",
-          "value": 1
+        {
+          "name": "Mutant",
+          "code": "MUTANT"
         },
-        "pou": {
-          "name": "Pouvoir",
-          "value": 1
+        {
+          "name": "Pan",
+          "code": "PAN"
+        },
+        {
+          "name": "Arlénien",
+          "code": "ARLENIEN"
         }
-      }
+      ],
+      "divinities": [
+        {
+          "name": "Ange Métatron",
+          "code": "ANGE01"
+        },
+        {
+          "name": "Ange Ratziel",
+          "code": "ANGE02"
+        },
+        {
+          "name": "Ange Zafkiel",
+          "code": "ANGE03"
+        },
+        {
+          "name": "Ange Tzadokiel",
+          "code": "ANGE04"
+        },
+        {
+          "name": "Ange Samael",
+          "code": "ANGE05"
+        },
+        {
+          "name": "Ange Michael",
+          "code": "ANGE06"
+        },
+        {
+          "name": "Ange Haniel",
+          "code": "ANGE07"
+        },
+        {
+          "name": "Ange Raphael",
+          "code": "ANGE08"
+        },
+        {
+          "name": "Ange Gabriel",
+          "code": "ANGE09"
+        },
+        {
+          "name": "Ange Sandalfone",
+          "code": "ANGE10"
+        },
+        {
+          "name": "Démon Satan",
+          "code": "DEMON01"
+        },
+        {
+          "name": "Démon Belzébuth",
+          "code": "DEMON02"
+        },
+        {
+          "name": "Démon Lucifugus",
+          "code": "DEMON03"
+        },
+        {
+          "name": "Démon Astaroth",
+          "code": "DEMON04"
+        },
+        {
+          "name": "Démon Asmodée",
+          "code": "DEMON05"
+        },
+        {
+          "name": "Démon Belphégor",
+          "code": "DEMON06"
+        },
+        {
+          "name": "Démon Ba'al",
+          "code": "DEMON07"
+        },
+        {
+          "name": "Démon Adramalec",
+          "code": "DEMON08"
+        },
+        {
+          "name": "Démon Lilith",
+          "code": "DEMON09"
+        },
+        {
+          "name": "Démon Nahémar",
+          "code": "DEMON10"
+        }
+      ]
+    },
+    "creature": {
+      "templates": [
+        "commun"
+      ],
+      "biography": ""
+    },
+    "pnj": {
+      "templates": [],
+      "biography": ""
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": [
+      "item",
+      "feature",
+      "spell"
+    ],
     "templates": {
       "base": {
         "description": ""
       }
     },
     "item": {
-      "templates": ["base"],
+      "templates": [
+        "base"
+      ],
       "quantity": 1,
       "weight": 0
     },
     "feature": {
-      "templates": ["base"]
+      "templates": [
+        "base"
+      ]
     },
     "spell": {
-      "templates": ["base"],
+      "templates": [
+        "base"
+      ],
       "spellLevel": 1
     }
   }

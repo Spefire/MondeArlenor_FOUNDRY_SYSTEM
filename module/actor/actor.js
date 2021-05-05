@@ -17,6 +17,8 @@ export class ArlenorActor extends Actor {
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     if (actorData.type === 'character') this._prepareCharacterData(actorData);
+    /*else if (actorData.type === 'creature') this._prepareCharacterData(actorData);
+    else if (actorData.type === 'pnj') this._prepareCharacterData(actorData);*/
   }
 
   /**

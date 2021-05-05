@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
+
 /* Global styles */
 .window-app {
   font-family: "Roboto", sans-serif;
 }
 
-.rollable:hover, .rollable:focus {
+.rollable:hover,
+.rollable:focus {
   color: #000;
   text-shadow: 0 0 10px red;
   cursor: pointer;
@@ -15,8 +17,8 @@
   display: grid;
   grid-column: span 2 / span 2;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin: 10px 0;
+  gap: 5px;
+  margin: 5px 0;
   padding: 0;
 }
 
@@ -156,7 +158,7 @@
 .arlenor .sheet-header h1.charname {
   height: 50px;
   padding: 0px;
-  margin: 5px 0;
+  margin-bottom: 5px;
   border-bottom: 0;
 }
 

@@ -4,7 +4,7 @@ import { ArlenorActorSheet } from "./actor/actor-sheet.js";
 import { ArlenorItem } from "./item/item.js";
 import { ArlenorItemSheet } from "./item/item-sheet.js";
 
-Hooks.once('init', async function() {
+Hooks.once('init', async function () {
 
   game.arlenor = {
     ArlenorActor,
@@ -32,7 +32,7 @@ Hooks.once('init', async function() {
   Items.registerSheet("arlenor", ArlenorItemSheet, { makeDefault: true });
 
   // If you need to add Handlebars helpers, here are a few useful examples:
-  Handlebars.registerHelper('concat', function() {
+  Handlebars.registerHelper('concat', function () {
     var outStr = '';
     for (var arg in arguments) {
       if (typeof arguments[arg] != 'object') {
@@ -42,12 +42,12 @@ Hooks.once('init', async function() {
     return outStr;
   });
 
-  Handlebars.registerHelper('toLowerCase', function(str) {
+  Handlebars.registerHelper('toLowerCase', function (str) {
     return str.toLowerCase();
   });
 });
 
-Hooks.once("ready", async function() {
+Hooks.once("ready", async function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on("hotbarDrop", (bar, data, slot) => createArlenorMacro(data, slot));
 });
