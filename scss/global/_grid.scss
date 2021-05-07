@@ -62,6 +62,14 @@
   width: 100%;
 }
 
+.grid-tiers-1 {
+  grid-column: 1/2;
+}
+
+.grid-tiers-2 {
+  grid-column: 2/4;
+}
+
 .flex-group-center,
 .flex-group-left,
 .flex-group-right {

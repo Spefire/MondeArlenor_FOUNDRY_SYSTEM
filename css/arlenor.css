@@ -74,6 +74,14 @@
   width: 100%;
 }
 
+.grid-tiers-1 {
+  grid-column: 1/2;
+}
+
+.grid-tiers-2 {
+  grid-column: 2/4;
+}
+
 .flex-group-center,
 .flex-group-left,
 .flex-group-right {
@@ -146,6 +154,12 @@
   -webkit-box-flex: 0;
   -ms-flex: 0 0 90px;
   flex: 0 0 90px;
+}
+
+.arlenor .sheet-header.tri-header {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 65px;
+  flex: 0 0 65px;
 }
 
 .arlenor .sheet-header .profile-img {

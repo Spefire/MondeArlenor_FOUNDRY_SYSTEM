@@ -8,25 +8,30 @@
     "templates": {
       "commun": {
         "health": {
+          "name": "Points de Vie",
+          "value": 0,
+          "max": 0
+        },
+        "healthLevels": {
           "safe": {
             "name": "Indemme",
-            "value": 3,
-            "max": 3
+            "value": 0,
+            "max": 0
           },
           "injured": {
-            "name": "Touché",
-            "value": 3,
-            "max": 3
+            "name": "Touché (-1D6)",
+            "value": 0,
+            "max": 0
           },
           "seriously": {
-            "name": "Gravement atteint",
-            "value": 3,
-            "max": 3
+            "name": "Gravement atteint (-2D6)",
+            "value": 0,
+            "max": 0
           },
           "underdeath": {
-            "name": "Au seuil de la mort",
-            "value": 3,
-            "max": 3
+            "name": "Au seuil de la mort (-3D6)",
+            "value": 0,
+            "max": 0
           }
         },
         "caracts": {

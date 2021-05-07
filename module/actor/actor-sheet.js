@@ -20,7 +20,6 @@ export class ArlenorActorSheet extends ActorSheet {
   /** @override */
   getData() {
     const data = super.getData();
-    console.warn('data', data);
     data.dtypes = ["String", "Number", "Boolean"];
     /*for (let attr of Object.values(data.data.attributes)) {
       attr.isCheckbox = attr.dtype === "Boolean";
@@ -29,9 +28,65 @@ export class ArlenorActorSheet extends ActorSheet {
     // Prepare items.
     if (this.actor.data.type == 'character') {
       this._prepareCharacterItems(data);
+      this._prepareCharacterHealth(data);
     }
 
+    console.warn('data', data);
+
     return data;
+  }
+
+  /**
+   * Update health stats.
+   *
+   * @param {Object} actorData The actor to prepare.
+   *
+   * @return {undefined}
+   */
+  _prepareCharacterHealth(sheetData) {
+    const actorData = sheetData.actor;
+
+    const race = actorData.data.attributes.race;
+    const races = actorData.data.races;
+
+    const vig = actorData.data.caracts.vig;
+    const safe = actorData.data.healthLevels.safe;
+    const injured = actorData.data.healthLevels.injured;
+    const seriously = actorData.data.healthLevels.seriously;
+    const underdeath = actorData.data.healthLevels.underdeath;
+
+    // Assign and return
+    safe.max = 2;
+    injured.max = 2;
+    seriously.max = 2;
+    underdeath.max = 2;
+
+    if (race === races[1].code
+      || race === races[4].code) {
+      seriously.max = 1;
+    }
+    if (race === races[2].code
+      || race === races[5].code) {
+      seriously.max = 3;
+    }
+
+    if (vig.value === 1) {
+      safe.max = 1;
+    } else if (vig.value === 5) {
+      safe.max = 3;
+    }
+
+    actorData.data.health.max = safe.max + injured.max + seriously.max + underdeath.max;
+
+    if (actorData.data.health.value < underdeath.max) {
+      actorData.data.health.indic = underdeath.name
+    } else if (actorData.data.health.value < underdeath.max + seriously.max) {
+      actorData.data.health.indic = seriously.name
+    } else if (actorData.data.health.value < underdeath.max + seriously.max + injured.max) {
+      actorData.data.health.indic = injured.name
+    } else {
+      actorData.data.health.indic = safe.name
+    }
   }
 
   /**

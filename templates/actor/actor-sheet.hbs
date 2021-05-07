@@ -6,7 +6,7 @@
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
       {{#if (eq actor.type "character")}}
-      <div class="resources grid grid-1col">
+      <div class="resources grid grid-3col">
         <div class="resource flex-group-center">
           <label for="data.attributes.race" class="resource-label">Peuple</label>
           <div class="resource-content flexrow flex-center flex-between">
@@ -33,6 +33,12 @@
             </select>
           </div>
         </div>
+        <div class="resource flex-group-center">
+          <label for="data.attributes.level" class="resource-label">Niveau</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="data.attributes.level" value="{{data.attributes.level}}" data-dtype="Number" />
+          </div>
+        </div>
       </div>
       {{/if}}
     </div>
@@ -49,29 +55,39 @@
       </div>
       {{/each}}
       <div class="caract flexrow flex-group-center">
-        <label for="data.attributes.level" class="resource-label" data-label="Niveau">Niveau</label>
-        <input type="text" name="data.attributes.level" value="{{data.attributes.level}}" data-dtype="Number" />
+        <label class="resource-label">Initiative</label>
+        <label>+{{data.caracts.vig.value}}</label>
       </div>
     </div>
   </div>
 
-  <!-- Sheet Mid-Header -->
-  <div class="sheet-header mid-header">
-    <div class="healths grid grid-2col grid-full-width">
-      {{#each data.health as |health key|}}
-      <div class="health flexrow flex-group-center">
-        <label class="resource-label" data-label="{{health.name}}">{{health.name}}</label>
-        {{#if (gte health.value 1)}}
-        <input type='checkbox' {{#if true}}checked{{/if}}>
-        {{/if}}
-        {{#if (gte health.value 2)}}
-        <input type='checkbox' {{#if true}}checked{{/if}}>
-        {{/if}}
-        {{#if (gte health.value 3)}}
-        <input type='checkbox' {{#if true}}checked{{/if}}>
-        {{/if}}
+  <!-- Sheet Tri-Header -->
+  <div class="sheet-header tri-header">
+    <div class="healthLevels grid grid-3col grid-full-width">
+      <div class="resource flex-group-center grid-tiers-1">
+        <label for="data.health.value" class="resource-label">{{data.health.name}}</label>
+        <div class="resource-content flexrow flex-center">
+          <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number" />
+          <span> / </span>
+          <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number" disabled />
+        </div>
       </div>
-      {{/each}}
+      <div class="resource flex-group-center grid-tiers-2">
+        <label class="resource-label">{{data.health.indic}}</label>
+        <div class="resource-content flexrow flex-center">
+          {{#each data.healthLevels as |healthLevel key|}}
+          {{#if (gte healthLevel.max 1)}}
+          <input type='checkbox' {{#if true}}checked{{/if}} disabled>
+          {{/if}}
+          {{#if (gte healthLevel.max 2)}}
+          <input type='checkbox' {{#if true}}checked{{/if}} disabled>
+          {{/if}}
+          {{#if (gte healthLevel.max 3)}}
+          <input type='checkbox' {{#if true}}checked{{/if}} disabled>
+          {{/if}}
+          {{/each}}
+        </div>
+      </div>
     </div>
   </div>
 
