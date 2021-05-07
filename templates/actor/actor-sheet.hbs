@@ -56,7 +56,7 @@
       {{/each}}
       <div class="caract flexrow flex-group-center">
         <label class="resource-label">Initiative</label>
-        <label>+{{data.caracts.vig.value}}</label>
+        <label>+{{data.init}}</label>
       </div>
     </div>
   </div>
@@ -76,14 +76,14 @@
         <label class="resource-label">{{data.health.indic}}</label>
         <div class="resource-content flexrow flex-center">
           {{#each data.healthLevels as |healthLevel key|}}
-          {{#if (gte healthLevel.max 1)}}
-          <input type='checkbox' {{#if true}}checked{{/if}} disabled>
+          {{#if (gte healthLevel.max 3)}}
+          <input type='checkbox' {{#if (gte healthLevel.value 3)}}checked{{/if}} disabled>
           {{/if}}
           {{#if (gte healthLevel.max 2)}}
-          <input type='checkbox' {{#if true}}checked{{/if}} disabled>
+          <input type='checkbox' {{#if (gte healthLevel.value 2)}}checked{{/if}} disabled>
           {{/if}}
-          {{#if (gte healthLevel.max 3)}}
-          <input type='checkbox' {{#if true}}checked{{/if}} disabled>
+          {{#if (gte healthLevel.max 1)}}
+          <input type='checkbox' {{#if (gte healthLevel.value 1)}}checked{{/if}} disabled>
           {{/if}}
           {{/each}}
         </div>

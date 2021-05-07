@@ -29,6 +29,7 @@ export class ArlenorActorSheet extends ActorSheet {
     if (this.actor.data.type == 'character') {
       this._prepareCharacterItems(data);
       this._prepareCharacterHealth(data);
+      this._prepareCharacterInit(data);
     }
 
     console.warn('data', data);
@@ -79,14 +80,47 @@ export class ArlenorActorSheet extends ActorSheet {
     actorData.data.health.max = safe.max + injured.max + seriously.max + underdeath.max;
 
     if (actorData.data.health.value < underdeath.max) {
-      actorData.data.health.indic = underdeath.name
+      actorData.data.health.indic = underdeath.name;
+      safe.value = 0;
+      injured.value = 0;
+      seriously.value = 0;
+      underdeath.value = actorData.data.health.value;
     } else if (actorData.data.health.value < underdeath.max + seriously.max) {
-      actorData.data.health.indic = seriously.name
+      actorData.data.health.indic = seriously.name;
+      safe.value = 0;
+      injured.value = 0;
+      seriously.value = actorData.data.health.value - underdeath.max;
+      underdeath.value = underdeath.max;
     } else if (actorData.data.health.value < underdeath.max + seriously.max + injured.max) {
-      actorData.data.health.indic = injured.name
+      actorData.data.health.indic = injured.name;
+      safe.value = 0;
+      injured.value = actorData.data.health.value - underdeath.max - seriously.max;
+      seriously.value = seriously.max;
+      underdeath.value = underdeath.max;
     } else {
-      actorData.data.health.indic = safe.name
+      actorData.data.health.indic = safe.name;
+      safe.value = actorData.data.health.value - underdeath.max - seriously.max - injured.max;
+      injured.value = injured.max;
+      seriously.value = seriously.max;
+      underdeath.value = underdeath.max;
     }
+  }
+
+  /**
+   * Update init stats.
+   *
+   * @param {Object} actorData The actor to prepare.
+   *
+   * @return {undefined}
+   */
+  _prepareCharacterInit(sheetData) {
+    const actorData = sheetData.actor;
+
+    const vig = actorData.data.caracts.vig;
+    const hab = actorData.data.caracts.hab;
+
+    // Assign and return
+    actorData.data.init = hab.value + int.value;
   }
 
   /**
