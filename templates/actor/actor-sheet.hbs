@@ -96,7 +96,7 @@
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="skills">Compétences</a>
     <a class="item" data-tab="spells">Cristaux</a>
-    <a class="item" data-tab="features">Armes / Armures</a>
+    <a class="item" data-tab="features">Equipement</a>
     <a class="item" data-tab="items">Objets</a>
     <a class="item" data-tab="description">Description</a>
   </nav>
@@ -118,7 +118,9 @@
         {{#each data.skills as |skill key|}}
         {{#each skill.caracts as |caract keyCaract|}}
         <li class="item flexrow no-drag" data-item-id="{{skill.key}}{{skill.key}}">
-          <div class="item-image"><img src="{{skill.img}}" title="{{skill.name}}" width="24" height="24" /></div>
+          <div class="item-image">
+            <img src="{{lookup skill.img caract}}" width="24" height="24" />
+          </div>
           <h4 class="item-name">{{skill.name}} ({{caract}})</h4>
           <div class="item-value">
             {{#if (eq @index 0)}}

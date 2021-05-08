@@ -27,6 +27,7 @@ export class ArlenorActorSheet extends ActorSheet {
       this._prepareCharacterItems(data);
       this._prepareCharacterHealth(data);
       this._prepareCharacterInit(data);
+      this._prepareCharacterSkills(data);
     }
 
     console.warn('data', data);
@@ -118,6 +119,27 @@ export class ArlenorActorSheet extends ActorSheet {
 
     // Assign and return
     actorData.data.init = hab.value + int.value;
+  }
+
+  /**
+   * Update skills images.
+   *
+   * @param {Object} actorData The actor to prepare.
+   *
+   * @return {undefined}
+   */
+  _prepareCharacterSkills(sheetData) {
+    const actorData = sheetData.actor;
+
+    // Assign and return
+    const skills = actorData.data.skills;
+    Object.keys(skills).forEach(key => {
+      const skill = skills[key];
+      skill.img = {};
+      skill.caracts.forEach(caract => {
+        skill.img[caract] = "systems/arlenor/assets/icons/skill_" + key + "_" + caract + ".png";
+      });
+    });
   }
 
   /**

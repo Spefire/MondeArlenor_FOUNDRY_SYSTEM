@@ -1,4 +1,5 @@
 .items-list {
+  height: 410px;
   list-style: none;
   margin: 7px 0;
   padding: 0;
@@ -21,6 +22,7 @@
 
     img {
       display: block;
+      border: none;
     }
   }
 
