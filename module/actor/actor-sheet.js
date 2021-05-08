@@ -11,7 +11,7 @@ export class ArlenorActorSheet extends ActorSheet {
       template: "systems/arlenor/templates/actor/actor-sheet.hbs",
       width: 600,
       height: 700,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
     });
   }
 
@@ -21,9 +21,6 @@ export class ArlenorActorSheet extends ActorSheet {
   getData() {
     const data = super.getData();
     data.dtypes = ["String", "Number", "Boolean"];
-    /*for (let attr of Object.values(data.data.attributes)) {
-      attr.isCheckbox = attr.dtype === "Boolean";
-    }*/
 
     // Prepare items.
     if (this.actor.data.type == 'character') {
@@ -116,8 +113,8 @@ export class ArlenorActorSheet extends ActorSheet {
   _prepareCharacterInit(sheetData) {
     const actorData = sheetData.actor;
 
-    const vig = actorData.data.caracts.vig;
     const hab = actorData.data.caracts.hab;
+    const int = actorData.data.caracts.int;
 
     // Assign and return
     actorData.data.init = hab.value + int.value;
@@ -210,8 +207,10 @@ export class ArlenorActorSheet extends ActorSheet {
       let handler = ev => this._onDragStart(ev);
       html.find('li.item').each((i, li) => {
         if (li.classList.contains("inventory-header")) return;
-        li.setAttribute("draggable", true);
-        li.addEventListener("dragstart", handler, false);
+        if (!li.classList.contains("no-drag")) {
+          li.setAttribute("draggable", true);
+          li.addEventListener("dragstart", handler, false);
+        }
       });
     }
   }

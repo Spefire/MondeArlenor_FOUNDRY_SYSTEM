@@ -28,8 +28,21 @@
     margin: 0;
   }
 
-  .item-controls {
+  .item-value {
     flex: 0 0 86px;
-    text-align: right;
+  }
+
+  .item-spec {
+    select {
+      width: 100%;
+    }
+  }
+
+  .item-controls {
+    text-align: center;
+
+    a {
+      margin: 0 10px;
+    }
   }
 }

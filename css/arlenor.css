@@ -267,9 +267,20 @@
   margin: 0;
 }
 
-.arlenor .items-list .item-controls {
+.arlenor .items-list .item-value {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 86px;
   flex: 0 0 86px;
-  text-align: right;
+}
+
+.arlenor .items-list .item-spec select {
+  width: 100%;
+}
+
+.arlenor .items-list .item-controls {
+  text-align: center;
+}
+
+.arlenor .items-list .item-controls a {
+  margin: 0 10px;
 }
