@@ -44,23 +44,6 @@
     </div>
   </div>
 
-  <!-- Sheet Mid-Header -->
-  <div class="sheet-header mid-header">
-    <div class="caracts grid grid-3col">
-      {{#each data.caracts as |caract key|}}
-      <div class="caract flexrow flex-group-center">
-        <label for="data.caracts.{{key}}.value" class="resource-label rollable" data-roll="(@caracts.{{key}}.value)d6"
-          data-label="{{caract.name}}">{{caract.name}}</label>
-        <input type="text" name="data.caracts.{{key}}.value" value="{{caract.value}}" data-dtype="Number" />
-      </div>
-      {{/each}}
-      <div class="caract flexrow flex-group-center">
-        <label class="resource-label">Initiative</label>
-        <label>+{{data.init}}</label>
-      </div>
-    </div>
-  </div>
-
   <!-- Sheet Tri-Header -->
   <div class="sheet-header tri-header">
     <div class="healthLevels grid grid-3col grid-full-width">
@@ -91,6 +74,22 @@
     </div>
   </div>
 
+  <!-- Sheet Mid-Header -->
+  <div class="sheet-header mid-header">
+    <div class="caracts grid grid-3col">
+      {{#each data.caracts as |caract key|}}
+      <div class="caract flexrow flex-group-center">
+        <label for="data.caracts.{{key}}.value" class="resource-label rollable"
+          data-roll="(@caracts.{{key}}.realvalue)d6" data-label="{{caract.name}}">{{caract.name}}</label>
+        <input type="text" name="data.caracts.{{key}}.value" value="{{caract.value}}" data-dtype="Number" />
+      </div>
+      {{/each}}
+      <div class="caract flexrow flex-group-center">
+        <label class="resource-label">Initiative</label>
+        <label>+{{data.init}}</label>
+      </div>
+    </div>
+  </div>
 
   <!-- Sheet Tab Navigation -->
   <nav class="sheet-tabs tabs" data-group="primary">
@@ -146,9 +145,18 @@
             {{/if}}
           </div>
           <div class="item-controls">
-            <a class="item-control " title="Lancé avec Malus"><i class="fas fa-dice-one"></i></a>
-            <a class="item-control " title="Lancé Normal"><i class="fas fa-dice"></i></a>
-            <a class="item-control " title="Lancé avec Bonus"><i class="fas fa-dice-six"></i></a>
+            <a class="item-control rollable" title="Lancé avec Malus"
+              data-roll="(@caracts.{{caract}}.realvalue)d6+(@skills.{{key}}.value)-4"
+              data-label="{{skill.name}} ({{caract}}) avec malus">
+              <i class="fas fa-dice-one"></i></a>
+            <a class="item-control rollable" title="Lancé Normal"
+              data-roll="(@caracts.{{caract}}.realvalue)d6+(@skills.{{key}}.value)"
+              data-label="{{skill.name}} ({{caract}})">
+              <i class="fas fa-dice"></i></a>
+            <a class="item-control rollable" title="Lancé avec Bonus"
+              data-roll="(@caracts.{{caract}}.realvalue)d6+(@skills.{{key}}.value)+4"
+              data-label="{{skill.name}} ({{caract}}) avec bonus">
+              <i class="fas fa-dice-six"></i></a>
           </div>
         </li>
         {{/each}}

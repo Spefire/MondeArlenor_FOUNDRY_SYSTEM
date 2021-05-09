@@ -48,7 +48,7 @@ export class ArlenorActorSheet extends ActorSheet {
     const race = actorData.data.attributes.race;
     const races = actorData.data.races;
 
-    const vig = actorData.data.caracts.vig;
+    const caracts = actorData.data.caracts;
     const safe = actorData.data.healthLevels.safe;
     const injured = actorData.data.healthLevels.injured;
     const seriously = actorData.data.healthLevels.seriously;
@@ -69,9 +69,9 @@ export class ArlenorActorSheet extends ActorSheet {
       seriously.max = 3;
     }
 
-    if (vig.value === 1) {
+    if (caracts.vig.value === 1) {
       safe.max = 1;
-    } else if (vig.value === 5) {
+    } else if (caracts.vig.value === 5) {
       safe.max = 3;
     }
 
@@ -221,7 +221,7 @@ export class ArlenorActorSheet extends ActorSheet {
       li.slideUp(200, () => this.render(false));
     });
 
-    // Rollable caracts.
+    // Rollable caracts and skills.
     html.find('.rollable').click(this._onRoll.bind(this));
 
     // Drag events for macros.
@@ -274,6 +274,55 @@ export class ArlenorActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const dataset = element.dataset;
 
+    // Application des malus de vie
+    const race = this.actor.data.data.attributes.race;
+    const races = this.actor.data.data.races;
+
+    const caracts = this.actor.data.data.caracts;
+    const injured = this.actor.data.data.healthLevels.injured;
+    const seriously = this.actor.data.data.healthLevels.seriously;
+    const underdeath = this.actor.data.data.healthLevels.underdeath;
+
+    // Re-calcul des max et des valeurs réelles (car données du template, pas du sheet)
+    injured.max = 2;
+    seriously.max = 2;
+    underdeath.max = 2;
+
+    if (race === races[1].code
+      || race === races[4].code) {
+      seriously.max = 1;
+    }
+    if (race === races[2].code
+      || race === races[5].code) {
+      seriously.max = 3;
+    }
+
+    if (this.actor.data.data.health.value < underdeath.max) {
+      caracts.vig.realvalue = Math.max(caracts.vig.value - 3, 0);
+      caracts.hab.realvalue = Math.max(caracts.hab.value - 3, 0);
+      caracts.int.realvalue = Math.max(caracts.int.value - 3, 0);
+      caracts.cha.realvalue = Math.max(caracts.cha.value - 3, 0);
+      caracts.pou.realvalue = Math.max(caracts.pou.value - 3, 0);
+    } else if (this.actor.data.data.health.value < underdeath.max + seriously.max) {
+      caracts.vig.realvalue = Math.max(caracts.vig.value - 2, 0);
+      caracts.hab.realvalue = Math.max(caracts.hab.value - 2, 0);
+      caracts.int.realvalue = Math.max(caracts.int.value - 2, 0);
+      caracts.cha.realvalue = Math.max(caracts.cha.value - 2, 0);
+      caracts.pou.realvalue = Math.max(caracts.pou.value - 2, 0);
+    } else if (this.actor.data.data.health.value < underdeath.max + seriously.max + injured.max) {
+      caracts.vig.realvalue = Math.max(caracts.vig.value - 1, 0);
+      caracts.hab.realvalue = Math.max(caracts.hab.value - 1, 0);
+      caracts.int.realvalue = Math.max(caracts.int.value - 1, 0);
+      caracts.cha.realvalue = Math.max(caracts.cha.value - 1, 0);
+      caracts.pou.realvalue = Math.max(caracts.pou.value - 1, 0);
+    } else {
+      caracts.vig.realvalue = caracts.vig.value;
+      caracts.hab.realvalue = caracts.hab.value;
+      caracts.int.realvalue = caracts.int.value;
+      caracts.cha.realvalue = caracts.cha.value;
+      caracts.pou.realvalue = caracts.pou.value;
+    }
+
     if (dataset.roll) {
       let roll = new Roll(dataset.roll, this.actor.data.data);
       let label = dataset.label ? `Lance ${dataset.label}` : '';
@@ -283,5 +332,4 @@ export class ArlenorActorSheet extends ActorSheet {
       });
     }
   }
-
 }
