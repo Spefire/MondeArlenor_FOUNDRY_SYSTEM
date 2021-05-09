@@ -324,7 +324,7 @@
     "types": [
       "item",
       "feature",
-      "spell"
+      "cristal"
     ],
     "templates": {
       "base": {
@@ -343,11 +343,36 @@
         "base"
       ]
     },
-    "spell": {
+    "cristal": {
       "templates": [
         "base"
       ],
-      "spellLevel": 1
+      "family": "Abjuration",
+      "families": [
+        "Abjuration",
+        "Convocation",
+        "Divination",
+        "Enchantement",
+        "Evocation",
+        "Envoûtement",
+        "Illusion",
+        "Transmutation"
+      ],
+      "level": 0,
+      "time": "Instantanée",
+      "times": [
+        "Instantanée",
+        "Une scène",
+        "Une journée",
+        "Illimitée"
+      ],
+      "target": "Personnelle",
+      "targets": [
+        "Personnelle",
+        "Toucher",
+        "A vue",
+        "Infinie"
+      ]
     }
   }
 }

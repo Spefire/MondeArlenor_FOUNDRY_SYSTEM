@@ -155,18 +155,7 @@ export class ArlenorActorSheet extends ActorSheet {
     // Initialize containers.
     const gear = [];
     const features = [];
-    const spells = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: []
-    };
+    const cristals = [];
 
     // Iterate through items, allocating to containers
     // let totalWeight = 0;
@@ -181,18 +170,16 @@ export class ArlenorActorSheet extends ActorSheet {
       else if (i.type === 'feature') {
         features.push(i);
       }
-      // Append to spells.
-      else if (i.type === 'spell') {
-        if (i.data.spellLevel != undefined) {
-          spells[i.data.spellLevel].push(i);
-        }
+      // Append to cristals.
+      else if (i.type === 'cristal') {
+        cristals.push(i);
       }
     }
 
     // Assign and return
     actorData.gear = gear;
     actorData.features = features;
-    actorData.spells = spells;
+    actorData.cristals = cristals;
   }
 
   /* -------------------------------------------- */
@@ -250,7 +237,7 @@ export class ArlenorActorSheet extends ActorSheet {
     // Grab any data associated with this control.
     const data = duplicate(header.dataset);
     // Initialize a default name.
-    const name = `New ${type.capitalize()}`;
+    const name = `${type.capitalize()}`;
     // Prepare the item object.
     const itemData = {
       name: name,
