@@ -1,5 +1,5 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header sheet-item">
+    <header class="sheet-header sheet-min">
         <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
@@ -19,7 +19,7 @@
             <!-- As you add new fields, add them in here! -->
             <div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
-                    <label for="data.family" class="resource-label">Famille</label>
+                    <label for="data.family" class="title-up-label">Famille</label>
                     <select name="data.family">
                         {{#select data.family }}
                         {{#each data.families }}
@@ -29,13 +29,13 @@
                     </select>
                 </div>
                 <div class="flexrow flex-group-center">
-                    <label class="resource-label">Niveau</label>
+                    <label class="title-up-label">Niveau</label>
                     <input type="text" name="data.level" value="{{data.level}}" data-dtype="Number" />
                 </div>
             </div>
             <div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
-                    <label for="data.time" class="resource-label">Durée</label>
+                    <label for="data.time" class="title-up-label">Durée</label>
                     <select name="data.time">
                         {{#select data.time }}
                         {{#each data.times }}
@@ -45,7 +45,7 @@
                     </select>
                 </div>
                 <div class="flexrow flex-group-center">
-                    <label for="data.target" class="resource-label">Portée</label>
+                    <label for="data.target" class="title-up-label">Portée</label>
                     <select name="data.target">
                         {{#select data.target }}
                         {{#each data.targets }}

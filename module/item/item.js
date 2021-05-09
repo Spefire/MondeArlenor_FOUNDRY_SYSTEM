@@ -10,9 +10,9 @@ export class ArlenorItem extends Item {
     super.prepareData();
 
     // Get the Item's data
-    const itemData = this.data;
+    /*const itemData = this.data;
     const actorData = this.actor ? this.actor.data : {};
-    const data = itemData.data;
+    const data = itemData.data;*/
   }
 
   /**
@@ -20,7 +20,7 @@ export class ArlenorItem extends Item {
    * @param {Event} event   The originating click event
    * @private
    */
-  async roll() {
+  /*async roll() {
     // Basic template rendering data
     const token = this.actor.token;
     const item = this.data;
@@ -33,5 +33,5 @@ export class ArlenorItem extends Item {
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       flavor: label
     });
-  }
+  }*/
 }

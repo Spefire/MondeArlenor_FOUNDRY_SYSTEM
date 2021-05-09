@@ -6,6 +6,7 @@ export class ArlenorActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
+    console.warn(this);
     return mergeObject(super.defaultOptions, {
       classes: ["arlenor", "sheet", "actor"],
       template: "systems/arlenor/templates/actor/actor-sheet.hbs",
@@ -24,10 +25,16 @@ export class ArlenorActorSheet extends ActorSheet {
 
     // Prepare items.
     if (this.actor.data.type == 'character') {
-      this._prepareCharacterItems(data);
-      this._prepareCharacterHealth(data);
+      this._prepareCharacterHealth(data, true);
       this._prepareCharacterInit(data);
       this._prepareCharacterSkills(data);
+      this._prepareCharacterItems(data);
+    }
+    if (this.actor.data.type == 'creature') {
+      this._prepareCharacterHealth(data, false);
+      this._prepareCharacterInit(data);
+      this._prepareCharacterSkills(data);
+      this._prepareCharacterItems(data);
     }
 
     console.warn('data', data);
@@ -42,11 +49,8 @@ export class ArlenorActorSheet extends ActorSheet {
    *
    * @return {undefined}
    */
-  _prepareCharacterHealth(sheetData) {
+  _prepareCharacterHealth(sheetData, withRaces = false) {
     const actorData = sheetData.actor;
-
-    const race = actorData.data.attributes.race;
-    const races = actorData.data.races;
 
     const caracts = actorData.data.caracts;
     const safe = actorData.data.healthLevels.safe;
@@ -60,13 +64,18 @@ export class ArlenorActorSheet extends ActorSheet {
     seriously.max = 2;
     underdeath.max = 2;
 
-    if (race === races[1].code
-      || race === races[4].code) {
-      seriously.max = 1;
-    }
-    if (race === races[2].code
-      || race === races[5].code) {
-      seriously.max = 3;
+    if (withRaces) {
+      const race = actorData.data.attributes.race;
+      const races = actorData.data.races;
+
+      if (race === races[1].code
+        || race === races[4].code) {
+        seriously.max = 1;
+      }
+      if (race === races[2].code
+        || race === races[5].code) {
+        seriously.max = 3;
+      }
     }
 
     if (caracts.vig.value === 1) {

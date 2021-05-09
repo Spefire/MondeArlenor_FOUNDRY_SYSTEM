@@ -313,7 +313,38 @@
       "templates": [
         "commun"
       ],
-      "biography": ""
+      "biography": "",
+      "skills": {
+        "com": {
+          "name": "Combat",
+          "caracts": [
+            "vig",
+            "hab"
+          ],
+          "value": 0
+        },
+        "fur": {
+          "name": "Furtivité",
+          "caracts": [
+            "hab"
+          ],
+          "value": 0
+        },
+        "per": {
+          "name": "Perception",
+          "caracts": [
+            "int"
+          ],
+          "value": 0
+        },
+        "soc": {
+          "name": "Social",
+          "caracts": [
+            "cha"
+          ],
+          "value": 0
+        }
+      }
     },
     "pnj": {
       "templates": [],
