@@ -18,6 +18,19 @@
     flex: 0 0 65px;
   }
 
+  &.sheet-item {
+    flex: 0 0 65px;
+
+    .profile-img {
+      flex: 0 0 60px !important;
+      height: 60px !important;
+    }
+
+    h1.charname {
+      margin: 0 !important;
+    }
+  }
+
   .profile-img {
     flex: 0 0 110px;
     height: 110px;

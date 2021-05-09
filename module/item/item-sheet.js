@@ -9,7 +9,7 @@ export class ArlenorItemSheet extends ItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["arlenor", "sheet", "item"],
       width: 520,
-      height: 480,
+      height: 350,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "properties" }]
     });
   }

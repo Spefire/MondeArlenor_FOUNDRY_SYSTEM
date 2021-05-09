@@ -1,5 +1,5 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
+    <header class="sheet-header sheet-item">
         <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
@@ -9,18 +9,51 @@
     <!-- Sheet Tab Navigation -->
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="properties">Propriétés</a>
-        <a class="item" data-tab="description">Description</a>
+        <a class="item" data-tab="description">Notes</a>
     </nav>
 
     <!-- Sheet Body -->
     <section class="sheet-body">
-
         <!-- Properties Tab -->
         <div class="tab properties" data-group="primary" data-tab="properties">
             <!-- As you add new fields, add them in here! -->
-            <div class="resource">
-                <label class="resource-label">Cristal Level</label>
-                <input type="text" name="data.level" value="{{data.level}}" data-dtype="Number" />
+            <div class="grid grid-1col">
+                <div class="flexrow flex-group-center">
+                    <label for="data.family" class="resource-label">Famille</label>
+                    <select name="data.family">
+                        {{#select data.family }}
+                        {{#each data.families }}
+                        <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label class="resource-label">Niveau</label>
+                    <input type="text" name="data.level" value="{{data.level}}" data-dtype="Number" />
+                </div>
+            </div>
+            <div class="grid grid-1col">
+                <div class="flexrow flex-group-center">
+                    <label for="data.time" class="resource-label">Durée</label>
+                    <select name="data.time">
+                        {{#select data.time }}
+                        {{#each data.times }}
+                        <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label for="data.target" class="resource-label">Portée</label>
+                    <select name="data.target">
+                        {{#select data.target }}
+                        {{#each data.targets }}
+                        <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
             </div>
         </div>
 

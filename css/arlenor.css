@@ -162,6 +162,23 @@
   flex: 0 0 65px;
 }
 
+.arlenor .sheet-header.sheet-item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 65px;
+  flex: 0 0 65px;
+}
+
+.arlenor .sheet-header.sheet-item .profile-img {
+  -webkit-box-flex: 0 !important;
+  -ms-flex: 0 0 60px !important;
+  flex: 0 0 60px !important;
+  height: 60px !important;
+}
+
+.arlenor .sheet-header.sheet-item h1.charname {
+  margin: 0 !important;
+}
+
 .arlenor .sheet-header .profile-img {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 110px;
