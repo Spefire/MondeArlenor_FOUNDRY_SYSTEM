@@ -6,7 +6,6 @@ export class ArlenorActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
-    console.warn(this);
     return mergeObject(super.defaultOptions, {
       classes: ["arlenor", "sheet", "actor"],
       template: "systems/arlenor/templates/actor/actor-sheet.hbs",
@@ -270,57 +269,55 @@ export class ArlenorActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const dataset = element.dataset;
 
-    // Application des malus de vie
-    const race = this.actor.data.data.attributes.race;
-    const races = this.actor.data.data.races;
+    if (dataset.caract) {
 
-    const caracts = this.actor.data.data.caracts;
-    const injured = this.actor.data.data.healthLevels.injured;
-    const seriously = this.actor.data.data.healthLevels.seriously;
-    const underdeath = this.actor.data.data.healthLevels.underdeath;
+      // Re-calculate health levels
+      const race = this.actor.data.data.attributes.race;
+      const races = this.actor.data.data.races;
+      const injured = this.actor.data.data.healthLevels.injured;
+      const seriously = this.actor.data.data.healthLevels.seriously;
+      const underdeath = this.actor.data.data.healthLevels.underdeath;
+      const health = this.actor.data.data.health;
+      const caracts = this.actor.data.data.caracts;
 
-    // Re-calcul des max et des valeurs réelles (car données du template, pas du sheet)
-    injured.max = 2;
-    seriously.max = 2;
-    underdeath.max = 2;
+      injured.max = 2;
+      seriously.max = 2;
+      underdeath.max = 2;
 
-    if (race === races[1].code
-      || race === races[4].code) {
-      seriously.max = 1;
-    }
-    if (race === races[2].code
-      || race === races[5].code) {
-      seriously.max = 3;
-    }
+      if (race === races[1].code
+        || race === races[4].code) {
+        seriously.max = 1;
+      }
+      if (race === races[2].code
+        || race === races[5].code) {
+        seriously.max = 3;
+      }
 
-    if (this.actor.data.data.health.value < underdeath.max) {
-      caracts.vig.realvalue = Math.max(caracts.vig.value - 3, 0);
-      caracts.hab.realvalue = Math.max(caracts.hab.value - 3, 0);
-      caracts.int.realvalue = Math.max(caracts.int.value - 3, 0);
-      caracts.cha.realvalue = Math.max(caracts.cha.value - 3, 0);
-      caracts.pou.realvalue = Math.max(caracts.pou.value - 3, 0);
-    } else if (this.actor.data.data.health.value < underdeath.max + seriously.max) {
-      caracts.vig.realvalue = Math.max(caracts.vig.value - 2, 0);
-      caracts.hab.realvalue = Math.max(caracts.hab.value - 2, 0);
-      caracts.int.realvalue = Math.max(caracts.int.value - 2, 0);
-      caracts.cha.realvalue = Math.max(caracts.cha.value - 2, 0);
-      caracts.pou.realvalue = Math.max(caracts.pou.value - 2, 0);
-    } else if (this.actor.data.data.health.value < underdeath.max + seriously.max + injured.max) {
-      caracts.vig.realvalue = Math.max(caracts.vig.value - 1, 0);
-      caracts.hab.realvalue = Math.max(caracts.hab.value - 1, 0);
-      caracts.int.realvalue = Math.max(caracts.int.value - 1, 0);
-      caracts.cha.realvalue = Math.max(caracts.cha.value - 1, 0);
-      caracts.pou.realvalue = Math.max(caracts.pou.value - 1, 0);
-    } else {
-      caracts.vig.realvalue = caracts.vig.value;
-      caracts.hab.realvalue = caracts.hab.value;
-      caracts.int.realvalue = caracts.int.value;
-      caracts.cha.realvalue = caracts.cha.value;
-      caracts.pou.realvalue = caracts.pou.value;
-    }
+      let caract = caracts[dataset.caract].value;
+      if (health.value < underdeath.max) {
+        caract += -3;
+      } else if (health.value < underdeath.max + seriously.max) {
+        caract += -2;
+      } else if (health.value < underdeath.max + seriously.max + injured.max) {
+        caract += -1;
+      }
 
-    if (dataset.roll) {
-      let roll = new Roll(dataset.roll, this.actor.data.data);
+      // Create rolling command
+      let rollCmd = "(" + caract + ")d6";
+      if (dataset.skill) {
+        const skills = this.actor.data.data.skills;
+        let skill = skills[dataset.skill].value;
+        if (skill === 0) skill = -4;
+        rollCmd += "+" + skill;
+      }
+      if (dataset.cristal) {
+        let cristal = parseInt(dataset.cristal, 10);
+        if (cristal === 0) cristal = -4;
+        rollCmd += "+" + cristal;
+      }
+      if (dataset.bonusmalus) rollCmd += "+" + dataset.bonusmalus;
+
+      let roll = new Roll(rollCmd, {});
       let label = dataset.label ? `Lance ${dataset.label}` : '';
       roll.roll().toMessage({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
