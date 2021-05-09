@@ -164,16 +164,16 @@
 
 .arlenor .sheet-header.sheet-min {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 65px;
-  flex: 0 0 65px;
+  -ms-flex: 0 0 85px;
+  flex: 0 0 85px;
 }
 
 .arlenor .sheet-header.sheet-min .profile-img {
   -webkit-box-flex: 0 !important;
-  -ms-flex: 0 0 60px !important;
-  flex: 0 0 60px !important;
-  height: 60px !important;
-  width: 60px !important;
+  -ms-flex: 0 0 80px !important;
+  flex: 0 0 80px !important;
+  height: 80px !important;
+  width: 80px !important;
   margin-bottom: 0;
 }
 
@@ -255,9 +255,9 @@
 }
 
 .arlenor .items-list {
-  height: 410px;
+  height: auto;
   list-style: none;
-  margin: 7px 0;
+  margin: 5px 0 15px 0;
   padding: 0;
   overflow-y: auto;
 }
