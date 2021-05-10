@@ -317,12 +317,39 @@ export class ArlenorActorSheet extends ActorSheet {
       }
       if (dataset.bonusmalus) rollCmd += "+" + dataset.bonusmalus;
 
+      // Roll once
       let roll = new Roll(rollCmd, {});
       let label = dataset.label ? `Lance ${dataset.label}` : '';
-      roll.roll().toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label
-      });
+      roll = roll.roll();
+
+      if (caract !== 0 && roll.results[0] === caract) {
+        roll.toMessage({
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          flavor: label + " : Echec critique"
+        });
+      }
+      else if (caract !== 0 && roll.results[0] === caract * 6) {
+        let rollSuccess = new Roll("1d6", {});
+        rollSuccess = rollSuccess.roll();
+
+        roll.terms.push("+");
+        roll.terms.push(rollSuccess.terms[0]);
+        roll.results.push("+");
+        roll.results.push(rollSuccess.results[0]);
+        roll._formula = roll.formula;
+        roll._total = roll.total + rollSuccess.total;
+
+        roll.toMessage({
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          flavor: label + " : Succès critique"
+        });
+      }
+      else {
+        roll.toMessage({
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          flavor: label
+        });
+      }
     }
   }
 }
