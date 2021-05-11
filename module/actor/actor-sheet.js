@@ -170,6 +170,9 @@ export class ArlenorActorSheet extends ActorSheet {
     };
     const cristals = [];
 
+    let bonusAttack = 0;
+    let bonusDefence = 0;
+
     // Iterate through items, allocating to containers
     // let totalWeight = 0;
     for (let i of sheetData.items) {
@@ -183,6 +186,10 @@ export class ArlenorActorSheet extends ActorSheet {
       else if (i.type === 'feature') {
         if (i.data.featureType != undefined) {
           features[i.data.featureType].push(i);
+          if (i.data.equipped) {
+            bonusAttack += i.data.attack;
+            bonusDefence += i.data.defence;
+          }
         }
       }
       // Append to cristals.
@@ -195,6 +202,8 @@ export class ArlenorActorSheet extends ActorSheet {
     actorData.gear = gear;
     actorData.features = features;
     actorData.cristals = cristals;
+    actorData.bonusAttack = bonusAttack;
+    actorData.bonusDefence = bonusDefence;
   }
 
   /* -------------------------------------------- */
