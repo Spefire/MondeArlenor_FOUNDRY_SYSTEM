@@ -219,7 +219,8 @@ export class ArlenorActorSheet extends ActorSheet {
     html.find('.item-create').click(this._onItemCreate.bind(this));
 
     // Modify inline Inventory Item
-    html.find('.inline-edit').click(this._onItemModify.bind(this));
+    html.find('.inline-edit-check').click(this._onItemModifyCheck.bind(this));
+    html.find('.inline-edit-value').click(this._onItemModifyValue.bind(this));
 
     // Update Inventory Item
     html.find('.item-edit').click(ev => {
@@ -243,7 +244,7 @@ export class ArlenorActorSheet extends ActorSheet {
       let handler = ev => this._onDragStart(ev);
       html.find('li.item').each((i, li) => {
         if (li.classList.contains("inventory-header")) return;
-        if (!li.classList.contains("no-drag")) {
+        if (li.classList.contains("with-drag")) {
           li.setAttribute("draggable", true);
           li.addEventListener("dragstart", handler, false);
         }
@@ -278,13 +279,22 @@ export class ArlenorActorSheet extends ActorSheet {
     return this.actor.createOwnedItem(itemData);
   }
 
-  _onItemModify(event) {
+  _onItemModifyCheck(event) {
     event.preventDefault();
     const element = event.currentTarget;
     const itemId = element.closest(".item").dataset.itemId;
     let item = this.actor.getOwnedItem(itemId);
     let field = element.dataset.field;
     return item.update({ [field]: element.checked });
+  }
+
+  _onItemModifyValue(event) {
+    event.preventDefault();
+    const element = event.currentTarget;
+    const itemId = element.closest(".item").dataset.itemId;
+    let item = this.actor.getOwnedItem(itemId);
+    let field = element.dataset.field;
+    return item.update({ [field]: element.value });
   }
 
   /**

@@ -314,6 +314,13 @@
   flex: 0 0 86px;
 }
 
+.arlenor .items-list .item-type {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 106px;
+  flex: 0 0 106px;
+  padding-left: 10px;
+}
+
 .arlenor .items-list .item-spec select {
   width: 100%;
 }

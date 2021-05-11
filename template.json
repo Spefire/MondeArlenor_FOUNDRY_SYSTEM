@@ -367,7 +367,16 @@
         "base"
       ],
       "quantity": 1,
-      "weight": 0
+      "itemType": "Autre",
+      "itemTypes": [
+        "Affaire / Bijou",
+        "Livre / Parchemin",
+        "Matériau",
+        "Nourriture",
+        "Plante",
+        "Potion",
+        "Autre"
+      ]
     },
     "feature": {
       "templates": [
