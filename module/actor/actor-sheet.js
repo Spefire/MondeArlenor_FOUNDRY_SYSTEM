@@ -162,7 +162,12 @@ export class ArlenorActorSheet extends ActorSheet {
 
     // Initialize containers.
     const gear = [];
-    const features = [];
+    const features = {
+      "Arme au Corps à corps": [],
+      "Arme à Distance": [],
+      "Armure": [],
+      "Bouclier": []
+    };
     const cristals = [];
 
     // Iterate through items, allocating to containers
@@ -176,7 +181,9 @@ export class ArlenorActorSheet extends ActorSheet {
       }
       // Append to features.
       else if (i.type === 'feature') {
-        features.push(i);
+        if (i.data.featureType != undefined) {
+          features[i.data.featureType].push(i);
+        }
       }
       // Append to cristals.
       else if (i.type === 'cristal') {
@@ -201,6 +208,9 @@ export class ArlenorActorSheet extends ActorSheet {
 
     // Add Inventory Item
     html.find('.item-create').click(this._onItemCreate.bind(this));
+
+    // Modify inline Inventory Item
+    html.find('.inline-edit').click(this._onItemModify.bind(this));
 
     // Update Inventory Item
     html.find('.item-edit').click(ev => {
@@ -257,6 +267,15 @@ export class ArlenorActorSheet extends ActorSheet {
 
     // Finally, create the item!
     return this.actor.createOwnedItem(itemData);
+  }
+
+  _onItemModify(event) {
+    event.preventDefault();
+    const element = event.currentTarget;
+    const itemId = element.closest(".item").dataset.itemId;
+    let item = this.actor.getOwnedItem(itemId);
+    let field = element.dataset.field;
+    return item.update({ [field]: element.checked });
   }
 
   /**

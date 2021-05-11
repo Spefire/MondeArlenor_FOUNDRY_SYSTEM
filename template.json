@@ -372,6 +372,16 @@
     "feature": {
       "templates": [
         "base"
+      ],
+      "attack": 0,
+      "defence": 0,
+      "equipped": false,
+      "featureType": "Arme au Corps à corps",
+      "featureTypes": [
+        "Arme au Corps à corps",
+        "Arme à Distance",
+        "Armure",
+        "Bouclier"
       ]
     },
     "cristal": {
