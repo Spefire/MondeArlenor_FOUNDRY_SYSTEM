@@ -1,38 +1,40 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
+    <header class="sheet-header sheet-min">
         <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
-            <div class="grid grid-2col">
-                <div>
-                    <label class="title-up-label">Quantity</label>
-                    <input type="text" name="data.quantity" value="{{data.quantity}}" data-dtype="Number" />
-                </div>
-                <div>
-                    <label class="title-up-label">Weight</label>
-                    <input type="text" name="data.weight" value="{{data.weight}}" data-dtype="Number" />
-                </div>
-            </div>
         </div>
     </header>
 
     <!-- Sheet Tab Navigation -->
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="attributes">Attributes</a>
+        <a class="item" data-tab="properties">Propriétés</a>
+        <a class="item" data-tab="description">Notes</a>
     </nav>
 
     <!-- Sheet Body -->
     <section class="sheet-body">
+        <!-- Properties Tab -->
+        <div class="tab properties" data-group="primary" data-tab="properties">
+            <!-- As you add new fields, add them in here! -->
+            <div class="grid grid-1col">
+                <div class="flexrow flex-group-center grid-one">
+                    <label for="data.itemType" class="title-up-label">Type d'objet</label>
+                    <select name="data.itemType">
+                        {{#select data.itemType }}
+                        {{#each data.itemTypes }}
+                        <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+            </div>
+        </div>
 
         <!-- Description Tab -->
         <div class="tab" data-group="primary" data-tab="description">
             {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
         </div>
 
-        <!-- Attributes Tab -->
-        <div class="tab attributes" data-group="primary" data-tab="attributes">
-            <!-- As you add new fields, add them in here! -->
-        </div>
     </section>
 </form>
