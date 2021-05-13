@@ -57,7 +57,8 @@ function rollArlenor(caractKey, skillKey, cristalKey) {
   if (speaker.token) actor = game.actors.tokens[speaker.token];
   if (!actor) actor = game.actors.get(speaker.actor);
   if (!actor) actor = game.actors.find(act => act.owner);
-  rollSkill(actor, caractKey, skillKey, cristalKey, 0);
+  if (actor) rollSkill(actor, caractKey, skillKey, cristalKey, 0);
+  else console.error("Il n'y a pas de personnage valide.");
 }
 
 export function rollSkill(actor, caractKey, skillKey, cristalKey, bonusMalus) {
@@ -110,6 +111,9 @@ export function rollSkill(actor, caractKey, skillKey, cristalKey, bonusMalus) {
       }
     }
     let indexKey = parseInt(cristalKey, 10);
+    cristals.sort(function (a, b) {
+      return a._id.localeCompare(b._id);
+    });
     let cristal = cristals[indexKey].data.level;
     label = cristals[indexKey].name;
     if (cristal === 0) cristal = -4;

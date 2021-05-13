@@ -200,6 +200,10 @@ export class ArlenorActorSheet extends ActorSheet {
       }
     }
 
+    cristals.sort(function (a, b) {
+      return a._id.localeCompare(b._id);
+    });
+
     // Assign and return
     actorData.gear = gear;
     actorData.features = features;
