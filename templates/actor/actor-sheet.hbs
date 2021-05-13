@@ -81,8 +81,8 @@
     <div class="grid grid-3col grid-full-width">
       {{#each data.caracts as |caract key|}}
       <div class="flexrow flex-group-center">
-        <label for="data.caracts.{{key}}.value" class="title-up-label rollable" data-caract="{{key}}"
-          data-label="{{caract.name}}">{{caract.name}}</label>
+        <label for="data.caracts.{{key}}.value" class="title-up-label rollable"
+          data-caractKey="{{key}}">{{caract.name}}</label>
         <input type="text" name="data.caracts.{{key}}.value" value="{{caract.value}}" data-dtype="Number" />
       </div>
       {{/each}}
@@ -125,7 +125,7 @@
 
         {{#each data.skills as |skill key|}}
         {{#each skill.caracts as |caract keyCaract|}}
-        <li class="item flexrow" data-item-id="{{skill.key}}{{keyCaract}}">
+        <li class="item flexrow" data-item-id="{{skill.key}}{{caract}}">
           <div class="item-image">
             <img src="{{lookup skill.img caract}}" width="24" height="24" />
           </div>
@@ -154,14 +154,13 @@
             {{/if}}
           </div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caract="{{caract}}" data-skill="{{key}}"
-              data-bonusmalus="-4" data-label="{{skill.name}} ({{caract}}) avec malus">
+            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="{{caract}}"
+              data-skillKey="{{key}}" data-bonusMalus="-4">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caract="{{caract}}" data-skill="{{key}}"
-              data-label="{{skill.name}} ({{caract}})">
+            <a class="item-control rollable" title="Lancé Normal" data-caractKey="{{caract}}" data-skillKey="{{key}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caract="{{caract}}" data-skill="{{key}}"
-              data-bonusmalus="+4" data-label="{{skill.name}} ({{caract}}) avec bonus">
+            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="{{caract}}"
+              data-skillKey="{{key}}" data-bonusMalus="+4">
               <i class="fas fa-dice-six"></i></a>
           </div>
         </li>
@@ -198,14 +197,13 @@
             <input type="text" name="cristal.data.level" value="{{cristal.data.level}}" data-dtype="Number" disabled />
           </div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caract="pou"
-              data-cristal="{{cristal.data.level}}" data-bonusmalus="-4" data-label="{{cristal.name}} avec malus">
+            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="pou" data-cristalKey="{{id}}"
+              data-bonusMalus="-4">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caract="pou"
-              data-cristal="{{cristal.data.level}}" data-label="{{cristal.name}}">
+            <a class="item-control rollable" title="Lancé Normal" data-caractKey="pou" data-cristalKey="{{id}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caract="pou"
-              data-cristal="{{cristal.data.level}}" data-bonusmalus="+4" data-label="{{cristal.name}} avec bonus">
+            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="pou" data-cristalKey="{{id}}"
+              data-bonusMalus="+4">
               <i class="fas fa-dice-six"></i></a>
           </div>
           <div class="item-controls">
@@ -279,7 +277,7 @@
 
         {{#each data.skills as |skill key|}}
         {{#each skill.caracts as |caract keyCaract|}}
-        <li class="item flexrow" data-item-id="{{skill.key}}{{keyCaract}}">
+        <li class="item flexrow" data-item-id="{{skill.key}}{{caract}}">
           <div class="item-image">
             <img src="{{lookup skill.img caract}}" width="24" height="24" />
           </div>
@@ -293,14 +291,13 @@
             {{/if}}
           </div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caract="{{caract}}" data-skill="{{key}}"
-              data-bonusmalus="-4" data-label="{{skill.name}} ({{caract}}) avec malus">
+            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="{{caract}}"
+              data-skillKey="{{key}}" data-bonusMalus="-4">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caract="{{caract}}" data-skill="{{key}}"
-              data-label="{{skill.name}} ({{caract}})">
+            <a class="item-control rollable" title="Lancé Normal" data-caractKey="{{caract}}" data-skillKey="{{key}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caract="{{caract}}" data-skill="{{key}}"
-              data-bonusmalus="+4" data-label="{{skill.name}} ({{caract}}) avec bonus">
+            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="{{caract}}"
+              data-skillKey="{{key}}" data-bonusMalus="+4">
               <i class="fas fa-dice-six"></i></a>
           </div>
         </li>
@@ -333,14 +330,13 @@
             <input type="text" name="cristal.data.level" value="{{cristal.data.level}}" data-dtype="Number" disabled />
           </div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caract="pou"
-              data-cristal="{{cristal.data.level}}" data-bonusmalus="-4" data-label="{{cristal.name}} avec malus">
+            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="pou" data-cristalKey="{{id}}"
+              data-bonusMalus="-4">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caract="pou"
-              data-cristal="{{cristal.data.level}}" data-label="{{cristal.name}}">
+            <a class="item-control rollable" title="Lancé Normal" data-caractKey="pou" data-cristalKey="{{id}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caract="pou"
-              data-cristal="{{cristal.data.level}}" data-bonusmalus="+4" data-label="{{cristal.name}} avec bonus">
+            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="pou" data-cristalKey="{{id}}"
+              data-bonusMalus="+4">
               <i class="fas fa-dice-six"></i></a>
           </div>
           <div class="item-controls">

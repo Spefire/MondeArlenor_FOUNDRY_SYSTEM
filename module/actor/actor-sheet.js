@@ -1,3 +1,5 @@
+import { rollSkill } from "./../arlenor.js";
+
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -306,88 +308,6 @@ export class ArlenorActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
-
-    if (dataset.caract) {
-
-      // Re-calculate health levels
-      const race = this.actor.data.data.attributes.race;
-      const races = this.actor.data.data.races;
-      const injured = this.actor.data.data.healthLevels.injured;
-      const seriously = this.actor.data.data.healthLevels.seriously;
-      const underdeath = this.actor.data.data.healthLevels.underdeath;
-      const health = this.actor.data.data.health;
-      const caracts = this.actor.data.data.caracts;
-
-      injured.max = 2;
-      seriously.max = 2;
-      underdeath.max = 2;
-
-      if (race === races[1].code
-        || race === races[4].code) {
-        seriously.max = 1;
-      }
-      if (race === races[2].code
-        || race === races[5].code) {
-        seriously.max = 3;
-      }
-
-      let caract = caracts[dataset.caract].value;
-      if (health.value < underdeath.max) {
-        caract += -3;
-      } else if (health.value < underdeath.max + seriously.max) {
-        caract += -2;
-      } else if (health.value < underdeath.max + seriously.max + injured.max) {
-        caract += -1;
-      }
-
-      // Create rolling command
-      let rollCmd = "(" + caract + ")d6";
-      if (dataset.skill) {
-        const skills = this.actor.data.data.skills;
-        let skill = skills[dataset.skill].value;
-        if (skill === 0) skill = -4;
-        rollCmd += "+" + skill;
-      }
-      if (dataset.cristal) {
-        let cristal = parseInt(dataset.cristal, 10);
-        if (cristal === 0) cristal = -4;
-        rollCmd += "+" + cristal;
-      }
-      if (dataset.bonusmalus) rollCmd += "+" + dataset.bonusmalus;
-
-      // Roll once
-      let roll = new Roll(rollCmd, {});
-      let label = dataset.label ? `Lance ${dataset.label}` : '';
-      roll = roll.roll();
-
-      if (caract !== 0 && roll.results[0] === caract) {
-        roll.toMessage({
-          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-          flavor: label + " : Echec critique"
-        });
-      }
-      else if (caract !== 0 && roll.results[0] === caract * 6) {
-        let rollSuccess = new Roll("1d6", {});
-        rollSuccess = rollSuccess.roll();
-
-        roll.terms.push("+");
-        roll.terms.push(rollSuccess.terms[0]);
-        roll.results.push("+");
-        roll.results.push(rollSuccess.results[0]);
-        roll._formula = roll.formula;
-        roll._total = roll.total + rollSuccess.total;
-
-        roll.toMessage({
-          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-          flavor: label + " : Succès critique"
-        });
-      }
-      else {
-        roll.toMessage({
-          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-          flavor: label
-        });
-      }
-    }
+    rollSkill(this.actor, dataset.caractkey, dataset.skillkey, dataset.cristalkey, dataset.bonusmalus);
   }
 }
