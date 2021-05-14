@@ -43,6 +43,7 @@ Hooks.once('init', async function () {
   });
 
   Handlebars.registerHelper('toLowerCase', function (str) {
+    if (!str) return "";
     return str.toLowerCase();
   });
 });
@@ -114,10 +115,14 @@ export function rollSkill(actor, caractKey, skillKey, cristalKey, bonusMalus) {
     cristals.sort(function (a, b) {
       return a._id.localeCompare(b._id);
     });
-    let cristal = cristals[indexKey].data.level;
-    label = cristals[indexKey].name;
-    if (cristal === 0) cristal = -4;
-    rollCmd += "+" + cristal;
+    if (indexKey < cristals.length) {
+      let cristal = cristals[indexKey].data.level;
+      label = cristals[indexKey].name;
+      if (cristal === 0) cristal = -4;
+      rollCmd += "+" + cristal;
+    } else {
+      console.error("Cristal non disponible");
+    }
   }
   if (bonusMalus) {
     if (bonusMalus < 0) label += " avec malus";

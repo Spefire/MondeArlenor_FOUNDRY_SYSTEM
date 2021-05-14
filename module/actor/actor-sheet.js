@@ -38,7 +38,7 @@ export class ArlenorActorSheet extends ActorSheet {
       this._prepareCharacterItems(data);
     }
 
-    console.warn('data', data);
+    // console.warn('data', data);
 
     return data;
   }
