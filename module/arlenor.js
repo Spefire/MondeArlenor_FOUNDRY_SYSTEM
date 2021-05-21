@@ -28,7 +28,7 @@ Hooks.once('init', async function () {
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("arlenor", ArlenorActorSheet, { makeDefault: true });
-  Items.unregisterSheet("cre", ItemSheet);
+  Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("arlenor", ArlenorItemSheet, { makeDefault: true });
 
   // If you need to add Handlebars helpers, here are a few useful examples:
@@ -97,14 +97,14 @@ export function rollSkill(actor, caractKey, skillKey, cristalKey, bonusMalus) {
   // Create rolling command
   let label = caracts[caractKey].name;
   let rollCmd = "(" + caract + ")d6";
-  if (skillKey) {
+  if (skillKey !== null && skillKey !== undefined) {
     const skills = actor.data.data.skills;
     let skill = skills[skillKey].value;
     label = skills[skillKey].name + " (" + caractKey + ")";
     if (skill === 0) skill = -4;
     rollCmd += "+" + skill;
   }
-  if (cristalKey) {
+  if (cristalKey !== null && cristalKey !== undefined) {
     const cristals = [];
     for (let i of actor.data.items) {
       if (i.type === 'cristal') {
@@ -124,7 +124,7 @@ export function rollSkill(actor, caractKey, skillKey, cristalKey, bonusMalus) {
       console.error("Cristal non disponible");
     }
   }
-  if (bonusMalus) {
+  if (bonusMalus !== null && bonusMalus !== undefined && bonusMalus !== 0) {
     if (bonusMalus < 0) label += " avec malus";
     if (bonusMalus > 0) label += " avec bonus";
     rollCmd += "+" + bonusMalus;
@@ -132,7 +132,7 @@ export function rollSkill(actor, caractKey, skillKey, cristalKey, bonusMalus) {
 
   // Roll once
   let roll = new Roll(rollCmd, {});
-  let rollLabel = `Lance ${label}`;
+  let rollLabel = `Lance <b>${label}</b>`;
   roll = roll.roll();
 
   if (caract !== 0 && roll.results[0] === caract) {
