@@ -30,7 +30,12 @@
                 </div>
                 <div class="flexrow flex-group-center">
                     <label class="title-up-label">Niveau</label>
-                    <input type="text" name="data.level" value="{{data.level}}" data-dtype="Number" />
+                    <div class="input-value-base">
+                        <input type="text" name="data.level" value="{{data.level}}" data-dtype="Number" />
+                        <span>(</span>
+                        <input type="text" name="data.base" value="{{data.base}}" data-dtype="Number" />
+                        <span>)</span>
+                    </div>
                 </div>
             </div>
             <div class="grid grid-1col">

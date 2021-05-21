@@ -11,7 +11,7 @@ export class ArlenorActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["arlenor", "sheet", "actor"],
       template: "systems/arlenor/templates/actor/actor-sheet.hbs",
-      width: 600,
+      width: 620,
       height: 700,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
     });

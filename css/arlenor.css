@@ -238,6 +238,28 @@
   text-transform: uppercase;
 }
 
+.arlenor .input-value-base {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 5px;
+}
+
+.arlenor .input-value-base input[type="text"]:first-child {
+  margin-right: 5px;
+}
+
+.arlenor .input-value-base input[type="text"]:not(:first-child) {
+  width: 20px;
+  padding: 0;
+  text-align: center;
+  border: none;
+  background: none;
+}
+
 .arlenor .tabs {
   height: auto !important;
   -webkit-box-flex: 0 !important;
@@ -314,8 +336,8 @@
 
 .arlenor .items-list .item-type {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 106px;
-  flex: 0 0 106px;
+  -ms-flex: 0 0 126px;
+  flex: 0 0 126px;
   padding-left: 10px;
 }
 

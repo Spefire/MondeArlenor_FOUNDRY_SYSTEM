@@ -82,3 +82,21 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.input-value-base {
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+
+  input[type="text"]:first-child {
+    margin-right: 5px;
+  }
+
+  input[type="text"]:not(:first-child) {
+    width: 20px;
+    padding: 0;
+    text-align: center;
+    border: none;
+    background: none;
+  }
+}

@@ -52,9 +52,11 @@
       <div class="flex-group-center grid-tiers-1">
         <label for="data.health.value" class="title-up-label">{{data.health.name}}</label>
         <div class="flexrow flex-center">
-          <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number" />
+          <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"
+            title="Actuels" />
           <span> / </span>
-          <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number" disabled />
+          <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number" title="Maximum"
+            disabled />
         </div>
       </div>
       <div class="flex-group-center grid-tiers-2">
@@ -83,7 +85,14 @@
       <div class="flexrow flex-group-center">
         <label for="data.caracts.{{key}}.value" class="title-up-label rollable"
           data-caractKey="{{key}}">{{caract.name}}</label>
-        <input type="text" name="data.caracts.{{key}}.value" value="{{caract.value}}" data-dtype="Number" />
+        <div class="input-value-base">
+          <input type="text" name="data.caracts.{{key}}.value" value="{{caract.value}}" data-dtype="Number"
+            title="Actuel" />
+          <span>(</span>
+          <input type="text" name="data.caracts.{{key}}.base" value="{{caract.base}}" data-dtype="Number"
+            title="De base" />
+          <span>)</span>
+        </div>
       </div>
       {{/each}}
       <div class="flexrow flex-group-center">
@@ -132,7 +141,14 @@
           <h4 class="item-name">{{skill.name}} ({{caract}})</h4>
           <div class="item-value">
             {{#if (eq @index 0)}}
-            <input type="text" name="data.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number" />
+            <div class="input-value-base">
+              <input type="text" name="data.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"
+                title="Actuelle" />
+              <span>(</span>
+              <input type="text" name="data.skills.{{key}}.base" value="{{skill.base}}" data-dtype="Number"
+                title="De base" />
+              <span>)</span>
+            </div>
             {{/if}}
             {{#if (gte @index 1)}}
             <h4 class="item-name">{{skill.value}}</h4>
@@ -194,7 +210,14 @@
             <i class="fas fa-bullseye" title="{{cristal.data.target}}"></i>
           </div>
           <div class="item-value">
-            <input type="text" name="cristal.data.level" value="{{cristal.data.level}}" data-dtype="Number" disabled />
+            <div class="input-value-base">
+              <input type="text" name="cristal.data.level" value="{{cristal.data.level}}" data-dtype="Number" disabled
+                title="Actuel" />
+              <span>(</span>
+              <input type="text" name="cristal.data.base" value="{{cristal.data.base}}" data-dtype="Number" disabled
+                title="De base" />
+              <span>)</span>
+            </div>
           </div>
           <div class="item-controls">
             <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="pou" data-cristalKey="{{id}}"
