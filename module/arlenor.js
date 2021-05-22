@@ -48,6 +48,58 @@ Hooks.once('init', async function () {
   });
 });
 
+Hooks.once("ready", async function () {
+  // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
+  Hooks.on("hotbarDrop", (bar, data, slot) => createArlenorMacro(data, slot));
+});
+
+/* -------------------------------------------- */
+/*  Hotbar Macros                               */
+/* -------------------------------------------- */
+
+/**
+ * Create a Macro from an Item drop.
+ * Get an existing item macro if one exists, otherwise create a new one.
+ * @param {Object} data     The dropped data
+ * @param {number} slot     The hotbar slot to use
+ * @returns {Promise}
+ */
+async function createArlenorMacro(data, slot) {
+  console.warn(data, data.type);
+  if (data.type !== "Item") return ui.notifications.warn("Ce n'est pas un objet.");
+  if (!("data" in data)) return ui.notifications.warn("Ce n'est pas les données d'un objet.");
+  const item = data.data;
+  if (item.type !== "cristal") return ui.notifications.warn("Ce n'est pas un cristal.");
+
+  // Récupération de l'index du cristal
+  const actor = game.actors.get(data.actorId);
+  const cristals = [];
+  for (let i of actor.data.items) {
+    if (i.type === 'cristal') {
+      cristals.push(i);
+    }
+  }
+  cristals.sort(function (a, b) {
+    return a._id.localeCompare(b._id);
+  });
+  const indexCristal = cristals.findIndex(crist => crist._id === item._id);
+
+  // Create the macro command
+  const command = `game.arlenor.rollArlenor('pou', null, "${indexCristal}");`;
+  let macro = game.macros.entities.find(m => (m.name === item.name) && (m.command === command));
+  if (!macro) {
+    macro = await Macro.create({
+      name: item.name,
+      type: "script",
+      img: item.img,
+      command: command,
+      flags: { "arlenor.itemMacro": true }
+    });
+  }
+  game.user.assignHotbarMacro(macro, slot);
+  return false;
+}
+
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
@@ -111,10 +163,10 @@ export function rollSkill(actor, caractKey, skillKey, cristalKey, bonusMalus) {
         cristals.push(i);
       }
     }
-    let indexKey = parseInt(cristalKey, 10);
     cristals.sort(function (a, b) {
       return a._id.localeCompare(b._id);
     });
+    let indexKey = parseInt(cristalKey, 10);
     if (indexKey < cristals.length) {
       let cristal = cristals[indexKey].data.level;
       label = cristals[indexKey].name;
