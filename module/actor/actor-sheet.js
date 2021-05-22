@@ -178,7 +178,6 @@ export class ArlenorActorSheet extends ActorSheet {
     // Iterate through items, allocating to containers
     // let totalWeight = 0;
     for (let i of sheetData.items) {
-      let item = i.data;
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
       if (i.type === 'item') {
@@ -201,7 +200,7 @@ export class ArlenorActorSheet extends ActorSheet {
     }
 
     cristals.sort(function (a, b) {
-      return a._id.localeCompare(b._id);
+      return a.name.localeCompare(b.name);
     });
 
     // Assign and return
@@ -312,6 +311,6 @@ export class ArlenorActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
-    rollSkill(this.actor, dataset.caractkey, dataset.skillkey, dataset.cristalkey, dataset.bonusmalus);
+    rollSkill(this.actor, dataset.caractkey, dataset.skillkey, dataset.cristalid, dataset.bonusmalus);
   }
 }

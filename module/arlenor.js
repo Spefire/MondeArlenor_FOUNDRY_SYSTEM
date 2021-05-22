@@ -65,27 +65,13 @@ Hooks.once("ready", async function () {
  * @returns {Promise}
  */
 async function createArlenorMacro(data, slot) {
-  console.warn(data, data.type);
   if (data.type !== "Item") return ui.notifications.warn("Ce n'est pas un objet.");
   if (!("data" in data)) return ui.notifications.warn("Ce n'est pas les données d'un objet.");
   const item = data.data;
   if (item.type !== "cristal") return ui.notifications.warn("Ce n'est pas un cristal.");
 
-  // Récupération de l'index du cristal
-  const actor = game.actors.get(data.actorId);
-  const cristals = [];
-  for (let i of actor.data.items) {
-    if (i.type === 'cristal') {
-      cristals.push(i);
-    }
-  }
-  cristals.sort(function (a, b) {
-    return a._id.localeCompare(b._id);
-  });
-  const indexCristal = cristals.findIndex(crist => crist._id === item._id);
-
   // Create the macro command
-  const command = `game.arlenor.rollArlenor('pou', null, "${indexCristal}");`;
+  const command = `game.arlenor.rollArlenor('pou', null, '${item._id}');`;
   let macro = game.macros.entities.find(m => (m.name === item.name) && (m.command === command));
   if (!macro) {
     macro = await Macro.create({
@@ -104,17 +90,17 @@ async function createArlenorMacro(data, slot) {
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
 
-function rollArlenor(caractKey, skillKey, cristalKey) {
+function rollArlenor(caractKey, skillKey, cristalId) {
   const speaker = ChatMessage.getSpeaker();
   let actor;
   if (speaker.token) actor = game.actors.tokens[speaker.token];
   if (!actor) actor = game.actors.get(speaker.actor);
   if (!actor) actor = game.actors.find(act => act.owner);
-  if (actor) rollSkill(actor, caractKey, skillKey, cristalKey, 0);
+  if (actor) rollSkill(actor, caractKey, skillKey, cristalId, 0);
   else console.error("Il n'y a pas de personnage valide.");
 }
 
-export function rollSkill(actor, caractKey, skillKey, cristalKey, bonusMalus) {
+export function rollSkill(actor, caractKey, skillKey, cristalId, bonusMalus) {
   // Re-calculate health levels
   const race = actor.data.data.attributes.race;
   const races = actor.data.data.races;
@@ -156,20 +142,16 @@ export function rollSkill(actor, caractKey, skillKey, cristalKey, bonusMalus) {
     if (skill === 0) skill = -4;
     rollCmd += "+" + skill;
   }
-  if (cristalKey !== null && cristalKey !== undefined) {
-    const cristals = [];
+  if (cristalId !== null && cristalId !== undefined) {
+    let cristalItem = null;
     for (let i of actor.data.items) {
-      if (i.type === 'cristal') {
-        cristals.push(i);
+      if (i.type === 'cristal' && i._id === cristalId) {
+        cristalItem = i;
       }
     }
-    cristals.sort(function (a, b) {
-      return a._id.localeCompare(b._id);
-    });
-    let indexKey = parseInt(cristalKey, 10);
-    if (indexKey < cristals.length) {
-      let cristal = cristals[indexKey].data.level;
-      label = cristals[indexKey].name;
+    if (cristalItem) {
+      let cristal = cristalItem.data.level;
+      label = cristalItem.name;
       if (cristal === 0) cristal = -4;
       rollCmd += "+" + cristal;
     } else {
