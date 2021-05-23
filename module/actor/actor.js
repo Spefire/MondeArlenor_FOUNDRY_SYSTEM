@@ -10,30 +10,58 @@ export class ArlenorActor extends Actor {
   prepareData() {
     super.prepareData();
 
-    /*const actorData = this.data;
-    const data = actorData.data;
-    const flags = actorData.flags;
+    const actorData = this.data;
 
-    // Make separate methods for each Actor type (character, npc, etc.) to keep
-    // things organized.
-    if (actorData.type === 'character') this._prepareCharacterData(actorData);
-    else if (actorData.type === 'creature') this._prepareCharacterData(actorData);
-    else if (actorData.type === 'pnj') this._prepareCharacterData(actorData);*/
+    // Prepare items.
+    if (actorData.type == 'character') {
+      this._prepareCharacterHealth(actorData, true);
+    }
+    if (actorData.type == 'creature') {
+      this._prepareCharacterHealth(actorData, false);
+    }
   }
 
   /**
-   * Prepare Character type specific data
+   * Update health stats.
+   *
+   * @param {Object} actorData The actor to prepare.
+   *
+   * @return {undefined}
    */
-  /*_prepareCharacterData(actorData) {
-    const data = actorData.data;
+  _prepareCharacterHealth(actorData, withRaces = false) {
 
-    // Make modifications to data here. For example:
+    const caracts = actorData.data.caracts;
+    const safe = actorData.data.healthLevels.safe;
+    const injured = actorData.data.healthLevels.injured;
+    const seriously = actorData.data.healthLevels.seriously;
+    const underdeath = actorData.data.healthLevels.underdeath;
 
-    // Loop through caract scores, and add their modifiers to our sheet output.
-    for (let [key, caract] of Object.entries(data.caracts)) {
-      // Calculate the modifier using d20 rules.
-      caract.mod = Math.floor((caract.value - 10) / 2);
+    // Assign and return
+    safe.max = 2;
+    injured.max = 2;
+    seriously.max = 2;
+    underdeath.max = 2;
+
+    if (withRaces) {
+      const race = actorData.data.attributes.race;
+      const races = actorData.data.races;
+
+      if (race === races[1].code
+        || race === races[4].code) {
+        seriously.max = 1;
+      }
+      if (race === races[2].code
+        || race === races[5].code) {
+        seriously.max = 3;
+      }
     }
-  }*/
 
+    if (caracts.vig.value === 1) {
+      safe.max = 1;
+    } else if (caracts.vig.value === 5) {
+      safe.max = 3;
+    }
+
+    actorData.data.health.max = safe.max + injured.max + seriously.max + underdeath.max;
+  }
 }
