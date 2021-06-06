@@ -9,7 +9,7 @@
     <!-- Sheet Tab Navigation -->
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="properties">Propriétés</a>
-        <a class="item" data-tab="description">Notes</a>
+        <a class="item" data-tab="description">Détail des maitrises</a>
     </nav>
 
     <!-- Sheet Body -->
@@ -29,7 +29,7 @@
                     </select>
                 </div>
                 <div class="flexrow flex-group-center">
-                    <label class="title-up-label">Niveau</label>
+                    <label class="title-up-label">Maitrise</label>
                     <div class="input-value-base">
                         <input type="text" name="data.level" value="{{data.level}}" data-dtype="Number" />
                         <span>(</span>
@@ -38,9 +38,9 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-1col">
+            <!--div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
-                    <label for="data.time" class="title-up-label">Durée</label>
+                    <label for="data.time" class="title-up-label">Durée max</label>
                     <select name="data.time">
                         {{#select data.time }}
                         {{#each data.times }}
@@ -50,7 +50,7 @@
                     </select>
                 </div>
                 <div class="flexrow flex-group-center">
-                    <label for="data.target" class="title-up-label">Portée</label>
+                    <label for="data.target" class="title-up-label">Portée max</label>
                     <select name="data.target">
                         {{#select data.target }}
                         {{#each data.targets }}
@@ -59,7 +59,7 @@
                         {{/select}}
                     </select>
                 </div>
-            </div>
+            </div-->
         </div>
 
         <!-- Description Tab -->

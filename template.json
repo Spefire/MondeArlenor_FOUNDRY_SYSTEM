@@ -187,12 +187,10 @@
           "spec": "",
           "specs": [
             "Archéologie",
-            "Armurerie",
             "Contrefaçon",
-            "Comédie",
-            "Écriture",
-            "Musique",
-            "Peinture"
+            "Crochetage",
+            "Type d'art",
+            "Type d'artisanat"
           ]
         },
         "ath": {
@@ -216,7 +214,8 @@
           "name": "Combat",
           "caracts": [
             "vig",
-            "hab"
+            "hab",
+            "int"
           ],
           "value": 0,
           "spec": "",
@@ -225,6 +224,7 @@
             "Armes à feu",
             "Armes à une main",
             "Armes à deux mains",
+            "Mains nues",
             "Esquive",
             "Parade"
           ]

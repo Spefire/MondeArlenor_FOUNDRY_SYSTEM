@@ -191,8 +191,8 @@
         <li class="item flexrow item-header">
           <div class="item-image"></div>
           <div class="item-name">Nom</div>
-          <div class="item-value"></div>
-          <div class="item-value">Niveau</div>
+          <div class="item-name">Famille</div>
+          <div class="item-value">Maitrise</div>
           <div class="item-controls">Lancés</div>
           <div class="item-controls">
             <a class="item-control item-create" title="Ajouter cristal" data-type="cristal">
@@ -204,11 +204,12 @@
         <li class="item flexrow with-drag" data-item-id="{{cristal._id}}">
           <div class="item-image"><img src="{{cristal.img}}" width="24" height="24" /></div>
           <h4 class="item-name">{{cristal.name}}</h4>
-          <div class="item-details">
+          <h4 class="item-name">{{cristal.data.family}}</h4>
+          <!--div class="item-details">
             <i class="fas fa-book-open" title="{{cristal.data.family}}"></i>
             <i class="fas fa-hourglass-half" title="{{cristal.data.time}}"></i>
             <i class="fas fa-bullseye" title="{{cristal.data.target}}"></i>
-          </div>
+          </div-->
           <div class="item-value">
             <div class="input-value-base">
               <input type="text" name="cristal.data.level" value="{{cristal.data.level}}" data-dtype="Number" disabled
@@ -331,8 +332,8 @@
         <li class="item flexrow item-header">
           <div class="item-image"></div>
           <div class="item-name">Nom</div>
-          <div class="item-value"></div>
-          <div class="item-value">Niveau</div>
+          <div class="item-name">Famille</div>
+          <div class="item-value">Maitrise</div>
           <div class="item-controls">Lancés</div>
           <div class="item-controls">
             <a class="item-control item-create" title="Ajouter cristal" data-type="cristal">
@@ -344,11 +345,12 @@
         <li class="item flexrow" data-item-id="{{cristal._id}}">
           <div class="item-image"><img src="{{cristal.img}}" width="24" height="24" /></div>
           <h4 class="item-name">{{cristal.name}}</h4>
-          <div class="item-details">
+          <h4 class="item-name">{{cristal.data.family}}</h4>
+          <!--div class="item-details">
             <i class="fas fa-book-open" title="{{cristal.data.family}}"></i>
             <i class="fas fa-hourglass-half" title="{{cristal.data.time}}"></i>
             <i class="fas fa-bullseye" title="{{cristal.data.target}}"></i>
-          </div>
+          </div-->
           <div class="item-value">
             <input type="text" name="cristal.data.level" value="{{cristal.data.level}}" data-dtype="Number" disabled />
           </div>

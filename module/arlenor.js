@@ -65,7 +65,7 @@ Hooks.once("ready", async function () {
  * @returns {Promise}
  */
 async function createArlenorMacro(data, slot) {
-  if (data.type !== "Item") return ui.notifications.warn("Ce n'est pas un objet.");
+  if (data.type !== "Item") return false;
   if (!("data" in data)) return ui.notifications.warn("Ce n'est pas les données d'un objet.");
   const item = data.data;
   if (item.type !== "cristal") return ui.notifications.warn("Ce n'est pas un cristal.");
@@ -150,10 +150,10 @@ export function rollSkill(actor, caractKey, skillKey, cristalId, bonusMalus) {
       }
     }
     if (cristalItem) {
-      let cristal = cristalItem.data.level;
+      // let cristal = cristalItem.data.level;
       label = cristalItem.name;
-      if (cristal === 0) cristal = -4;
-      rollCmd += "+" + cristal;
+      /*if (cristal === 0) cristal = -4;
+      rollCmd += "+" + cristal;*/
     } else {
       console.error("Cristal non disponible");
     }
@@ -186,15 +186,30 @@ export function rollSkill(actor, caractKey, skillKey, cristalId, bonusMalus) {
     roll._formula = roll.formula;
     roll._total = roll.total + rollSuccess.total;
 
-    roll.toMessage({
-      speaker: ChatMessage.getSpeaker({ actor: actor }),
-      flavor: rollLabel + " : Succès critique"
-    });
+    rollLabel = rollLabel + " : Succès critique";
   }
-  else {
-    roll.toMessage({
-      speaker: ChatMessage.getSpeaker({ actor: actor }),
-      flavor: rollLabel
-    });
+
+  /*
+  - Action simple : Difficulté 6.
+  - Action complexe : Difficulté 14.
+  - Action difficile : Difficulté 20.
+  - Action épique : Difficulté 30 et plus.
+  */
+
+  if (roll._total >= 30) {
+    rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Epique</b>."
+  } else if (roll._total >= 20) {
+    rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Difficile</b>."
+  } else if (roll._total >= 14) {
+    rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Complexe</b>."
+  } else if (roll._total >= 6) {
+    rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Simple</b>."
+  } else {
+    rollLabel = rollLabel + ". <br/>Jet <b>raté</b>."
   }
+
+  roll.toMessage({
+    speaker: ChatMessage.getSpeaker({ actor: actor }),
+    flavor: rollLabel
+  });
 }
