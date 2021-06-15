@@ -102,7 +102,7 @@ function rollArlenor(caractKey, skillKey, cristalId) {
 
 export function rollSkill(actor, caractKey, skillKey, cristalId, bonusMalus) {
   // Re-calculate health levels
-  const race = actor.data.data.attributes.race;
+  const race = actor.data.data.attributes?.race;
   const races = actor.data.data.races;
   const injured = actor.data.data.healthLevels.injured;
   const seriously = actor.data.data.healthLevels.seriously;
@@ -114,13 +114,15 @@ export function rollSkill(actor, caractKey, skillKey, cristalId, bonusMalus) {
   seriously.max = 2;
   underdeath.max = 2;
 
-  if (race === races[1].code
-    || race === races[4].code) {
-    seriously.max = 1;
-  }
-  if (race === races[2].code
-    || race === races[5].code) {
-    seriously.max = 3;
+  if (race) {
+    if (race === races[1].code
+      || race === races[4].code) {
+      seriously.max = 1;
+    }
+    if (race === races[2].code
+      || race === races[5].code) {
+      seriously.max = 3;
+    }
   }
 
   let caract = caracts[caractKey].value;
@@ -175,41 +177,43 @@ export function rollSkill(actor, caractKey, skillKey, cristalId, bonusMalus) {
       flavor: rollLabel + " : Echec critique"
     });
   }
-  else if (caract !== 0 && roll.results[0] === caract * 6) {
-    let rollSuccess = new Roll("1d6", {});
-    rollSuccess = rollSuccess.roll();
+  else {
+    if (caract !== 0 && roll.results[0] === caract * 6) {
+      let rollSuccess = new Roll("1d6", {});
+      rollSuccess = rollSuccess.roll();
 
-    roll.terms.push("+");
-    roll.terms.push(rollSuccess.terms[0]);
-    roll.results.push("+");
-    roll.results.push(rollSuccess.results[0]);
-    roll._formula = roll.formula;
-    roll._total = roll.total + rollSuccess.total;
+      roll.terms.push("+");
+      roll.terms.push(rollSuccess.terms[0]);
+      roll.results.push("+");
+      roll.results.push(rollSuccess.results[0]);
+      roll._formula = roll.formula;
+      roll._total = roll.total + rollSuccess.total;
 
-    rollLabel = rollLabel + " : Succès critique";
+      rollLabel = rollLabel + " : Succès critique";
+    }
+
+    /*
+    - Action simple : Difficulté 6.
+    - Action complexe : Difficulté 14.
+    - Action difficile : Difficulté 20.
+    - Action épique : Difficulté 30 et plus.
+    */
+
+    if (roll._total >= 30) {
+      rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Epique</b>."
+    } else if (roll._total >= 20) {
+      rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Difficile</b>."
+    } else if (roll._total >= 14) {
+      rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Complexe</b>."
+    } else if (roll._total >= 6) {
+      rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Simple</b>."
+    } else {
+      rollLabel = rollLabel + ". <br/>Jet <b>raté</b>."
+    }
+
+    roll.toMessage({
+      speaker: ChatMessage.getSpeaker({ actor: actor }),
+      flavor: rollLabel
+    });
   }
-
-  /*
-  - Action simple : Difficulté 6.
-  - Action complexe : Difficulté 14.
-  - Action difficile : Difficulté 20.
-  - Action épique : Difficulté 30 et plus.
-  */
-
-  if (roll._total >= 30) {
-    rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Epique</b>."
-  } else if (roll._total >= 20) {
-    rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Difficile</b>."
-  } else if (roll._total >= 14) {
-    rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Complexe</b>."
-  } else if (roll._total >= 6) {
-    rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Simple</b>."
-  } else {
-    rollLabel = rollLabel + ". <br/>Jet <b>raté</b>."
-  }
-
-  roll.toMessage({
-    speaker: ChatMessage.getSpeaker({ actor: actor }),
-    flavor: rollLabel
-  });
 }
