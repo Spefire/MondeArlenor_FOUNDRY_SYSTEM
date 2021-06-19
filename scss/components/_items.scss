@@ -61,5 +61,15 @@
     a {
       margin: 0 5px;
     }
+
+    &.combat-roll {
+      display: flex;
+      justify-content: center;
+
+      img {
+        display: inline-block;
+        margin-right: 5px;
+      }
+    }
   }
 }

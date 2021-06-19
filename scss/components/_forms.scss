@@ -1,3 +1,7 @@
+form.editable {
+  min-width: 620px;
+}
+
 .item-form {
   font-family: $font-primary;
 }
@@ -66,6 +70,10 @@
 .sheet-body .tab,
 .sheet-body .tab .editor {
   height: 100%;
+
+  &.height-auto {
+    height: auto;
+  }
 }
 
 .tox {

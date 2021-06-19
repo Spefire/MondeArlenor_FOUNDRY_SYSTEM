@@ -131,6 +131,10 @@
 }
 
 /* Styles limited to arlenor sheets */
+.arlenor form.editable {
+  min-width: 620px;
+}
+
 .arlenor .item-form {
   font-family: "Roboto", sans-serif;
 }
@@ -223,6 +227,12 @@
 .arlenor .sheet-body .tab,
 .arlenor .sheet-body .tab .editor {
   height: 100%;
+}
+
+.arlenor .sheet-body.height-auto,
+.arlenor .sheet-body .tab.height-auto,
+.arlenor .sheet-body .tab .editor.height-auto {
+  height: auto;
 }
 
 .arlenor .tox .tox-editor-container {
@@ -351,4 +361,18 @@
 
 .arlenor .items-list .item-controls a {
   margin: 0 5px;
+}
+
+.arlenor .items-list .item-controls.combat-roll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.arlenor .items-list .item-controls.combat-roll img {
+  display: inline-block;
+  margin-right: 5px;
 }
