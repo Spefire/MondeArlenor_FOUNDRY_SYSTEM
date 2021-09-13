@@ -22,8 +22,8 @@ Hooks.once('init', async function () {
   };
 
   // Define custom Entity classes
-  CONFIG.Actor.entityClass = ArlenorActor;
-  CONFIG.Item.entityClass = ArlenorItem;
+  CONFIG.Actor.documentClass = ArlenorActor;
+  CONFIG.Item.documentClass = ArlenorItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
@@ -71,7 +71,7 @@ async function createArlenorMacro(data, slot) {
   if (item.type !== "cristal") return ui.notifications.warn("Ce n'est pas un cristal.");
 
   // Create the macro command
-  const command = `game.arlenor.rollArlenor('pou', null, '${item._id}');`;
+  const command = `game.arlenor.rollArlenor('pou', null, '${item.id}');`;
   let macro = game.macros.entities.find(m => (m.name === item.name) && (m.command === command));
   if (!macro) {
     macro = await Macro.create({
@@ -95,12 +95,13 @@ function rollArlenor(caractKey, skillKey, cristalId) {
   let actor;
   if (speaker.token) actor = game.actors.tokens[speaker.token];
   if (!actor) actor = game.actors.get(speaker.actor);
-  if (!actor) actor = game.actors.find(act => act.owner);
+  if (!actor) actor = game.actors.find(act => act.isOwner);
   if (actor) rollSkill(actor, caractKey, skillKey, cristalId, 0);
   else console.error("Il n'y a pas de personnage valide.");
 }
 
-export function rollSkill(actor, caractKey, skillKey, cristalId, bonusMalus) {
+export async function rollSkill(actor, caractKey, skillKey, cristalId, bonusMalus) {
+
   // Re-calculate health levels
   const race = actor.data.data.attributes?.race;
   const races = actor.data.data.races;
@@ -136,7 +137,7 @@ export function rollSkill(actor, caractKey, skillKey, cristalId, bonusMalus) {
 
   // Create rolling command
   let label = caracts[caractKey].name;
-  let rollCmd = "(" + caract + ")d6";
+  let rollCmd = "" + caract + "d6";
   if (skillKey !== null && skillKey !== undefined) {
     const skills = actor.data.data.skills;
     let skill = skills[skillKey].value;
@@ -147,45 +148,45 @@ export function rollSkill(actor, caractKey, skillKey, cristalId, bonusMalus) {
   if (cristalId !== null && cristalId !== undefined) {
     let cristalItem = null;
     for (let i of actor.data.items) {
-      if (i.type === 'cristal' && i._id === cristalId) {
+      if (i.type === 'cristal' && i.id === cristalId) {
         cristalItem = i;
       }
     }
     if (cristalItem) {
-      // let cristal = cristalItem.data.level;
       label = cristalItem.name;
-      /*if (cristal === 0) cristal = -4;
-      rollCmd += "+" + cristal;*/
     } else {
       console.error("Cristal non disponible");
+      return;
     }
   }
   if (bonusMalus !== null && bonusMalus !== undefined && bonusMalus !== 0) {
-    if (bonusMalus < 0) label += " avec malus";
-    if (bonusMalus > 0) label += " avec bonus";
+    if (bonusMalus.indexOf('-4') === 0) label += " avec malus";
+    if (bonusMalus.indexOf('+4') === 0) label += " avec bonus";
     rollCmd += "+" + bonusMalus;
   }
 
   // Roll once
   let roll = new Roll(rollCmd, {});
   let rollLabel = `Lance <b>${label}</b>`;
-  roll = roll.roll();
+  roll = await roll.roll({ async: true });
 
-  if (caract !== 0 && roll.results[0] === caract) {
+  if (caract !== 0 && roll.dice[0].total === caract) {
     roll.toMessage({
       speaker: ChatMessage.getSpeaker({ actor: actor }),
       flavor: rollLabel + " : Echec critique"
     });
   }
   else {
-    if (caract !== 0 && roll.results[0] === caract * 6) {
+    if (caract !== 0 && roll.dice[0].total === caract * 6) {
       let rollSuccess = new Roll("1d6", {});
-      rollSuccess = rollSuccess.roll();
+      rollSuccess = await rollSuccess.roll({ async: true });
 
-      roll.terms.push("+");
+      const opePlus = new OperatorTerm();
+      opePlus.operator = "+";
+      opePlus._evaluated = true;
+
+      roll.terms.push(opePlus);
       roll.terms.push(rollSuccess.terms[0]);
-      roll.results.push("+");
-      roll.results.push(rollSuccess.results[0]);
       roll._formula = roll.formula;
       roll._total = roll.total + rollSuccess.total;
 
@@ -210,6 +211,10 @@ export function rollSkill(actor, caractKey, skillKey, cristalId, bonusMalus) {
     } else {
       rollLabel = rollLabel + ". <br/>Jet <b>raté</b>."
     }
+
+    roll._formula = roll._formula.replaceAll('  ', ' ');
+    roll._formula = roll._formula.replaceAll('+ -', '-');
+    roll._formula = roll._formula.replaceAll('+ +', '+');
 
     roll.toMessage({
       speaker: ChatMessage.getSpeaker({ actor: actor }),

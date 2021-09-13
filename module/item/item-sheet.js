@@ -29,8 +29,16 @@ export class ArlenorItemSheet extends ItemSheet {
 
   /** @override */
   getData() {
-    const data = super.getData();
-    return data;
+    const baseData = super.getData();
+
+    let sheetData = {
+      owner: this.item.isOwner,
+      editable: this.isEditable,
+      item: baseData.item,
+      data: baseData.item.data.data
+    };
+
+    return sheetData;
   }
 
   /* -------------------------------------------- */

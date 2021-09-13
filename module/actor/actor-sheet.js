@@ -21,26 +21,31 @@ export class ArlenorActorSheet extends ActorSheet {
 
   /** @override */
   getData() {
-    const data = super.getData();
-    data.dtypes = ["String", "Number", "Boolean"];
+    const baseData = super.getData();
+    baseData.dtypes = ["String", "Number", "Boolean"];
 
     // Prepare items.
     if (this.actor.data.type == 'character') {
-      this._prepareCharacterHealth(data, true);
-      this._prepareCharacterInit(data);
-      this._prepareCharacterSkills(data);
-      this._prepareCharacterItems(data);
+      this._prepareCharacterHealth(baseData, true);
+      this._prepareCharacterInit(baseData);
+      this._prepareCharacterSkills(baseData);
+      this._prepareCharacterItems(baseData);
     }
     if (this.actor.data.type == 'creature') {
-      this._prepareCharacterHealth(data, false);
-      this._prepareCharacterInit(data);
-      this._prepareCharacterSkills(data);
-      this._prepareCharacterItems(data);
+      this._prepareCharacterHealth(baseData, false);
+      this._prepareCharacterInit(baseData);
+      this._prepareCharacterSkills(baseData);
+      this._prepareCharacterItems(baseData);
     }
 
-    // console.warn('data', data);
+    let sheetData = {
+      owner: this.actor.isOwner,
+      editable: this.isEditable,
+      actor: baseData.actor,
+      data: baseData.actor.data.data
+    };
 
-    return data;
+    return sheetData;
   }
 
   /**
@@ -51,7 +56,7 @@ export class ArlenorActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterHealth(sheetData, withRaces = false) {
-    const actorData = sheetData.actor;
+    const actorData = sheetData.actor.data;
 
     const caracts = actorData.data.caracts;
     const safe = actorData.data.healthLevels.safe;
@@ -122,7 +127,7 @@ export class ArlenorActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterInit(sheetData) {
-    const actorData = sheetData.actor;
+    const actorData = sheetData.actor.data;
 
     const hab = actorData.data.caracts.hab;
     const int = actorData.data.caracts.int;
@@ -139,7 +144,7 @@ export class ArlenorActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterSkills(sheetData) {
-    const actorData = sheetData.actor;
+    const actorData = sheetData.actor.data;
 
     // Assign and return
     const skills = actorData.data.skills;
@@ -160,7 +165,7 @@ export class ArlenorActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterItems(sheetData) {
-    const actorData = sheetData.actor;
+    const actorData = sheetData.actor.data;
 
     // Initialize containers.
     const gear = [];
@@ -225,19 +230,19 @@ export class ArlenorActorSheet extends ActorSheet {
 
     // Modify inline Inventory Item
     html.find('.inline-edit-check').click(this._onItemModifyCheck.bind(this));
-    html.find('.inline-edit-value').click(this._onItemModifyValue.bind(this));
+    html.find('.inline-edit-value').change(this._onItemModifyValue.bind(this));
 
     // Update Inventory Item
     html.find('.item-edit').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
       item.sheet.render(true);
     });
 
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      this.actor.deleteOwnedItem(li.data("itemId"));
+      this.actor.deleteEmbeddedDocuments("Item", [li.data("itemId")]);
       li.slideUp(200, () => this.render(false));
     });
 
@@ -245,7 +250,7 @@ export class ArlenorActorSheet extends ActorSheet {
     html.find('.rollable').click(this._onRoll.bind(this));
 
     // Drag events for macros.
-    if (this.actor.owner) {
+    if (this.actor.isOwner) {
       let handler = ev => this._onDragStart(ev);
       html.find('li.item').each((i, li) => {
         if (li.classList.contains("inventory-header")) return;
@@ -281,14 +286,14 @@ export class ArlenorActorSheet extends ActorSheet {
     delete itemData.data["type"];
 
     // Finally, create the item!
-    return this.actor.createOwnedItem(itemData);
+    return this.actor.createEmbeddedDocuments("Item", [itemData]);
   }
 
   _onItemModifyCheck(event) {
     event.preventDefault();
     const element = event.currentTarget;
     const itemId = element.closest(".item").dataset.itemId;
-    let item = this.actor.getOwnedItem(itemId);
+    let item = this.actor.items.get(itemId);
     let field = element.dataset.field;
     return item.update({ [field]: element.checked });
   }
@@ -297,7 +302,7 @@ export class ArlenorActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const itemId = element.closest(".item").dataset.itemId;
-    let item = this.actor.getOwnedItem(itemId);
+    let item = this.actor.items.get(itemId);
     let field = element.dataset.field;
     return item.update({ [field]: element.value });
   }
