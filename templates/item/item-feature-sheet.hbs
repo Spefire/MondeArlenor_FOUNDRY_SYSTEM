@@ -19,10 +19,10 @@
             <!-- As you add new fields, add them in here! -->
             <div class="grid grid-1col">
                 <div class="flexrow flex-group-center grid-one">
-                    <label for="data.featureType" class="title-up-label">Type d'équipement</label>
-                    <select name="data.featureType">
-                        {{#select data.featureType }}
-                        {{#each data.featureTypes }}
+                    <label for="system.featureType" class="title-up-label">Type d'équipement</label>
+                    <select name="system.featureType">
+                        {{#select system.featureType }}
+                        {{#each system.featureTypes }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}
@@ -32,18 +32,24 @@
             <div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
                     <label class="title-up-label">Attaque</label>
-                    <input type="text" name="data.attack" value="{{data.attack}}" data-dtype="Number" />
+                    <input type="text" name="system.attack" value="{{system.attack}}" data-dtype="Number" />
                 </div>
                 <div class="flexrow flex-group-center">
                     <label class="title-up-label">Défense</label>
-                    <input type="text" name="data.defence" value="{{data.defence}}" data-dtype="Number" />
+                    <input type="text" name="system.defence" value="{{system.defence}}" data-dtype="Number" />
                 </div>
             </div>
         </div>
 
         <!-- Description Tab -->
         <div class="tab" data-group="primary" data-tab="description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            {{
+                editor
+                enrichedBiography
+                target="system.description"
+                editable=editable
+                button=true
+            }}
         </div>
 
     </section>

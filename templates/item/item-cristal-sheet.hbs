@@ -19,10 +19,10 @@
             <!-- As you add new fields, add them in here! -->
             <div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
-                    <label for="data.family" class="title-up-label">Famille</label>
-                    <select name="data.family">
-                        {{#select data.family }}
-                        {{#each data.families }}
+                    <label for="system.family" class="title-up-label">Famille</label>
+                    <select name="system.family">
+                        {{#select system.family }}
+                        {{#each system.families }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}
@@ -31,40 +31,46 @@
                 <div class="flexrow flex-group-center">
                     <label class="title-up-label">Maitrise</label>
                     <div class="input-value-base">
-                        <input type="text" name="data.level" value="{{data.level}}" data-dtype="Number" />
+                        <input type="text" name="system.level" value="{{system.level}}" data-dtype="Number" />
                         <span>(</span>
-                        <input type="text" name="data.base" value="{{data.base}}" data-dtype="Number" />
+                        <input type="text" name="system.base" value="{{system.base}}" data-dtype="Number" />
                         <span>)</span>
                     </div>
                 </div>
             </div>
-            <!--div class="grid grid-1col">
+            <div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
-                    <label for="data.time" class="title-up-label">Durée max</label>
-                    <select name="data.time">
-                        {{#select data.time }}
-                        {{#each data.times }}
+                    <label for="system.time" class="title-up-label">Durée max</label>
+                    <select name="system.time">
+                        {{#select system.time }}
+                        {{#each system.times }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
                 </div>
                 <div class="flexrow flex-group-center">
-                    <label for="data.target" class="title-up-label">Portée max</label>
-                    <select name="data.target">
-                        {{#select data.target }}
-                        {{#each data.targets }}
+                    <label for="system.target" class="title-up-label">Portée max</label>
+                    <select name="system.target">
+                        {{#select system.target }}
+                        {{#each system.targets }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
                 </div>
-            </div-->
+            </div>
         </div>
 
         <!-- Description Tab -->
         <div class="tab" data-group="primary" data-tab="description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            {{
+                editor
+                enrichedBiography
+                target="system.description"
+                editable=editable
+                button=true
+            }}
         </div>
 
     </section>

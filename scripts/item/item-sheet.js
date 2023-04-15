@@ -22,7 +22,7 @@ export class ArlenorItemSheet extends ItemSheet {
 
     // Alternatively, you could use the following return statement to do a
     // unique item sheet by type, like `weapon-sheet.hbs`.
-    return `${path}/item-${this.item.data.type}-sheet.hbs`;
+    return `${path}/item-${this.item.type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */
@@ -31,11 +31,11 @@ export class ArlenorItemSheet extends ItemSheet {
   getData() {
     const baseData = super.getData();
 
+    // Return data for the "item-sheet.hbs"
     let sheetData = {
-      owner: this.item.isOwner,
       editable: this.isEditable,
-      item: baseData.item,
-      data: baseData.item.data.data
+      item: this.item,
+      system: this.item.system
     };
 
     return sheetData;
@@ -60,7 +60,5 @@ export class ArlenorItemSheet extends ItemSheet {
 
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
-
-    // Roll handlers, click handlers, etc. would go here.
   }
 }

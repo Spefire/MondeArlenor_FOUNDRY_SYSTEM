@@ -19,10 +19,10 @@
             <!-- As you add new fields, add them in here! -->
             <div class="grid grid-1col">
                 <div class="flexrow flex-group-center grid-one">
-                    <label for="data.itemType" class="title-up-label">Type d'objet</label>
-                    <select name="data.itemType">
-                        {{#select data.itemType }}
-                        {{#each data.itemTypes }}
+                    <label for="system.itemType" class="title-up-label">Type d'objet</label>
+                    <select name="system.itemType">
+                        {{#select system.itemType }}
+                        {{#each system.itemTypes }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}
@@ -33,7 +33,13 @@
 
         <!-- Description Tab -->
         <div class="tab" data-group="primary" data-tab="description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            {{
+                editor
+                enrichedBiography
+                target="system.description"
+                editable=editable  
+                button=true 
+            }}
         </div>
 
     </section>
