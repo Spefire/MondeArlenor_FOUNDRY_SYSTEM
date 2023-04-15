@@ -39,9 +39,9 @@ export class ArlenorActorSheet extends ActorSheet {
 
     // Return data for the "actor-sheet.hbs"
     let sheetData = {
-      isEditable: this.isEditable,
+      editable: this.isEditable,
       actor: this.actor,
-      data: this.actor.system
+      system: this.actor.system
     };
 
     return sheetData;

@@ -13,12 +13,12 @@
       {{#if (eq actor.type "character")}}
       <div class="grid grid-3col">
         <div class="flex-group-center">
-          <label for="data.attributes.race" class="title-up-label">Peuple</label>
+          <label for="system.attributes.race" class="title-up-label">Peuple</label>
           <div class="flexrow flex-center flex-between">
-            <select name="data.attributes.race">
+            <select name="system.attributes.race">
               <option value=""></option>
-              {{#select data.attributes.race }}
-              {{#each data.races }}
+              {{#select system.attributes.race }}
+              {{#each system.races }}
               <option value="{{this.code}}">{{this.name}}</option>
               {{/each}}
               {{/select}}
@@ -26,12 +26,12 @@
           </div>
         </div>
         <div class="flex-group-center">
-          <label for="data.attributes.divinity" class="title-up-label">Divinité</label>
+          <label for="system.attributes.divinity" class="title-up-label">Divinité</label>
           <div class="flexrow flex-center flex-between">
-            <select name="data.attributes.divinity">
+            <select name="system.attributes.divinity">
               <option value=""></option>
-              {{#select data.attributes.divinity }}
-              {{#each data.divinities }}
+              {{#select system.attributes.divinity }}
+              {{#each system.divinities }}
               <option value="{{this.code}}">{{this.name}}</option>
               {{/each}}
               {{/select}}
@@ -39,9 +39,9 @@
           </div>
         </div>
         <div class="flex-group-center">
-          <label for="data.attributes.level" class="title-up-label">Niveau</label>
+          <label for="system.attributes.level" class="title-up-label">Niveau</label>
           <div class="flexrow flex-center flex-between">
-            <input type="text" name="data.attributes.level" value="{{data.attributes.level}}" data-dtype="Number" />
+            <input type="text" name="system.attributes.level" value="{{system.attributes.level}}" data-dtype="Number" />
           </div>
         </div>
       </div>
@@ -54,19 +54,19 @@
   <div class="sheet-header tri-header">
     <div class="healthLevels grid grid-3col grid-full-width">
       <div class="flex-group-center grid-tiers-1">
-        <label for="data.health.value" class="title-up-label">{{data.health.name}}</label>
+        <label for="system.health.value" class="title-up-label">{{system.health.name}}</label>
         <div class="flexrow flex-center">
-          <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"
+          <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"
             title="Actuels" />
           <span> / </span>
-          <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number" title="Maximum"
+          <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number" title="Maximum"
             disabled />
         </div>
       </div>
       <div class="flex-group-center grid-tiers-2">
-        <label class="title-up-label">{{data.health.indic}}</label>
+        <label class="title-up-label">{{system.health.indic}}</label>
         <div class="flexrow flex-center">
-          {{#each data.healthLevels as |healthLevel key|}}
+          {{#each system.healthLevels as |healthLevel key|}}
           {{#if (gte healthLevel.max 3)}}
           <input type='checkbox' {{#if (gte healthLevel.value 3)}}checked{{/if}} disabled>
           {{/if}}
@@ -85,15 +85,15 @@
   <!-- Sheet Mid-Header -->
   <div class="sheet-header mid-header">
     <div class="grid grid-3col grid-full-width">
-      {{#each data.caracts as |caract key|}}
+      {{#each system.caracts as |caract key|}}
       <div class="flexrow flex-group-center">
-        <label for="data.caracts.{{key}}.value" class="title-up-label rollable"
+        <label for="system.caracts.{{key}}.value" class="title-up-label rollable"
           data-caractKey="{{key}}">{{caract.name}}</label>
         <div class="input-value-base">
-          <input type="text" name="data.caracts.{{key}}.value" value="{{caract.value}}" data-dtype="Number"
+          <input type="text" name="system.caracts.{{key}}.value" value="{{caract.value}}" data-dtype="Number"
             title="Actuel" />
           <span>(</span>
-          <input type="text" name="data.caracts.{{key}}.base" value="{{caract.base}}" data-dtype="Number"
+          <input type="text" name="system.caracts.{{key}}.base" value="{{caract.base}}" data-dtype="Number"
             title="De base" />
           <span>)</span>
         </div>
@@ -101,7 +101,7 @@
       {{/each}}
       <div class="flexrow flex-group-center">
         <label class="title-up-label">Initiative</label>
-        <label>+{{data.init}}</label>
+        <label>+{{system.init}}</label>
       </div>
     </div>
   </div>
@@ -131,13 +131,13 @@
         <li class="item flexrow item-header">
           <div class="item-name">Avec équipement</div>
           <div class="item-controls combat-roll">
-            <img src="{{data.skills.com.img.for}}" width="24" height="24" />Combat (for)
+            <img src="{{system.skills.com.img.for}}" width="24" height="24" />Combat (for)
           </div>
           <div class="item-controls combat-roll">
-            <img src="{{data.skills.com.img.hab}}" width="24" height="24" />Combat (hab)
+            <img src="{{system.skills.com.img.hab}}" width="24" height="24" />Combat (hab)
           </div>
           <div class="item-controls combat-roll">
-            <img src="{{data.skills.com.img.int}}" width="24" height="24" />Combat (int)
+            <img src="{{system.skills.com.img.int}}" width="24" height="24" />Combat (int)
           </div>
         </li>
         <li class="item flexrow">
@@ -224,7 +224,7 @@
           <div class="item-controls">Lancés</div>
         </li>
 
-        {{#each data.skills as |skill key|}}
+        {{#each system.skills as |skill key|}}
         {{#each skill.caracts as |caract keyCaract|}}
         <li class="item flexrow" data-item-id="{{skill.key}}{{caract}}">
           <div class="item-image">
@@ -234,10 +234,10 @@
           <div class="item-value">
             {{#if (eq @index 0)}}
             <div class="input-value-base">
-              <input type="text" name="data.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"
+              <input type="text" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"
                 title="Actuelle" />
               <span>(</span>
-              <input type="text" name="data.skills.{{key}}.base" value="{{skill.base}}" data-dtype="Number"
+              <input type="text" name="system.skills.{{key}}.base" value="{{skill.base}}" data-dtype="Number"
                 title="De base" />
               <span>)</span>
             </div>
@@ -248,7 +248,7 @@
           </div>
           <div class="item-spec">
             {{#if (eq @index 0)}}
-            <select name="data.skills.{{key}}.spec">
+            <select name="system.skills.{{key}}.spec">
               <option value=""></option>
               {{#select skill.spec }}
               {{#each skill.specs }}
@@ -367,7 +367,7 @@
               disabled />
           </div>
           <div class="item-type">
-            <input class="inline-edit-check" type='checkbox' data-field="data.equipped"
+            <input class="inline-edit-check" type='checkbox' data-field="feature.data.equipped"
             {{#if feature.data.equipped}}checked{{/if}}>
           </div>
           <div class="item-controls">
@@ -392,7 +392,7 @@
           <div class="item-controls">Lancés</div>
         </li>
 
-        {{#each data.skills as |skill key|}}
+        {{#each system.skills as |skill key|}}
         {{#each skill.caracts as |caract keyCaract|}}
         <li class="item flexrow" data-item-id="{{skill.key}}{{caract}}">
           <div class="item-image">
@@ -401,7 +401,7 @@
           <h4 class="item-name">{{skill.name}} ({{caract}})</h4>
           <div class="item-value">
             {{#if (eq @index 0)}}
-            <input type="text" name="data.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number" />
+            <input type="text" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number" />
             {{/if}}
             {{#if (gte @index 1)}}
             <h4 class="item-name">{{skill.value}}</h4>
@@ -486,7 +486,7 @@
           <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24" /></div>
           <h4 class="item-name">{{item.name}}</h4>
           <div class="item-value">
-            <input class="inline-edit-value" data-field="data.quantity" type="text" value="{{item.data.quantity}}"
+            <input class="inline-edit-value" data-field="item.data.quantity" type="text" value="{{item.data.quantity}}"
               data-dtype="Number" />
           </div>
           <h4 class="item-type">{{item.data.itemType}}</h4>
@@ -504,8 +504,8 @@
       {{
         editor
         enrichedBiography
-        target="data.biography"
-        editable=isEditable
+        target="system.biography"
+        editable=editable
         button=true
        }}
     </div>
