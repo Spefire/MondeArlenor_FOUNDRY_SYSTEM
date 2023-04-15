@@ -1,20 +1,41 @@
 {
-  "name": "arlenor",
-  "title": "Arlenor",
-  "description": "The Arlenor system for FoundryVTT!",
-  "version": "0.0.3",
-  "minimumCoreVersion": "0.8.7",
-  "compatibleCoreVersion": "0.8.9",
-  "templateVersion": 2,
-  "author": "Nicholas Brun (Spefire)",
-  "esmodules": [
-    "module/arlenor.js"
-  ],
-  "styles": [
-    "css/arlenor.css"
+  "id": "arlenor",
+  "title": "Le Monde d'Arlenor",
+  "description": "Système de jeu pour le JDR du Monde d'Arlenor",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10",
+    "maximum": "10"
+  },
+  "authors": [
+    {
+      "name": "Nicholas Brun, Spefire",
+      "url": "arlenor.com",
+	    "email": "spefire@gmail.com"
+    }
   ],
   "scripts": [],
-  "packs": [],
+  "esmodules": [
+    "scripts/arlenor.js"
+  ],
+  "styles": [
+    "styles/arlenor.css"
+  ],
+  "packs": [
+    {
+      "name": "monsters",
+      "label": "My Monsters",
+      "path": "packs/monsters.db",
+      "type": "Actor"
+    },
+    {
+      "name": "items",
+      "label": "My Items",
+      "path": "packs/items.db",
+      "type": "Item"
+    }
+  ],
   "languages": [
     {
       "lang": "fr",
@@ -22,11 +43,12 @@
       "path": "lang/fr.json"
     }
   ],
+  "socket": false,
+  "initiative": "1d6",
   "gridDistance": 1.5,
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
-  "url": "",
-  "manifest": "",
-  "download": "",
-  "license": "LICENSE.txt"
+  "url": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM",
+  "manifest": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/blob/master/system.json",
+  "download": ""
 }
