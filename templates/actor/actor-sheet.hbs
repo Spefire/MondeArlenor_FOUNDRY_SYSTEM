@@ -1,11 +1,15 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
 
   <!-- Sheet Header -->
-  <header {{#if (eq actor.type "character" )}}class="sheet-header" {{/if}} {{#if (ne actor.type "character" )}}
-    class="sheet-header sheet-min" {{/if}}>
+  <header
+    {{#if (eq actor.type "character" )}} class="sheet-header" {{/if}}
+    {{#if (ne actor.type "character" )}} class="sheet-header sheet-min" {{/if}}>
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+      <h1 class="charname">
+        <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+      </h1>
+
       {{#if (eq actor.type "character")}}
       <div class="grid grid-3col">
         <div class="flex-group-center">
@@ -127,7 +131,7 @@
         <li class="item flexrow item-header">
           <div class="item-name">Avec équipement</div>
           <div class="item-controls combat-roll">
-            <img src="{{data.skills.com.img.vig}}" width="24" height="24" />Combat (vig)
+            <img src="{{data.skills.com.img.for}}" width="24" height="24" />Combat (for)
           </div>
           <div class="item-controls combat-roll">
             <img src="{{data.skills.com.img.hab}}" width="24" height="24" />Combat (hab)
@@ -139,72 +143,72 @@
         <li class="item flexrow">
           <div class="item-name">Jets d'Attaque</div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="vig" data-skillKey="com"
-              data-bonusMalus="-4 + {{actor.data.bonusAttack}}">
+            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="for" data-skillKey="com"
+              data-bonusMalus="-4 + {{actor.bonusAttack}}">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caractKey="vig" data-skillKey="com"
-              data-bonusMalus="{{actor.data.bonusAttack}}">
+            <a class="item-control rollable" title="Lancé Normal" data-caractKey="for" data-skillKey="com"
+              data-bonusMalus="{{actor.bonusAttack}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="vig" data-skillKey="com"
-              data-bonusMalus="+4 + {{actor.data.bonusAttack}}">
+            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="for" data-skillKey="com"
+              data-bonusMalus="+4 + {{actor.bonusAttack}}">
               <i class="fas fa-dice-six"></i></a>
           </div>
           <div class="item-controls">
             <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="hab" data-skillKey="com"
-              data-bonusMalus="-4 + {{actor.data.bonusAttack}}">
+              data-bonusMalus="-4 + {{actor.bonusAttack}}">
               <i class="fas fa-dice-one"></i></a>
             <a class="item-control rollable" title="Lancé Normal" data-caractKey="hab" data-skillKey="com"
-              data-bonusMalus="{{actor.data.bonusAttack}}">
+              data-bonusMalus="{{actor.bonusAttack}}">
               <i class="fas fa-dice"></i></a>
             <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="hab" data-skillKey="com"
-              data-bonusMalus="+4 + {{actor.data.bonusAttack}}">
+              data-bonusMalus="+4 + {{actor.bonusAttack}}">
               <i class="fas fa-dice-six"></i></a>
           </div>
           <div class="item-controls">
             <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="int" data-skillKey="com"
-              data-bonusMalus="-4 + {{actor.data.bonusAttack}}">
+              data-bonusMalus="-4 + {{actor.bonusAttack}}">
               <i class="fas fa-dice-one"></i></a>
             <a class="item-control rollable" title="Lancé Normal" data-caractKey="int" data-skillKey="com"
-              data-bonusMalus="{{actor.data.bonusAttack}}">
+              data-bonusMalus="{{actor.bonusAttack}}">
               <i class="fas fa-dice"></i></a>
             <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="int" data-skillKey="com"
-              data-bonusMalus="+4 + {{actor.data.bonusAttack}}">
+              data-bonusMalus="+4 + {{actor.bonusAttack}}">
               <i class="fas fa-dice-six"></i></a>
           </div>
         </li>
         <li class="item flexrow">
           <div class="item-name">Jets de Défense</div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="vig" data-skillKey="com"
-              data-bonusMalus="-4 + {{actor.data.bonusDefence}}">
+            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="for" data-skillKey="com"
+              data-bonusMalus="-4 + {{actor.bonusDefence}}">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caractKey="vig" data-skillKey="com"
-              data-bonusMalus="{{actor.data.bonusDefence}}">
+            <a class="item-control rollable" title="Lancé Normal" data-caractKey="for" data-skillKey="com"
+              data-bonusMalus="{{actor.bonusDefence}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="vig" data-skillKey="com"
-              data-bonusMalus="+4 + {{actor.data.bonusDefence}}">
+            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="for" data-skillKey="com"
+              data-bonusMalus="+4 + {{actor.bonusDefence}}">
               <i class="fas fa-dice-six"></i></a>
           </div>
           <div class="item-controls">
             <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="hab" data-skillKey="com"
-              data-bonusMalus="-4 + {{actor.data.bonusDefence}}">
+              data-bonusMalus="-4 + {{actor.bonusDefence}}">
               <i class="fas fa-dice-one"></i></a>
             <a class="item-control rollable" title="Lancé Normal" data-caractKey="hab" data-skillKey="com"
-              data-bonusMalus="{{actor.data.bonusDefence}}">
+              data-bonusMalus="{{actor.bonusDefence}}">
               <i class="fas fa-dice"></i></a>
             <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="hab" data-skillKey="com"
-              data-bonusMalus="+4 + {{actor.data.bonusDefence}}">
+              data-bonusMalus="+4 + {{actor.bonusDefence}}">
               <i class="fas fa-dice-six"></i></a>
           </div>
           <div class="item-controls">
             <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="int" data-skillKey="com"
-              data-bonusMalus="-4 + {{actor.data.bonusDefence}}">
+              data-bonusMalus="-4 + {{actor.bonusDefence}}">
               <i class="fas fa-dice-one"></i></a>
             <a class="item-control rollable" title="Lancé Normal" data-caractKey="int" data-skillKey="com"
-              data-bonusMalus="{{actor.data.bonusDefence}}">
+              data-bonusMalus="{{actor.bonusDefence}}">
               <i class="fas fa-dice"></i></a>
             <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="int" data-skillKey="com"
-              data-bonusMalus="+4 + {{actor.data.bonusDefence}}">
+              data-bonusMalus="+4 + {{actor.bonusDefence}}">
               <i class="fas fa-dice-six"></i></a>
           </div>
         </li>
@@ -284,11 +288,12 @@
           <div class="item-controls">Lancés</div>
           <div class="item-controls">
             <a class="item-control item-create" title="Ajouter cristal" data-type="cristal">
-              <i class="fas fa-plus"></i> Ajouter cristal
+              <i class="fas fa-plus"></i>
+              Ajouter cristal
             </a>
           </div>
         </li>
-        {{#each actor.data.cristals as |cristal id|}}
+        {{#each actor.cristals as |cristal id|}}
         <li class="item flexrow with-drag" data-item-id="{{cristal._id}}">
           <div class="item-image"><img src="{{cristal.img}}" width="24" height="24" /></div>
           <h4 class="item-name">{{cristal.name}}</h4>
@@ -333,12 +338,12 @@
         <li class="item flexrow item-header">
           <div class="item-image"></div>
           <div class="item-name"></div>
-          <div class="item-value">Attaque : {{actor.data.bonusAttack}}</div>
-          <div class="item-value">Défense : {{actor.data.bonusDefence}}</div>
+          <div class="item-value">Attaque : {{actor.bonusAttack}}</div>
+          <div class="item-value">Défense : {{actor.bonusDefence}}</div>
           <div class="item-type">Equipé</div>
           <div class="item-controls"></div>
         </li>
-        {{#each actor.data.features as |features featureType|}}
+        {{#each actor.features as |features featureType|}}
         <li class="item flexrow item-header">
           <div class="item-name">{{featureType}}</div>
           <div class="item-value"></div>
@@ -362,8 +367,8 @@
               disabled />
           </div>
           <div class="item-type">
-            <input class="inline-edit-check" type='checkbox' data-field="data.equipped" {{#if
-              feature.data.equipped}}checked{{/if}}>
+            <input class="inline-edit-check" type='checkbox' data-field="data.equipped"
+            {{#if feature.data.equipped}}checked{{/if}}>
           </div>
           <div class="item-controls">
             <a class="item-control item-edit" title="Modifier équipement"><i class="fas fa-edit"></i></a>
@@ -429,7 +434,7 @@
             </a>
           </div>
         </li>
-        {{#each actor.data.cristals as |cristal id|}}
+        {{#each actor.cristals as |cristal id|}}
         <li class="item flexrow" data-item-id="{{cristal._id}}">
           <div class="item-image"><img src="{{cristal.img}}" width="24" height="24" /></div>
           <h4 class="item-name">{{cristal.name}}</h4>
@@ -476,7 +481,7 @@
             </a>
           </div>
         </li>
-        {{#each actor.data.gear as |item id|}}
+        {{#each actor.gear as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
           <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24" /></div>
           <h4 class="item-name">{{item.name}}</h4>
@@ -496,7 +501,13 @@
 
     <!-- Biography Tab -->
     <div class="tab biography" data-group="primary" data-tab="description">
-      {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+      {{
+        editor
+        enrichedBiography
+        target="data.biography"
+        editable=isEditable
+        button=true
+       }}
     </div>
 
   </section>

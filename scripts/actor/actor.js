@@ -9,59 +9,56 @@ export class ArlenorActor extends Actor {
    */
   prepareData() {
     super.prepareData();
-
-    const actorData = this.data;
-
-    // Prepare items.
-    if (actorData.type == 'character') {
-      this._prepareCharacterHealth(actorData, true);
+    
+    // Prepare items
+    if (this.type == 'character') {
+      this._prepareCharacterHealth(this, true);
     }
-    if (actorData.type == 'creature') {
-      this._prepareCharacterHealth(actorData, false);
+    if (this.type == 'creature') {
+      this._prepareCharacterHealth(this, false);
     }
   }
 
   /**
    * Update health stats.
    *
-   * @param {Object} actorData The actor to prepare.
+   * @param {Object} actor The actor to prepare.
    *
    * @return {undefined}
    */
-  _prepareCharacterHealth(actorData, withRaces = false) {
+  _prepareCharacterHealth(actor, withRaces = false) {
+    const data = actor.system;
 
-    const caracts = actorData.data.caracts;
-    const safe = actorData.data.healthLevels.safe;
-    const injured = actorData.data.healthLevels.injured;
-    const seriously = actorData.data.healthLevels.seriously;
-    const underdeath = actorData.data.healthLevels.underdeath;
+    const caracts = data.caracts;
+    const safe = data.healthLevels.safe;
+    const injured = data.healthLevels.injured;
+    const underdeath = data.healthLevels.underdeath;
 
     // Assign and return
     safe.max = 2;
     injured.max = 2;
-    seriously.max = 2;
     underdeath.max = 2;
 
     if (withRaces) {
-      const race = actorData.data.attributes.race;
-      const races = actorData.data.races;
+      const race = data.attributes.race;
+      const races = data.races;
 
       if (race === races[1].code
         || race === races[4].code) {
-        seriously.max = 1;
+        safe.max = 1;
       }
       if (race === races[2].code
         || race === races[5].code) {
-        seriously.max = 3;
+        safe.max = 3;
       }
     }
 
-    if (caracts.vig.value === 1) {
+    if (caracts.ten.value === 1) {
       safe.max = 1;
-    } else if (caracts.vig.value === 5) {
+    } else if (caracts.ten.value === 5) {
       safe.max = 3;
     }
 
-    actorData.data.health.max = safe.max + injured.max + seriously.max + underdeath.max;
+    data.health.max = safe.max + injured.max + underdeath.max;
   }
 }

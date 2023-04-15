@@ -175,7 +175,6 @@
           "code": "DEMON10"
         }
       ],
-      "skills": [],
       "classes": [
         {
           "name": "Paladin",
@@ -233,6 +232,7 @@
           "group": "Sorcier"
         }
       ],
+      "skills": [],
       "powers": []
     },
     "creature": {

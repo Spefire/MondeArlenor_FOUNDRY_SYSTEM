@@ -50,7 +50,7 @@ Hooks.once('init', async function () {
 
 Hooks.once("ready", async function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
-  Hooks.on("hotbarDrop", (bar, data, slot) => createArlenorMacro(data, slot));
+  // Hooks.on("hotbarDrop", (bar, data, slot) => createArlenorMacro(data, slot));
 });
 
 /* -------------------------------------------- */
@@ -64,7 +64,7 @@ Hooks.once("ready", async function () {
  * @param {number} slot     The hotbar slot to use
  * @returns {Promise}
  */
-async function createArlenorMacro(data, slot) {
+/*async function createArlenorMacro(data, slot) {
   if (data.type !== "Item") return false;
   if (!("data" in data)) return ui.notifications.warn("Ce n'est pas les données d'un objet.");
   const item = data.data;
@@ -84,20 +84,20 @@ async function createArlenorMacro(data, slot) {
   }
   game.user.assignHotbarMacro(macro, slot);
   return false;
-}
+}*/
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
 
 function rollArlenor(caractKey, skillKey, cristalId) {
-  const speaker = ChatMessage.getSpeaker();
+  /*const speaker = ChatMessage.getSpeaker();
   let actor;
   if (speaker.token) actor = game.actors.tokens[speaker.token];
   if (!actor) actor = game.actors.get(speaker.actor);
   if (!actor) actor = game.actors.find(act => act.isOwner);
   if (actor) rollSkill(actor, caractKey, skillKey, cristalId, 0);
-  else console.error("Il n'y a pas de personnage valide.");
+  else console.error("Il n'y a pas de personnage valide.");*/
 }
 
 export async function rollSkill(actor, caractKey, skillKey, cristalId, bonusMalus) {

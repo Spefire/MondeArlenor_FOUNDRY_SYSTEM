@@ -24,25 +24,24 @@ export class ArlenorActorSheet extends ActorSheet {
     const baseData = super.getData();
     baseData.dtypes = ["String", "Number", "Boolean"];
 
-    // Prepare items.
-    if (this.actor.data.type == 'character') {
-      this._prepareCharacterHealth(baseData, true);
-      this._prepareCharacterInit(baseData);
-      this._prepareCharacterSkills(baseData);
-      this._prepareCharacterItems(baseData);
+    // Prepare items
+    if (baseData.actor.type == 'character') {
+      this._prepareCharacterHealth(baseData.actor, true);
+      this._prepareCharacterInit(baseData.actor);
+      this._prepareCharacterSkills(baseData.actor);
+      this._prepareCharacterItems(baseData.actor);
     }
-    if (this.actor.data.type == 'creature') {
-      this._prepareCharacterHealth(baseData, false);
-      this._prepareCharacterInit(baseData);
-      this._prepareCharacterSkills(baseData);
-      this._prepareCharacterItems(baseData);
+    if (baseData.actor.type == 'creature') {
+      this._prepareCharacterHealth(baseData.actor, false);
+      this._prepareCharacterInit(baseData.actor);
+      this._prepareCharacterItems(baseData.actor);
     }
 
+    // Return data for the "actor-sheet.hbs"
     let sheetData = {
-      owner: this.actor.isOwner,
-      editable: this.isEditable,
-      actor: baseData.actor,
-      data: baseData.actor.data.data
+      isEditable: this.isEditable,
+      actor: this.actor,
+      data: this.actor.system
     };
 
     return sheetData;
@@ -51,70 +50,59 @@ export class ArlenorActorSheet extends ActorSheet {
   /**
    * Update health stats.
    *
-   * @param {Object} actorData The actor to prepare.
+   * @param {Object} actor The actor to prepare.
    *
    * @return {undefined}
    */
-  _prepareCharacterHealth(sheetData, withRaces = false) {
-    const actorData = sheetData.actor.data;
+  _prepareCharacterHealth(actor, withRaces = false) {
+    const data = actor.system;
 
-    const caracts = actorData.data.caracts;
-    const safe = actorData.data.healthLevels.safe;
-    const injured = actorData.data.healthLevels.injured;
-    const seriously = actorData.data.healthLevels.seriously;
-    const underdeath = actorData.data.healthLevels.underdeath;
+    const caracts = data.caracts;
+    const safe = data.healthLevels.safe;
+    const injured = data.healthLevels.injured;
+    const underdeath = data.healthLevels.underdeath;
 
     // Assign and return
     safe.max = 2;
     injured.max = 2;
-    seriously.max = 2;
     underdeath.max = 2;
 
     if (withRaces) {
-      const race = actorData.data.attributes.race;
-      const races = actorData.data.races;
+      const race = data.attributes.race;
+      const races = data.races;
 
       if (race === races[1].code
         || race === races[4].code) {
-        seriously.max = 1;
+        safe.max = 1;
       }
       if (race === races[2].code
         || race === races[5].code) {
-        seriously.max = 3;
+        safe.max = 3;
       }
     }
 
-    if (caracts.vig.value === 1) {
+    if (caracts.ten.value === 1) {
       safe.max = 1;
-    } else if (caracts.vig.value === 5) {
+    } else if (caracts.ten.value === 5) {
       safe.max = 3;
     }
 
-    actorData.data.health.max = safe.max + injured.max + seriously.max + underdeath.max;
+    data.health.max = safe.max + injured.max + underdeath.max;
 
-    if (actorData.data.health.value < underdeath.max) {
-      actorData.data.health.indic = underdeath.name;
+    if (data.health.value < underdeath.max) {
+      data.health.indic = underdeath.name;
       safe.value = 0;
       injured.value = 0;
-      seriously.value = 0;
-      underdeath.value = actorData.data.health.value;
-    } else if (actorData.data.health.value < underdeath.max + seriously.max) {
-      actorData.data.health.indic = seriously.name;
+      underdeath.value = data.health.value;
+    } else if (data.health.value < underdeath.max + injured.max) {
+      data.health.indic = injured.name;
       safe.value = 0;
-      injured.value = 0;
-      seriously.value = actorData.data.health.value - underdeath.max;
-      underdeath.value = underdeath.max;
-    } else if (actorData.data.health.value < underdeath.max + seriously.max + injured.max) {
-      actorData.data.health.indic = injured.name;
-      safe.value = 0;
-      injured.value = actorData.data.health.value - underdeath.max - seriously.max;
-      seriously.value = seriously.max;
+      injured.value = data.health.value - underdeath.max;
       underdeath.value = underdeath.max;
     } else {
-      actorData.data.health.indic = safe.name;
-      safe.value = actorData.data.health.value - underdeath.max - seriously.max - injured.max;
+      data.health.indic = safe.name;
+      safe.value = data.health.value - underdeath.max - injured.max;
       injured.value = injured.max;
-      seriously.value = seriously.max;
       underdeath.value = underdeath.max;
     }
   }
@@ -122,32 +110,32 @@ export class ArlenorActorSheet extends ActorSheet {
   /**
    * Update init stats.
    *
-   * @param {Object} actorData The actor to prepare.
+   * @param {Object} actor The actor to prepare.
    *
    * @return {undefined}
    */
-  _prepareCharacterInit(sheetData) {
-    const actorData = sheetData.actor.data;
+  _prepareCharacterInit(actor) {
+    const data = actor.system;
 
-    const hab = actorData.data.caracts.hab;
-    const int = actorData.data.caracts.int;
+    const hab = data.caracts.hab;
+    const int = data.caracts.int;
 
     // Assign and return
-    actorData.data.init = hab.value + int.value;
+    data.init = hab.value + int.value;
   }
 
   /**
    * Update skills images.
    *
-   * @param {Object} actorData The actor to prepare.
+   * @param {Object} actor The actor to prepare.
    *
    * @return {undefined}
    */
-  _prepareCharacterSkills(sheetData) {
-    const actorData = sheetData.actor.data;
+  _prepareCharacterSkills(actor) {
+    const data = actor.system;
 
     // Assign and return
-    const skills = actorData.data.skills;
+    const skills = data.skills;
     Object.keys(skills).forEach(key => {
       const skill = skills[key];
       skill.img = {};
@@ -160,13 +148,11 @@ export class ArlenorActorSheet extends ActorSheet {
   /**
    * Organize and classify Items for Character sheets.
    *
-   * @param {Object} actorData The actor to prepare.
+   * @param {Object} actor The actor to prepare.
    *
    * @return {undefined}
    */
-  _prepareCharacterItems(sheetData) {
-    const actorData = sheetData.actor.data;
-
+  _prepareCharacterItems(actor) {
     // Initialize containers.
     const gear = [];
     const features = {
@@ -182,7 +168,7 @@ export class ArlenorActorSheet extends ActorSheet {
 
     // Iterate through items, allocating to containers
     // let totalWeight = 0;
-    for (let i of sheetData.items) {
+    for (let i of actor.items) {
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
       if (i.type === 'item') {
@@ -209,11 +195,11 @@ export class ArlenorActorSheet extends ActorSheet {
     });
 
     // Assign and return
-    actorData.gear = gear;
-    actorData.features = features;
-    actorData.cristals = cristals;
-    actorData.bonusAttack = bonusAttack;
-    actorData.bonusDefence = bonusDefence;
+    actor.gear = gear;
+    actor.features = features;
+    actor.cristals = cristals;
+    actor.bonusAttack = bonusAttack;
+    actor.bonusDefence = bonusDefence;
   }
 
   /* -------------------------------------------- */
