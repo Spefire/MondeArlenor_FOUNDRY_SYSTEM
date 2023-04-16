@@ -171,9 +171,8 @@
       "templates": [
         "base"
       ],
-      "quantity": 1,
-      "crystalType": "Cristal évolutif",
-      "crystalTypes": [
+      "source": "Cristal évolutif",
+      "sources": [
         "Cristal évolutif",
         "Cristal instantanée",
         "Parchemin"

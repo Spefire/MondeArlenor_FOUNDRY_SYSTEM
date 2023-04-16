@@ -9,15 +9,24 @@
     <!-- Sheet Tab Navigation -->
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="properties">Propriétés</a>
-        <a class="item" data-tab="description">Détail des maitrises</a>
+        <a class="item" data-tab="description">Détail du pouvoir</a>
     </nav>
 
     <!-- Sheet Body -->
     <section class="sheet-body">
         <!-- Properties Tab -->
         <div class="tab properties" data-group="primary" data-tab="properties">
-            <!-- As you add new fields, add them in here! -->
-            <div class="grid grid-1col">
+            <div class="grid grid-2col">
+                <div class="flexrow flex-group-center">
+                    <label for="system.source" class="title-up-label">Source</label>
+                    <select name="system.source">
+                        {{#select system.source }}
+                        {{#each system.sources }}
+                        <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
                 <div class="flexrow flex-group-center">
                     <label for="system.family" class="title-up-label">Famille</label>
                     <select name="system.family">
@@ -28,16 +37,28 @@
                         {{/select}}
                     </select>
                 </div>
+            </div>
+
+            <div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
-                    <label class="title-up-label">Maitrise</label>
-                    <div class="input-value-base">
-                        <input type="text" name="system.level" value="{{system.level}}" data-dtype="Number" />
-                        <span>(</span>
-                        <input type="text" name="system.base" value="{{system.base}}" data-dtype="Number" />
-                        <span>)</span>
-                    </div>
+                    Le rang d'un pouvoir indique sa puissance
+                    <br>et souvent la difficulté qui sera nécessaire pour l'utiliser.
+                    <br>Rang : 1/ 2 / 3 / 4
+                    <br>Difficulté : Simple / Standard / Complexe / Légendaire
                 </div>
             </div>
+
+            <div class="grid grid-2col">
+                <div class="flexrow flex-group-center">
+                    <label class="title-up-label">Rang</label>
+                    <input type="text" name="system.rank" value="{{system.rank}}" data-dtype="Number" />
+                </div>
+                <div class="flexrow flex-group-center">
+                    {{#if (eq system.chaneling true )}}Avec canalisation{{/if}}
+                    {{#if (eq system.chaneling false )}}Sans canalisation{{/if}}
+                </div>
+            </div>
+
             <div class="grid grid-2col">
                 <div class="flexrow flex-group-center">
                     <label for="system.duration" class="title-up-label">Durée max</label>
