@@ -65,6 +65,7 @@
       "attributes": {
         "race": "",
         "divinity": "",
+        "classe": "",
         "level": 0
       },
       "races": [
@@ -231,9 +232,7 @@
           "code": "CREATEUR",
           "group": "Sorcier"
         }
-      ],
-      "skills": [],
-      "powers": []
+      ]
     },
     "creature": {
       "templates": [
@@ -271,8 +270,9 @@
   "Item": {
     "types": [
       "item",
-      "feature",
-      "cristal"
+      "skill",
+      "equipment",
+      "crystal"
     ],
     "templates": {
       "base": {
@@ -286,33 +286,104 @@
       "quantity": 1,
       "itemType": "Autre",
       "itemTypes": [
-        "Affaire / Bijou",
-        "Livre / Parchemin",
-        "Matériau",
-        "Nourriture",
-        "Plante",
+        "Bijou / Vêtement",
+        "Nourriture / Plante",
         "Potion",
         "Autre"
       ]
     },
-    "feature": {
+    "skill": {
       "templates": [
         "base"
       ],
-      "attack": 0,
-      "defence": 0,
-      "equipped": false,
-      "featureType": "Arme au Corps à corps",
-      "featureTypes": [
+      "effect": 1,
+      "skillType": "Autre compétence",
+      "skillTypes": [
+        "Compétence d'arme",
+        "Autre compétence"
+      ]
+    },
+    "equipment": {
+      "templates": [
+        "base"
+      ],
+      "effect": 0,
+      "equipmentType": "Arme au Corps à corps",
+      "equipmentTypes": [
         "Arme au Corps à corps",
         "Arme à Distance",
         "Armure",
         "Bouclier"
       ]
     },
-    "cristal": {
+    "crystal": {
       "templates": [
         "base"
+      ],
+      "quantity": 1,
+      "crystalType": "Cristal évolutif",
+      "crystalTypes": [
+        "Cristal évolutif",
+        "Cristal instantanée",
+        "Parchemin"
+      ],
+      "classe": "PALADIN",
+      "classes": [
+        {
+          "name": "Paladin",
+          "code": "PALADIN",
+          "group": "Gardien"
+        },
+        {
+          "name": "Chevalier",
+          "code": "CHEVALIER",
+          "group": "Gardien"
+        },
+        {
+          "name": "Danseur Martial",
+          "code": "DANSEURMARTIAL",
+          "group": "Moine"
+        },
+        {
+          "name": "Derviche",
+          "code": "DERVICHE",
+          "group": "Moine"
+        },
+        {
+          "name": "Lame de l'Ombre",
+          "code": "LAMEOMBRE",
+          "group": "Assassin"
+        },
+        {
+          "name": "Chasseur",
+          "code": "CHASSEUR",
+          "group": "Assassin"
+        },
+        {
+          "name": "Danseur au Sabre",
+          "code": "DANSEURSABRE",
+          "group": "Assassin"
+        },
+        {
+          "name": "Double Lame",
+          "code": "DOUBLELAME",
+          "group": "Bretteur"
+        },
+        {
+          "name": "Escrimeur",
+          "code": "ESCRIMEUR",
+          "group": "Bretteur"
+        },
+        {
+          "name": "Météorologue",
+          "code": "METEOROLOGUE",
+          "group": "Sorcier"
+        },
+        {
+          "name": "Créateur",
+          "code": "CREATEUR",
+          "group": "Sorcier"
+        }
       ],
       "type": "Abjuration",
       "types": [
@@ -325,21 +396,22 @@
         "Illusion",
         "Transmutation"
       ],
-      "level": 0,
-      "time": "Instantanée",
-      "times": [
+      "rank": 0,
+      "duration": "Instantanée",
+      "durations": [
         "Instantanée",
         "Une scène",
         "Une journée",
         "Illimitée"
       ],
-      "target": "Personnelle",
-      "targets": [
+      "range": "Personnelle",
+      "ranges": [
         "Personnelle",
         "Toucher",
         "A vue",
         "Infinie"
-      ]
+      ],
+      "chaneling": false
     }
   }
 }

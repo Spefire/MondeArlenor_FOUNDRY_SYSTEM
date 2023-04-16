@@ -154,52 +154,46 @@ export class ArlenorActorSheet extends ActorSheet {
    */
   _prepareCharacterItems(actor) {
     // Initialize containers.
-    const gear = [];
-    const features = {
+    const backpack = [];
+    const equipments = {
       "Arme au Corps à corps": [],
       "Arme à Distance": [],
       "Armure": [],
       "Bouclier": []
     };
-    const cristals = [];
-
-    let bonusAttack = 0;
-    let bonusDefence = 0;
+    const crystals = [];
 
     // Iterate through items, allocating to containers
-    // let totalWeight = 0;
     for (let i of actor.items) {
       i.img = i.img || DEFAULT_TOKEN;
-      // Append to gear.
+      // Append to backpack.
       if (i.type === 'item') {
-        gear.push(i);
+        backpack.push(i);
       }
-      // Append to features.
-      else if (i.type === 'feature') {
-        if (i.data.featureType != undefined) {
-          features[i.data.featureType].push(i);
+      // Append to equipments
+      else if (i.type === 'equipment') {
+        if (i.data.equipmentType != undefined) {
+          equipments[i.data.equipmentType].push(i);
           if (i.data.equipped) {
             bonusAttack += i.data.attack;
             bonusDefence += i.data.defence;
           }
         }
       }
-      // Append to cristals.
-      else if (i.type === 'cristal') {
-        cristals.push(i);
+      // Append to crystals
+      else if (i.type === 'crystal') {
+        crystals.push(i);
       }
     }
 
-    cristals.sort(function (a, b) {
+    crystals.sort(function (a, b) {
       return a.name.localeCompare(b.name);
     });
 
     // Assign and return
-    actor.gear = gear;
-    actor.features = features;
-    actor.cristals = cristals;
-    actor.bonusAttack = bonusAttack;
-    actor.bonusDefence = bonusDefence;
+    actor.backpack = backpack;
+    actor.equipments = equipments;
+    actor.crystals = crystals;
   }
 
   /* -------------------------------------------- */
@@ -302,6 +296,6 @@ export class ArlenorActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
-    rollSkill(this.actor, dataset.caractkey, dataset.skillkey, dataset.cristalid, dataset.bonusmalus);
+    rollSkill(this.actor, dataset.caractkey, dataset.skillkey, dataset.crystalid, dataset.bonusmalus);
   }
 }

@@ -40,20 +40,20 @@
             </div>
             <div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
-                    <label for="system.time" class="title-up-label">Durée max</label>
-                    <select name="system.time">
-                        {{#select system.time }}
-                        {{#each system.times }}
+                    <label for="system.duration" class="title-up-label">Durée max</label>
+                    <select name="system.duration">
+                        {{#select system.duration }}
+                        {{#each system.durations }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
                 </div>
                 <div class="flexrow flex-group-center">
-                    <label for="system.target" class="title-up-label">Portée max</label>
-                    <select name="system.target">
-                        {{#select system.target }}
-                        {{#each system.targets }}
+                    <label for="system.range" class="title-up-label">Portée max</label>
+                    <select name="system.range">
+                        {{#select system.range }}
+                        {{#each system.ranges }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}
