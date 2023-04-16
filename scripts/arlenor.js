@@ -103,7 +103,7 @@ function rollArlenor(caractKey, skillKey, powerId) {
 export async function rollSkill(actor, caractKey, skillKey, powerId, bonusMalus) {
 
   // Re-calculate health levels
-  const race = actor.data.data.attributes?.race;
+  const race = actor.data.data.race;
   const races = actor.data.data.races;
   const injured = actor.data.data.healthLevels.injured;
   const seriously = actor.data.data.healthLevels.seriously;

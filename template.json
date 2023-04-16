@@ -13,8 +13,8 @@
           "max": 0
         },
         "healthLevels": {
-          "safe": {
-            "name": "Indemme",
+          "underdeath": {
+            "name": "Au seuil de la mort (-2D6)",
             "value": 0,
             "max": 0
           },
@@ -23,8 +23,8 @@
             "value": 0,
             "max": 0
           },
-          "underdeath": {
-            "name": "Au seuil de la mort (-2D6)",
+          "safe": {
+            "name": "Indemme",
             "value": 0,
             "max": 0
           }
@@ -62,12 +62,11 @@
         "commun"
       ],
       "biography": "",
-      "attributes": {
-        "race": "",
-        "divinity": "",
-        "classe": "",
-        "level": 0
-      }
+      "level": 0,
+      "race": "",
+      "divinity": "",
+      "speciality01": "",
+      "speciality02": ""
     },
     "creature": {
       "templates": [
@@ -177,7 +176,7 @@
         "Cristal instantanée",
         "Parchemin"
       ],
-      "classe": "PALADIN",
+      "speciality": "PALADIN",
       "family": "Abjuration",
       "rank": 0,
       "duration": "Instantanée",

@@ -36,29 +36,24 @@ export class ArlenorActor extends Actor {
     const injured = data.healthLevels.injured;
     const underdeath = data.healthLevels.underdeath;
 
-    // Assign and return
-    safe.max = 2;
-    injured.max = 2;
-    underdeath.max = 2;
+    data.health.max = 5;
 
     if (withRaces) {
-      const race = data.attributes.race;
+      const race = data.race;
       if (race === races[1].code
         || race === races[4].code) {
-        safe.max = 1;
-      }
-      if (race === races[2].code
-        || race === races[5].code) {
-        safe.max = 3;
+          data.health.max += 1;
       }
     }
 
-    if (caracts.ten.value === 1) {
-      safe.max = 1;
-    } else if (caracts.ten.value === 5) {
-      safe.max = 3;
+    if (caracts.ten.value === 0) {
+      data.health.max -= 1;
+    } else if (caracts.ten.value > 2) {
+      data.health.max += 1;
     }
 
-    data.health.max = safe.max + injured.max + underdeath.max;
+    safe.max = Math.round(data.health.max * 40 / 100);
+    injured.max = Math.floor(data.health.max * 40 / 100);
+    underdeath.max = data.health.max - safe.max - injured.max;
   }
 }

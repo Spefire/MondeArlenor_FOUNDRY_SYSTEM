@@ -13,11 +13,11 @@
       {{#if (eq actor.type "character")}}
       <div class="grid grid-3col">
         <div class="flex-group-center">
-          <label for="system.attributes.race" class="title-up-label">Peuple</label>
+          <label for="system.race" class="title-up-label">Race</label>
           <div class="flexrow flex-center flex-between">
-            <select name="system.attributes.race">
-              <option value=""></option>
-              {{#select system.attributes.race }}
+            <select name="system.race">
+              <option value="">Autre</option>
+              {{#select system.race }}
               {{#each races }}
               <option value="{{this.code}}">{{this.name}}</option>
               {{/each}}
@@ -26,11 +26,11 @@
           </div>
         </div>
         <div class="flex-group-center">
-          <label for="system.attributes.divinity" class="title-up-label">Divinité</label>
+          <label for="system.divinity" class="title-up-label">Divinité</label>
           <div class="flexrow flex-center flex-between">
-            <select name="system.attributes.divinity">
-              <option value=""></option>
-              {{#select system.attributes.divinity }}
+            <select name="system.divinity">
+              <option value="">Aucune</option>
+              {{#select system.divinity }}
               {{#each divinities }}
               <option value="{{this.code}}">{{this.name}}</option>
               {{/each}}
@@ -39,9 +39,9 @@
           </div>
         </div>
         <div class="flex-group-center">
-          <label for="system.attributes.level" class="title-up-label">Niveau</label>
+          <label for="system.level" class="title-up-label">Niveau</label>
           <div class="flexrow flex-center flex-between">
-            <input type="text" name="system.attributes.level" value="{{system.attributes.level}}" data-dtype="Number" />
+            <input type="text" name="system.level" value="{{system.level}}" data-dtype="Number" />
           </div>
         </div>
       </div>
@@ -64,19 +64,33 @@
         </div>
       </div>
       <div class="flex-group-center grid-tiers-2">
-        <label class="title-up-label">{{system.health.indic}}</label>
+        <label class="title-up-label">État actuel : {{system.health.indic}}</label>
         <div class="flexrow flex-center">
           {{#each system.healthLevels as |healthLevel key|}}
-          {{#if (gte healthLevel.max 3)}}
-          <input type='checkbox' {{#if (gte healthLevel.value 3)}}checked{{/if}} disabled>
+          |
+          {{#if (gte healthLevel.max 1)}}
+          <input type='checkbox' {{#if (gte healthLevel.value 1)}}checked{{/if}} disabled>
           {{/if}}
           {{#if (gte healthLevel.max 2)}}
           <input type='checkbox' {{#if (gte healthLevel.value 2)}}checked{{/if}} disabled>
           {{/if}}
-          {{#if (gte healthLevel.max 1)}}
-          <input type='checkbox' {{#if (gte healthLevel.value 1)}}checked{{/if}} disabled>
+          {{#if (gte healthLevel.max 3)}}
+          <input type='checkbox' {{#if (gte healthLevel.value 3)}}checked{{/if}} disabled>
+          {{/if}}
+          {{#if (gte healthLevel.max 4)}}
+          <input type='checkbox' {{#if (gte healthLevel.value 4)}}checked{{/if}} disabled>
+          {{/if}}
+          {{#if (gte healthLevel.max 5)}}
+          <input type='checkbox' {{#if (gte healthLevel.value 5)}}checked{{/if}} disabled>
+          {{/if}}
+          {{#if (gte healthLevel.max 6)}}
+          <input type='checkbox' {{#if (gte healthLevel.value 6)}}checked{{/if}} disabled>
+          {{/if}}
+          {{#if (gte healthLevel.max 7)}}
+          ...
           {{/if}}
           {{/each}}
+          |
         </div>
       </div>
     </div>
