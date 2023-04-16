@@ -87,10 +87,6 @@
   width: 100%;
 }
 
-.grid-one {
-  grid-column: 1/3;
-}
-
 .grid-tiers-1 {
   grid-column: 1/2;
 }

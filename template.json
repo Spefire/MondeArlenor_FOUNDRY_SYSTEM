@@ -99,7 +99,8 @@
       "quantity": 1,
       "itemType": "Autre",
       "itemTypes": [
-        "Nourriture / Plante",
+        "Nourriture",
+        "Plante",
         "Potion",
         "Autre"
       ]

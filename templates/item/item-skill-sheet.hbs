@@ -16,17 +16,23 @@
     <section class="sheet-body">
         <!-- Properties Tab -->
         <div class="tab properties" data-group="primary" data-tab="properties">
-            <!-- As you add new fields, add them in here! -->
             <div class="grid grid-1col">
-                <div class="flexrow flex-group-center grid-one">
-                    <label for="system.itemType" class="title-up-label">Type d'objet</label>
-                    <select name="system.itemType">
-                        {{#select system.itemType }}
-                        {{#each system.itemTypes }}
+                <div class="flexrow flex-group-center">
+                    <label for="system.skillType" class="title-up-label">Type de compétence</label>
+                    <select name="system.skillType">
+                        {{#select system.skillType }}
+                        {{#each system.skillTypes }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
+                </div>
+            </div>
+            
+            <div class="grid grid-1col">
+                <div class="flexrow flex-group-center">
+                    La compétence donne 1 dé bonus lors qu'une action se déroule
+                    dans son contexte.
                 </div>
             </div>
         </div>

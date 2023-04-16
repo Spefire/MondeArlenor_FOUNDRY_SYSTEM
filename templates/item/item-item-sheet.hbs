@@ -16,10 +16,9 @@
     <section class="sheet-body">
         <!-- Properties Tab -->
         <div class="tab properties" data-group="primary" data-tab="properties">
-            <!-- As you add new fields, add them in here! -->
-            <div class="grid grid-1col">
-                <div class="flexrow flex-group-center grid-one">
-                    <label for="system.itemType" class="title-up-label">Type d'objet</label>
+            <div class="grid grid-2col">
+                <div class="flexrow flex-group-center">
+                    <label for="system.itemType" class="title-up-label">Type</label>
                     <select name="system.itemType">
                         {{#select system.itemType }}
                         {{#each system.itemTypes }}
@@ -27,6 +26,10 @@
                         {{/each}}
                         {{/select}}
                     </select>
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label class="title-up-label">Quantité</label>
+                    <input type="text" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
                 </div>
             </div>
         </div>
