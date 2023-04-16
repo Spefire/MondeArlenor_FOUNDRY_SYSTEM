@@ -30,12 +30,10 @@ export class ArlenorActorSheet extends ActorSheet {
     // Prepare items
     if (baseData.actor.type == 'character') {
       this._prepareCharacterHealth(baseData.actor, true);
-      this._prepareCharacterInit(baseData.actor);
       this._prepareCharacterItems(baseData.actor);
     }
     if (baseData.actor.type == 'creature') {
       this._prepareCharacterHealth(baseData.actor, false);
-      this._prepareCharacterInit(baseData.actor);
       this._prepareCharacterItems(baseData.actor);
     }
 
@@ -108,23 +106,6 @@ export class ArlenorActorSheet extends ActorSheet {
       injured.value = injured.max;
       underdeath.value = underdeath.max;
     }
-  }
-
-  /**
-   * Update init stats.
-   *
-   * @param {Object} actor The actor to prepare.
-   *
-   * @return {undefined}
-   */
-  _prepareCharacterInit(actor) {
-    const data = actor.system;
-
-    const hab = data.caracts.hab;
-    const int = data.caracts.int;
-
-    // Assign and return
-    data.init = hab.value + int.value;
   }
 
   /**
