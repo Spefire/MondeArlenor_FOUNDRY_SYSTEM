@@ -1,0 +1,22 @@
+[
+    {
+      "name": "Simple",
+      "code": "SIMPLE",
+      "value": 1
+    },
+    {
+      "name": "Standard",
+      "code": "STANDARD",
+      "value": 2
+    },
+    {
+      "name": "Complexe",
+      "code": "COMPLEXE",
+      "value": 3
+    },
+    {
+      "name": "Légendaire",
+      "code": "LEGENDAIRE",
+      "value": 4
+    }
+]

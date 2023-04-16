@@ -20,7 +20,7 @@
     "scripts/arlenor.js"
   ],
   "styles": [
-    "styles/arlenor.css"
+    "css/arlenor.css"
   ],
   "packs": [
     {

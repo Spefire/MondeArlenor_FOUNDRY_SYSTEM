@@ -18,7 +18,7 @@
             <select name="system.attributes.race">
               <option value=""></option>
               {{#select system.attributes.race }}
-              {{#each system.races }}
+              {{#each races }}
               <option value="{{this.code}}">{{this.name}}</option>
               {{/each}}
               {{/select}}
@@ -31,7 +31,7 @@
             <select name="system.attributes.divinity">
               <option value=""></option>
               {{#select system.attributes.divinity }}
-              {{#each system.divinities }}
+              {{#each divinities }}
               <option value="{{this.code}}">{{this.name}}</option>
               {{/each}}
               {{/select}}
@@ -112,12 +112,12 @@
     {{#if (eq actor.type "character")}}
     <a class="item" data-tab="skills">Compétences</a>
     <a class="item" data-tab="crystals">Cristaux</a>
-    <a class="item" data-tab="features">Equipement</a>
+    <a class="item" data-tab="equipments">Équipement</a>
     {{/if}}
     {{#if (eq actor.type "creature")}}
     <a class="item" data-tab="actions">Actions</a>
     {{/if}}
-    <a class="item" data-tab="items">Objets</a>
+    <a class="item" data-tab="backpack">Objets</a>
     <a class="item" data-tab="description">Description</a>
   </nav>
 
@@ -277,7 +277,7 @@
       </ol>
     </div>
 
-    <!-- Owned Cristals Tab -->
+    <!-- Owned Crystals Tab -->
     <div class="tab crystals" data-group="primary" data-tab="crystals">
       <ol class="items-list">
         <li class="item flexrow item-header">
@@ -332,8 +332,8 @@
       </ol>
     </div>
 
-    <!-- Owned Features Tab -->
-    <div class="tab features" data-group="primary" data-tab="features">
+    <!-- Owned Equipments Tab -->
+    <div class="tab equipments" data-group="primary" data-tab="equipments">
       <ol class="items-list">
         <li class="item flexrow item-header">
           <div class="item-image"></div>
@@ -343,32 +343,32 @@
           <div class="item-type">Equipé</div>
           <div class="item-controls"></div>
         </li>
-        {{#each actor.features as |features featureType|}}
+        {{#each actor.equipments as |equipments equipmentType|}}
         <li class="item flexrow item-header">
-          <div class="item-name">{{featureType}}</div>
+          <div class="item-name">{{equipmentType}}</div>
           <div class="item-value"></div>
           <div class="item-value"></div>
           <div class="item-type"></div>
           <div class="item-controls">
-            <a class="item-control item-create" title="Ajouter {{toLowerCase featureType}}" data-type="feature"
-              data-feature-type="{{featureType}}"><i class="fas fa-plus"></i> Ajouter</a>
+            <a class="item-control item-create" title="Ajouter {{toLowerCase equipmentType}}" data-type="equipment"
+              data-equipment-type="{{equipmentType}}"><i class="fas fa-plus"></i> Ajouter</a>
           </div>
         </li>
-        {{#each features as |feature id|}}
-        <li class="item flexrow" data-item-id="{{feature._id}}">
-          <div class="item-image"><img src="{{feature.img}}" title="{{feature.name}}" width="24" height="24" /></div>
-          <h4 class="item-name">{{feature.name}}</h4>
+        {{#each equipments as |equipment id|}}
+        <li class="item flexrow" data-item-id="{{equipment._id}}">
+          <div class="item-image"><img src="{{equipment.img}}" title="{{equipment.name}}" width="24" height="24" /></div>
+          <h4 class="item-name">{{equipment.name}}</h4>
           <div class="item-value">
-            <input type="text" name="feature.data.attack" value="{{feature.data.attack}}" data-dtype="Number"
+            <input type="text" name="equipment.data.attack" value="{{equipment.data.attack}}" data-dtype="Number"
               disabled />
           </div>
           <div class="item-value">
-            <input type="text" name="feature.data.defence" value="{{feature.data.defence}}" data-dtype="Number"
+            <input type="text" name="equipment.data.defence" value="{{equipment.data.defence}}" data-dtype="Number"
               disabled />
           </div>
           <div class="item-type">
-            <input class="inline-edit-check" type='checkbox' data-field="feature.data.equipped"
-            {{#if feature.data.equipped}}checked{{/if}}>
+            <input class="inline-edit-check" type='checkbox' data-field="equipment.data.equipped"
+            {{#if equipment.data.equipped}}checked{{/if}}>
           </div>
           <div class="item-controls">
             <a class="item-control item-edit" title="Modifier équipement"><i class="fas fa-edit"></i></a>
@@ -467,8 +467,8 @@
     </div>
     {{/if}}
 
-    <!-- Owned Items Tab -->
-    <div class="tab items" data-group="primary" data-tab="items">
+    <!-- Owned Backpack Tab -->
+    <div class="tab backpack" data-group="primary" data-tab="backpack">
       <ol class="items-list">
         <li class="item flexrow item-header">
           <div class="item-image"></div>

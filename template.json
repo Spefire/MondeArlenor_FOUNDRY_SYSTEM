@@ -67,200 +67,13 @@
         "divinity": "",
         "classe": "",
         "level": 0
-      },
-      "races": [
-        {
-          "name": "Humain",
-          "code": "HUMAN"
-        },
-        {
-          "name": "Elfe",
-          "code": "ELFE"
-        },
-        {
-          "name": "Nain",
-          "code": "NAIN"
-        },
-        {
-          "name": "Mutant",
-          "code": "MUTANT"
-        },
-        {
-          "name": "Pan",
-          "code": "PAN"
-        },
-        {
-          "name": "Arlénien",
-          "code": "ARLENIEN"
-        }
-      ],
-      "divinities": [
-        {
-          "name": "Ange Métatron",
-          "code": "ANGE01"
-        },
-        {
-          "name": "Ange Ratziel",
-          "code": "ANGE02"
-        },
-        {
-          "name": "Ange Zafkiel",
-          "code": "ANGE03"
-        },
-        {
-          "name": "Ange Tzadokiel",
-          "code": "ANGE04"
-        },
-        {
-          "name": "Ange Samael",
-          "code": "ANGE05"
-        },
-        {
-          "name": "Ange Michael",
-          "code": "ANGE06"
-        },
-        {
-          "name": "Ange Haniel",
-          "code": "ANGE07"
-        },
-        {
-          "name": "Ange Raphael",
-          "code": "ANGE08"
-        },
-        {
-          "name": "Ange Gabriel",
-          "code": "ANGE09"
-        },
-        {
-          "name": "Ange Sandalfone",
-          "code": "ANGE10"
-        },
-        {
-          "name": "Démon Satan",
-          "code": "DEMON01"
-        },
-        {
-          "name": "Démon Belzébuth",
-          "code": "DEMON02"
-        },
-        {
-          "name": "Démon Lucifugus",
-          "code": "DEMON03"
-        },
-        {
-          "name": "Démon Astaroth",
-          "code": "DEMON04"
-        },
-        {
-          "name": "Démon Asmodée",
-          "code": "DEMON05"
-        },
-        {
-          "name": "Démon Belphégor",
-          "code": "DEMON06"
-        },
-        {
-          "name": "Démon Ba'al",
-          "code": "DEMON07"
-        },
-        {
-          "name": "Démon Adramalec",
-          "code": "DEMON08"
-        },
-        {
-          "name": "Démon Lilith",
-          "code": "DEMON09"
-        },
-        {
-          "name": "Démon Nahémar",
-          "code": "DEMON10"
-        }
-      ],
-      "classes": [
-        {
-          "name": "Paladin",
-          "code": "PALADIN",
-          "group": "Gardien"
-        },
-        {
-          "name": "Chevalier",
-          "code": "CHEVALIER",
-          "group": "Gardien"
-        },
-        {
-          "name": "Danseur Martial",
-          "code": "DANSEURMARTIAL",
-          "group": "Moine"
-        },
-        {
-          "name": "Derviche",
-          "code": "DERVICHE",
-          "group": "Moine"
-        },
-        {
-          "name": "Lame de l'Ombre",
-          "code": "LAMEOMBRE",
-          "group": "Assassin"
-        },
-        {
-          "name": "Chasseur",
-          "code": "CHASSEUR",
-          "group": "Assassin"
-        },
-        {
-          "name": "Danseur au Sabre",
-          "code": "DANSEURSABRE",
-          "group": "Assassin"
-        },
-        {
-          "name": "Double Lame",
-          "code": "DOUBLELAME",
-          "group": "Bretteur"
-        },
-        {
-          "name": "Escrimeur",
-          "code": "ESCRIMEUR",
-          "group": "Bretteur"
-        },
-        {
-          "name": "Météorologue",
-          "code": "METEOROLOGUE",
-          "group": "Sorcier"
-        },
-        {
-          "name": "Créateur",
-          "code": "CREATEUR",
-          "group": "Sorcier"
-        }
-      ]
+      }
     },
     "creature": {
       "templates": [
         "commun"
       ],
-      "biography": "",
-      "difficulty": [
-        {
-          "name": "Simple",
-          "code": "SIMPLE",
-          "value": 1
-        },
-        {
-          "name": "Standard",
-          "code": "STANDARD",
-          "value": 2
-        },
-        {
-          "name": "Complexe",
-          "code": "COMPLEXE",
-          "value": 3
-        },
-        {
-          "name": "Légendaire",
-          "code": "LEGENDAIRE",
-          "value": 4
-        }
-      ]
+      "biography": ""
     },
     "pnj": {
       "templates": [],
@@ -286,7 +99,6 @@
       "quantity": 1,
       "itemType": "Autre",
       "itemTypes": [
-        "Bijou / Vêtement",
         "Nourriture / Plante",
         "Potion",
         "Autre"
@@ -307,13 +119,51 @@
       "templates": [
         "base"
       ],
-      "effect": 0,
-      "equipmentType": "Arme au Corps à corps",
+      "for": {
+        "min": "For",
+        "name": "Force",
+        "value": 0,
+        "case": "PERM"
+      },
+      "hab": {
+        "min": "Hab",
+        "name": "Habileté",
+        "value": 0,
+        "case": "PERM"
+      },
+      "int": {
+        "min": "Int",
+        "name": "Intellect",
+        "value": 0,
+        "case": "PERM"
+      },
+      "ten": {
+        "min": "Ten",
+        "name": "Ténacité",
+        "value": 0,
+        "case": "PERM"
+      },
+      "cha": {
+        "min": "Cha",
+        "name": "Charisme",
+        "value": 0,
+        "case": "PERM"
+      },
+      "mag": {
+        "min": "Mag",
+        "name": "Magie",
+        "value": 0,
+        "case": "PERM"
+      },
+      "equipmentType": "Arme au corps à corps",
       "equipmentTypes": [
-        "Arme au Corps à corps",
-        "Arme à Distance",
-        "Armure",
-        "Bouclier"
+        "Arme au corps à corps",
+        "Arme à distance",
+        "Armure lourde",
+        "Armure normale",
+        "Armure légère",
+        "Bouclier",
+        "Autre (bijou, ..)"
       ]
     },
     "crystal": {
@@ -328,89 +178,10 @@
         "Parchemin"
       ],
       "classe": "PALADIN",
-      "classes": [
-        {
-          "name": "Paladin",
-          "code": "PALADIN",
-          "group": "Gardien"
-        },
-        {
-          "name": "Chevalier",
-          "code": "CHEVALIER",
-          "group": "Gardien"
-        },
-        {
-          "name": "Danseur Martial",
-          "code": "DANSEURMARTIAL",
-          "group": "Moine"
-        },
-        {
-          "name": "Derviche",
-          "code": "DERVICHE",
-          "group": "Moine"
-        },
-        {
-          "name": "Lame de l'Ombre",
-          "code": "LAMEOMBRE",
-          "group": "Assassin"
-        },
-        {
-          "name": "Chasseur",
-          "code": "CHASSEUR",
-          "group": "Assassin"
-        },
-        {
-          "name": "Danseur au Sabre",
-          "code": "DANSEURSABRE",
-          "group": "Assassin"
-        },
-        {
-          "name": "Double Lame",
-          "code": "DOUBLELAME",
-          "group": "Bretteur"
-        },
-        {
-          "name": "Escrimeur",
-          "code": "ESCRIMEUR",
-          "group": "Bretteur"
-        },
-        {
-          "name": "Météorologue",
-          "code": "METEOROLOGUE",
-          "group": "Sorcier"
-        },
-        {
-          "name": "Créateur",
-          "code": "CREATEUR",
-          "group": "Sorcier"
-        }
-      ],
-      "type": "Abjuration",
-      "types": [
-        "Abjuration",
-        "Convocation",
-        "Divination",
-        "Enchantement",
-        "Evocation",
-        "Envoûtement",
-        "Illusion",
-        "Transmutation"
-      ],
+      "family": "Abjuration",
       "rank": 0,
       "duration": "Instantanée",
-      "durations": [
-        "Instantanée",
-        "Une scène",
-        "Une journée",
-        "Illimitée"
-      ],
       "range": "Personnelle",
-      "ranges": [
-        "Personnelle",
-        "Toucher",
-        "A vue",
-        "Infinie"
-      ],
       "chaneling": false
     }
   }

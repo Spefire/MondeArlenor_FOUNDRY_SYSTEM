@@ -1,4 +1,7 @@
 import { rollSkill } from "./../arlenor.js";
+import classes from "./../../models/classes.json" assert { type: "json" };
+import divinities from "./../../models/divinities.json" assert { type: "json" };
+import races from "./../../models/races.json" assert { type: "json" };
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -28,7 +31,6 @@ export class ArlenorActorSheet extends ActorSheet {
     if (baseData.actor.type == 'character') {
       this._prepareCharacterHealth(baseData.actor, true);
       this._prepareCharacterInit(baseData.actor);
-      this._prepareCharacterSkills(baseData.actor);
       this._prepareCharacterItems(baseData.actor);
     }
     if (baseData.actor.type == 'creature') {
@@ -41,7 +43,10 @@ export class ArlenorActorSheet extends ActorSheet {
     let sheetData = {
       editable: this.isEditable,
       actor: this.actor,
-      system: this.actor.system
+      system: this.actor.system,
+      classes: classes,
+      divinities: divinities,
+      races: races
     };
 
     return sheetData;
@@ -69,8 +74,6 @@ export class ArlenorActorSheet extends ActorSheet {
 
     if (withRaces) {
       const race = data.attributes.race;
-      const races = data.races;
-
       if (race === races[1].code
         || race === races[4].code) {
         safe.max = 1;
@@ -125,27 +128,6 @@ export class ArlenorActorSheet extends ActorSheet {
   }
 
   /**
-   * Update skills images.
-   *
-   * @param {Object} actor The actor to prepare.
-   *
-   * @return {undefined}
-   */
-  _prepareCharacterSkills(actor) {
-    const data = actor.system;
-
-    // Assign and return
-    const skills = data.skills;
-    Object.keys(skills).forEach(key => {
-      const skill = skills[key];
-      skill.img = {};
-      skill.caracts.forEach(caract => {
-        skill.img[caract] = "systems/arlenor/assets/icons/skill_" + key + "_" + caract + ".png";
-      });
-    });
-  }
-
-  /**
    * Organize and classify Items for Character sheets.
    *
    * @param {Object} actor The actor to prepare.
@@ -153,25 +135,21 @@ export class ArlenorActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterItems(actor) {
-    // Initialize containers.
-    const backpack = [];
+    // Initialize containers
     const equipments = {
       "Arme au Corps à corps": [],
       "Arme à Distance": [],
       "Armure": [],
       "Bouclier": []
     };
+    const backpack = [];
+    const skills = [];
     const crystals = [];
 
     // Iterate through items, allocating to containers
     for (let i of actor.items) {
       i.img = i.img || DEFAULT_TOKEN;
-      // Append to backpack.
-      if (i.type === 'item') {
-        backpack.push(i);
-      }
-      // Append to equipments
-      else if (i.type === 'equipment') {
+      if (i.type === 'equipment') {
         if (i.data.equipmentType != undefined) {
           equipments[i.data.equipmentType].push(i);
           if (i.data.equipped) {
@@ -180,19 +158,31 @@ export class ArlenorActorSheet extends ActorSheet {
           }
         }
       }
-      // Append to crystals
+      else if (i.type === 'item') {
+        backpack.push(i);
+      }
+      else if (i.type === 'skill') {
+        skills.push(i);
+      }
       else if (i.type === 'crystal') {
         crystals.push(i);
       }
     }
 
+    backpack.sort(function (a, b) {
+      return a.name.localeCompare(b.name);
+    });
+    skills.sort(function (a, b) {
+      return a.name.localeCompare(b.name);
+    });
     crystals.sort(function (a, b) {
       return a.name.localeCompare(b.name);
     });
 
     // Assign and return
-    actor.backpack = backpack;
     actor.equipments = equipments;
+    actor.backpack = backpack;
+    actor.skills = skills;
     actor.crystals = crystals;
   }
 

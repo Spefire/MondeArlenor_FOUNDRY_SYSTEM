@@ -1,3 +1,10 @@
+import cases from "./../../models/cases.json" assert { type: "json" };
+import classes from "./../../models/classes.json" assert { type: "json" };
+import difficulties from "./../../models/divinities.json" assert { type: "json" };
+import durations from "./../../models/durations.json" assert { type: "json" };
+import families from "./../../models/families.json" assert { type: "json" };
+import ranges from "./../../models/ranges.json" assert { type: "json" };
+
 /**
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
@@ -9,7 +16,7 @@ export class ArlenorItemSheet extends ItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["arlenor", "sheet", "item"],
       width: 520,
-      height: 350,
+      height: 415,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "properties" }]
     });
   }
@@ -35,7 +42,13 @@ export class ArlenorItemSheet extends ItemSheet {
     let sheetData = {
       editable: this.isEditable,
       item: this.item,
-      system: this.item.system
+      system: this.item.system,
+      cases,
+      classes,
+      difficulties,
+      durations,
+      families,
+      ranges
     };
 
     return sheetData;

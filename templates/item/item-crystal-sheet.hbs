@@ -22,7 +22,7 @@
                     <label for="system.family" class="title-up-label">Famille</label>
                     <select name="system.family">
                         {{#select system.family }}
-                        {{#each system.families }}
+                        {{#each families }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}
@@ -38,12 +38,12 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-1col">
+            <div class="grid grid-2col">
                 <div class="flexrow flex-group-center">
                     <label for="system.duration" class="title-up-label">Durée max</label>
                     <select name="system.duration">
                         {{#select system.duration }}
-                        {{#each system.durations }}
+                        {{#each durations }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}
@@ -53,7 +53,7 @@
                     <label for="system.range" class="title-up-label">Portée max</label>
                     <select name="system.range">
                         {{#select system.range }}
-                        {{#each system.ranges }}
+                        {{#each ranges }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}

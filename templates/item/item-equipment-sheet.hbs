@@ -19,24 +19,123 @@
             <!-- As you add new fields, add them in here! -->
             <div class="grid grid-1col">
                 <div class="flexrow flex-group-center grid-one">
-                    <label for="system.featureType" class="title-up-label">Type d'équipement</label>
-                    <select name="system.featureType">
-                        {{#select system.featureType }}
-                        {{#each system.featureTypes }}
+                    <label for="system.equipmentType" class="title-up-label">Type d'équipement</label>
+                    <select name="system.equipmentType">
+                        {{#select system.equipmentType }}
+                        {{#each system.equipmentTypes }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
                 </div>
             </div>
+            
             <div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
-                    <label class="title-up-label">Attaque</label>
-                    <input type="text" name="system.attack" value="{{system.attack}}" data-dtype="Number" />
+                    Les valeurs si dessous sont le nombre de dés (bonus / malus) à ajouter
+                    ou à retirer lors d'un lancé dans la caractéristique correspondante.
+                </div>
+            </div>
+            <div class="grid grid-2col">
+                <div class="flexrow flex-group-center">
+                    <label class="title-up-label">
+                        {{#if (eq system.for.value 0 )}} {{system.for.name}} {{/if}}
+                        {{#if (ne system.for.value 0 )}} {{system.for.min}} {{/if}}
+                    </label>
+                    <input type="text" name="system.for.value" value="{{system.for.value}}" data-dtype="Number" />
+                    {{#if (ne system.for.value 0 )}}
+                    <select name="system.for.case" class="margin-left-1">
+                        {{#select system.for.case }}
+                        {{#each cases }}
+                        <option value="{{this.code}}">{{this.name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    {{/if}}
                 </div>
                 <div class="flexrow flex-group-center">
-                    <label class="title-up-label">Défense</label>
-                    <input type="text" name="system.defence" value="{{system.defence}}" data-dtype="Number" />
+                    <label class="title-up-label">
+                        {{#if (eq system.hab.value 0 )}} {{system.hab.name}} {{/if}}
+                        {{#if (ne system.hab.value 0 )}} {{system.hab.min}} {{/if}}
+                    </label>
+                    <input type="text" name="system.hab.value" value="{{system.hab.value}}" data-dtype="Number" />
+                    {{#if (ne system.hab.value 0 )}}
+                    <select name="system.hab.case" class="margin-left-1">
+                        {{#select system.hab.case }}
+                        {{#each cases }}
+                        <option value="{{this.code}}">{{this.name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="grid grid-2col">
+                <div class="flexrow flex-group-center">
+                    <label class="title-up-label">
+                        {{#if (eq system.int.value 0 )}} {{system.int.name}} {{/if}}
+                        {{#if (ne system.int.value 0 )}} {{system.int.min}} {{/if}}
+                    </label>
+                    <input type="text" name="system.int.value" value="{{system.int.value}}" data-dtype="Number" />
+                    {{#if (ne system.int.value 0 )}}
+                    <select name="system.int.case" class="margin-left-1">
+                        {{#select system.int.case }}
+                        {{#each cases }}
+                        <option value="{{this.code}}">{{this.name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    {{/if}}
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label class="title-up-label">
+                        {{#if (eq system.ten.value 0 )}} {{system.ten.name}} {{/if}}
+                        {{#if (ne system.ten.value 0 )}} {{system.ten.min}} {{/if}}
+                    </label>
+                    <input type="text" name="system.ten.value" value="{{system.ten.value}}" data-dtype="Number" />
+                    {{#if (ne system.ten.value 0 )}}
+                    <select name="system.ten.case" class="margin-left-1">
+                        {{#select system.ten.case }}
+                        {{#each cases }}
+                        <option value="{{this.code}}">{{this.name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="grid grid-2col">
+                <div class="flexrow flex-group-center">
+                    <label class="title-up-label">
+                        {{#if (eq system.cha.value 0 )}} {{system.cha.name}} {{/if}}
+                        {{#if (ne system.cha.value 0 )}} {{system.cha.min}} {{/if}}
+                    </label>
+                    <input type="text" name="system.cha.value" value="{{system.cha.value}}" data-dtype="Number" />
+                    {{#if (ne system.cha.value 0 )}}
+                    <select name="system.cha.case" class="margin-left-1">
+                        {{#select system.cha.case }}
+                        {{#each cases }}
+                        <option value="{{this.code}}">{{this.name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    {{/if}}
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label class="title-up-label">
+                        {{#if (eq system.mag.value 0 )}} {{system.mag.name}} {{/if}}
+                        {{#if (ne system.mag.value 0 )}} {{system.mag.min}} {{/if}}
+                    </label>
+                    <input type="text" name="system.mag.value" value="{{system.mag.value}}" data-dtype="Number" />
+                    {{#if (ne system.mag.value 0 )}}
+                    <select name="system.mag.case" class="margin-left-1">
+                        {{#select system.mag.case }}
+                        {{#each cases }}
+                        <option value="{{this.code}}">{{this.name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    {{/if}}
                 </div>
             </div>
         </div>

@@ -1,3 +1,5 @@
+import races from "./../../models/races.json" assert { type: "json" };
+
 /**
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
@@ -41,8 +43,6 @@ export class ArlenorActor extends Actor {
 
     if (withRaces) {
       const race = data.attributes.race;
-      const races = data.races;
-
       if (race === races[1].code
         || race === races[4].code) {
         safe.max = 1;
