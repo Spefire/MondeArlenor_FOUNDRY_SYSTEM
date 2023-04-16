@@ -144,7 +144,7 @@ export class ArlenorActorSheet extends ActorSheet {
     };
     const backpack = [];
     const skills = [];
-    const crystals = [];
+    const powers = [];
 
     // Iterate through items, allocating to containers
     for (let i of actor.items) {
@@ -164,8 +164,8 @@ export class ArlenorActorSheet extends ActorSheet {
       else if (i.type === 'skill') {
         skills.push(i);
       }
-      else if (i.type === 'crystal') {
-        crystals.push(i);
+      else if (i.type === 'power') {
+        powers.push(i);
       }
     }
 
@@ -175,7 +175,7 @@ export class ArlenorActorSheet extends ActorSheet {
     skills.sort(function (a, b) {
       return a.name.localeCompare(b.name);
     });
-    crystals.sort(function (a, b) {
+    powers.sort(function (a, b) {
       return a.name.localeCompare(b.name);
     });
 
@@ -183,7 +183,7 @@ export class ArlenorActorSheet extends ActorSheet {
     actor.equipments = equipments;
     actor.backpack = backpack;
     actor.skills = skills;
-    actor.crystals = crystals;
+    actor.powers = powers;
   }
 
   /* -------------------------------------------- */
@@ -286,6 +286,6 @@ export class ArlenorActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
-    rollSkill(this.actor, dataset.caractkey, dataset.skillkey, dataset.crystalid, dataset.bonusmalus);
+    rollSkill(this.actor, dataset.caractkey, dataset.skillkey, dataset.powerid, dataset.bonusmalus);
   }
 }

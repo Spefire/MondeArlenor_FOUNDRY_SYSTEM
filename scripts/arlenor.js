@@ -68,7 +68,7 @@ Hooks.once("ready", async function () {
   if (data.type !== "Item") return false;
   if (!("data" in data)) return ui.notifications.warn("Ce n'est pas les données d'un objet.");
   const item = data.data;
-  if (item.type !== "crystal") return ui.notifications.warn("Ce n'est pas un cristal.");
+  if (item.type !== "power") return ui.notifications.warn("Ce n'est pas un cristal.");
 
   // Create the macro command
   const command = `game.arlenor.rollArlenor('pou', null, '${item.id}');`;
@@ -90,17 +90,17 @@ Hooks.once("ready", async function () {
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
 
-function rollArlenor(caractKey, skillKey, crystalId) {
+function rollArlenor(caractKey, skillKey, powerId) {
   /*const speaker = ChatMessage.getSpeaker();
   let actor;
   if (speaker.token) actor = game.actors.tokens[speaker.token];
   if (!actor) actor = game.actors.get(speaker.actor);
   if (!actor) actor = game.actors.find(act => act.isOwner);
-  if (actor) rollSkill(actor, caractKey, skillKey, crystalId, 0);
+  if (actor) rollSkill(actor, caractKey, skillKey, powerId, 0);
   else console.error("Il n'y a pas de personnage valide.");*/
 }
 
-export async function rollSkill(actor, caractKey, skillKey, crystalId, bonusMalus) {
+export async function rollSkill(actor, caractKey, skillKey, powerId, bonusMalus) {
 
   // Re-calculate health levels
   const race = actor.data.data.attributes?.race;
@@ -145,15 +145,15 @@ export async function rollSkill(actor, caractKey, skillKey, crystalId, bonusMalu
     if (skill === 0) skill = -4;
     rollCmd += "+" + skill;
   }
-  if (crystalId !== null && crystalId !== undefined) {
-    let crystalItem = null;
+  if (powerId !== null && powerId !== undefined) {
+    let powerItem = null;
     for (let i of actor.data.items) {
-      if (i.type === 'crystal' && i.id === crystalId) {
-        crystalItem = i;
+      if (i.type === 'power' && i.id === powerId) {
+        powerItem = i;
       }
     }
-    if (crystalItem) {
-      label = crystalItem.name;
+    if (powerItem) {
+      label = powerItem.name;
     } else {
       console.error("Cristal non disponible");
       return;

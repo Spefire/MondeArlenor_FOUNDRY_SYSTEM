@@ -85,7 +85,7 @@
       "item",
       "skill",
       "equipment",
-      "crystal"
+      "power"
     ],
     "templates": {
       "base": {
@@ -167,12 +167,12 @@
         "Autre (bijou, ..)"
       ]
     },
-    "crystal": {
+    "power": {
       "templates": [
         "base"
       ],
-      "source": "Cristal évolutif",
-      "sources": [
+      "powerType": "Cristal évolutif",
+      "powerTypes": [
         "Cristal évolutif",
         "Cristal instantanée",
         "Parchemin"

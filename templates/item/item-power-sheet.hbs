@@ -18,10 +18,10 @@
         <div class="tab properties" data-group="primary" data-tab="properties">
             <div class="grid grid-2col">
                 <div class="flexrow flex-group-center">
-                    <label for="system.source" class="title-up-label">Source</label>
-                    <select name="system.source">
-                        {{#select system.source }}
-                        {{#each system.sources }}
+                    <label for="system.powerType" class="title-up-label">Source</label>
+                    <select name="system.powerType">
+                        {{#select system.powerType }}
+                        {{#each system.powerTypes }}
                         <option value="{{this}}">{{this}}</option>
                         {{/each}}
                         {{/select}}
