@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
 /* Global styles */
+.margin-left-1 {
+  margin-left: 5px;
+}
+
+.margin-right-1 {
+  margin-right: 5px;
+}
+
 .window-app {
   font-family: "Roboto", sans-serif;
 }
@@ -11,62 +19,67 @@
 }
 
 .grid,
-.grid-2col {
+.grid-1col {
   display: grid;
-  grid-column: span 2 / span 2;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-column: span 1/span 1;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 5px;
   margin: 5px 0;
   padding: 0;
 }
 
+.grid-2col {
+  grid-column: span 2/span 2;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-3col {
-  grid-column: span 3 / span 3;
+  grid-column: span 3/span 3;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-4col {
-  grid-column: span 4 / span 4;
+  grid-column: span 4/span 4;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-5col {
-  grid-column: span 5 / span 5;
+  grid-column: span 5/span 5;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .grid-6col {
-  grid-column: span 5 / span 5;
+  grid-column: span 5/span 5;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .grid-7col {
-  grid-column: span 7 / span 7;
+  grid-column: span 7/span 7;
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
 .grid-8col {
-  grid-column: span 8 / span 8;
+  grid-column: span 8/span 8;
   grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 
 .grid-9col {
-  grid-column: span 9 / span 9;
+  grid-column: span 9/span 9;
   grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 
 .grid-10col {
-  grid-column: span 10 / span 10;
+  grid-column: span 10/span 10;
   grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 
 .grid-11col {
-  grid-column: span 11 / span 11;
+  grid-column: span 11/span 11;
   grid-template-columns: repeat(11, minmax(0, 1fr));
 }
 
 .grid-12col {
-  grid-column: span 12 / span 12;
+  grid-column: span 12/span 12;
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
@@ -134,11 +147,9 @@
 .arlenor form.editable {
   min-width: 620px;
 }
-
 .arlenor .item-form {
   font-family: "Roboto", sans-serif;
 }
-
 .arlenor .sheet-header {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 115px;
@@ -157,25 +168,21 @@
   -ms-flex-pack: start;
   justify-content: flex-start;
 }
-
 .arlenor .sheet-header.mid-header {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 90px;
   flex: 0 0 90px;
 }
-
 .arlenor .sheet-header.tri-header {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 65px;
   flex: 0 0 65px;
 }
-
 .arlenor .sheet-header.sheet-min {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 85px;
   flex: 0 0 85px;
 }
-
 .arlenor .sheet-header.sheet-min .profile-img {
   -webkit-box-flex: 0 !important;
   -ms-flex: 0 0 80px !important;
@@ -184,11 +191,9 @@
   width: 80px !important;
   margin-bottom: 0;
 }
-
 .arlenor .sheet-header.sheet-min h1.charname {
   margin: 0 !important;
 }
-
 .arlenor .sheet-header .profile-img {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 110px;
@@ -197,57 +202,47 @@
   margin-right: 10px;
   margin-bottom: 5px;
 }
-
 .arlenor .sheet-header .header-fields {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
-
 .arlenor .sheet-header h1.charname {
   height: 50px;
   margin-bottom: 5px;
   padding: 0px;
   border-bottom: 0;
 }
-
 .arlenor .sheet-header h1.charname input {
   width: 100%;
   height: 100%;
   margin: 0;
 }
-
 .arlenor .sheet-tabs {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
 }
-
 .arlenor .sheet-body,
 .arlenor .sheet-body .tab,
 .arlenor .sheet-body .tab .editor {
   height: 100%;
 }
-
 .arlenor .sheet-body.height-auto,
 .arlenor .sheet-body .tab.height-auto,
 .arlenor .sheet-body .tab .editor.height-auto {
   height: auto;
 }
-
 .arlenor .tox .tox-editor-container {
   background: #fff;
 }
-
 .arlenor .tox .tox-edit-area {
   padding: 0 8px;
 }
-
 .arlenor .title-up-label {
   font-weight: bold;
   text-transform: uppercase;
 }
-
 .arlenor .input-value-base {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,19 +252,16 @@
   align-items: center;
   padding-right: 5px;
 }
-
-.arlenor .input-value-base input[type="text"]:first-child {
+.arlenor .input-value-base input[type=text]:first-child {
   margin-right: 5px;
 }
-
-.arlenor .input-value-base input[type="text"]:not(:first-child) {
+.arlenor .input-value-base input[type=text]:not(:first-child) {
   width: 20px;
   padding: 0;
   text-align: center;
   border: none;
   background: none;
 }
-
 .arlenor .tabs {
   height: auto !important;
   -webkit-box-flex: 0 !important;
@@ -279,46 +271,38 @@
   border-top: 1px solid #AAA;
   border-bottom: 1px solid #AAA;
 }
-
 .arlenor .tabs .item {
-  line-height: 40px;
+  line-height: 25px;
   font-weight: bold;
 }
-
 .arlenor .tabs .item.active {
   text-decoration: underline;
   text-shadow: none;
 }
-
 .arlenor .items-list {
   list-style: none;
   margin: 5px 0 15px 0;
   padding: 0;
 }
-
 .arlenor .items-list .item-header {
   font-weight: bold;
 }
-
 .arlenor .items-list .item {
   height: 30px;
   line-height: 24px;
   padding: 3px 0;
   border-bottom: 1px solid #BBB;
 }
-
 .arlenor .items-list .item .item-image {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 24px;
   flex: 0 0 24px;
   margin-right: 5px;
 }
-
 .arlenor .items-list .item img {
   display: block;
   border: none;
 }
-
 .arlenor .items-list .item-name {
   margin: 0;
   white-space: nowrap;
@@ -326,43 +310,35 @@
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-
 .arlenor .items-list .item-details {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 86px;
   flex: 0 0 86px;
   text-align: center;
 }
-
 .arlenor .items-list .item-details i {
   margin: 0 5px;
 }
-
 .arlenor .items-list .item-value {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 86px;
   flex: 0 0 86px;
 }
-
 .arlenor .items-list .item-type {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 126px;
   flex: 0 0 126px;
   padding-left: 10px;
 }
-
 .arlenor .items-list .item-spec select {
   width: 100%;
 }
-
 .arlenor .items-list .item-controls {
   text-align: center;
 }
-
 .arlenor .items-list .item-controls a {
   margin: 0 5px;
 }
-
 .arlenor .items-list .item-controls.combat-roll {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -371,7 +347,6 @@
   -ms-flex-pack: center;
   justify-content: center;
 }
-
 .arlenor .items-list .item-controls.combat-roll img {
   display: inline-block;
   margin-right: 5px;
