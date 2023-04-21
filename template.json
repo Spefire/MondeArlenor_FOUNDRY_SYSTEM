@@ -32,27 +32,27 @@
         "caracts": {
           "for": {
             "name": "Force",
-            "value": 1
+            "value": 0
           },
           "hab": {
             "name": "Habileté",
-            "value": 1
+            "value": 0
           },
           "int": {
             "name": "Intellect",
-            "value": 1
+            "value": 0
           },
           "ten": {
             "name": "Ténacité",
-            "value": 1
+            "value": 0
           },
           "cha": {
             "name": "Charisme",
-            "value": 1
+            "value": 0
           },
           "mag": {
             "name": "Magie",
-            "value": 1
+            "value": 0
           }
         }
       }
@@ -108,7 +108,6 @@
       "templates": [
         "base"
       ],
-      "effect": 1,
       "skillType": "Autre compétence",
       "skillTypes": [
         "Compétence d'arme",
@@ -173,14 +172,14 @@
       "powerType": "Cristal évolutif",
       "powerTypes": [
         "Cristal évolutif",
-        "Cristal instantanée",
+        "Cristal instantané",
         "Parchemin"
       ],
       "speciality": "PALADIN",
-      "family": "Abjuration",
-      "rank": 0,
-      "duration": "Instantanée",
-      "range": "Personnelle",
+      "family": "OFF",
+      "rank": "RANK1",
+      "duration": "DUR0",
+      "range": "RANG0",
       "chaneling": false
     }
   }

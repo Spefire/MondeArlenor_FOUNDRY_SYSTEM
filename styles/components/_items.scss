@@ -31,32 +31,24 @@
     text-overflow: ellipsis;
   }
 
-  .item-details {
-    flex: 0 0 86px;
-    text-align: center;
+  .item-big {
+    flex: 0 0 126px;
 
     i {
       margin: 0 5px;
     }
   }
 
-  .item-value {
-    flex: 0 0 86px;
+  .item-normal {
+    flex: 0 0 84px;
   }
 
-  .item-type {
-    flex: 0 0 126px;
-    padding-left: 10px;
-  }
-
-  .item-spec {
-    select {
-      width: 100%;
-    }
+  .item-small {
+    flex: 0 0 42px;
   }
 
   .item-controls {
-    text-align: center;
+    text-align: right;
 
     a {
       margin: 0 5px;

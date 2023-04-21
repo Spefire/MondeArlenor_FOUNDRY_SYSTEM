@@ -68,7 +68,7 @@ Hooks.once("ready", async function () {
   if (data.type !== "Item") return false;
   if (!("data" in data)) return ui.notifications.warn("Ce n'est pas les données d'un objet.");
   const item = data.data;
-  if (item.type !== "power") return ui.notifications.warn("Ce n'est pas un cristal.");
+  if (item.type !== "power") return ui.notifications.warn("Ce n'est pas un pouvoir.");
 
   // Create the macro command
   const command = `game.arlenor.rollArlenor('pou', null, '${item.id}');`;
@@ -155,7 +155,7 @@ export async function rollSkill(actor, caractKey, skillKey, powerId, bonusMalus)
     if (powerItem) {
       label = powerItem.name;
     } else {
-      console.error("Cristal non disponible");
+      console.error("Pouvoir non disponible");
       return;
     }
   }

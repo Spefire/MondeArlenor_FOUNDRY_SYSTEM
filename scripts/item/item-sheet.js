@@ -3,6 +3,7 @@ import difficulties from "./../../models/divinities.json" assert { type: "json" 
 import durations from "./../../models/durations.json" assert { type: "json" };
 import families from "./../../models/families.json" assert { type: "json" };
 import ranges from "./../../models/ranges.json" assert { type: "json" };
+import ranks from "./../../models/ranks.json" assert { type: "json" };
 import specialities from "./../../models/specialities.json" assert { type: "json" };
 
 /**
@@ -16,7 +17,7 @@ export class ArlenorItemSheet extends ItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["arlenor", "sheet", "item"],
       width: 520,
-      height: 415,
+      height: 480,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "properties" }]
     });
   }
@@ -48,6 +49,7 @@ export class ArlenorItemSheet extends ItemSheet {
       durations,
       families,
       ranges,
+      ranks,
       specialities
     };
 

@@ -1,6 +1,18 @@
 [
-    "Instantanée",
-    "Une scène",
-    "Une journée",
-    "Illimitée"
+    {
+        "name": "Instantanée",
+        "code": "DUR0"
+    },
+    {
+        "name": "Une scène",
+        "code": "DUR1"
+    },
+    {
+        "name": "Une journée",
+        "code": "DUR2"
+    },
+    {
+        "name": "Illimitée",
+        "code": "DUR3"
+    }
 ]

@@ -16,7 +16,7 @@ export class ArlenorActorSheet extends ActorSheet {
       template: "systems/arlenor/templates/actor/actor-sheet.hbs",
       width: 620,
       height: 700,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "powers" }]
     });
   }
 
@@ -126,6 +126,7 @@ export class ArlenorActorSheet extends ActorSheet {
     const backpack = [];
     const skills = [];
     const powers = [];
+    const othersPowers = [];
 
     // Iterate through items, allocating to containers
     for (let i of actor.items) {
@@ -146,7 +147,8 @@ export class ArlenorActorSheet extends ActorSheet {
         skills.push(i);
       }
       else if (i.type === 'power') {
-        powers.push(i);
+        if (i.system.powerType === "Cristal évolutif") powers.push(i);
+        else othersPowers.push(i);
       }
     }
 
@@ -159,12 +161,16 @@ export class ArlenorActorSheet extends ActorSheet {
     powers.sort(function (a, b) {
       return a.name.localeCompare(b.name);
     });
+    othersPowers.sort(function (a, b) {
+      return a.name.localeCompare(b.name);
+    });
 
     // Assign and return
     actor.equipments = equipments;
     actor.backpack = backpack;
     actor.skills = skills;
     actor.powers = powers;
+    actor.othersPowers = othersPowers;
   }
 
   /* -------------------------------------------- */

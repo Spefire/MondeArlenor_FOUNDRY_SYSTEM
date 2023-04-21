@@ -8,6 +8,10 @@
   margin-right: 5px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .window-app {
   font-family: "Roboto", sans-serif;
 }
@@ -215,9 +219,13 @@
   margin: 0;
 }
 .arlenor .sheet-tabs {
+  margin: 4px 0 0 0 !important;
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
+}
+.arlenor .sheet-body {
+  background: rgba(255, 255, 255, 0.2);
 }
 .arlenor .sheet-body,
 .arlenor .sheet-body .tab,
@@ -306,31 +314,26 @@
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-.arlenor .items-list .item-details {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 86px;
-  flex: 0 0 86px;
-  text-align: center;
-}
-.arlenor .items-list .item-details i {
-  margin: 0 5px;
-}
-.arlenor .items-list .item-value {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 86px;
-  flex: 0 0 86px;
-}
-.arlenor .items-list .item-type {
+.arlenor .items-list .item-big {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 126px;
   flex: 0 0 126px;
-  padding-left: 10px;
 }
-.arlenor .items-list .item-spec select {
-  width: 100%;
+.arlenor .items-list .item-big i {
+  margin: 0 5px;
+}
+.arlenor .items-list .item-normal {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 84px;
+  flex: 0 0 84px;
+}
+.arlenor .items-list .item-small {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 42px;
+  flex: 0 0 42px;
 }
 .arlenor .items-list .item-controls {
-  text-align: center;
+  text-align: right;
 }
 .arlenor .items-list .item-controls a {
   margin: 0 5px;

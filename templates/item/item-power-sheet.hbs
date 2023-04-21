@@ -16,7 +16,7 @@
     <section class="sheet-body">
         <!-- Properties Tab -->
         <div class="tab properties" data-group="primary" data-tab="properties">
-            <div class="grid grid-2col">
+            <div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
                     <label for="system.powerType" class="title-up-label">Source</label>
                     <select name="system.powerType">
@@ -27,12 +27,16 @@
                         {{/select}}
                     </select>
                 </div>
+            </div>
+            
+            {{#if (eq system.powerType "Cristal évolutif" )}}
+            <div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
-                    <label for="system.family" class="title-up-label">Famille</label>
-                    <select name="system.family">
-                        {{#select system.family }}
-                        {{#each families }}
-                        <option value="{{this}}">{{this}}</option>
+                    <label for="system.speciality" class="title-up-label">Classe</label>
+                    <select name="system.speciality">
+                        {{#select system.speciality }}
+                        {{#each specialities }}
+                        <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
                         {{/each}}
                         {{/select}}
                     </select>
@@ -43,20 +47,36 @@
                 <div class="flexrow flex-group-center">
                     Le rang d'un pouvoir indique sa puissance
                     <br>et souvent la difficulté qui sera nécessaire pour l'utiliser.
-                    <br>Rang : 1/ 2 / 3 / 4
-                    <br>Difficulté : Simple / Standard / Complexe / Légendaire
+                    <br>I (Simple) / II (Standard) / III (Complexe) / IV (Légendaire)
                 </div>
             </div>
+            {{/if}}
 
-            <div class="grid grid-2col">
+            <div
+                {{#if (eq system.powerType "Cristal évolutif" )}} class="grid grid-2col" {{/if}}
+                {{#if (ne system.powerType "Cristal évolutif" )}} class="grid grid-1col" {{/if}}>
                 <div class="flexrow flex-group-center">
-                    <label class="title-up-label">Rang</label>
-                    <input type="text" name="system.rank" value="{{system.rank}}" data-dtype="Number" />
+                    <label for="system.family" class="title-up-label">Famille</label>
+                    <select name="system.family">
+                        {{#select system.family }}
+                        {{#each families }}
+                        <option value="{{this.code}}">{{this.name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
                 </div>
+                {{#if (eq system.powerType "Cristal évolutif" )}}
                 <div class="flexrow flex-group-center">
-                    {{#if (eq system.chaneling true )}}Avec canalisation{{/if}}
-                    {{#if (eq system.chaneling false )}}Sans canalisation{{/if}}
+                    <label for="system.rank" class="title-up-label">Rang</label>
+                    <select name="system.rank">
+                        {{#select system.rank }}
+                        {{#each ranks }}
+                        <option value="{{this.code}}">Rang {{this.name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
                 </div>
+                {{/if}}
             </div>
 
             <div class="grid grid-2col">
@@ -65,7 +85,7 @@
                     <select name="system.duration">
                         {{#select system.duration }}
                         {{#each durations }}
-                        <option value="{{this}}">{{this}}</option>
+                        <option value="{{this.code}}">{{this.name}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
@@ -75,10 +95,18 @@
                     <select name="system.range">
                         {{#select system.range }}
                         {{#each ranges }}
-                        <option value="{{this}}">{{this}}</option>
+                        <option value="{{this.code}}">{{this.name}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
+                </div>
+            </div>
+
+            <div class="grid grid-1col">
+                <div class="flexrow flex-group-center">
+                    <input type='checkbox' name="system.chaneling" {{checked system.chaneling}}>
+                    {{#if (eq system.chaneling true )}}Avec canalisation{{/if}}
+                    {{#if (eq system.chaneling false )}}Sans canalisation{{/if}}
                 </div>
             </div>
         </div>

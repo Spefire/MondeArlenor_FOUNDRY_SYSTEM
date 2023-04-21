@@ -13,10 +13,10 @@
       {{#if (eq actor.type "character")}}
       <div class="grid grid-3col">
         <div class="flex-group-center">
-          <label for="system.race" class="title-up-label">Race</label>
+          <label for="system.race" class="title-up-label">Peuple</label>
           <div class="flexrow flex-center flex-between">
             <select name="system.race">
-              <option value="">Autre</option>
+              <option value="">-</option>
               {{#select system.race }}
               {{#each races }}
               <option value="{{this.code}}">{{this.name}}</option>
@@ -29,7 +29,7 @@
           <label for="system.divinity" class="title-up-label">Divinité</label>
           <div class="flexrow flex-center flex-between">
             <select name="system.divinity">
-              <option value="">Aucune</option>
+              <option value="">-</option>
               {{#select system.divinity }}
               {{#each divinities }}
               <option value="{{this.code}}">{{this.name}}</option>
@@ -119,13 +119,10 @@
 
   <!-- Sheet Tab Navigation -->
   <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="powers">Pouvoirs</a>
     {{#if (eq actor.type "character")}}
     <a class="item" data-tab="skills">Compétences</a>
-    <a class="item" data-tab="powers">Cristaux</a>
     <a class="item" data-tab="equipments">Équipement</a>
-    {{/if}}
-    {{#if (eq actor.type "creature")}}
-    <a class="item" data-tab="actions">Actions</a>
     {{/if}}
     <a class="item" data-tab="backpack">Objets</a>
     <a class="item" data-tab="description">Description</a>
@@ -153,35 +150,35 @@
         <li class="item flexrow">
           <div class="item-name">Jets d'Attaque</div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="for" data-skillKey="com"
+            <a class="rollable" title="Lancé avec Malus" data-caractKey="for" data-skillKey="com"
               data-bonusMalus="-4 + {{actor.bonusAttack}}">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caractKey="for" data-skillKey="com"
+            <a class="rollable" title="Lancé Normal" data-caractKey="for" data-skillKey="com"
               data-bonusMalus="{{actor.bonusAttack}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="for" data-skillKey="com"
+            <a class="rollable" title="Lancé avec Bonus" data-caractKey="for" data-skillKey="com"
               data-bonusMalus="+4 + {{actor.bonusAttack}}">
               <i class="fas fa-dice-six"></i></a>
           </div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="hab" data-skillKey="com"
+            <a class="rollable" title="Lancé avec Malus" data-caractKey="hab" data-skillKey="com"
               data-bonusMalus="-4 + {{actor.bonusAttack}}">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caractKey="hab" data-skillKey="com"
+            <a class="rollable" title="Lancé Normal" data-caractKey="hab" data-skillKey="com"
               data-bonusMalus="{{actor.bonusAttack}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="hab" data-skillKey="com"
+            <a class="rollable" title="Lancé avec Bonus" data-caractKey="hab" data-skillKey="com"
               data-bonusMalus="+4 + {{actor.bonusAttack}}">
               <i class="fas fa-dice-six"></i></a>
           </div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="int" data-skillKey="com"
+            <a class="rollable" title="Lancé avec Malus" data-caractKey="int" data-skillKey="com"
               data-bonusMalus="-4 + {{actor.bonusAttack}}">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caractKey="int" data-skillKey="com"
+            <a class="rollable" title="Lancé Normal" data-caractKey="int" data-skillKey="com"
               data-bonusMalus="{{actor.bonusAttack}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="int" data-skillKey="com"
+            <a class="rollable" title="Lancé avec Bonus" data-caractKey="int" data-skillKey="com"
               data-bonusMalus="+4 + {{actor.bonusAttack}}">
               <i class="fas fa-dice-six"></i></a>
           </div>
@@ -189,35 +186,35 @@
         <li class="item flexrow">
           <div class="item-name">Jets de Défense</div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="for" data-skillKey="com"
+            <a class="rollable" title="Lancé avec Malus" data-caractKey="for" data-skillKey="com"
               data-bonusMalus="-4 + {{actor.bonusDefence}}">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caractKey="for" data-skillKey="com"
+            <a class="rollable" title="Lancé Normal" data-caractKey="for" data-skillKey="com"
               data-bonusMalus="{{actor.bonusDefence}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="for" data-skillKey="com"
+            <a class="rollable" title="Lancé avec Bonus" data-caractKey="for" data-skillKey="com"
               data-bonusMalus="+4 + {{actor.bonusDefence}}">
               <i class="fas fa-dice-six"></i></a>
           </div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="hab" data-skillKey="com"
+            <a class="rollable" title="Lancé avec Malus" data-caractKey="hab" data-skillKey="com"
               data-bonusMalus="-4 + {{actor.bonusDefence}}">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caractKey="hab" data-skillKey="com"
+            <a class="rollable" title="Lancé Normal" data-caractKey="hab" data-skillKey="com"
               data-bonusMalus="{{actor.bonusDefence}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="hab" data-skillKey="com"
+            <a class="rollable" title="Lancé avec Bonus" data-caractKey="hab" data-skillKey="com"
               data-bonusMalus="+4 + {{actor.bonusDefence}}">
               <i class="fas fa-dice-six"></i></a>
           </div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="int" data-skillKey="com"
+            <a class="rollable" title="Lancé avec Malus" data-caractKey="int" data-skillKey="com"
               data-bonusMalus="-4 + {{actor.bonusDefence}}">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caractKey="int" data-skillKey="com"
+            <a class="rollable" title="Lancé Normal" data-caractKey="int" data-skillKey="com"
               data-bonusMalus="{{actor.bonusDefence}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="int" data-skillKey="com"
+            <a class="rollable" title="Lancé avec Bonus" data-caractKey="int" data-skillKey="com"
               data-bonusMalus="+4 + {{actor.bonusDefence}}">
               <i class="fas fa-dice-six"></i></a>
           </div>
@@ -230,7 +227,7 @@
           <div class="item-image"></div>
           <div class="item-name">Nom</div>
           <div class="item-value">Valeur</div>
-          <div class="item-spec">Spécialité</div>
+          <div class="item-value">Spécialité</div>
           <div class="item-controls">Lancés</div>
         </li>
 
@@ -256,10 +253,10 @@
             <h4 class="item-name">{{skill.value}}</h4>
             {{/if}}
           </div>
-          <div class="item-spec">
+          <div class="item-value">
             {{#if (eq @index 0)}}
             <select name="system.skills.{{key}}.spec">
-              <option value=""></option>
+              <option value="">-</option>
               {{#select skill.spec }}
               {{#each skill.specs }}
               <option value="{{this}}">{{this}}</option>
@@ -272,12 +269,12 @@
             {{/if}}
           </div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="{{caract}}"
+            <a class="rollable" title="Lancé avec Malus" data-caractKey="{{caract}}"
               data-skillKey="{{key}}" data-bonusMalus="-4">
               <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caractKey="{{caract}}" data-skillKey="{{key}}">
+            <a class="rollable" title="Lancé Normal" data-caractKey="{{caract}}" data-skillKey="{{key}}">
               <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="{{caract}}"
+            <a class="rollable" title="Lancé avec Bonus" data-caractKey="{{caract}}"
               data-skillKey="{{key}}" data-bonusMalus="+4">
               <i class="fas fa-dice-six"></i></a>
           </div>
@@ -289,56 +286,125 @@
 
     <!-- Owned Powers Tab -->
     <div class="tab powers" data-group="primary" data-tab="powers">
+      <div class="grid grid-2col">
+        <div class="flex-group-center">
+          <label for="system.speciality01" class="title-up-label">Classe principale</label>
+          <select name="system.speciality01">
+            <option value="">-</option>
+            {{#select system.speciality01 }}
+            {{#each specialities }}
+            <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
+            {{/each}}
+            {{/select}}
+          </select>
+        </div>
+        <div class="flex-group-center">
+          <label for="system.speciality02" class="title-up-label">Classe secondaire</label>
+          <select name="system.speciality02">
+            <option value="">-</option>
+            {{#select system.speciality02 }}
+            {{#each specialities }}
+            <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
+            {{/each}}
+            {{/select}}
+          </select>
+        </div>
+      </div>
+
       <ol class="items-list">
         <li class="item flexrow item-header">
           <div class="item-image"></div>
-          <div class="item-name">Nom</div>
-          <div class="item-name">Famille</div>
-          <div class="item-value">Maitrise</div>
-          <div class="item-controls">Lancés</div>
+          <div class="item-name">Nom du pouvoir</div>
+          <div class="item-small text-center"></div>
+          <div class="item-small text-center">Rang</div>
+          <div class="item-normal text-center">Classe</div>
+          <div class="item-big">Détails</div>
           <div class="item-controls">
-            <a class="item-control item-create" title="Ajouter cristal" data-type="power">
+            <a class="item-create" title="Ajouter un pouvoir" data-type="power">
               <i class="fas fa-plus"></i>
-              Ajouter cristal
+              Ajouter
             </a>
           </div>
         </li>
+
         {{#each actor.powers as |power id|}}
-        <li class="item flexrow with-drag" data-item-id="{{power._id}}">
-          <div class="item-image"><img src="{{power.img}}" width="24" height="24" /></div>
-          <h4 class="item-name">{{power.name}}</h4>
-          <h4 class="item-name">{{power.data.family}}</h4>
-          <!--div class="item-details">
-            <i class="fas fa-book-open" title="{{power.data.family}}"></i>
-            <i class="fas fa-hourglass-half" title="{{power.data.duration}}"></i>
-            <i class="fas fa-bullseye" title="{{power.data.range}}"></i>
-          </div-->
-          <div class="item-value">
-            <div class="input-value-base">
-              <input type="text" name="power.data.level" value="{{power.data.level}}" data-dtype="Number" disabled
-                title="Actuel" />
-              <span>(</span>
-              <input type="text" name="power.data.base" value="{{power.data.base}}" data-dtype="Number" disabled
-                title="De base" />
-              <span>)</span>
+          <li class="item flexrow" data-item-id="{{power._id}}">
+            <div class="item-image"><img src="{{power.img}}" width="24" height="24" /></div>
+            <h4 class="item-name">{{power.name}}</h4>
+            <div class="item-small text-center">
+              <a class="rollable" title="Utiliser le pouvoir" data-caractKey="mag" data-powerId="{{power._id}}">
+                <i class="fas fa-dice"></i>
+              </a>
             </div>
-          </div>
+            <div class="item-small text-center">{{power.system.rank}}</div>
+            <div class="item-normal text-center">{{power.system.speciality}}</div>
+            <div class="item-big">
+              <i class="fas fa-book-open" title="{{power.system.family}}"></i>
+              <i class="fas fa-hourglass-half" title="{{power.system.duration}}"></i>
+              <i class="fas fa-bullseye" title="{{power.system.range}}"></i>
+              {{#if (eq power.system.chaneling true)}}
+                <i class="fas fa-refresh" title="Avec canalisation"></i>
+              {{/if}}
+            </div>
+            <div class="item-controls">
+              <a class="item-edit" title="Modifier le pouvoir"><i class="fas fa-edit"></i></a>
+              <a class="item-delete" title="Supprimer le pouvoir"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+        {{/each}}
+        
+        {{#if (eq actor.powers.length 0)}}
+          <li class="item flexrow text-center">
+            <div>Aucun pouvoir</div>
+          </li>
+        {{/if}}
+      </ol>
+
+      <ol class="items-list">
+        <li class="item flexrow item-header">
+          <div class="item-image"></div>
+          <div class="item-name">Nom du pouvoir</div>
+          <div class="item-small text-center"></div>
+          <div class="item-big text-center">Source</div>
+          <div class="item-big">Détails</div>
           <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="pou"
-              data-powerId="{{power._id}}" data-bonusMalus="-4">
-              <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caractKey="pou" data-powerId="{{power._id}}">
-              <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="pou"
-              data-powerId="{{power._id}}" data-bonusMalus="+4">
-              <i class="fas fa-dice-six"></i></a>
-          </div>
-          <div class="item-controls">
-            <a class="item-control item-edit" title="Modifier cristal"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Supprimer cristal"><i class="fas fa-trash"></i></a>
+            <a class="item-create" title="Ajouter un pouvoir" data-type="power">
+              <i class="fas fa-plus"></i>
+              Ajouter
+            </a>
           </div>
         </li>
+
+        {{#each actor.othersPowers as |power id|}}
+          <li class="item flexrow with-drag" data-item-id="{{power._id}}">
+            <div class="item-image"><img src="{{power.img}}" width="24" height="24" /></div>
+            <h4 class="item-name">{{power.name}}</h4>
+            <div class="item-small text-center">
+              <a class="rollable" title="Utiliser le pouvoir" data-caractKey="mag" data-powerId="{{power._id}}">
+                <i class="fas fa-dice"></i>
+              </a>
+            </div>
+            <div class="item-big text-center">{{power.system.powerType}}</div>
+            <div class="item-big">
+              <i class="fas fa-book-open" title="{{power.system.family}}"></i>
+              <i class="fas fa-hourglass-half" title="{{power.system.duration}}"></i>
+              <i class="fas fa-bullseye" title="{{power.system.range}}"></i>
+              {{#if (eq power.system.chaneling true)}}
+                <i class="fas fa-refresh" title="Avec canalisation"></i>
+              {{/if}}
+            </div>
+            <div class="item-controls">
+              <a class="item-edit" title="Modifier le pouvoir"><i class="fas fa-edit"></i></a>
+              <a class="item-delete" title="Supprimer le pouvoir"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
         {{/each}}
+
+        {{#if (eq actor.othersPowers.length 0)}}
+          <li class="item flexrow text-center">
+            <div>Aucun cristal instantané, ou parchemin...</div>
+          </li>
+        {{/if}}
       </ol>
     </div>
 
@@ -350,7 +416,7 @@
           <div class="item-name"></div>
           <div class="item-value">Attaque : {{actor.bonusAttack}}</div>
           <div class="item-value">Défense : {{actor.bonusDefence}}</div>
-          <div class="item-type">Equipé</div>
+          <div class="item-details">Equipé</div>
           <div class="item-controls"></div>
         </li>
         {{#each actor.equipments as |equipments equipmentType|}}
@@ -358,9 +424,9 @@
           <div class="item-name">{{equipmentType}}</div>
           <div class="item-value"></div>
           <div class="item-value"></div>
-          <div class="item-type"></div>
+          <div class="item-details"></div>
           <div class="item-controls">
-            <a class="item-control item-create" title="Ajouter {{toLowerCase equipmentType}}" data-type="equipment"
+            <a class="item-create" title="Ajouter {{toLowerCase equipmentType}}" data-type="equipment"
               data-equipment-type="{{equipmentType}}"><i class="fas fa-plus"></i> Ajouter</a>
           </div>
         </li>
@@ -376,102 +442,16 @@
             <input type="text" name="equipment.data.defence" value="{{equipment.data.defence}}" data-dtype="Number"
               disabled />
           </div>
-          <div class="item-type">
+          <div class="item-details">
             <input class="inline-edit-check" type='checkbox' data-field="equipment.data.equipped"
             {{#if equipment.data.equipped}}checked{{/if}}>
           </div>
           <div class="item-controls">
-            <a class="item-control item-edit" title="Modifier équipement"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Supprimer équipement"><i class="fas fa-trash"></i></a>
+            <a class="item-edit" title="Modifier équipement"><i class="fas fa-edit"></i></a>
+            <a class="item-delete" title="Supprimer équipement"><i class="fas fa-trash"></i></a>
           </div>
         </li>
         {{/each}}
-        {{/each}}
-      </ol>
-    </div>
-    {{/if}}
-
-    {{#if (eq actor.type "creature")}}
-    <!-- Owned Actions Tab -->
-    <div class="tab actions" data-group="primary" data-tab="actions">
-      <ol class="items-list">
-        <li class="item flexrow item-header">
-          <div class="item-image"></div>
-          <div class="item-name">Nom</div>
-          <div class="item-value">Valeur</div>
-          <div class="item-controls">Lancés</div>
-        </li>
-
-        {{#each system.skills as |skill key|}}
-        {{#each skill.caracts as |caract keyCaract|}}
-        <li class="item flexrow" data-item-id="{{skill.key}}{{caract}}">
-          <div class="item-image">
-            <img src="{{lookup skill.img caract}}" width="24" height="24" />
-          </div>
-          <h4 class="item-name">{{skill.name}} ({{caract}})</h4>
-          <div class="item-value">
-            {{#if (eq @index 0)}}
-            <input type="text" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number" />
-            {{/if}}
-            {{#if (gte @index 1)}}
-            <h4 class="item-name">{{skill.value}}</h4>
-            {{/if}}
-          </div>
-          <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="{{caract}}"
-              data-skillKey="{{key}}" data-bonusMalus="-4">
-              <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caractKey="{{caract}}" data-skillKey="{{key}}">
-              <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="{{caract}}"
-              data-skillKey="{{key}}" data-bonusMalus="+4">
-              <i class="fas fa-dice-six"></i></a>
-          </div>
-        </li>
-        {{/each}}
-        {{/each}}
-      </ol>
-      <ol class="items-list">
-        <li class="item flexrow item-header">
-          <div class="item-image"></div>
-          <div class="item-name">Nom</div>
-          <div class="item-name">Famille</div>
-          <div class="item-value">Maitrise</div>
-          <div class="item-controls">Lancés</div>
-          <div class="item-controls">
-            <a class="item-control item-create" title="Ajouter cristal" data-type="power">
-              <i class="fas fa-plus"></i> Ajouter cristal
-            </a>
-          </div>
-        </li>
-        {{#each actor.powers as |power id|}}
-        <li class="item flexrow" data-item-id="{{power._id}}">
-          <div class="item-image"><img src="{{power.img}}" width="24" height="24" /></div>
-          <h4 class="item-name">{{power.name}}</h4>
-          <h4 class="item-name">{{power.data.family}}</h4>
-          <!--div class="item-details">
-            <i class="fas fa-book-open" title="{{power.data.family}}"></i>
-            <i class="fas fa-hourglass-half" title="{{power.data.duration}}"></i>
-            <i class="fas fa-bullseye" title="{{power.data.range}}"></i>
-          </div-->
-          <div class="item-value">
-            <input type="text" name="power.data.level" value="{{power.data.level}}" data-dtype="Number" disabled />
-          </div>
-          <div class="item-controls">
-            <a class="item-control rollable" title="Lancé avec Malus" data-caractKey="pou"
-              data-powerId="{{power._id}}" data-bonusMalus="-4">
-              <i class="fas fa-dice-one"></i></a>
-            <a class="item-control rollable" title="Lancé Normal" data-caractKey="pou" data-powerId="{{power._id}}">
-              <i class="fas fa-dice"></i></a>
-            <a class="item-control rollable" title="Lancé avec Bonus" data-caractKey="pou"
-              data-powerId="{{power._id}}" data-bonusMalus="+4">
-              <i class="fas fa-dice-six"></i></a>
-          </div>
-          <div class="item-controls">
-            <a class="item-control item-edit" title="Modifier cristal"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Supprimer cristal"><i class="fas fa-trash"></i></a>
-          </div>
-        </li>
         {{/each}}
       </ol>
     </div>
@@ -484,9 +464,9 @@
           <div class="item-image"></div>
           <div class="item-name">Nom</div>
           <div class="item-value">Quantité</div>
-          <div class="item-type">Type</div>
+          <div class="item-details">Type</div>
           <div class="item-controls">
-            <a class="item-control item-create" title="Ajouter objet" data-type="item">
+            <a class="item-create" title="Ajouter objet" data-type="item">
               <i class="fas fa-plus"></i> Ajouter objet
             </a>
           </div>
@@ -499,10 +479,10 @@
             <input class="inline-edit-value" data-field="item.data.quantity" type="text" value="{{item.data.quantity}}"
               data-dtype="Number" />
           </div>
-          <h4 class="item-type">{{item.data.itemType}}</h4>
+          <h4 class="item-details">{{item.data.itemType}}</h4>
           <div class="item-controls">
-            <a class="item-control item-edit" title="Modifier objet"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Supprimer objet"><i class="fas fa-trash"></i></a>
+            <a class="item-edit" title="Modifier objet"><i class="fas fa-edit"></i></a>
+            <a class="item-delete" title="Supprimer objet"><i class="fas fa-trash"></i></a>
           </div>
         </li>
         {{/each}}

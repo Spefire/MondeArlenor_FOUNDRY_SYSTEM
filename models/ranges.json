@@ -1,6 +1,18 @@
 [
-    "Personnelle",
-    "Toucher",
-    "A vue",
-    "Infinie"
+    {
+        "name": "Personnelle",
+        "code": "RANG0"
+    },
+    {
+        "name": "Toucher",
+        "code": "RANG1"
+    },
+    {
+        "name": "À vue",
+        "code": "RANG2"
+    },
+    {
+        "name": "Infinie",
+        "code": "RANG3"
+    }
 ]

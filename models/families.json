@@ -1,10 +1,18 @@
 [
-    "Abjuration",
-    "Convocation",
-    "Divination",
-    "Enchantement",
-    "Evocation",
-    "Envoûtement",
-    "Illusion",
-    "Transmutation"
+    {
+        "name": "Offensif",
+        "code": "OFF"
+    },
+    {
+        "name": "Défensif",
+        "code": "DEF"
+    },
+    {
+        "name": "Utilitaire",
+        "code": "UTIL"
+    },
+    {
+        "name": "Altération",
+        "code": "ALT"
+    }
 ]
