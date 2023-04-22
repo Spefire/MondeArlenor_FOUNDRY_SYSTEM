@@ -1,4 +1,6 @@
 import { rollSkill } from "./../arlenor.js";
+import bonusMalusList from "./../../models/bonusMalusList.json" assert { type: "json" };
+import difficulties from "./../../models/difficulties.json" assert { type: "json" };
 import divinities from "./../../models/divinities.json" assert { type: "json" };
 import durations from "./../../models/durations.json" assert { type: "json" };
 import families from "./../../models/families.json" assert { type: "json" };
@@ -46,6 +48,7 @@ export class ArlenorActorSheet extends ActorSheet {
       editable: this.isEditable,
       actor: this.actor,
       system: this.actor.system,
+      difficulties,
       divinities,
       durations,
       families,
@@ -281,6 +284,14 @@ export class ArlenorActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
-    rollSkill(this.actor, dataset.caractkey, dataset.skillkey, dataset.powerid, dataset.bonusmalus);
+    const data = {
+      actor: this.actor,
+      difficulties,
+      powerid: dataset.powerid,
+      caractName: this.actor.system?.caracts[dataset.caractkey].name,
+      caractValue: this.actor.system?.caracts[dataset.caractkey].value,
+      bonusMalusList,
+    }
+    rollSkill(data);
   }
 }

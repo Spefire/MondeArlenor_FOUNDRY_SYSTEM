@@ -109,10 +109,33 @@ function rollArlenor(caractKey, skillKey, powerId) {
   else console.error("Il n'y a pas de personnage valide.");*/
 }
 
-export async function rollSkill(actor, caractKey, skillKey, powerId, bonusMalus) {
+export async function rollSkill(data) {
+
+  const myContent = await renderTemplate("systems/arlenor/templates/roll-dialog.hbs", 
+    {
+      ...data,
+      bonusMalus: "0",
+      difficulty: "STANDARD"
+    });
+
+  new Dialog({
+    title: "Configuration du lancé de dés",
+    content: myContent,
+    buttons: {
+      button1: {
+        label: "Lancer les dés",
+        callback: (html) => myCallback(html),
+        icon: `<i class="fas fa-dice"></i>`
+      }
+    }
+  }).render(true);
+
+  function myCallback(html) {
+    console.warn("myCallback", html);
+  }
 
   // Re-calculate health levels
-  const race = actor.data.data.race;
+  /*const race = actor.data.data.race;
   const races = actor.data.data.races;
   const injured = actor.data.data.healthLevels.injured;
   const seriously = actor.data.data.healthLevels.seriously;
@@ -202,13 +225,6 @@ export async function rollSkill(actor, caractKey, skillKey, powerId, bonusMalus)
       rollLabel = rollLabel + " : Succès critique";
     }
 
-    /*
-    - Action simple : Difficulté 6.
-    - Action complexe : Difficulté 14.
-    - Action difficile : Difficulté 20.
-    - Action épique : Difficulté 30 et plus.
-    */
-
     if (roll._total >= 30) {
       rollLabel = rollLabel + ". <br/>Jet réussi si action : <b>Epique</b>."
     } else if (roll._total >= 20) {
@@ -229,5 +245,5 @@ export async function rollSkill(actor, caractKey, skillKey, powerId, bonusMalus)
       speaker: ChatMessage.getSpeaker({ actor: actor }),
       flavor: rollLabel
     });
-  }
+  }*/
 }

@@ -1,0 +1,34 @@
+<form class="flexcol" autocomplete="off">
+  <div class="grid grid-1col">
+    <div class="flex-group-center">
+      <div>Caractéristique liée : <b>{{ caractName }}</b></div>
+      <div>Valeur naturelle : <b>{{ caractValue }}</b></div>
+    </div>
+  </div>
+
+  <div class="grid grid-1col">
+    <div class="flex-group-center">
+      <label for="difficulty" class="title-up-label">Difficulté : </label>
+      <select name="difficulty">
+          {{#select difficulty }}
+          {{#each difficulties }}
+          <option value="{{this.code}}">{{this.name}}</option>
+          {{/each}}
+          {{/select}}
+      </select>
+    </div>
+  </div>
+
+  <div class="grid grid-1col">
+    <div class="flex-group-center">
+      <label for="bonusMalus" class="title-up-label">Bonus / Malus : </label>
+      <select name="bonusMalus">
+          {{#select bonusMalus }}
+          {{#each bonusMalusList }}
+          <option value="{{this.code}}">{{this.name}}</option>
+          {{/each}}
+          {{/select}}
+      </select>
+    </div>
+  </div>
+</form>
