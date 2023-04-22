@@ -1,0 +1,13 @@
+<div class="grid grid-1col">
+  {{ log roll }}
+  <div class="flex-group-center">
+    <div>{{ rollTitle }} - Difficulté <b>{{ difficulty }}</b></div>
+    <div>Commande : <b>{{ rollCmd }}</b></div>
+  </div>
+  
+  <div class="flex-group-center">
+    {{#each rollValues }}
+    <div><b>{{this}}</b></div>
+    {{/each}}
+  </div>
+</div>

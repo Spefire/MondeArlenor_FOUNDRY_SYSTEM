@@ -111,7 +111,7 @@ function rollArlenor(caractKey, skillKey, powerId) {
 
 export async function rollSkill(data) {
 
-  const myContent = await renderTemplate("systems/arlenor/templates/roll-dialog.hbs", 
+  const templateDialog = await renderTemplate("systems/arlenor/templates/roll-dialog.hbs", 
     {
       ...data,
       bonusMalus: "0",
@@ -120,7 +120,7 @@ export async function rollSkill(data) {
 
   new Dialog({
     title: "Configuration du lancé de dés",
-    content: myContent,
+    content: templateDialog,
     buttons: {
       button1: {
         label: "Lancer les dés",
@@ -136,7 +136,8 @@ export async function rollSkill(data) {
     // ui.notifications.info(`rollDifficulty: ${difficulty} / rollBonusMalus: ${bonusMalus}`);
 
     // Create rolling command...
-    let label = data.caractName;
+    let rollTitle = data.caractName;
+    let rollImage = "";
 
     // Get the power
     if (data.powerId !== null && data.powerId !== undefined) {
@@ -148,7 +149,8 @@ export async function rollSkill(data) {
         if (i.id === data.powerId) powerItem = i;
       }
       if (powerItem) {
-        label = powerItem.name;
+        rollTitle = powerItem.name;
+        rollImage = powerItem.image;
       } else {
         console.error("Pouvoir non disponible");
         return;
@@ -159,14 +161,28 @@ export async function rollSkill(data) {
     let bonusMalusValue = parseInt(bonusMalus, 10);
     
     // Rolling...
-    let rollCmd = (bonusMalusValue !== 0) ? "(" + data.caractValue + " + " + bonusMalusValue + ")D6" : "" + data.caractValue + "D6";
+    const rollCmd = (bonusMalusValue !== 0) ? "(" + data.caractValue + " + " + bonusMalusValue + ")D6" : "" + data.caractValue + "D6";
     let roll = new Roll(rollCmd, {});
-    let rollLabel = `Lance <b>${label}</b> avec une difficulté (` + difficulty + `)`;
     roll = await roll.roll({ async: true });
+    console.warn(roll);
+    const rollValues = roll.dice[0].values;
 
-    roll.toMessage({
+    const templateMessage = await renderTemplate("systems/arlenor/templates/roll-message.hbs", 
+      {
+        ...data,
+        bonusMalus,
+        difficulty,
+        rollTitle,
+        rollImage,
+        rollCmd,
+        rollValues,
+        roll,
+      });
+
+    ChatMessage.create({
+      user: game.user._id,
       speaker: ChatMessage.getSpeaker({ actor: data.actor }),
-      flavor: rollLabel
+      content: templateMessage,
     });
   }
 }
