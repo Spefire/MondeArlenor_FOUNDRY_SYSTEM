@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Compétence d'arme",
+        "code": "SKILL0"
+    },
+    {
+        "name": "Autre compétence",
+        "code": "AUTRESKILL"
+    }
+]

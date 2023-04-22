@@ -21,8 +21,8 @@
                     <label for="system.equipmentType" class="title-up-label">Type d'équipement</label>
                     <select name="system.equipmentType">
                         {{#select system.equipmentType }}
-                        {{#each system.equipmentTypes }}
-                        <option value="{{this}}">{{this}}</option>
+                        {{#each equipmentTypes }}
+                        <option value="{{this.code}}">{{this.name}}</option>
                         {{/each}}
                         {{/select}}
                     </select>

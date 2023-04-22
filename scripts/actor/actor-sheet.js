@@ -1,6 +1,10 @@
 import { rollSkill } from "./../arlenor.js";
 import divinities from "./../../models/divinities.json" assert { type: "json" };
+import durations from "./../../models/durations.json" assert { type: "json" };
+import families from "./../../models/families.json" assert { type: "json" };
 import races from "./../../models/races.json" assert { type: "json" };
+import ranges from "./../../models/ranges.json" assert { type: "json" };
+import ranks from "./../../models/ranks.json" assert { type: "json" };
 import specialities from "./../../models/specialities.json" assert { type: "json" };
 
 /**
@@ -43,7 +47,11 @@ export class ArlenorActorSheet extends ActorSheet {
       actor: this.actor,
       system: this.actor.system,
       divinities,
+      durations,
+      families,
       races,
+      ranges,
+      ranks,
       specialities
     };
 
@@ -147,7 +155,7 @@ export class ArlenorActorSheet extends ActorSheet {
         skills.push(i);
       }
       else if (i.type === 'power') {
-        if (i.system.powerType === "Cristal évolutif") powers.push(i);
+        if (i.system.powerType === "EVO") powers.push(i);
         else othersPowers.push(i);
       }
     }

@@ -96,23 +96,13 @@
         "base"
       ],
       "quantity": 1,
-      "itemType": "Autre",
-      "itemTypes": [
-        "Nourriture",
-        "Plante",
-        "Potion",
-        "Autre"
-      ]
+      "itemType": "AUTREITEM"
     },
     "skill": {
       "templates": [
         "base"
       ],
-      "skillType": "Autre compétence",
-      "skillTypes": [
-        "Compétence d'arme",
-        "Autre compétence"
-      ]
+      "skillType": "AUTRESKILL"
     },
     "equipment": {
       "templates": [
@@ -154,27 +144,13 @@
         "value": 0,
         "case": "PERM"
       },
-      "equipmentType": "Arme au corps à corps",
-      "equipmentTypes": [
-        "Arme au corps à corps",
-        "Arme à distance",
-        "Armure lourde",
-        "Armure normale",
-        "Armure légère",
-        "Bouclier",
-        "Autre (bijou, ..)"
-      ]
+      "equipmentType": "EQUIP0"
     },
     "power": {
       "templates": [
         "base"
       ],
-      "powerType": "Cristal évolutif",
-      "powerTypes": [
-        "Cristal évolutif",
-        "Cristal instantané",
-        "Parchemin"
-      ],
+      "powerType": "EVO",
       "speciality": "PALADIN",
       "family": "OFF",
       "rank": "RANK1",

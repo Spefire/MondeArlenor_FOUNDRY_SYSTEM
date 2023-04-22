@@ -46,6 +46,15 @@ Hooks.once('init', async function () {
     if (!str) return "";
     return str.toLowerCase();
   });
+
+  Handlebars.registerHelper('codeToLibelle', function (objs, code) {
+    let libelle = "";
+    if (!objs || objs.length === 0) return code;
+    objs.forEach(obj => {
+      if (obj.code === code) libelle = obj.name;
+    });
+    return libelle;
+  });
 });
 
 Hooks.once("ready", async function () {

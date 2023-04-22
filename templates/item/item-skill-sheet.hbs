@@ -21,8 +21,8 @@
                     <label for="system.skillType" class="title-up-label">Type de compétence</label>
                     <select name="system.skillType">
                         {{#select system.skillType }}
-                        {{#each system.skillTypes }}
-                        <option value="{{this}}">{{this}}</option>
+                        {{#each skillTypes }}
+                        <option value="{{this.code}}">{{this.name}}</option>
                         {{/each}}
                         {{/select}}
                     </select>

@@ -1,9 +1,13 @@
 import cases from "./../../models/cases.json" assert { type: "json" };
 import difficulties from "./../../models/divinities.json" assert { type: "json" };
+import equipmentTypes from "./../../models/equipmentTypes.json" assert { type: "json" };
 import durations from "./../../models/durations.json" assert { type: "json" };
 import families from "./../../models/families.json" assert { type: "json" };
+import itemTypes from "./../../models/itemTypes.json" assert { type: "json" };
+import powerTypes from "./../../models/powerTypes.json" assert { type: "json" };
 import ranges from "./../../models/ranges.json" assert { type: "json" };
 import ranks from "./../../models/ranks.json" assert { type: "json" };
+import skillTypes from "./../../models/skillTypes.json" assert { type: "json" };
 import specialities from "./../../models/specialities.json" assert { type: "json" };
 
 /**
@@ -47,9 +51,13 @@ export class ArlenorItemSheet extends ItemSheet {
       cases,
       difficulties,
       durations,
+      equipmentTypes,
       families,
+      itemTypes,
+      powerTypes,
       ranges,
       ranks,
+      skillTypes,
       specialities
     };
 

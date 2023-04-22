@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Cristal évolutif",
+        "code": "EVO"
+    },
+    {
+        "name": "Cristal instantané",
+        "code": "INSTA"
+    },
+    {
+        "name": "Parchemin",
+        "code": "PARCH"
+    }
+]

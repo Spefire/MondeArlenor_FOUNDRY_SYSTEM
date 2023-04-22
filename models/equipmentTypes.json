@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Arme au corps à corps",
+        "code": "EQUIP0"
+    },
+    {
+        "name": "Arme à distance",
+        "code": "EQUIP1"
+    },
+    {
+        "name": "Armure lourde",
+        "code": "EQUIP2"
+    },
+    {
+        "name": "Armure normale",
+        "code": "EQUIP3"
+    },
+    {
+        "name": "Armure légère",
+        "code": "EQUIP4"
+    },
+    {
+        "name": "Bouclier",
+        "code": "EQUIP5"
+    },
+    {
+        "name": "Autre (bijou, ...)",
+        "code": "AUTREEQUIP"
+    }
+]

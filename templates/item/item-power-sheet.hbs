@@ -21,15 +21,15 @@
                     <label for="system.powerType" class="title-up-label">Source</label>
                     <select name="system.powerType">
                         {{#select system.powerType }}
-                        {{#each system.powerTypes }}
-                        <option value="{{this}}">{{this}}</option>
+                        {{#each powerTypes }}
+                        <option value="{{this.code}}">{{this.name}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
                 </div>
             </div>
             
-            {{#if (eq system.powerType "Cristal évolutif" )}}
+            {{#if (eq system.powerType "EVO" )}}
             <div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
                     <label for="system.speciality" class="title-up-label">Classe</label>
@@ -53,8 +53,8 @@
             {{/if}}
 
             <div
-                {{#if (eq system.powerType "Cristal évolutif" )}} class="grid grid-2col" {{/if}}
-                {{#if (ne system.powerType "Cristal évolutif" )}} class="grid grid-1col" {{/if}}>
+                {{#if (eq system.powerType "EVO" )}} class="grid grid-2col" {{/if}}
+                {{#if (ne system.powerType "EVO" )}} class="grid grid-1col" {{/if}}>
                 <div class="flexrow flex-group-center">
                     <label for="system.family" class="title-up-label">Famille</label>
                     <select name="system.family">
@@ -65,7 +65,7 @@
                         {{/select}}
                     </select>
                 </div>
-                {{#if (eq system.powerType "Cristal évolutif" )}}
+                {{#if (eq system.powerType "EVO" )}}
                 <div class="flexrow flex-group-center">
                     <label for="system.rank" class="title-up-label">Rang</label>
                     <select name="system.rank">
