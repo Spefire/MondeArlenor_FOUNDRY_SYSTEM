@@ -227,7 +227,7 @@
           </div>
         </li>
 
-        {{#each actor.othersPowers as |power id|}}
+        {{#each actor.otherPowers as |power id|}}
           <li class="item flexrow with-drag" data-item-id="{{power._id}}">
             <div class="item-image"><img src="{{power.img}}" width="24" height="24" /></div>
             <h4 class="item-name">{{power.name}}</h4>
@@ -252,7 +252,7 @@
           </li>
         {{/each}}
 
-        {{#if (eq actor.othersPowers.length 0)}}
+        {{#if (eq actor.otherPowers.length 0)}}
           <li class="item flexrow text-center">
             <div>Aucun cristal instantané, ou parchemin...</div>
           </li>

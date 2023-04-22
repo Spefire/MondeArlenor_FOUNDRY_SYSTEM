@@ -137,7 +137,7 @@ export class ArlenorActorSheet extends ActorSheet {
     const backpack = [];
     const skills = [];
     const powers = [];
-    const othersPowers = [];
+    const otherPowers = [];
 
     // Iterate through items, allocating to containers
     for (let i of actor.items) {
@@ -159,7 +159,7 @@ export class ArlenorActorSheet extends ActorSheet {
       }
       else if (i.type === 'power') {
         if (i.system.powerType === "EVO") powers.push(i);
-        else othersPowers.push(i);
+        else otherPowers.push(i);
       }
     }
 
@@ -172,7 +172,7 @@ export class ArlenorActorSheet extends ActorSheet {
     powers.sort(function (a, b) {
       return a.name.localeCompare(b.name);
     });
-    othersPowers.sort(function (a, b) {
+    otherPowers.sort(function (a, b) {
       return a.name.localeCompare(b.name);
     });
 
@@ -181,7 +181,7 @@ export class ArlenorActorSheet extends ActorSheet {
     actor.backpack = backpack;
     actor.skills = skills;
     actor.powers = powers;
-    actor.othersPowers = othersPowers;
+    actor.otherPowers = otherPowers;
   }
 
   /* -------------------------------------------- */
@@ -287,7 +287,7 @@ export class ArlenorActorSheet extends ActorSheet {
     const data = {
       actor: this.actor,
       difficulties,
-      powerid: dataset.powerid,
+      powerId: dataset.powerid,
       caractName: this.actor.system?.caracts[dataset.caractkey].name,
       caractValue: this.actor.system?.caracts[dataset.caractkey].value,
       bonusMalusList,
