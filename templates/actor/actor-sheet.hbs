@@ -188,12 +188,12 @@
                 <i class="fas fa-dice"></i>
               </a>
             </div>
-            <div class="item-small text-center">{{codeToLibelle ../ranks power.system.rank}}</div>
-            <div class="item-normal text-center">{{codeToLibelle ../specialities power.system.speciality}}</div>
+            <div class="item-small text-center">{{codeToName ../ranks power.system.rank}}</div>
+            <div class="item-normal text-center">{{codeToName ../specialities power.system.speciality}}</div>
             <div class="item-big">
-              <i class="fas fa-book-open" title="{{codeToLibelle ../families power.system.family}}"></i>
-              <i class="fas fa-hourglass-half" title="{{codeToLibelle ../durations power.system.duration}}"></i>
-              <i class="fas fa-bullseye" title="{{codeToLibelle ../ranges power.system.range}}"></i>
+              <i class="fas fa-book-open" title="{{codeToName ../families power.system.family}}"></i>
+              <i class="fas fa-hourglass-half" title="{{codeToName ../durations power.system.duration}}"></i>
+              <i class="fas fa-bullseye" title="{{codeToName ../ranges power.system.range}}"></i>
               {{#if (eq power.system.chaneling true)}}
                 <i class="fas fa-refresh" title="Avec canalisation"></i>
               {{/if}}

@@ -3,6 +3,7 @@ import { ArlenorActor } from "./actor/actor.js";
 import { ArlenorActorSheet } from "./actor/actor-sheet.js";
 import { ArlenorItem } from "./item/item.js";
 import { ArlenorItemSheet } from "./item/item-sheet.js";
+import results from "./../models/results.json" assert { type: "json" };
 
 Hooks.once('init', async function () {
 
@@ -47,11 +48,20 @@ Hooks.once('init', async function () {
     return str.toLowerCase();
   });
 
-  Handlebars.registerHelper('codeToLibelle', function (objs, code) {
+  Handlebars.registerHelper('codeToName', function (objs, code) {
     let libelle = "";
     if (!objs || objs.length === 0) return code;
     objs.forEach(obj => {
       if (obj.code === code) libelle = obj.name;
+    });
+    return libelle;
+  });
+
+  Handlebars.registerHelper('codeToDescription', function (objs, code) {
+    let libelle = "";
+    if (!objs || objs.length === 0) return code;
+    objs.forEach(obj => {
+      if (obj.code === code) libelle = obj.description;
     });
     return libelle;
   });
@@ -138,6 +148,7 @@ export async function rollSkill(data) {
     // Create rolling command...
     let rollTitle = data.caractName;
     let rollImage = "";
+    let rollDescription = "";
 
     // Get the power
     if (data.powerId !== null && data.powerId !== undefined) {
@@ -150,7 +161,8 @@ export async function rollSkill(data) {
       }
       if (powerItem) {
         rollTitle = powerItem.name;
-        rollImage = powerItem.image;
+        rollImage = powerItem.img;
+        rollDescription = convertToPlain(powerItem.system.description);
       } else {
         console.error("Pouvoir non disponible");
         return;
@@ -164,17 +176,21 @@ export async function rollSkill(data) {
     const rollCmd = (bonusMalusValue !== 0) ? "(" + data.caractValue + " + " + bonusMalusValue + ")D6" : "" + data.caractValue + "D6";
     let roll = new Roll(rollCmd, {});
     roll = await roll.roll({ async: true });
-    console.warn(roll);
     const rollValues = roll.dice[0].values;
+
+    const rollResult = "RES_CRITIQUE";
 
     const templateMessage = await renderTemplate("systems/arlenor/templates/roll-message.hbs", 
       {
         ...data,
         bonusMalus,
         difficulty,
+        results,
         rollTitle,
+        rollDescription,
         rollImage,
         rollCmd,
+        rollResult,
         rollValues,
         roll,
       });
@@ -184,5 +200,34 @@ export async function rollSkill(data) {
       speaker: ChatMessage.getSpeaker({ actor: data.actor }),
       content: templateMessage,
     });
+  }
+
+  function convertHTMLToText(html) {
+    html = html.replace(/<style([\s\S]*?)<\/style>/gi, '');
+    html = html.replace(/<script([\s\S]*?)<\/script>/gi, '');
+    html = html.replace(/<\/div>/ig, '\n');
+    html = html.replace(/<\/li>/ig, '\n');
+    html = html.replace(/<li>/ig, '  *  ');
+    html = html.replace(/<\/ul>/ig, '\n');
+    html = html.replace(/<\/p>/ig, '\n');
+    html = html.replace(/<br\s*[\/]?>/gi, "\n");
+    html = html.replace(/<[^>]+>/ig, '');
+    return html;
+  }
+
+  function convertToPlain(html){
+    // Create a new div element
+    var tempDivElement = document.createElement("div");
+
+    // Set the HTML content with the given value
+    tempDivElement.innerHTML = html;
+
+    const textPlain = (tempDivElement.textContent || tempDivElement.innerText || "").toString();
+    if (textPlain?.length > 400) textPlain = textPlain.slice(0, 400);
+
+    tempDivElement.remove();
+
+    // Retrieve the text property of the element 
+    return textPlain;
   }
 }

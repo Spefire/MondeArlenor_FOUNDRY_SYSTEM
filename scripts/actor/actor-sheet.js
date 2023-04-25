@@ -29,7 +29,7 @@ export class ArlenorActorSheet extends ActorSheet {
   /* -------------------------------------------- */
 
   /** @override */
-  getData() {
+  async getData() {
     const baseData = super.getData();
     baseData.dtypes = ["String", "Number", "Boolean"];
 
@@ -42,12 +42,14 @@ export class ArlenorActorSheet extends ActorSheet {
       this._prepareCharacterHealth(baseData.actor, false);
       this._prepareCharacterItems(baseData.actor);
     }
+    const enrichedBiography = await TextEditor.enrichHTML(this.actor.system.description, {async: true});
 
     // Return data for the "actor-sheet.hbs"
     let sheetData = {
       editable: this.isEditable,
       actor: this.actor,
       system: this.actor.system,
+      enrichedBiography,
       difficulties,
       divinities,
       durations,

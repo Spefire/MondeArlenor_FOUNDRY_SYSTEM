@@ -350,3 +350,73 @@
   display: inline-block;
   margin-right: 5px;
 }
+.arlenor .roll-message-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.arlenor .roll-message-header .roll-message-img {
+  height: 40px !important;
+  width: 40px !important;
+}
+.arlenor .roll-message-header .roll-message-name {
+  width: 100%;
+  margin-left: 5px;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.arlenor .roll-message-description {
+  margin-top: 5px;
+  font-style: italic;
+}
+.arlenor .roll-message-section .roll-message-dice {
+  display: inline-block;
+  margin: 2px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+.arlenor .roll-message-section .roll-message-dice.is-gagnant {
+  background: rgba(57, 172, 57, 0.8);
+}
+.arlenor .roll-message-section .roll-message-dice.is-perdant {
+  background: rgba(232, 48, 48, 0.8);
+}
+.arlenor .roll-message-section .roll-message-resultat {
+  margin-bottom: 5px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+.arlenor .roll-message-section .roll-message-resultat.is-reussite-critique {
+  background: rgba(57, 172, 57, 0.8);
+}
+.arlenor .roll-message-section .roll-message-resultat.is-reussite-consequence {
+  background: rgba(57, 172, 57, 0.5);
+}
+.arlenor .roll-message-section .roll-message-resultat.is-reussite-simple {
+  background: rgba(57, 172, 57, 0.2);
+}
+.arlenor .roll-message-section .roll-message-resultat.is-echec-cout {
+  background: rgba(232, 48, 48, 0.2);
+}
+.arlenor .roll-message-section .roll-message-resultat.is-echec-simple {
+  background: rgba(232, 48, 48, 0.5);
+}
+.arlenor .roll-message-section .roll-message-resultat.is-echec-critique {
+  background: rgba(232, 48, 48, 0.8);
+}

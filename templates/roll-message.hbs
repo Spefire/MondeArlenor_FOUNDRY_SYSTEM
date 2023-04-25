@@ -1,13 +1,40 @@
-<div class="grid grid-1col">
-  {{ log roll }}
-  <div class="flex-group-center">
-    <div>{{ rollTitle }} - Difficulté <b>{{ difficulty }}</b></div>
-    <div>Commande : <b>{{ rollCmd }}</b></div>
+<div class="arlenor">
+  <header class="roll-message-header">
+    <img class="roll-message-img" src="{{rollImage}}" title="{{item.name}}" />
+    <h2 class="roll-message-name">{{rollTitle}}</h2>
+  </header>
+
+  <div class="roll-message-description">{{ rollDescription }}</div>
+
+  <div class="roll-message-section grid grid-1col">
+    <div class="flex-group-center">
+      <div>Difficulté : <b>{{ codeToName difficulties difficulty }}</b></div>
+      <div>Lancé : <b>{{ rollCmd }}</b></div>
+    </div>
+    
+    <div class="flex-group-center">
+      {{#each rollValues }}
+      <div 
+        {{#if (gte this 4 )}} class="roll-message-dice is-gagnant" {{/if}}
+        {{#if (lte this 3 )}} class="roll-message-dice is-perdant" {{/if}}> 
+          <b>{{this}}</b>
+        </div>
+      {{/each}}
+    </div>
   </div>
-  
-  <div class="flex-group-center">
-    {{#each rollValues }}
-    <div><b>{{this}}</b></div>
-    {{/each}}
+
+  <div class="roll-message-section grid grid-1col">
+    <div class="flex-group-center">
+      <div
+        {{#if (eq rollResult "RES_CRITIQUE")}} class="roll-message-resultat is-reussite-critique" {{/if}}
+        {{#if (eq rollResult "RES_SIMPLE")}} class="roll-message-resultat is-reussite-consequence" {{/if}}
+        {{#if (eq rollResult "RES_COUT")}} class="roll-message-resultat is-reussite-simple" {{/if}}
+        {{#if (eq rollResult "ECHEC_SIMPLE")}} class="roll-message-resultat is-echec-cout" {{/if}}
+        {{#if (eq rollResult "ECHEC_CONSEQ")}} class="roll-message-resultat is-echec-simple" {{/if}}
+        {{#if (eq rollResult "ECHEC_CRITIQUE")}} class="roll-message-resultat is-echec-critique" {{/if}}>
+        <b>{{ codeToName results rollResult }}</b>
+      </div>
+      <div><i>{{ codeToDescription results rollResult }}</i></div>
+    </div>
   </div>
 </div>
