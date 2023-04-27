@@ -291,6 +291,7 @@ export class ArlenorActorSheet extends ActorSheet {
       difficulties,
       powerId: dataset.powerid,
       caractName: this.actor.system?.caracts[dataset.caractkey].name,
+      caractKey: dataset.caractkey,
       caractValue: this.actor.system?.caracts[dataset.caractkey].value,
       bonusMalusList,
     }

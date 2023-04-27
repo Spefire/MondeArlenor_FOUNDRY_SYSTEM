@@ -369,6 +369,7 @@
 .arlenor .roll-message-header .roll-message-img {
   height: 40px !important;
   width: 40px !important;
+  border: none;
 }
 .arlenor .roll-message-header .roll-message-name {
   width: 100%;

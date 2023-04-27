@@ -3,6 +3,7 @@ import { ArlenorActor } from "./actor/actor.js";
 import { ArlenorActorSheet } from "./actor/actor-sheet.js";
 import { ArlenorItem } from "./item/item.js";
 import { ArlenorItemSheet } from "./item/item-sheet.js";
+import difficulties from "./../models/difficulties.json" assert { type: "json" };
 import results from "./../models/results.json" assert { type: "json" };
 
 Hooks.once('init', async function () {
@@ -67,10 +68,10 @@ Hooks.once('init', async function () {
   });
 });
 
-Hooks.once("ready", async function () {
+/*Hooks.once("ready", async function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   // Hooks.on("hotbarDrop", (bar, data, slot) => createArlenorMacro(data, slot));
-});
+});*/
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
@@ -109,9 +110,10 @@ Hooks.once("ready", async function () {
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
 
-function rollArlenor(caractKey, skillKey, powerId) {
-  /*const speaker = ChatMessage.getSpeaker();
-  let actor;
+function rollArlenor(caractKey, powerId) {
+  const speaker = ChatMessage.getSpeaker();
+  console.warn("rollArlenor", speaker, caractKey, powerId);
+  /*let actor;
   if (speaker.token) actor = game.actors.tokens[speaker.token];
   if (!actor) actor = game.actors.get(speaker.actor);
   if (!actor) actor = game.actors.find(act => act.isOwner);
@@ -146,7 +148,7 @@ export async function rollSkill(data) {
     // ui.notifications.info(`rollDifficulty: ${difficulty} / rollBonusMalus: ${bonusMalus}`);
 
     // Create rolling command...
-    let rollTitle = data.caractName;
+    let rollTitle = "";
     let rollImage = "";
     let rollDescription = "";
 
@@ -168,6 +170,11 @@ export async function rollSkill(data) {
         return;
       }
     }
+    // Or get the caract
+    else {
+      rollTitle = data.caractName;
+      rollImage = "systems/arlenor/assets/icons/" + data.caractKey + ".png";
+    }
 
     // Get the bonus/malus
     let bonusMalusValue = parseInt(bonusMalus, 10);
@@ -178,7 +185,31 @@ export async function rollSkill(data) {
     roll = await roll.roll({ async: true });
     const rollValues = roll.dice[0].values;
 
-    const rollResult = "RES_CRITIQUE";
+    // Calcul du résultat
+    const nbReussites = rollValues.filter(value => value > 3).length;
+    const maxValue = Math.max(...rollValues);
+    const numDifficulty = difficulties.find(diff => diff.code === difficulty)?.value;
+    const isReussite = nbReussites >= numDifficulty;
+
+    let rollResult = "";
+    if (numDifficulty === 1) {
+      if (maxValue === 6) rollResult = "RES_CRITIQUE";
+      else if (maxValue === 5) rollResult = "RES_SIMPLE";
+      else if (maxValue === 4) rollResult = "RES_COUT";
+      else if (maxValue === 3) rollResult = "ECHEC_SIMPLE";
+      else if (maxValue === 2) rollResult = "ECHEC_CONSEQ";
+      else rollResult = "ECHEC_CRITIQUE";
+    } else if (!isReussite) {
+      if (maxValue === 6 || maxValue === 5) rollResult = "ECHEC_SIMPLE";
+      else if (maxValue === 4 || maxValue === 3) rollResult = "ECHEC_CONSEQ";
+      else rollResult = "ECHEC_CRITIQUE";
+    } else {
+      if (maxValue === 4) rollResult = "RES_COUT";
+      else if (maxValue === 5) rollResult = "RES_SIMPLE";
+      else rollResult = "RES_CRITIQUE";
+    }
+    
+    console.warn("Calcul", nbReussites, maxValue, rollResult);
 
     const templateMessage = await renderTemplate("systems/arlenor/templates/roll-message.hbs", 
       {
