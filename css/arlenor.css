@@ -358,6 +358,9 @@
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
+.arlenor .items-list .item-number {
+  width: 48px;
+}
 .arlenor .items-list .item-details {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 128px;

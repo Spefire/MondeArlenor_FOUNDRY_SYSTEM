@@ -4,6 +4,7 @@ import difficulties from "./../../models/difficulties.json" assert { type: "json
 import divinities from "./../../models/divinities.json" assert { type: "json" };
 import durations from "./../../models/durations.json" assert { type: "json" };
 import families from "./../../models/families.json" assert { type: "json" };
+import itemTypes from "./../../models/itemTypes.json" assert { type: "json" };
 import powerTypes from "./../../models/powerTypes.json" assert { type: "json" };
 import races from "./../../models/races.json" assert { type: "json" };
 import ranges from "./../../models/ranges.json" assert { type: "json" };
@@ -57,6 +58,7 @@ export class ArlenorActorSheet extends ActorSheet {
       divinities,
       durations,
       families,
+      itemTypes,
       powerTypes,
       races,
       ranges,
