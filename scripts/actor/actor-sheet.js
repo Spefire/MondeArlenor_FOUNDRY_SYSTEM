@@ -3,6 +3,7 @@ import bonusMalusList from "./../../models/bonusMalusList.json" assert { type: "
 import difficulties from "./../../models/difficulties.json" assert { type: "json" };
 import divinities from "./../../models/divinities.json" assert { type: "json" };
 import durations from "./../../models/durations.json" assert { type: "json" };
+import equipmentTypes from "./../../models/equipmentTypes.json" assert { type: "json" };
 import families from "./../../models/families.json" assert { type: "json" };
 import itemTypes from "./../../models/itemTypes.json" assert { type: "json" };
 import powerTypes from "./../../models/powerTypes.json" assert { type: "json" };
@@ -57,6 +58,7 @@ export class ArlenorActorSheet extends ActorSheet {
       difficulties,
       divinities,
       durations,
+      equipmentTypes,
       families,
       itemTypes,
       powerTypes,
@@ -137,12 +139,10 @@ export class ArlenorActorSheet extends ActorSheet {
    */
   _prepareCharacterItems(actor) {
     // Initialize containers
-    const equipments = {
-      "Arme au Corps à corps": [],
-      "Arme à Distance": [],
-      "Armure": [],
-      "Bouclier": []
-    };
+    const equipments = {};
+    equipmentTypes.forEach(equipement => {
+      equipments[equipement.code] = [];
+    });
     const backpack = [];
     const skills = [];
     const powers = [];
@@ -152,12 +152,9 @@ export class ArlenorActorSheet extends ActorSheet {
     for (let i of actor.items) {
       i.img = i.img || DEFAULT_TOKEN;
       if (i.type === 'equipment') {
-        if (i.data.equipmentType != undefined) {
-          equipments[i.data.equipmentType].push(i);
-          if (i.data.equipped) {
-            bonusAttack += i.data.attack;
-            bonusDefence += i.data.defence;
-          }
+        const code = i.system.equipmentType;
+        if (code && equipments[code]) {
+          equipments[code].push(i);
         }
       }
       else if (i.type === 'item') {
