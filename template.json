@@ -108,42 +108,6 @@
       "templates": [
         "base"
       ],
-      "for": {
-        "min": "For",
-        "name": "Force",
-        "value": 0,
-        "case": "PERM"
-      },
-      "hab": {
-        "min": "Hab",
-        "name": "Habileté",
-        "value": 0,
-        "case": "PERM"
-      },
-      "int": {
-        "min": "Int",
-        "name": "Intellect",
-        "value": 0,
-        "case": "PERM"
-      },
-      "ten": {
-        "min": "Ten",
-        "name": "Ténacité",
-        "value": 0,
-        "case": "PERM"
-      },
-      "cha": {
-        "min": "Cha",
-        "name": "Charisme",
-        "value": 0,
-        "case": "PERM"
-      },
-      "mag": {
-        "min": "Mag",
-        "name": "Magie",
-        "value": 0,
-        "case": "PERM"
-      },
       "equipmentType": "EQUIP0"
     },
     "power": {
