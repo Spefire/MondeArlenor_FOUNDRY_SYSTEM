@@ -17,7 +17,7 @@
     .item-image {
       position: relative;
       flex: 0 0 24px;
-      margin-right: 10px;
+      margin-right: 5px;
 
       img {
         transform: translate(0px, -50%);
@@ -38,8 +38,8 @@
     img {
       position: absolute;
       border: none;
-      padding: 1px;
-      background: black;
+      //padding: 1px;
+      //background: black;
     }
   }
 
@@ -58,6 +58,7 @@
   }
 
   .item-details {
+    flex: 0 0 128px;
     text-align: center;
     
     i {
@@ -66,6 +67,7 @@
   }
 
   .item-controls {
+    flex: 0 0 96px;
     text-align: right;
 
     a {

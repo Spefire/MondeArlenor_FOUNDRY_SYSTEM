@@ -9,6 +9,7 @@ import races from "./../../models/races.json" assert { type: "json" };
 import ranges from "./../../models/ranges.json" assert { type: "json" };
 import ranks from "./../../models/ranks.json" assert { type: "json" };
 import specialities from "./../../models/specialities.json" assert { type: "json" };
+import skillTypes from "./../../models/skillTypes.json" assert { type: "json" };
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -60,6 +61,7 @@ export class ArlenorActorSheet extends ActorSheet {
       races,
       ranges,
       ranks,
+      skillTypes,
       specialities
     };
 
@@ -243,21 +245,24 @@ export class ArlenorActorSheet extends ActorSheet {
   _onItemCreate(event) {
     event.preventDefault();
     const header = event.currentTarget;
-    console.warn("header", header);
     // Get the type of item to create.
     const type = header.dataset.type;
     // Grab any data associated with this control.
-    const data = duplicate(header.dataset);
+    const system = duplicate(header.dataset);
+    if (system.powertype) {
+      system.powerType = system.powertype;
+      delete system["powertype"];
+    }
     // Initialize a default name.
     const name = `${type.capitalize()}`;
     // Prepare the item object.
     const itemData = {
       name: name,
       type: type,
-      data: data
+      system: system,
     };
     // Remove the type from the dataset since it's in the itemData.type prop.
-    delete itemData.data["type"];
+    delete itemData.system["type"];
 
     // Finally, create the item!
     return this.actor.createEmbeddedDocuments("Item", [itemData]);

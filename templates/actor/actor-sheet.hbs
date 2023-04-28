@@ -176,8 +176,13 @@
         {{#each actor.skills as |skill id|}}
           <li class="item flexrow no-bottom-border" data-item-id="{{skill._id}}">
             <div class="item-big-image"><img src="{{skill.img}}" width="48" height="48" /></div>
-            <div class="item-name">{{skill.name}}</div>
-            <div class="item-details">{{skill.system.skillType}}</div>
+            <div class="item-name">
+              <b>{{skill.name}}</b>
+            </div>
+            <div class="item-details">
+              {{codeToName ../skillTypes skill.system.skillType}}
+            </div>
+            <div class="item-details"></div>
             <div class="item-controls">
               <a class="item-edit" title="Modifier la compétence"><i class="fas fa-edit"></i></a>
               <a class="item-delete" title="Supprimer la compétence"><i class="fas fa-trash"></i></a>
@@ -202,7 +207,7 @@
         <li class="item flexrow item-header">
           <div></div>
           <div class="item-controls">
-            <a class="item-create" title="Ajouter un pouvoir" data-type="power">
+            <a class="item-create" title="Ajouter un pouvoir" data-type="power" data-powerType="EVO">
               <i class="fas fa-plus"></i>
               Ajouter
             </a>
@@ -251,7 +256,7 @@
         <li class="item flexrow item-header">
           <div></div>
           <div class="item-controls">
-            <a class="item-create" title="Ajouter un pouvoir" data-type="power">
+            <a class="item-create" title="Ajouter un pouvoir" data-type="power" data-powerType="INSTA">
               <i class="fas fa-plus"></i>
               Ajouter
             </a>
