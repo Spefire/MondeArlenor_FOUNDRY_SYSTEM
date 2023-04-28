@@ -4,6 +4,7 @@ import difficulties from "./../../models/difficulties.json" assert { type: "json
 import divinities from "./../../models/divinities.json" assert { type: "json" };
 import durations from "./../../models/durations.json" assert { type: "json" };
 import families from "./../../models/families.json" assert { type: "json" };
+import powerTypes from "./../../models/powerTypes.json" assert { type: "json" };
 import races from "./../../models/races.json" assert { type: "json" };
 import ranges from "./../../models/ranges.json" assert { type: "json" };
 import ranks from "./../../models/ranks.json" assert { type: "json" };
@@ -42,7 +43,8 @@ export class ArlenorActorSheet extends ActorSheet {
       this._prepareCharacterHealth(baseData.actor, false);
       this._prepareCharacterItems(baseData.actor);
     }
-    const enrichedBiography = await TextEditor.enrichHTML(this.actor.system.description, {async: true});
+
+    const enrichedBiography = await TextEditor.enrichHTML(this.actor.system.biography, {async: true});
 
     // Return data for the "actor-sheet.hbs"
     let sheetData = {
@@ -54,6 +56,7 @@ export class ArlenorActorSheet extends ActorSheet {
       divinities,
       durations,
       families,
+      powerTypes,
       races,
       ranges,
       ranks,
@@ -240,6 +243,7 @@ export class ArlenorActorSheet extends ActorSheet {
   _onItemCreate(event) {
     event.preventDefault();
     const header = event.currentTarget;
+    console.warn("header", header);
     // Get the type of item to create.
     const type = header.dataset.type;
     // Grab any data associated with this control.

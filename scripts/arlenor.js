@@ -11,7 +11,6 @@ Hooks.once('init', async function () {
   game.arlenor = {
     ArlenorActor,
     ArlenorItem,
-    rollArlenor,
   };
 
   /**
@@ -66,60 +65,16 @@ Hooks.once('init', async function () {
     });
     return libelle;
   });
+
+  Handlebars.registerHelper('convertToPlain', function (str) {
+    if (!str) return "Aucune description";
+    return convertToPlain(str);
+  });
 });
 
-/*Hooks.once("ready", async function () {
-  // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
-  // Hooks.on("hotbarDrop", (bar, data, slot) => createArlenorMacro(data, slot));
-});*/
-
 /* -------------------------------------------- */
-/*  Hotbar Macros                               */
+/*  Roll for Arlenor                            */
 /* -------------------------------------------- */
-
-/**
- * Create a Macro from an Item drop.
- * Get an existing item macro if one exists, otherwise create a new one.
- * @param {Object} data     The dropped data
- * @param {number} slot     The hotbar slot to use
- * @returns {Promise}
- */
-/*async function createArlenorMacro(data, slot) {
-  if (data.type !== "Item") return false;
-  if (!("data" in data)) return ui.notifications.warn("Ce n'est pas les données d'un objet.");
-  const item = data.data;
-  if (item.type !== "power") return ui.notifications.warn("Ce n'est pas un pouvoir.");
-
-  // Create the macro command
-  const command = `game.arlenor.rollArlenor('pou', null, '${item.id}');`;
-  let macro = game.macros.entities.find(m => (m.name === item.name) && (m.command === command));
-  if (!macro) {
-    macro = await Macro.create({
-      name: item.name,
-      type: "script",
-      img: item.img,
-      command: command,
-      flags: { "arlenor.itemMacro": true }
-    });
-  }
-  game.user.assignHotbarMacro(macro, slot);
-  return false;
-}*/
-
-/* -------------------------------------------- */
-/*  Hotbar Macros                               */
-/* -------------------------------------------- */
-
-function rollArlenor(caractKey, powerId) {
-  const speaker = ChatMessage.getSpeaker();
-  console.warn("rollArlenor", speaker, caractKey, powerId);
-  /*let actor;
-  if (speaker.token) actor = game.actors.tokens[speaker.token];
-  if (!actor) actor = game.actors.get(speaker.actor);
-  if (!actor) actor = game.actors.find(act => act.isOwner);
-  if (actor) rollSkill(actor, caractKey, skillKey, powerId, 0);
-  else console.error("Il n'y a pas de personnage valide.");*/
-}
 
 export async function rollSkill(data) {
 
@@ -232,33 +187,33 @@ export async function rollSkill(data) {
       content: templateMessage,
     });
   }
+}
 
-  function convertHTMLToText(html) {
-    html = html.replace(/<style([\s\S]*?)<\/style>/gi, '');
-    html = html.replace(/<script([\s\S]*?)<\/script>/gi, '');
-    html = html.replace(/<\/div>/ig, '\n');
-    html = html.replace(/<\/li>/ig, '\n');
-    html = html.replace(/<li>/ig, '  *  ');
-    html = html.replace(/<\/ul>/ig, '\n');
-    html = html.replace(/<\/p>/ig, '\n');
-    html = html.replace(/<br\s*[\/]?>/gi, "\n");
-    html = html.replace(/<[^>]+>/ig, '');
-    return html;
-  }
+function convertHTMLToText(html) {
+  html = html.replace(/<style([\s\S]*?)<\/style>/gi, '');
+  html = html.replace(/<script([\s\S]*?)<\/script>/gi, '');
+  html = html.replace(/<\/div>/ig, '\n');
+  html = html.replace(/<\/li>/ig, '\n');
+  html = html.replace(/<li>/ig, '  *  ');
+  html = html.replace(/<\/ul>/ig, '\n');
+  html = html.replace(/<\/p>/ig, '\n');
+  html = html.replace(/<br\s*[\/]?>/gi, "\n");
+  html = html.replace(/<[^>]+>/ig, '');
+  return html;
+}
 
-  function convertToPlain(html){
-    // Create a new div element
-    var tempDivElement = document.createElement("div");
+function convertToPlain(html){
+  // Create a new div element
+  var tempDivElement = document.createElement("div");
 
-    // Set the HTML content with the given value
-    tempDivElement.innerHTML = html;
+  // Set the HTML content with the given value
+  tempDivElement.innerHTML = html;
 
-    const textPlain = (tempDivElement.textContent || tempDivElement.innerText || "").toString();
-    if (textPlain?.length > 400) textPlain = textPlain.slice(0, 400);
+  const textPlain = (tempDivElement.textContent || tempDivElement.innerText || "").toString();
+  if (textPlain?.length > 400) textPlain = textPlain.slice(0, 400);
 
-    tempDivElement.remove();
+  tempDivElement.remove();
 
-    // Retrieve the text property of the element 
-    return textPlain;
-  }
+  // Retrieve the text property of the element 
+  return textPlain;
 }

@@ -117,15 +117,43 @@
   </div>
   {{/if}}
 
+  <!-- Sheet Quad-Header -->
+  {{#if (eq actor.type "character")}}
+  <div class="sheet-header quad-header">
+    <div class="grid grid-2col grid-full-width">
+      <div class="flexrow flex-group-center">
+        <select name="system.speciality01">
+          <option value=""><i>Choix de la première classe...</i></option>
+          {{#select system.speciality01 }}
+          {{#each specialities }}
+          <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
+          {{/each}}
+          {{/select}}
+        </select>
+      </div>
+      <div class="flexrow flex-group-center">
+        <select name="system.speciality02">
+          <option value=""><i>Choix de la seconde classe...</i></option>
+          {{#select system.speciality02 }}
+          {{#each specialities }}
+          <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
+          {{/each}}
+          {{/select}}
+        </select>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+
   <!-- Sheet Tab Navigation -->
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="powers">Pouvoirs</a>
+    <a class="item title-up-label" data-tab="powers">Pouvoirs</a>
     {{#if (eq actor.type "character")}}
-    <a class="item" data-tab="skills">Compétences</a>
-    <a class="item" data-tab="equipments">Équipement</a>
+    <a class="item title-up-label" data-tab="skills">Compétences</a>
+    <a class="item title-up-label" data-tab="equipments">Équipement</a>
     {{/if}}
-    <a class="item" data-tab="backpack">Objets</a>
-    <a class="item" data-tab="description">Description</a>
+    <a class="item title-up-label" data-tab="backpack">Objets</a>
+    <a class="item title-up-label" data-tab="description">Description</a>
   </nav>
 
   <!-- Sheet Body -->
@@ -134,43 +162,45 @@
     {{#if (eq actor.type "character")}}
     <!-- Owned Skills Tab -->
     <div class="tab skills height-auto" data-group="primary" data-tab="skills">
+      <ol class="items-list">
+        <li class="item flexrow item-header">
+          <div></div>
+          <div class="item-controls">
+            <a class="item-create" title="Ajouter une compétence" data-type="skill">
+              <i class="fas fa-plus"></i>
+              Ajouter
+            </a>
+          </div>
+        </li>
+
+        {{#each actor.skills as |skill id|}}
+          <li class="item flexrow no-bottom-border" data-item-id="{{skill._id}}">
+            <div class="item-big-image"><img src="{{skill.img}}" width="48" height="48" /></div>
+            <div class="item-name">{{skill.name}}</div>
+            <div class="item-details">{{skill.system.skillType}}</div>
+            <div class="item-controls">
+              <a class="item-edit" title="Modifier la compétence"><i class="fas fa-edit"></i></a>
+              <a class="item-delete" title="Supprimer la compétence"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          <li class="item flexrow" data-item-id="{{skill._id}}">
+            <div class="item-big-image"></div>
+            <div class="item-description">{{ convertToPlain skill.system.description }}</div>
+          </li>
+        {{/each}}
+
+        {{#if (eq actor.skills.length 0)}}
+          <li class="item flexrow no-bottom-border text-center">
+            <div>Aucune compétence...</div>
+          </li>
+        {{/if}}
     </div>
 
     <!-- Owned Powers Tab -->
     <div class="tab powers" data-group="primary" data-tab="powers">
-      <div class="grid grid-2col">
-        <div class="flex-group-center">
-          <label for="system.speciality01" class="title-up-label">Classe principale</label>
-          <select name="system.speciality01">
-            <option value="">-</option>
-            {{#select system.speciality01 }}
-            {{#each specialities }}
-            <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
-            {{/each}}
-            {{/select}}
-          </select>
-        </div>
-        <div class="flex-group-center">
-          <label for="system.speciality02" class="title-up-label">Classe secondaire</label>
-          <select name="system.speciality02">
-            <option value="">-</option>
-            {{#select system.speciality02 }}
-            {{#each specialities }}
-            <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
-            {{/each}}
-            {{/select}}
-          </select>
-        </div>
-      </div>
-
       <ol class="items-list">
         <li class="item flexrow item-header">
-          <div class="item-image"></div>
-          <div class="item-name">Nom du pouvoir</div>
-          <div class="item-small text-center"></div>
-          <div class="item-small text-center">Rang</div>
-          <div class="item-normal text-center">Classe</div>
-          <div class="item-big">Détails</div>
+          <div></div>
           <div class="item-controls">
             <a class="item-create" title="Ajouter un pouvoir" data-type="power">
               <i class="fas fa-plus"></i>
@@ -180,17 +210,67 @@
         </li>
 
         {{#each actor.powers as |power id|}}
-          <li class="item flexrow" data-item-id="{{power._id}}">
-            <div class="item-image"><img src="{{power.img}}" width="24" height="24" /></div>
-            <h4 class="item-name">{{power.name}}</h4>
-            <div class="item-small text-center">
-              <a class="rollable" title="Utiliser le pouvoir" data-caractKey="mag" data-powerId="{{power._id}}">
-                <i class="fas fa-dice"></i>
-              </a>
+          <li class="item flexrow no-bottom-border" data-item-id="{{power._id}}">
+            <div class="item-big-image"><img src="{{power.img}}" width="48" height="48" /></div>
+            <div class="item-name rollable" title="Utiliser le pouvoir" data-caractKey="mag" data-powerId="{{power._id}}">
+              <b>{{power.name}} {{codeToName ../ranks power.system.rank}}</b>
             </div>
-            <div class="item-small text-center">{{codeToName ../ranks power.system.rank}}</div>
-            <div class="item-normal text-center">{{codeToName ../specialities power.system.speciality}}</div>
-            <div class="item-big">
+            <div class="item-details">
+              {{codeToName ../specialities power.system.speciality}}
+            </div>
+            <div class="item-details">
+              <i class="fas fa-book-open" title="{{codeToName ../families power.system.family}}"></i>
+              <i class="fas fa-hourglass-half" title="{{codeToName ../durations power.system.duration}}"></i>
+              <i class="fas fa-bullseye" title="{{codeToName ../ranges power.system.range}}"></i>
+              {{#if (eq power.system.chaneling true)}}
+                <i class="fas fa-refresh" title="Avec canalisation"></i>
+              {{/if}}
+            </div>
+            <div class="item-controls">
+              <a class="item-edit" title="Modifier le pouvoir"><i class="fas fa-edit"></i></a>
+              <a class="item-delete" title="Supprimer le pouvoir"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          <li
+            {{#if @last }} class="item flexrow no-bottom-border"
+            {{ else }} class="item flexrow" {{/if}}
+            data-item-id="{{power._id}}">
+            <div class="item-big-image"></div>
+            <div class="item-description">{{ convertToPlain power.system.description }}</div>
+          </li>
+        {{/each}}
+        
+        {{#if (eq actor.powers.length 0)}}
+          <li class="item flexrow no-bottom-border text-center">
+            <div>Aucun pouvoir</div>
+          </li>
+        {{/if}}
+      </ol>
+
+      <ol class="items-list">
+        <li class="item flexrow item-header">
+          <div></div>
+          <div class="item-controls">
+            <a class="item-create" title="Ajouter un pouvoir" data-type="power">
+              <i class="fas fa-plus"></i>
+              Ajouter
+            </a>
+          </div>
+        </li>
+
+        {{#each actor.otherPowers as |power id|}}
+          <li
+            {{#if @last }} class="item flexrow no-bottom-border"
+            {{ else }} class="item flexrow" {{/if}}
+            data-item-id="{{power._id}}">
+            <div class="item-image"><img src="{{power.img}}" width="24" height="24" /></div>
+            <div class="item-name rollable" title="Utiliser le pouvoir" data-caractKey="mag" data-powerId="{{power._id}}">
+              <b>{{power.name}}</b>
+            </div>
+            <div class="item-details">
+              {{codeToName ../powerTypes power.system.powerType}}
+              </div>
+            <div class="item-details">
               <i class="fas fa-book-open" title="{{codeToName ../families power.system.family}}"></i>
               <i class="fas fa-hourglass-half" title="{{codeToName ../durations power.system.duration}}"></i>
               <i class="fas fa-bullseye" title="{{codeToName ../ranges power.system.range}}"></i>
@@ -204,56 +284,9 @@
             </div>
           </li>
         {{/each}}
-        
-        {{#if (eq actor.powers.length 0)}}
-          <li class="item flexrow text-center">
-            <div>Aucun pouvoir</div>
-          </li>
-        {{/if}}
-      </ol>
-
-      <ol class="items-list">
-        <li class="item flexrow item-header">
-          <div class="item-image"></div>
-          <div class="item-name">Nom du pouvoir</div>
-          <div class="item-small text-center"></div>
-          <div class="item-big text-center">Source</div>
-          <div class="item-big">Détails</div>
-          <div class="item-controls">
-            <a class="item-create" title="Ajouter un pouvoir" data-type="power">
-              <i class="fas fa-plus"></i>
-              Ajouter
-            </a>
-          </div>
-        </li>
-
-        {{#each actor.otherPowers as |power id|}}
-          <li class="item flexrow with-drag" data-item-id="{{power._id}}">
-            <div class="item-image"><img src="{{power.img}}" width="24" height="24" /></div>
-            <h4 class="item-name">{{power.name}}</h4>
-            <div class="item-small text-center">
-              <a class="rollable" title="Utiliser le pouvoir" data-caractKey="mag" data-powerId="{{power._id}}">
-                <i class="fas fa-dice"></i>
-              </a>
-            </div>
-            <div class="item-big text-center">{{power.system.powerType}}</div>
-            <div class="item-big">
-              <i class="fas fa-book-open" title="{{power.system.family}}"></i>
-              <i class="fas fa-hourglass-half" title="{{power.system.duration}}"></i>
-              <i class="fas fa-bullseye" title="{{power.system.range}}"></i>
-              {{#if (eq power.system.chaneling true)}}
-                <i class="fas fa-refresh" title="Avec canalisation"></i>
-              {{/if}}
-            </div>
-            <div class="item-controls">
-              <a class="item-edit" title="Modifier le pouvoir"><i class="fas fa-edit"></i></a>
-              <a class="item-delete" title="Supprimer le pouvoir"><i class="fas fa-trash"></i></a>
-            </div>
-          </li>
-        {{/each}}
 
         {{#if (eq actor.otherPowers.length 0)}}
-          <li class="item flexrow text-center">
+          <li class="item flexrow no-bottom-border text-center">
             <div>Aucun cristal instantané, ou parchemin...</div>
           </li>
         {{/if}}
@@ -263,11 +296,6 @@
     <!-- Owned Equipments Tab -->
     <div class="tab equipments" data-group="primary" data-tab="equipments">
       <ol class="items-list">
-        <li class="item flexrow item-header">
-          <div class="item-image"></div>
-          <div class="item-name"></div>
-          <div class="item-controls"></div>
-        </li>
         {{#each actor.equipments as |equipments equipmentType|}}
         <li class="item flexrow item-header">
           <div class="item-name">{{equipmentType}}</div>

@@ -1,26 +1,45 @@
 .items-list {
   list-style: none;
-  margin: 5px 0 15px 0;
-  padding: 0;
+  margin: 0 0 10px 0;
+  padding: 0 10px;
+  background: #ffffff60;
+  border: 1px solid #BBB;
 
   .item-header {
     font-weight: bold;
   }
 
   .item {
+    align-items: center;
     height: 30px;
-    line-height: 24px;
-    padding: 3px 0;
     border-bottom: 1px solid #BBB;
 
     .item-image {
+      position: relative;
       flex: 0 0 24px;
-      margin-right: 5px;
+      margin-right: 10px;
+
+      img {
+        transform: translate(0px, -50%);
+      }
+    }
+
+    .item-big-image {
+      position: relative;
+      flex: 0 0 48px;
+      margin-right: 10px;
+
+      img {
+        // 48px - 30px = 18px... 9px
+        transform: translate(0px, -9px);
+      }
     }
 
     img {
-      display: block;
+      position: absolute;
       border: none;
+      padding: 1px;
+      background: black;
     }
   }
 
@@ -31,20 +50,19 @@
     text-overflow: ellipsis;
   }
 
-  .item-big {
-    flex: 0 0 126px;
+  .item-description {
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
+  .item-details {
+    text-align: center;
+    
     i {
       margin: 0 5px;
     }
-  }
-
-  .item-normal {
-    flex: 0 0 84px;
-  }
-
-  .item-small {
-    flex: 0 0 42px;
   }
 
   .item-controls {

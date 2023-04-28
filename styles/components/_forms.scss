@@ -2,6 +2,12 @@ form.editable {
   min-width: 620px;
 }
 
+.editor-content {
+  padding: 0 10px;
+  background: rgba(255, 255, 255, 0.3764705882);
+  border: 1px solid #BBB;
+}
+
 .item-form {
   font-family: $font-primary;
 }
@@ -20,6 +26,10 @@ form.editable {
 
   &.tri-header {
     flex: 0 0 65px;
+  }
+
+  &.quad-header {
+    flex: 0 0 48px;
   }
 
   &.sheet-min {
@@ -63,13 +73,13 @@ form.editable {
 }
 
 .sheet-tabs {
-  margin: 4px 0 0 0 !important;
+  margin: 5px 0 !important;
   flex: 0;
 }
 
-.sheet-body {
+/*.sheet-body {
   background: rgba($color: #FFFFFF, $alpha: 0.2);
-}
+}*/
 
 .sheet-body,
 .sheet-body .tab,
