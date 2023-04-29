@@ -1,3 +1,12 @@
+.item-editor {
+  display: block;
+  height: 100%;
+
+  .editor {
+    height: 100%;
+  }
+}
+
 .items-list {
   list-style: none;
   margin: 0 0 10px 0;

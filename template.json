@@ -95,8 +95,8 @@
       "templates": [
         "base"
       ],
-      "quantity": 1,
-      "itemType": "AUTREITEM"
+      "itemType": "AUTREITEM",
+      "quantity": 1
     },
     "skill": {
       "templates": [

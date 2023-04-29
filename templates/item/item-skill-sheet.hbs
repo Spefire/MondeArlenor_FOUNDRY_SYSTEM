@@ -6,39 +6,31 @@
         </div>
     </header>
 
-    <!-- Sheet Tab Navigation -->
-    <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item title-up-label" data-tab="properties">Propriétés</a>
-        <a class="item title-up-label" data-tab="description">Notes</a>
-    </nav>
-
     <!-- Sheet Body -->
     <section class="sheet-body">
         <!-- Properties Tab -->
-        <div class="tab properties" data-group="primary" data-tab="properties">
-            <div class="grid grid-1col">
-                <div class="flexrow flex-group-center">
-                    <label for="system.skillType" class="title-up-label">Type de compétence</label>
-                    <select name="system.skillType">
-                        {{#select system.skillType }}
-                        {{#each skillTypes }}
-                        <option value="{{this.code}}">{{this.name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                </div>
+        <div class="grid grid-1col">
+            <div class="flexrow flex-group-center">
+                <label for="system.skillType" class="title-up-label">Type de compétence</label>
+                <select name="system.skillType">
+                    {{#select system.skillType }}
+                    {{#each skillTypes }}
+                    <option value="{{this.code}}">{{this.name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
             </div>
-            
-            <div class="grid grid-1col">
-                <div class="flexrow flex-group-center">
-                    La compétence donne 1 dé bonus lors qu'une action se déroule
-                    dans son contexte.
-                </div>
+        </div>
+        
+        <div class="grid grid-1col">
+            <div class="flexrow flex-group-center">
+                La compétence donne 1 dé bonus lors qu'une action se déroule
+                dans son contexte.
             </div>
         </div>
 
         <!-- Description Tab -->
-        <div class="tab" data-group="primary" data-tab="description">
+        <div class="item-editor">
             {{
                 editor
                 enrichedBiography
@@ -47,6 +39,5 @@
                 button=true 
             }}
         </div>
-
     </section>
 </form>

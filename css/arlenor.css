@@ -157,7 +157,7 @@
   min-width: 620px;
 }
 .arlenor .editor-content {
-  padding: 0 10px;
+  padding: 5px 10px;
   background: rgba(255, 255, 255, 0.3764705882);
   border: 1px solid #BBB;
 }
@@ -298,6 +298,13 @@
 .arlenor .tabs .item.active {
   text-decoration: overline;
   text-shadow: none;
+}
+.arlenor .item-editor {
+  display: block;
+  height: 100%;
+}
+.arlenor .item-editor .editor {
+  height: 100%;
 }
 .arlenor .items-list {
   list-style: none;
