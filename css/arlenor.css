@@ -148,11 +148,6 @@
 }
 
 /* Styles limited to arlenor sheets */
-.arlenor {
-  /*.sheet-body {
-    background: rgba($color: #FFFFFF, $alpha: 0.2);
-  }*/
-}
 .arlenor form.editable {
   min-width: 620px;
 }

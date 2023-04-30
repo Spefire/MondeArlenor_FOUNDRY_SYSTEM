@@ -1,7 +1,7 @@
 {
   "id": "arlenor",
-  "title": "Le Monde d'Arlenor",
-  "description": "Système de jeu pour le JDR du Monde d'Arlenor",
+  "title": "Le Monde d'Arlénor",
+  "description": "Système de jeu pour le JDR du Monde d'Arlénor (seulement en FR)",
   "version": "1.0.0",
   "compatibility": {
     "minimum": "10",

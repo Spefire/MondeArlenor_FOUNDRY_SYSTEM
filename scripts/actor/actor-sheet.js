@@ -25,7 +25,7 @@ export class ArlenorActorSheet extends ActorSheet {
       classes: ["arlenor", "sheet", "actor"],
       template: "systems/arlenor/templates/actor/actor-sheet.hbs",
       width: 620,
-      height: 595,
+      height: 700,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "powers" }]
     });
   }
