@@ -1,7 +1,7 @@
 {
   "name": "arlenor",
   "version": "1.0.0",
-  "description": "CSS compiler for the Arlenor system",
+  "description": "CSS compiler",
   "scripts": {
     "build": "gulp",
     "compile": "gulp css",

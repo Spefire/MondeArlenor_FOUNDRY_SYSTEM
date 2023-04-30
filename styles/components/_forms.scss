@@ -4,12 +4,8 @@ form.editable {
 
 .editor-content {
   padding: 5px 10px;
-  background: rgba(255, 255, 255, 0.3764705882);
-  border: 1px solid #BBB;
-}
-
-.item-form {
-  font-family: $font-primary;
+  border: 1px solid #bbbbbb;
+  background: #ffffff60;
 }
 
 .sheet-header {
@@ -73,8 +69,21 @@ form.editable {
 }
 
 .sheet-tabs {
+  flex: 0 !important;
+  height: auto !important;
   margin: 5px 0 !important;
-  flex: 0;
+  line-height: normal !important;
+  border-top: 1px solid #aaaaaa;
+
+  .item {
+    line-height: 25px;
+    font-weight: bold;
+  }
+
+  .item.active {
+    text-decoration: overline;
+    text-shadow: none;
+  }
 }
 
 .sheet-body,
@@ -84,16 +93,6 @@ form.editable {
 
   &.height-auto {
     height: auto;
-  }
-}
-
-.tox {
-  .tox-editor-container {
-    background: $c-white;
-  }
-
-  .tox-edit-area {
-    padding: 0 8px;
   }
 }
 

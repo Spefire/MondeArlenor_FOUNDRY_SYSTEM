@@ -1,9 +1,3 @@
-// Import utilities.
-@import 'utils/typography';
-@import 'utils/colors';
-@import 'utils/mixins';
-@import 'utils/variables';
-
 /* Global styles */
 @import 'global/classes';
 @import 'global/window';
@@ -13,7 +7,6 @@
 /* Styles limited to arlenor sheets */
 .arlenor {
   @import 'components/forms';
-  @import 'components/tabs';
   @import 'components/items';
   @import 'components/message';
 }

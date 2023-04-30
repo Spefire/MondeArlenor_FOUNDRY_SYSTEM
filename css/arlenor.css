@@ -1,15 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
 /* Global styles */
 .margin-left-1 {
-  margin-left: 5px;
+  margin-left: 5px !important;
 }
 
 .margin-right-1 {
-  margin-right: 5px;
+  margin-right: 5px !important;
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .no-bottom-border {
@@ -21,7 +20,6 @@
 }
 
 .rollable:hover, .rollable:focus {
-  color: #000;
   text-shadow: 0 0 10px red;
   cursor: pointer;
 }
@@ -114,7 +112,7 @@
   align-items: center;
   text-align: center;
   padding: 5px;
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 
 .flex-group-left {
@@ -153,11 +151,8 @@
 }
 .arlenor .editor-content {
   padding: 5px 10px;
+  border: 1px solid #bbbbbb;
   background: rgba(255, 255, 255, 0.3764705882);
-  border: 1px solid #BBB;
-}
-.arlenor .item-form {
-  font-family: "Roboto", sans-serif;
 }
 .arlenor .sheet-header {
   -webkit-box-flex: 0;
@@ -233,10 +228,21 @@
   margin: 0;
 }
 .arlenor .sheet-tabs {
+  -webkit-box-flex: 0 !important;
+  -ms-flex: 0 !important;
+  flex: 0 !important;
+  height: auto !important;
   margin: 5px 0 !important;
-  -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+  line-height: normal !important;
+  border-top: 1px solid #aaaaaa;
+}
+.arlenor .sheet-tabs .item {
+  line-height: 25px;
+  font-weight: bold;
+}
+.arlenor .sheet-tabs .item.active {
+  text-decoration: overline;
+  text-shadow: none;
 }
 .arlenor .sheet-body,
 .arlenor .sheet-body .tab,
@@ -247,12 +253,6 @@
 .arlenor .sheet-body .tab.height-auto,
 .arlenor .sheet-body .tab .editor.height-auto {
   height: auto;
-}
-.arlenor .tox .tox-editor-container {
-  background: #fff;
-}
-.arlenor .tox .tox-edit-area {
-  padding: 0 8px;
 }
 .arlenor .title-up-label {
   font-weight: bold;
@@ -276,23 +276,6 @@
   text-align: center;
   border: none;
   background: none;
-}
-.arlenor .tabs {
-  height: auto !important;
-  -webkit-box-flex: 0 !important;
-  -ms-flex: 0 !important;
-  flex: 0 !important;
-  line-height: normal !important;
-  border-top: 1px solid #AAA;
-  border-bottom: 1px solid #AAA;
-}
-.arlenor .tabs .item {
-  line-height: 25px;
-  font-weight: bold;
-}
-.arlenor .tabs .item.active {
-  text-decoration: overline;
-  text-shadow: none;
 }
 .arlenor .item-editor {
   display: block;
@@ -380,18 +363,6 @@
 }
 .arlenor .items-list .item-controls a {
   margin: 0 5px;
-}
-.arlenor .items-list .item-controls.combat-roll {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-.arlenor .items-list .item-controls.combat-roll img {
-  display: inline-block;
-  margin-right: 5px;
 }
 .arlenor .roll-message-header {
   display: -webkit-box;
