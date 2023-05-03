@@ -78,7 +78,7 @@ Hooks.once('init', async function () {
 
 export async function rollSkill(data) {
 
-  const templateDialog = await renderTemplate("systems/arlenor/templates/roll-dialog.hbs", 
+  const templateDialog = await renderTemplate("systems/arlenor/templates/roll-dialog.hbs",
     {
       ...data,
       bonusMalus: "0",
@@ -133,7 +133,7 @@ export async function rollSkill(data) {
 
     // Get the bonus/malus
     let bonusMalusValue = parseInt(bonusMalus, 10);
-    
+
     // Rolling...
     const rollCmd = (bonusMalusValue !== 0) ? "(" + data.caractValue + " + " + bonusMalusValue + ")D6" : "" + data.caractValue + "D6";
     let roll = new Roll(rollCmd, {});
@@ -163,10 +163,10 @@ export async function rollSkill(data) {
       else if (maxValue === 5) rollResult = "RES_SIMPLE";
       else rollResult = "RES_CRITIQUE";
     }
-    
+
     console.warn("Calcul", nbReussites, maxValue, rollResult);
 
-    const templateMessage = await renderTemplate("systems/arlenor/templates/roll-message.hbs", 
+    const templateMessage = await renderTemplate("systems/arlenor/templates/roll-message.hbs",
       {
         ...data,
         bonusMalus,
@@ -202,7 +202,7 @@ function convertHTMLToText(html) {
   return html;
 }
 
-function convertToPlain(html){
+function convertToPlain(html) {
   // Create a new div element
   var tempDivElement = document.createElement("div");
 

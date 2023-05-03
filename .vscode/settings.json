@@ -1,0 +1,35 @@
+{
+    "search.exclude": {
+        "**/css/*": true,
+        "**/node_modules/*": true,
+        "**/packs/*": true,
+        "**/package-lock.json": true
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "[handlebars]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+    }
+    ,"[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "workbench.colorCustomizations": {
+        "tab.activeBorderTop": "#ffffff",
+        "tab.activeBackground": "#000000",
+        "tab.activeForeground": "#ffffff",
+        "list.inactiveSelectionBackground": "#000000",
+        "list.inactiveSelectionForeground": "#ffffff",
+        "list.inactiveFocusOutline": "#ffffff",
+        "list.focusOutline": "#ffffff"
+    },
+}

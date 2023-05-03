@@ -47,7 +47,7 @@ export class ArlenorActorSheet extends ActorSheet {
       this._prepareCharacterItems(baseData.actor);
     }
 
-    const enrichedBiography = await TextEditor.enrichHTML(this.actor.system.biography, {async: true});
+    const enrichedBiography = await TextEditor.enrichHTML(this.actor.system.biography, { async: true });
 
     // Return data for the "actor-sheet.hbs"
     let sheetData = {
@@ -93,7 +93,7 @@ export class ArlenorActorSheet extends ActorSheet {
       const race = data.race;
       if (race === races[1].code
         || race === races[4].code) {
-          data.health.max += 1;
+        data.health.max += 1;
       }
     }
 

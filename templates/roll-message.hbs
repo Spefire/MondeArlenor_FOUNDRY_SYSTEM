@@ -11,27 +11,25 @@
       <div>Difficulté : <b>{{ codeToName difficulties difficulty }}</b></div>
       <div>Lancé : <b>{{ rollCmd }}</b></div>
     </div>
-    
+
     <div class="flex-group-center">
       {{#each rollValues }}
-      <div 
-        {{#if (gte this 4 )}} class="roll-message-dice is-gagnant" {{/if}}
-        {{#if (lte this 3 )}} class="roll-message-dice is-perdant" {{/if}}> 
-          <b>{{this}}</b>
-        </div>
+      <div {{#if (gte this 4 )}} class="roll-message-dice is-gagnant" {{/if}} {{#if (lte this 3 )}}
+        class="roll-message-dice is-perdant" {{/if}}>
+        <b>{{this}}</b>
+      </div>
       {{/each}}
     </div>
   </div>
 
   <div class="roll-message-section grid grid-1col">
     <div class="flex-group-center">
-      <div
-        {{#if (eq rollResult "RES_CRITIQUE")}} class="roll-message-resultat is-reussite-critique" {{/if}}
-        {{#if (eq rollResult "RES_SIMPLE")}} class="roll-message-resultat is-reussite-consequence" {{/if}}
-        {{#if (eq rollResult "RES_COUT")}} class="roll-message-resultat is-reussite-simple" {{/if}}
-        {{#if (eq rollResult "ECHEC_SIMPLE")}} class="roll-message-resultat is-echec-cout" {{/if}}
-        {{#if (eq rollResult "ECHEC_CONSEQ")}} class="roll-message-resultat is-echec-simple" {{/if}}
-        {{#if (eq rollResult "ECHEC_CRITIQUE")}} class="roll-message-resultat is-echec-critique" {{/if}}>
+      <div {{#if (eq rollResult "RES_CRITIQUE" )}} class="roll-message-resultat is-reussite-critique" {{/if}} {{#if (eq
+        rollResult "RES_SIMPLE" )}} class="roll-message-resultat is-reussite-consequence" {{/if}} {{#if (eq
+        rollResult "RES_COUT" )}} class="roll-message-resultat is-reussite-simple" {{/if}} {{#if (eq
+        rollResult "ECHEC_SIMPLE" )}} class="roll-message-resultat is-echec-cout" {{/if}} {{#if (eq
+        rollResult "ECHEC_CONSEQ" )}} class="roll-message-resultat is-echec-simple" {{/if}} {{#if (eq
+        rollResult "ECHEC_CRITIQUE" )}} class="roll-message-resultat is-echec-critique" {{/if}}>
         <b>{{ codeToName results rollResult }}</b>
       </div>
       <div><i>{{ codeToDescription results rollResult }}</i></div>

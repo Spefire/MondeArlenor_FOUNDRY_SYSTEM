@@ -42,8 +42,8 @@ export class ArlenorItemSheet extends ItemSheet {
   /** @override */
   async getData() {
     const baseData = super.getData();
-    
-    const enrichedBiography = await TextEditor.enrichHTML(this.item.system.description, {async: true});
+
+    const enrichedBiography = await TextEditor.enrichHTML(this.item.system.description, { async: true });
 
     // Return data for the "item-sheet.hbs"
     let sheetData = {

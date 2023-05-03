@@ -28,7 +28,7 @@
                     </select>
                 </div>
             </div>
-            
+
             {{#if (eq system.powerType "EVO" )}}
             <div class="grid grid-1col">
                 <div class="flexrow flex-group-center">
@@ -52,9 +52,8 @@
             </div>
             {{/if}}
 
-            <div
-                {{#if (eq system.powerType "EVO" )}} class="grid grid-2col" {{/if}}
-                {{#if (ne system.powerType "EVO" )}} class="grid grid-1col" {{/if}}>
+            <div {{#if (eq system.powerType "EVO" )}} class="grid grid-2col" {{/if}} {{#if (ne system.powerType "EVO"
+                )}} class="grid grid-1col" {{/if}}>
                 <div class="flexrow flex-group-center">
                     <label for="system.family" class="title-up-label">Famille</label>
                     <select name="system.family">
@@ -114,11 +113,11 @@
         <!-- Description Tab -->
         <div class="tab" data-group="primary" data-tab="description">
             {{
-                editor
-                enrichedBiography
-                target="system.description"
-                editable=editable
-                button=true
+            editor
+            enrichedBiography
+            target="system.description"
+            editable=editable
+            button=true
             }}
         </div>
 

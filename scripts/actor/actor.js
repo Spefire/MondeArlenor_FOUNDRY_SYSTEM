@@ -11,7 +11,7 @@ export class ArlenorActor extends Actor {
    */
   prepareData() {
     super.prepareData();
-    
+
     // Prepare items
     if (this.type == 'character') {
       this._prepareCharacterHealth(this, true);
@@ -42,7 +42,7 @@ export class ArlenorActor extends Actor {
       const race = data.race;
       if (race === races[1].code
         || race === races[4].code) {
-          data.health.max += 1;
+        data.health.max += 1;
       }
     }
 
