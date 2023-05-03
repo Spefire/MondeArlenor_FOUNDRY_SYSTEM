@@ -49,6 +49,7 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
   "url": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM",
-  "manifest": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/blob/master/system.json",
-  "download": ""
+  "manifest": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/releases/download/V1.0.0/system.json",
+  "download": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/archive/refs/tags/V1.0.0.zip",
+  "bugs": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/issues"
 }
