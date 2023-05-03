@@ -14,10 +14,10 @@
 
     <div class="flex-group-center">
       {{#each rollValues }}
-      <div {{#if (gte this 4 )}} class="roll-message-dice is-gagnant" {{/if}} {{#if (lte this 3 )}}
-        class="roll-message-dice is-perdant" {{/if}}>
-        <b>{{this}}</b>
-      </div>
+        <div {{#if (gte this 4 )}} class="roll-message-dice is-gagnant" {{/if}} {{#if (lte this 3 )}}
+          class="roll-message-dice is-perdant" {{/if}}>
+          <b>{{this}}</b>
+        </div>
       {{/each}}
     </div>
   </div>

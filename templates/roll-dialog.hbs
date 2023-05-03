@@ -11,9 +11,9 @@
       <label for="difficulty" class="title-up-label">Difficulté : </label>
       <select name="difficulty" id="rollDifficulty">
         {{#select difficulty }}
-        {{#each difficulties }}
-        <option value="{{this.code}}">{{this.name}}</option>
-        {{/each}}
+          {{#each difficulties }}
+            <option value="{{this.code}}">{{this.name}}</option>
+          {{/each}}
         {{/select}}
       </select>
     </div>
@@ -24,9 +24,9 @@
       <label for="bonusMalus" class="title-up-label">Bonus / Malus : </label>
       <select name="bonusMalus" id="rollBonusMalus">
         {{#select bonusMalus }}
-        {{#each bonusMalusList }}
-        <option value="{{this.code}}">{{this.name}}</option>
-        {{/each}}
+          {{#each bonusMalusList }}
+            <option value="{{this.code}}">{{this.name}}</option>
+          {{/each}}
         {{/select}}
       </select>
     </div>

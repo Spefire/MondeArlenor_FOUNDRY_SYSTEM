@@ -21,35 +21,35 @@
                     <label for="system.powerType" class="title-up-label">Source</label>
                     <select name="system.powerType">
                         {{#select system.powerType }}
-                        {{#each powerTypes }}
-                        <option value="{{this.code}}">{{this.name}}</option>
-                        {{/each}}
+                            {{#each powerTypes }}
+                                <option value="{{this.code}}">{{this.name}}</option>
+                            {{/each}}
                         {{/select}}
                     </select>
                 </div>
             </div>
 
             {{#if (eq system.powerType "EVO" )}}
-            <div class="grid grid-1col">
-                <div class="flexrow flex-group-center">
-                    <label for="system.speciality" class="title-up-label">Classe</label>
-                    <select name="system.speciality">
-                        {{#select system.speciality }}
-                        {{#each specialities }}
-                        <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
+                <div class="grid grid-1col">
+                    <div class="flexrow flex-group-center">
+                        <label for="system.speciality" class="title-up-label">Classe</label>
+                        <select name="system.speciality">
+                            {{#select system.speciality }}
+                                {{#each specialities }}
+                                    <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
+                                {{/each}}
+                            {{/select}}
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="grid grid-1col">
-                <div class="flexrow flex-group-center">
-                    Le rang d'un pouvoir indique sa puissance
-                    <br>et souvent la difficulté qui sera nécessaire pour l'utiliser.
-                    <br>I (Simple) / II (Standard) / III (Complexe) / IV (Légendaire)
+                <div class="grid grid-1col">
+                    <div class="flexrow flex-group-center">
+                        Le rang d'un pouvoir indique sa puissance
+                        <br>et souvent la difficulté qui sera nécessaire pour l'utiliser.
+                        <br>I (Simple) / II (Standard) / III (Complexe) / IV (Légendaire)
+                    </div>
                 </div>
-            </div>
             {{/if}}
 
             <div {{#if (eq system.powerType "EVO" )}} class="grid grid-2col" {{/if}} {{#if (ne system.powerType "EVO"
@@ -58,23 +58,23 @@
                     <label for="system.family" class="title-up-label">Famille</label>
                     <select name="system.family">
                         {{#select system.family }}
-                        {{#each families }}
-                        <option value="{{this.code}}">{{this.name}}</option>
-                        {{/each}}
+                            {{#each families }}
+                                <option value="{{this.code}}">{{this.name}}</option>
+                            {{/each}}
                         {{/select}}
                     </select>
                 </div>
                 {{#if (eq system.powerType "EVO" )}}
-                <div class="flexrow flex-group-center">
-                    <label for="system.rank" class="title-up-label">Rang</label>
-                    <select name="system.rank">
-                        {{#select system.rank }}
-                        {{#each ranks }}
-                        <option value="{{this.code}}">Rang {{this.name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                </div>
+                    <div class="flexrow flex-group-center">
+                        <label for="system.rank" class="title-up-label">Rang</label>
+                        <select name="system.rank">
+                            {{#select system.rank }}
+                                {{#each ranks }}
+                                    <option value="{{this.code}}">Rang {{this.name}}</option>
+                                {{/each}}
+                            {{/select}}
+                        </select>
+                    </div>
                 {{/if}}
             </div>
 
@@ -83,9 +83,9 @@
                     <label for="system.duration" class="title-up-label">Durée max</label>
                     <select name="system.duration">
                         {{#select system.duration }}
-                        {{#each durations }}
-                        <option value="{{this.code}}">{{this.name}}</option>
-                        {{/each}}
+                            {{#each durations }}
+                                <option value="{{this.code}}">{{this.name}}</option>
+                            {{/each}}
                         {{/select}}
                     </select>
                 </div>
@@ -93,9 +93,9 @@
                     <label for="system.range" class="title-up-label">Portée max</label>
                     <select name="system.range">
                         {{#select system.range }}
-                        {{#each ranges }}
-                        <option value="{{this.code}}">{{this.name}}</option>
-                        {{/each}}
+                            {{#each ranges }}
+                                <option value="{{this.code}}">{{this.name}}</option>
+                            {{/each}}
                         {{/select}}
                     </select>
                 </div>
@@ -105,7 +105,7 @@
                 <div class="flexrow flex-group-center">
                     <input type='checkbox' name="system.chaneling" {{checked system.chaneling}}>
                     {{#if (eq system.chaneling true )}}Avec canalisation{{/if}}
-                    {{#if (eq system.chaneling false )}}Sans canalisation{{/if}}
+                        {{#if (eq system.chaneling false )}}Sans canalisation{{/if}}
                 </div>
             </div>
         </div>

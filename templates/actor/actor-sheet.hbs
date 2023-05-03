@@ -10,148 +10,148 @@
       </h1>
 
       {{#if (eq actor.type "character")}}
-      <div class="grid grid-3col">
-        <div class="flex-group-center">
-          <label for="system.race" class="title-up-label">Peuple</label>
-          <div class="flexrow flex-center flex-between">
-            <select name="system.race">
-              <option value="">-</option>
-              {{#select system.race }}
-              {{#each races }}
-              <option value="{{this.code}}">{{this.name}}</option>
-              {{/each}}
-              {{/select}}
-            </select>
+        <div class="grid grid-3col">
+          <div class="flex-group-center">
+            <label for="system.race" class="title-up-label">Peuple</label>
+            <div class="flexrow flex-center flex-between">
+              <select name="system.race">
+                <option value="">-</option>
+                {{#select system.race }}
+                  {{#each races }}
+                    <option value="{{this.code}}">{{this.name}}</option>
+                  {{/each}}
+                {{/select}}
+              </select>
+            </div>
+          </div>
+          <div class="flex-group-center">
+            <label for="system.divinity" class="title-up-label">Divinité</label>
+            <div class="flexrow flex-center flex-between">
+              <select name="system.divinity">
+                <option value="">-</option>
+                {{#select system.divinity }}
+                  {{#each divinities }}
+                    <option value="{{this.code}}">{{this.name}}</option>
+                  {{/each}}
+                {{/select}}
+              </select>
+            </div>
+          </div>
+          <div class="flex-group-center">
+            <label for="system.level" class="title-up-label">Niveau</label>
+            <div class="flexrow flex-center flex-between">
+              <input type="text" name="system.level" value="{{system.level}}" data-dtype="Number" />
+            </div>
           </div>
         </div>
-        <div class="flex-group-center">
-          <label for="system.divinity" class="title-up-label">Divinité</label>
-          <div class="flexrow flex-center flex-between">
-            <select name="system.divinity">
-              <option value="">-</option>
-              {{#select system.divinity }}
-              {{#each divinities }}
-              <option value="{{this.code}}">{{this.name}}</option>
-              {{/each}}
-              {{/select}}
-            </select>
-          </div>
-        </div>
-        <div class="flex-group-center">
-          <label for="system.level" class="title-up-label">Niveau</label>
-          <div class="flexrow flex-center flex-between">
-            <input type="text" name="system.level" value="{{system.level}}" data-dtype="Number" />
-          </div>
-        </div>
-      </div>
       {{/if}}
     </div>
   </header>
 
   <!-- Sheet Tri-Header -->
   {{#if (ne actor.type "pnj")}}
-  <div class="sheet-header tri-header">
-    <div class="healthLevels grid grid-3col grid-full-width">
-      <div class="flex-group-center grid-tiers-1">
-        <label for="system.health.value" class="title-up-label">{{system.health.name}}</label>
-        <div class="flexrow flex-center">
-          <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"
-            title="Actuels" />
-          <span> / </span>
-          <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number" title="Maximum"
-            disabled />
+    <div class="sheet-header tri-header">
+      <div class="healthLevels grid grid-3col grid-full-width">
+        <div class="flex-group-center grid-tiers-1">
+          <label for="system.health.value" class="title-up-label">{{system.health.name}}</label>
+          <div class="flexrow flex-center">
+            <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"
+              title="Actuels" />
+            <span> / </span>
+            <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"
+              title="Maximum" disabled />
+          </div>
         </div>
-      </div>
-      <div class="flex-group-center grid-tiers-2">
-        <label class="title-up-label">État actuel : {{system.health.indic}}</label>
-        <div class="flexrow flex-center">
-          {{#each system.healthLevels as |healthLevel key|}}
-          |
-          {{#if (gte healthLevel.max 1)}}
-          <input type='checkbox' {{#if (gte healthLevel.value 1)}}checked{{/if}} disabled>
-          {{/if}}
-          {{#if (gte healthLevel.max 2)}}
-          <input type='checkbox' {{#if (gte healthLevel.value 2)}}checked{{/if}} disabled>
-          {{/if}}
-          {{#if (gte healthLevel.max 3)}}
-          <input type='checkbox' {{#if (gte healthLevel.value 3)}}checked{{/if}} disabled>
-          {{/if}}
-          {{#if (gte healthLevel.max 4)}}
-          <input type='checkbox' {{#if (gte healthLevel.value 4)}}checked{{/if}} disabled>
-          {{/if}}
-          {{#if (gte healthLevel.max 5)}}
-          <input type='checkbox' {{#if (gte healthLevel.value 5)}}checked{{/if}} disabled>
-          {{/if}}
-          {{#if (gte healthLevel.max 6)}}
-          <input type='checkbox' {{#if (gte healthLevel.value 6)}}checked{{/if}} disabled>
-          {{/if}}
-          {{#if (gte healthLevel.max 7)}}
-          ...
-          {{/if}}
-          {{/each}}
-          |
+        <div class="flex-group-center grid-tiers-2">
+          <label class="title-up-label">État actuel : {{system.health.indic}}</label>
+          <div class="flexrow flex-center">
+            {{#each system.healthLevels as |healthLevel key|}}
+              |
+              {{#if (gte healthLevel.max 1)}}
+                <input type='checkbox' {{#if (gte healthLevel.value 1)}}checked{{/if}} disabled>
+              {{/if}}
+              {{#if (gte healthLevel.max 2)}}
+                <input type='checkbox' {{#if (gte healthLevel.value 2)}}checked{{/if}} disabled>
+              {{/if}}
+              {{#if (gte healthLevel.max 3)}}
+                <input type='checkbox' {{#if (gte healthLevel.value 3)}}checked{{/if}} disabled>
+              {{/if}}
+              {{#if (gte healthLevel.max 4)}}
+                <input type='checkbox' {{#if (gte healthLevel.value 4)}}checked{{/if}} disabled>
+              {{/if}}
+              {{#if (gte healthLevel.max 5)}}
+                <input type='checkbox' {{#if (gte healthLevel.value 5)}}checked{{/if}} disabled>
+              {{/if}}
+              {{#if (gte healthLevel.max 6)}}
+                <input type='checkbox' {{#if (gte healthLevel.value 6)}}checked{{/if}} disabled>
+              {{/if}}
+              {{#if (gte healthLevel.max 7)}}
+                ...
+              {{/if}}
+            {{/each}}
+            |
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Sheet Mid-Header -->
-  <div class="sheet-header mid-header">
-    <div class="grid grid-3col grid-full-width">
-      {{#each system.caracts as |caract key|}}
-      <div class="flexrow flex-group-center">
-        <label for="system.caracts.{{key}}.value" class="title-up-label rollable"
-          data-caractKey="{{key}}">{{caract.name}}</label>
-        <div class="input-value-base">
-          <input type="text" name="system.caracts.{{key}}.value" value="{{caract.value}}" data-dtype="Number"
-            title="Actuel" />
-          <span>(</span>
-          <input type="text" name="system.caracts.{{key}}.base" value="{{caract.base}}" data-dtype="Number"
-            title="De base" />
-          <span>)</span>
-        </div>
+    <!-- Sheet Mid-Header -->
+    <div class="sheet-header mid-header">
+      <div class="grid grid-3col grid-full-width">
+        {{#each system.caracts as |caract key|}}
+          <div class="flexrow flex-group-center">
+            <label for="system.caracts.{{key}}.value" class="title-up-label rollable"
+              data-caractKey="{{key}}">{{caract.name}}</label>
+            <div class="input-value-base">
+              <input type="text" name="system.caracts.{{key}}.value" value="{{caract.value}}" data-dtype="Number"
+                title="Actuel" />
+              <span>(</span>
+              <input type="text" name="system.caracts.{{key}}.base" value="{{caract.base}}" data-dtype="Number"
+                title="De base" />
+              <span>)</span>
+            </div>
+          </div>
+        {{/each}}
       </div>
-      {{/each}}
     </div>
-  </div>
   {{/if}}
 
   <!-- Sheet Quad-Header -->
   {{#if (eq actor.type "character")}}
-  <div class="sheet-header quad-header">
-    <div class="grid grid-2col grid-full-width">
-      <div class="flexrow flex-group-center">
-        <select name="system.speciality01">
-          <option value=""><i>Choix de la première classe...</i></option>
-          {{#select system.speciality01 }}
-          {{#each specialities }}
-          <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
-          {{/each}}
-          {{/select}}
-        </select>
-      </div>
-      <div class="flexrow flex-group-center">
-        <select name="system.speciality02">
-          <option value=""><i>Choix de la seconde classe...</i></option>
-          {{#select system.speciality02 }}
-          {{#each specialities }}
-          <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
-          {{/each}}
-          {{/select}}
-        </select>
+    <div class="sheet-header quad-header">
+      <div class="grid grid-2col grid-full-width">
+        <div class="flexrow flex-group-center">
+          <select name="system.speciality01">
+            <option value=""><i>Choix de la première classe...</i></option>
+            {{#select system.speciality01 }}
+              {{#each specialities }}
+                <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
+              {{/each}}
+            {{/select}}
+          </select>
+        </div>
+        <div class="flexrow flex-group-center">
+          <select name="system.speciality02">
+            <option value=""><i>Choix de la seconde classe...</i></option>
+            {{#select system.speciality02 }}
+              {{#each specialities }}
+                <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
+              {{/each}}
+            {{/select}}
+          </select>
+        </div>
       </div>
     </div>
-  </div>
   {{/if}}
 
   <!-- Sheet Tab Navigation -->
   <nav class="sheet-tabs tabs" data-group="primary">
     {{#if (ne actor.type "pnj")}}
-    <a class="item title-up-label" data-tab="powers">Pouvoirs</a>
+      <a class="item title-up-label" data-tab="powers">Pouvoirs</a>
     {{/if}}
     {{#if (eq actor.type "character")}}
-    <a class="item title-up-label" data-tab="skills">Compétences</a>
-    <a class="item title-up-label" data-tab="equipments">Équipement</a>
+      <a class="item title-up-label" data-tab="skills">Compétences</a>
+      <a class="item title-up-label" data-tab="equipments">Équipement</a>
     {{/if}}
     <a class="item title-up-label" data-tab="backpack">Objets</a>
     <a class="item title-up-label" data-tab="description">Description</a>
@@ -161,202 +161,205 @@
   <section class="sheet-body">
 
     {{#if (ne actor.type "pnj")}}
-    <!-- Owned Powers Tab -->
-    <div class="tab powers" data-group="primary" data-tab="powers">
+      <!-- Owned Powers Tab -->
+      <div class="tab powers" data-group="primary" data-tab="powers">
 
-      {{#if (eq actor.type "character")}}
-      <ol class="items-list">
-        <li class="item flexrow item-header">
-          <div></div>
-          <div class="item-controls">
-            {{#if editable}}
-            <a class="item-create" title="Ajouter un pouvoir" data-type="power" data-powerType="EVO">
-              <i class="fas fa-plus"></i>
-              Ajouter
-            </a>
-            {{/if}}
-          </div>
-        </li>
+        {{#if (eq actor.type "character")}}
+          <ol class="items-list">
+            <li class="item flexrow item-header">
+              <div></div>
+              <div class="item-controls">
+                {{#if editable}}
+                  <a class="item-create" title="Ajouter un pouvoir" data-type="power" data-powerType="EVO">
+                    <i class="fas fa-plus"></i>
+                    Ajouter
+                  </a>
+                {{/if}}
+              </div>
+            </li>
 
-        {{#each actor.powers as |power id|}}
-        <li class="item flexrow no-bottom-border" data-item-id="{{power._id}}">
-          <div class="item-big-image"><img src="{{power.img}}" width="48" height="48" /></div>
-          <div class="item-name rollable" title="Utiliser le pouvoir" data-caractKey="mag" data-powerId="{{power._id}}">
-            <b>{{power.name}} {{codeToName ../ranks power.system.rank}}</b>
-          </div>
-          <div class="item-details">
-            {{codeToName ../specialities power.system.speciality}}
-          </div>
-          <div class="item-details">
-            <i class="fas fa-book-open" title="{{codeToName ../families power.system.family}}"></i>
-            <i class="fas fa-hourglass-half" title="{{codeToName ../durations power.system.duration}}"></i>
-            <i class="fas fa-bullseye" title="{{codeToName ../ranges power.system.range}}"></i>
-            {{#if (eq power.system.chaneling true)}}
-            <i class="fas fa-refresh" title="Avec canalisation"></i>
-            {{/if}}
-          </div>
-          <div class="item-controls">
-            {{#if editable}}
-            <a class="item-edit" title="Modifier le pouvoir"><i class="fas fa-edit"></i></a>
-            <a class="item-delete" title="Supprimer le pouvoir"><i class="fas fa-trash"></i></a>
-            {{/if}}
-          </div>
-        </li>
-        <li {{#if @last }} class="item flexrow no-bottom-border" {{ else }} class="item flexrow" {{/if}}
-          data-item-id="{{power._id}}">
-          <div class="item-big-image"></div>
-          <div class="item-description">{{ convertToPlain power.system.description }}</div>
-        </li>
-        {{/each}}
+            {{#each actor.powers as |power id|}}
+              <li class="item flexrow no-bottom-border" data-item-id="{{power._id}}">
+                <div class="item-big-image"><img src="{{power.img}}" width="48" height="48" /></div>
+                <div class="item-name rollable" title="Utiliser le pouvoir" data-caractKey="mag"
+                  data-powerId="{{power._id}}">
+                  <b>{{power.name}} {{codeToName ../ranks power.system.rank}}</b>
+                </div>
+                <div class="item-details">
+                  {{codeToName ../specialities power.system.speciality}}
+                </div>
+                <div class="item-details">
+                  <i class="fas fa-book-open" title="{{codeToName ../families power.system.family}}"></i>
+                  <i class="fas fa-hourglass-half" title="{{codeToName ../durations power.system.duration}}"></i>
+                  <i class="fas fa-bullseye" title="{{codeToName ../ranges power.system.range}}"></i>
+                  {{#if (eq power.system.chaneling true)}}
+                    <i class="fas fa-refresh" title="Avec canalisation"></i>
+                  {{/if}}
+                </div>
+                <div class="item-controls">
+                  {{#if editable}}
+                    <a class="item-edit" title="Modifier le pouvoir"><i class="fas fa-edit"></i></a>
+                    <a class="item-delete" title="Supprimer le pouvoir"><i class="fas fa-trash"></i></a>
+                  {{/if}}
+                </div>
+              </li>
+              <li {{#if @last }} class="item flexrow no-bottom-border" {{ else }} class="item flexrow" {{/if}}
+                data-item-id="{{power._id}}">
+                <div class="item-big-image"></div>
+                <div class="item-description">{{ convertToPlain power.system.description }}</div>
+              </li>
+            {{/each}}
 
-        {{#if (eq actor.powers.length 0)}}
-        <li class="item flexrow no-bottom-border text-center">
-          <div>Aucun pouvoir de classe...</div>
-        </li>
+            {{#if (eq actor.powers.length 0)}}
+              <li class="item flexrow no-bottom-border text-center">
+                <div>Aucun pouvoir de classe...</div>
+              </li>
+            {{/if}}
+          </ol>
         {{/if}}
-      </ol>
-      {{/if}}
 
-      <ol class="items-list">
-        <li class="item flexrow item-header">
-          <div></div>
-          <div class="item-controls">
-            {{#if editable}}
-            {{#if (eq actor.type "character")}}
-            <a class="item-create" title="Ajouter un pouvoir" data-type="power" data-powerType="INSTA">
-              <i class="fas fa-plus"></i>
-              Ajouter
-            </a>
-            {{/if}}
-            {{#if (eq actor.type "creature")}}
-            <a class="item-create" title="Ajouter un pouvoir" data-type="power" data-powerType="POU">
-              <i class="fas fa-plus"></i>
-              Ajouter
-            </a>
-            {{/if}}
-            {{/if}}
-          </div>
-        </li>
+        <ol class="items-list">
+          <li class="item flexrow item-header">
+            <div></div>
+            <div class="item-controls">
+              {{#if editable}}
+                {{#if (eq actor.type "character")}}
+                  <a class="item-create" title="Ajouter un pouvoir" data-type="power" data-powerType="INSTA">
+                    <i class="fas fa-plus"></i>
+                    Ajouter
+                  </a>
+                {{/if}}
+                {{#if (eq actor.type "creature")}}
+                  <a class="item-create" title="Ajouter un pouvoir" data-type="power" data-powerType="POU">
+                    <i class="fas fa-plus"></i>
+                    Ajouter
+                  </a>
+                {{/if}}
+              {{/if}}
+            </div>
+          </li>
 
-        {{#each actor.otherPowers as |power id|}}
-        <li {{#if @last }} class="item flexrow no-bottom-border" {{ else }} class="item flexrow" {{/if}}
-          data-item-id="{{power._id}}">
-          <div class="item-image"><img src="{{power.img}}" width="24" height="24" /></div>
-          <div class="item-name rollable" title="Utiliser le pouvoir" data-caractKey="mag" data-powerId="{{power._id}}">
-            <b>{{power.name}}</b>
-          </div>
-          <div class="item-details">
-            {{codeToName ../powerTypes power.system.powerType}}
-          </div>
-          <div class="item-details">
-            <i class="fas fa-book-open" title="{{codeToName ../families power.system.family}}"></i>
-            <i class="fas fa-hourglass-half" title="{{codeToName ../durations power.system.duration}}"></i>
-            <i class="fas fa-bullseye" title="{{codeToName ../ranges power.system.range}}"></i>
-            {{#if (eq power.system.chaneling true)}}
-            <i class="fas fa-refresh" title="Avec canalisation"></i>
-            {{/if}}
-          </div>
-          <div class="item-controls">
-            {{#if editable}}
-            <a class="item-edit" title="Modifier le pouvoir"><i class="fas fa-edit"></i></a>
-            <a class="item-delete" title="Supprimer le pouvoir"><i class="fas fa-trash"></i></a>
-            {{/if}}
-          </div>
-        </li>
-        {{/each}}
+          {{#each actor.otherPowers as |power id|}}
+            <li {{#if @last }} class="item flexrow no-bottom-border" {{ else }} class="item flexrow" {{/if}}
+              data-item-id="{{power._id}}">
+              <div class="item-image"><img src="{{power.img}}" width="24" height="24" /></div>
+              <div class="item-name rollable" title="Utiliser le pouvoir" data-caractKey="mag"
+                data-powerId="{{power._id}}">
+                <b>{{power.name}}</b>
+              </div>
+              <div class="item-details">
+                {{codeToName ../powerTypes power.system.powerType}}
+              </div>
+              <div class="item-details">
+                <i class="fas fa-book-open" title="{{codeToName ../families power.system.family}}"></i>
+                <i class="fas fa-hourglass-half" title="{{codeToName ../durations power.system.duration}}"></i>
+                <i class="fas fa-bullseye" title="{{codeToName ../ranges power.system.range}}"></i>
+                {{#if (eq power.system.chaneling true)}}
+                  <i class="fas fa-refresh" title="Avec canalisation"></i>
+                {{/if}}
+              </div>
+              <div class="item-controls">
+                {{#if editable}}
+                  <a class="item-edit" title="Modifier le pouvoir"><i class="fas fa-edit"></i></a>
+                  <a class="item-delete" title="Supprimer le pouvoir"><i class="fas fa-trash"></i></a>
+                {{/if}}
+              </div>
+            </li>
+          {{/each}}
 
-        {{#if (eq actor.otherPowers.length 0)}}
-        <li class="item flexrow no-bottom-border text-center">
-          {{#if (eq actor.type "character")}}
-          <div>Aucun cristal instantané, ou parchemin...</div>
+          {{#if (eq actor.otherPowers.length 0)}}
+            <li class="item flexrow no-bottom-border text-center">
+              {{#if (eq actor.type "character")}}
+                <div>Aucun cristal instantané, ou parchemin...</div>
+              {{/if}}
+              {{#if (eq actor.type "creature")}}
+                <div>Aucun pouvoir inné...</div>
+              {{/if}}
+            </li>
           {{/if}}
-          {{#if (eq actor.type "creature")}}
-          <div>Aucun pouvoir inné...</div>
-          {{/if}}
-        </li>
-        {{/if}}
-      </ol>
-    </div>
+        </ol>
+      </div>
     {{/if}}
 
     {{#if (eq actor.type "character")}}
-    <!-- Owned Skills Tab -->
-    <div class="tab skills height-auto" data-group="primary" data-tab="skills">
-      <ol class="items-list">
-        <li class="item flexrow item-header">
-          <div></div>
-          <div class="item-controls">
-            {{#if editable}}
-            <a class="item-create" title="Ajouter une compétence" data-type="skill">
-              <i class="fas fa-plus"></i>
-              Ajouter
-            </a>
-            {{/if}}
-          </div>
-        </li>
+      <!-- Owned Skills Tab -->
+      <div class="tab skills height-auto" data-group="primary" data-tab="skills">
+        <ol class="items-list">
+          <li class="item flexrow item-header">
+            <div></div>
+            <div class="item-controls">
+              {{#if editable}}
+                <a class="item-create" title="Ajouter une compétence" data-type="skill">
+                  <i class="fas fa-plus"></i>
+                  Ajouter
+                </a>
+              {{/if}}
+            </div>
+          </li>
 
-        {{#each actor.skills as |skill id|}}
-        <li class="item flexrow no-bottom-border" data-item-id="{{skill._id}}">
-          <div class="item-big-image"><img src="{{skill.img}}" width="48" height="48" /></div>
-          <div class="item-name">
-            <b>{{skill.name}}</b>
-          </div>
-          <div class="item-details">
-            {{codeToName ../skillTypes skill.system.skillType}}
-          </div>
-          <div class="item-details"></div>
-          <div class="item-controls">
-            {{#if editable}}
-            <a class="item-edit" title="Modifier la compétence"><i class="fas fa-edit"></i></a>
-            <a class="item-delete" title="Supprimer la compétence"><i class="fas fa-trash"></i></a>
-            {{/if}}
-          </div>
-        </li>
-        <li {{#if @last }} class="item flexrow no-bottom-border" {{ else }} class="item flexrow" {{/if}}
-          data-item-id="{{skill._id}}">
-          <div class="item-big-image"></div>
-          <div class="item-description">{{ convertToPlain skill.system.description }}</div>
-        </li>
-        {{/each}}
+          {{#each actor.skills as |skill id|}}
+            <li class="item flexrow no-bottom-border" data-item-id="{{skill._id}}">
+              <div class="item-big-image"><img src="{{skill.img}}" width="48" height="48" /></div>
+              <div class="item-name">
+                <b>{{skill.name}}</b>
+              </div>
+              <div class="item-details">
+                {{codeToName ../skillTypes skill.system.skillType}}
+              </div>
+              <div class="item-details"></div>
+              <div class="item-controls">
+                {{#if editable}}
+                  <a class="item-edit" title="Modifier la compétence"><i class="fas fa-edit"></i></a>
+                  <a class="item-delete" title="Supprimer la compétence"><i class="fas fa-trash"></i></a>
+                {{/if}}
+              </div>
+            </li>
+            <li {{#if @last }} class="item flexrow no-bottom-border" {{ else }} class="item flexrow" {{/if}}
+              data-item-id="{{skill._id}}">
+              <div class="item-big-image"></div>
+              <div class="item-description">{{ convertToPlain skill.system.description }}</div>
+            </li>
+          {{/each}}
 
-        {{#if (eq actor.skills.length 0)}}
-        <li class="item flexrow no-bottom-border text-center">
-          <div>Aucune compétence...</div>
-        </li>
-        {{/if}}
-    </div>
+          {{#if (eq actor.skills.length 0)}}
+            <li class="item flexrow no-bottom-border text-center">
+              <div>Aucune compétence...</div>
+            </li>
+          {{/if}}
+      </div>
 
-    <!-- Owned Equipments Tab -->
-    <div class="tab equipments" data-group="primary" data-tab="equipments">
-      <ol class="items-list">
-        {{#each actor.equipments as |equipments equipmentType|}}
-        <li class="item flexrow item-header">
-          <div class="item-name">{{codeToName ../equipmentTypes equipmentType}}</div>
-          <div class="item-controls">
-            {{#if editable}}
-            <a class="item-create" title="Ajouter un équipement" data-type="equipment"
-              data-equipment-type="{{equipmentType}}">
-              <i class="fas fa-plus"></i> Ajouter
-            </a>
-            {{/if}}
-          </div>
-        </li>
-        {{#each equipments as |equipment id|}}
-        <li class="item flexrow" data-item-id="{{equipment._id}}">
-          <div class="item-image"><img src="{{equipment.img}}" title="{{equipment.name}}" width="24" height="24" />
-          </div>
-          <div class="item-name">{{equipment.name}}</div>
-          <div class="item-controls">
-            {{#if editable}}
-            <a class="item-edit" title="Modifier l'équipement"><i class="fas fa-edit"></i></a>
-            <a class="item-delete" title="Supprimer l'équipement"><i class="fas fa-trash"></i></a>
-            {{/if}}
-          </div>
-        </li>
-        {{/each}}
-        {{/each}}
-      </ol>
-    </div>
+      <!-- Owned Equipments Tab -->
+      <div class="tab equipments" data-group="primary" data-tab="equipments">
+        <ol class="items-list">
+          {{#each actor.equipments as |equipments equipmentType|}}
+            <li class="item flexrow item-header">
+              <div class="item-name">{{codeToName ../equipmentTypes equipmentType}}</div>
+              <div class="item-controls">
+                {{#if editable}}
+                  <a class="item-create" title="Ajouter un équipement" data-type="equipment"
+                    data-equipment-type="{{equipmentType}}">
+                    <i class="fas fa-plus"></i> Ajouter
+                  </a>
+                {{/if}}
+              </div>
+            </li>
+            {{#each equipments as |equipment id|}}
+              <li class="item flexrow" data-item-id="{{equipment._id}}">
+                <div class="item-image"><img src="{{equipment.img}}" title="{{equipment.name}}" width="24"
+                    height="24" />
+                </div>
+                <div class="item-name">{{equipment.name}}</div>
+                <div class="item-controls">
+                  {{#if editable}}
+                    <a class="item-edit" title="Modifier l'équipement"><i class="fas fa-edit"></i></a>
+                    <a class="item-delete" title="Supprimer l'équipement"><i class="fas fa-trash"></i></a>
+                  {{/if}}
+                </div>
+              </li>
+            {{/each}}
+          {{/each}}
+        </ol>
+      </div>
     {{/if}}
 
     <!-- Owned Backpack Tab -->
@@ -368,37 +371,37 @@
           <div class="item-details">Type</div>
           <div class="item-controls">
             {{#if editable}}
-            <a class="item-create" title="Ajouter un objet" data-type="item">
-              <i class="fas fa-plus"></i> Ajouter
-            </a>
+              <a class="item-create" title="Ajouter un objet" data-type="item">
+                <i class="fas fa-plus"></i> Ajouter
+              </a>
             {{/if}}
           </div>
         </li>
         {{#each actor.backpack as |item id|}}
-        <li {{#if @last }} class="item flexrow no-bottom-border" {{ else }} class="item flexrow" {{/if}}
-          data-item-id="{{item._id}}">
-          <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24" /></div>
-          <div class="item-name">{{item.name}}</div>
-          <div class="item-details">
-            <input class="item-number inline-edit-value" data-field="item.system.quantity" type="text"
-              value="{{item.system.quantity}}" data-dtype="Number" />
-          </div>
-          <div class="item-details">
-            {{codeToName ../itemTypes item.system.itemType}}
-          </div>
-          <div class="item-controls">
-            {{#if editable}}
-            <a class="item-edit" title="Modifier l'objet"><i class="fas fa-edit"></i></a>
-            <a class="item-delete" title="Supprimer l'objet"><i class="fas fa-trash"></i></a>
-            {{/if}}
-          </div>
-        </li>
+          <li {{#if @last }} class="item flexrow no-bottom-border" {{ else }} class="item flexrow" {{/if}}
+            data-item-id="{{item._id}}">
+            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24" /></div>
+            <div class="item-name">{{item.name}}</div>
+            <div class="item-details">
+              <input class="item-number inline-edit-value" data-field="item.system.quantity" type="text"
+                value="{{item.system.quantity}}" data-dtype="Number" />
+            </div>
+            <div class="item-details">
+              {{codeToName ../itemTypes item.system.itemType}}
+            </div>
+            <div class="item-controls">
+              {{#if editable}}
+                <a class="item-edit" title="Modifier l'objet"><i class="fas fa-edit"></i></a>
+                <a class="item-delete" title="Supprimer l'objet"><i class="fas fa-trash"></i></a>
+              {{/if}}
+            </div>
+          </li>
         {{/each}}
 
         {{#if (eq actor.backpack.length 0)}}
-        <li class="item flexrow no-bottom-border text-center">
-          <div>Aucune objet...</div>
-        </li>
+          <li class="item flexrow no-bottom-border text-center">
+            <div>Aucune objet...</div>
+          </li>
         {{/if}}
       </ol>
     </div>

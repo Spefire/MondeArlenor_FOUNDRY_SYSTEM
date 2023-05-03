@@ -14,9 +14,9 @@
                 <label for="system.itemType" class="title-up-label">Type</label>
                 <select name="system.itemType">
                     {{#select system.itemType }}
-                    {{#each itemTypes }}
-                    <option value="{{this.code}}">{{this.name}}</option>
-                    {{/each}}
+                        {{#each itemTypes }}
+                            <option value="{{this.code}}">{{this.name}}</option>
+                        {{/each}}
                     {{/select}}
                 </select>
             </div>

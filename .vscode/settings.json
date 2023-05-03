@@ -8,13 +8,12 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "[handlebars]": {
         "editor.defaultFormatter": "vscode.html-language-features",
-    }
-    ,"[javascript]": {
+    },
+    "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[html]": {
@@ -32,4 +31,5 @@
         "list.inactiveFocusOutline": "#ffffff",
         "list.focusOutline": "#ffffff"
     },
+    "html.format.indentHandlebars": true,
 }
