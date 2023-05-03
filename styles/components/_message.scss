@@ -6,7 +6,8 @@ $red: hsl(0, 80%, 55%);
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #999999;
 
   .roll-message-img {
     height: 40px !important;
@@ -21,6 +22,7 @@ $red: hsl(0, 80%, 55%);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    border: none;
   }
 }
 

@@ -145,6 +145,11 @@
   justify-content: space-between;
 }
 
+.chat-portrait-message-portrait-generic,
+.chat-portrait-flexrow {
+  display: none !important;
+}
+
 /* Styles limited to arlenor sheets */
 .arlenor form.editable {
   min-width: 620px;
@@ -378,7 +383,8 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #999999;
 }
 .arlenor .roll-message-header .roll-message-img {
   height: 40px !important;
@@ -393,6 +399,7 @@
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  border: none;
 }
 .arlenor .roll-message-description {
   margin-top: 5px;

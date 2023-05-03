@@ -164,8 +164,6 @@ export async function rollSkill(data) {
       else rollResult = "RES_CRITIQUE";
     }
 
-    console.warn("Calcul", nbReussites, maxValue, rollResult);
-
     const templateMessage = await renderTemplate("systems/arlenor/templates/roll-message.hbs",
       {
         ...data,
