@@ -154,7 +154,8 @@
 .arlenor form.editable {
   min-width: 620px;
 }
-.arlenor .editor-content {
+.arlenor .editor-content,
+.arlenor .tox-edit-area {
   padding: 5px 10px;
   border: 1px solid #bbbbbb;
   background: rgba(255, 255, 255, 0.3764705882);
