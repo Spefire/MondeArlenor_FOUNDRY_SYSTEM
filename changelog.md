@@ -4,6 +4,24 @@ Tous les changements sur ce projet `Le Monde d'Arlénor - Foundry Game System` s
 
 ---
 
+## [1.0.2] - Mai 2023
+
+Patch correctif sur la fiche de personnage
+
+### *Nouvelles fonctionnalités*
+
+- Ajout de nouvelles classes et de types de compétences (oubli)
+
+### *Modifications*
+
+- Meilleur affichage pour les pouvoirs et les compétences
+
+### *Corrections*
+
+- Correction du background pour les descriptions
+
+---
+
 ## [1.0.1] - Mai 2023
 
 Quelques ajouts pour l'affichage et le lancement des dés.
