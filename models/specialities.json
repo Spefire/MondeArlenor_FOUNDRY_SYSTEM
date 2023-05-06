@@ -1,57 +1,107 @@
 [
-    {
-      "name": "Paladin",
-      "code": "PALADIN",
-      "group": "Gardien"
-    },
-    {
-      "name": "Chevalier",
-      "code": "CHEVALIER",
-      "group": "Gardien"
-    },
-    {
-      "name": "Danseur Martial",
-      "code": "DANSEURMARTIAL",
-      "group": "Moine"
-    },
-    {
-      "name": "Derviche",
-      "code": "DERVICHE",
-      "group": "Moine"
-    },
-    {
-      "name": "Lame de l'Ombre",
-      "code": "LAMEOMBRE",
-      "group": "Assassin"
-    },
-    {
-      "name": "Chasseur",
-      "code": "CHASSEUR",
-      "group": "Assassin"
-    },
-    {
-      "name": "Danseur au Sabre",
-      "code": "DANSEURSABRE",
-      "group": "Assassin"
-    },
-    {
-      "name": "Double Lame",
-      "code": "DOUBLELAME",
-      "group": "Bretteur"
-    },
-    {
-      "name": "Escrimeur",
-      "code": "ESCRIMEUR",
-      "group": "Bretteur"
-    },
-    {
-      "name": "Météorologue",
-      "code": "METEOROLOGUE",
-      "group": "Sorcier"
-    },
-    {
-      "name": "Créateur",
-      "code": "CREATEUR",
-      "group": "Sorcier"
-    }
+  {
+    "name": "Paladin",
+    "code": "PALADIN",
+    "group": "Gardien"
+  },
+  {
+    "name": "Chevalier",
+    "code": "CHEVALIER",
+    "group": "Gardien"
+  },
+  {
+    "name": "Danseur Martial",
+    "code": "DANSEURMARTIAL",
+    "group": "Moine"
+  },
+  {
+    "name": "Derviche",
+    "code": "DERVICHE",
+    "group": "Moine"
+  },
+  {
+    "name": "Lame de l'Ombre",
+    "code": "LAMEOMBRE",
+    "group": "Assassin"
+  },
+  {
+    "name": "Chasseur",
+    "code": "CHASSEUR",
+    "group": "Assassin"
+  },
+  {
+    "name": "Danseur au Sabre",
+    "code": "DANSEURSABRE",
+    "group": "Assassin"
+  },
+  {
+    "name": "Double Lame",
+    "code": "DOUBLELAME",
+    "group": "Bretteur"
+  },
+  {
+    "name": "Escrimeur",
+    "code": "ESCRIMEUR",
+    "group": "Bretteur"
+  },
+  {
+    "name": "Météorologue",
+    "code": "METEOROLOGUE",
+    "group": "Sorcier"
+  },
+  {
+    "name": "Créateur",
+    "code": "CREATEUR",
+    "group": "Sorcier"
+  },
+  {
+    "name": "Pèlerin",
+    "code": "PELERIN",
+    "group": "Invocateur"
+  },
+  {
+    "name": "Dompteur",
+    "code": "DOMPTEUR",
+    "group": "Invocateur"
+  },
+  {
+    "name": "Illusionniste",
+    "code": "ILLUSIONNISTE",
+    "group": "Enchanteur"
+  },
+  {
+    "name": "Envoûteur",
+    "code": "ENVOUTEUR",
+    "group": "Enchanteur"
+  },
+  {
+    "name": "Chaman",
+    "code": "CHAMAN",
+    "group": "Druide"
+  },
+  {
+    "name": "Guérisseur",
+    "code": "GUERISSEUR",
+    "group": "Druide"
+  },
+  {
+    "name": "Prêtre d'Arlenor",
+    "code": "PRETREARLENOR",
+    "group": "Prêtre"
+  },
+  {
+    "name": "Nécromancien",
+    "code": "NECROMANCIEN",
+    "group": "Prêtre"
+  },
+  {
+    "name": "Virtuose",
+    "code": "VIRTUOSE",
+    "group": "Barde"
+  },
+  {
+    "name": "Banshee",
+    "code": "BANSHEE",
+    "group": "Barde"
+  }
 ]

@@ -48,6 +48,11 @@ Hooks.once('init', async function () {
     return str.toLowerCase();
   });
 
+  Handlebars.registerHelper('toUpperCase', function (str) {
+    if (!str) return "";
+    return str.toUpperCase();
+  });
+
   Handlebars.registerHelper('codeToName', function (objs, code) {
     let libelle = "";
     if (!objs || objs.length === 0) return code;

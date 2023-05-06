@@ -36,7 +36,7 @@
                         <select name="system.speciality">
                             {{#select system.speciality }}
                                 {{#each specialities }}
-                                    <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
+                                    <option value="{{this.code}}">{{toUpperCase this.group}} - {{this.name}}</option>
                                 {{/each}}
                             {{/select}}
                         </select>

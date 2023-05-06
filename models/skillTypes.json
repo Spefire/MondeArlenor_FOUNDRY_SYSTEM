@@ -4,6 +4,10 @@
         "code": "SKILL0"
     },
     {
+        "name": "Compétence d'armure",
+        "code": "SKILL1"
+    },
+    {
         "name": "Autre compétence",
         "code": "AUTRESKILL"
     }

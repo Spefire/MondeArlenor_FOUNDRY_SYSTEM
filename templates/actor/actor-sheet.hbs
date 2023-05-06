@@ -125,7 +125,7 @@
             <option value=""><i>Choix de la première classe...</i></option>
             {{#select system.speciality01 }}
               {{#each specialities }}
-                <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
+                <option value="{{this.code}}">{{toUpperCase this.group}} - {{this.name}}</option>
               {{/each}}
             {{/select}}
           </select>
@@ -135,7 +135,7 @@
             <option value=""><i>Choix de la seconde classe...</i></option>
             {{#select system.speciality02 }}
               {{#each specialities }}
-                <option value="{{this.code}}">{{this.name}} ({{this.group}})</option>
+                <option value="{{this.code}}">{{toUpperCase this.group}} - {{this.name}}</option>
               {{/each}}
             {{/select}}
           </select>
@@ -167,7 +167,9 @@
         {{#if (eq actor.type "character")}}
           <ol class="items-list">
             <li class="item flexrow item-header">
-              <div></div>
+              <div>Pouvoirs évolutifs</div>
+              <div class="item-details">Classe</div>
+              <div class="item-details"></div>
               <div class="item-controls">
                 {{#if editable}}
                   <a class="item-create" title="Ajouter un pouvoir" data-type="power" data-powerType="EVO">
@@ -220,7 +222,9 @@
 
         <ol class="items-list">
           <li class="item flexrow item-header">
-            <div></div>
+            <div>Pouvoirs consommables</div>
+            <div class="item-details">Type</div>
+            <div class="item-details"></div>
             <div class="item-controls">
               {{#if editable}}
                 {{#if (eq actor.type "character")}}
@@ -286,7 +290,9 @@
       <div class="tab skills height-auto" data-group="primary" data-tab="skills">
         <ol class="items-list">
           <li class="item flexrow item-header">
-            <div></div>
+            <div>Liste des compétences</div>
+            <div class="item-details">Type</div>
+            <div class="item-details"></div>
             <div class="item-controls">
               {{#if editable}}
                 <a class="item-create" title="Ajouter une compétence" data-type="skill">
@@ -299,7 +305,7 @@
 
           {{#each actor.skills as |skill id|}}
             <li class="item flexrow no-bottom-border" data-item-id="{{skill._id}}">
-              <div class="item-big-image"><img src="{{skill.img}}" width="48" height="48" /></div>
+              <div class="item-image"><img src="{{skill.img}}" width="24" height="24" /></div>
               <div class="item-name">
                 <b>{{skill.name}}</b>
               </div>
@@ -313,11 +319,6 @@
                   <a class="item-delete" title="Supprimer la compétence"><i class="fas fa-trash"></i></a>
                 {{/if}}
               </div>
-            </li>
-            <li {{#if @last }} class="item flexrow no-bottom-border" {{ else }} class="item flexrow" {{/if}}
-              data-item-id="{{skill._id}}">
-              <div class="item-big-image"></div>
-              <div class="item-description">{{ convertToPlain skill.system.description }}</div>
             </li>
           {{/each}}
 
@@ -366,7 +367,7 @@
     <div class="tab backpack" data-group="primary" data-tab="backpack">
       <ol class="items-list">
         <li class="item flexrow item-header">
-          <div>Contenu du sac à dos</div>
+          <div>Liste des objets</div>
           <div class="item-details">Quantité</div>
           <div class="item-details">Type</div>
           <div class="item-controls">
