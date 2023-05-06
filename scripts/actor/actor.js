@@ -36,7 +36,7 @@ export class ArlenorActor extends Actor {
     const injured = data.healthLevels.injured;
     const underdeath = data.healthLevels.underdeath;
 
-    data.health.max = 5;
+    data.health.max = 5 + Math.floor(data.level / 2);
 
     if (withRaces) {
       const race = data.race;
