@@ -1,13 +1,6 @@
 <form class="flexcol" autocomplete="off">
   <div class="grid grid-1col">
     <div class="flex-group-center">
-      <div>Caractéristique liée : <b>{{ caractName }}</b></div>
-      <div>Valeur naturelle : <b>{{ caractValue }}</b></div>
-    </div>
-  </div>
-
-  <div class="grid grid-1col">
-    <div class="flex-group-center">
       <label for="difficulty" class="title-up-label">Difficulté : </label>
       <select name="difficulty" id="rollDifficulty">
         {{#select difficulty }}
@@ -16,6 +9,22 @@
           {{/each}}
         {{/select}}
       </select>
+    </div>
+  </div>
+
+  <div class="grid grid-1col">
+    <div class="flex-group-center">
+      <div>Caractéristique liée : <b>{{ caractName }}</b></div>
+      <div>Valeur naturelle : <b>{{ caractValue }}</b></div>
+    </div>
+  </div>
+
+  <div class="grid grid-1col">
+    <div class="flex-group-center">
+      <div>Ne pas oublier :</div>
+      <div>- les bonus-malus <b>de la santé</b></div>
+      <div>- les bonus-malus <b>de l'équipement</b></div>
+      <div>- les autres <b>avantages et désavantages</b></div>
     </div>
   </div>
 
