@@ -1,4 +1,3 @@
-import cases from "./../../models/cases.json" assert { type: "json" };
 import difficulties from "./../../models/divinities.json" assert { type: "json" };
 import equipmentTypes from "./../../models/equipmentTypes.json" assert { type: "json" };
 import durations from "./../../models/durations.json" assert { type: "json" };
@@ -51,7 +50,6 @@ export class ArlenorItemSheet extends ItemSheet {
       item: this.item,
       system: this.item.system,
       enrichedBiography,
-      cases,
       difficulties,
       durations,
       equipmentTypes,
