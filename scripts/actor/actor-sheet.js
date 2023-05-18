@@ -83,9 +83,10 @@ export class ArlenorActorSheet extends ActorSheet {
     const data = actor.system;
 
     const caracts = data.caracts;
-    const safe = data.healthLevels.safe;
-    const injured = data.healthLevels.injured;
-    const underdeath = data.healthLevels.underdeath;
+    const safe = { name: "", value: 0, max: 0 };
+    const critical = { name: "", value: 0, max: 0 };
+    const injured = { name: "", value: 0, max: 0 };
+    const underdeath = { name: "", value: 0, max: 0 };
 
     data.health.max = 5 + Math.floor(data.level / 2);
 
@@ -103,31 +104,48 @@ export class ArlenorActorSheet extends ActorSheet {
       data.health.max += 1;
     }
 
-    safe.max = Math.round(data.health.max * 40 / 100);
-    injured.max = Math.floor(data.health.max * 40 / 100);
-    underdeath.max = data.health.max - safe.max - injured.max;
+    safe.name = "Indemne";
+    safe.max = 1;
+    injured.name = "Légèrement blessé";
+    injured.max = Math.round((data.health.max - 2) * 50 / 100);
+    critical.name = "Gravemment blessé (-1D6)";
+    critical.max = Math.floor((data.health.max - 2) * 50 / 100);
+    underdeath.name = "Au seuil de la mort (-2D6)";
+    underdeath.max = 1;
 
     if (data.health.value === 0) {
       data.health.indic = "Décédé";
       safe.value = 0;
       injured.value = 0;
+      critical.value = 0;
       underdeath.value = 0;
     } else if (data.health.value <= underdeath.max) {
       data.health.indic = underdeath.name;
       safe.value = 0;
       injured.value = 0;
+      critical.value = 0;
       underdeath.value = data.health.value;
-    } else if (data.health.value <= underdeath.max + injured.max) {
+    } else if (data.health.value <= underdeath.max + critical.max) {
+      data.health.indic = critical.name;
+      safe.value = 0;
+      injured.value = 0;
+      critical.value = data.health.value - underdeath.max;
+      underdeath.value = underdeath.max;
+    } else if (data.health.value <= underdeath.max + critical.max + injured.max) {
       data.health.indic = injured.name;
       safe.value = 0;
-      injured.value = data.health.value - underdeath.max;
+      injured.value = data.health.value - underdeath.max - critical.max;
+      critical.value = critical.max;
       underdeath.value = underdeath.max;
     } else {
       data.health.indic = safe.name;
-      safe.value = data.health.value - underdeath.max - injured.max;
+      safe.value = data.health.value - underdeath.max - critical.max - injured.max;
       injured.value = injured.max;
+      critical.value = critical.max;
       underdeath.value = underdeath.max;
     }
+
+    data.healthLevels = [underdeath, critical, injured, safe];
   }
 
   /**

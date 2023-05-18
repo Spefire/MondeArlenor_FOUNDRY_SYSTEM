@@ -12,23 +12,7 @@
           "value": 0,
           "max": 0
         },
-        "healthLevels": {
-          "underdeath": {
-            "name": "Au seuil de la mort (-2D6)",
-            "value": 0,
-            "max": 0
-          },
-          "injured": {
-            "name": "Blessé (-1D6)",
-            "value": 0,
-            "max": 0
-          },
-          "safe": {
-            "name": "Indemme",
-            "value": 0,
-            "max": 0
-          }
-        },
+        "healthLevels": [],
         "caracts": {
           "for": {
             "name": "Force",
