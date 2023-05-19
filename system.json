@@ -2,7 +2,7 @@
   "id": "arlenor",
   "title": "Le Monde d'Arlénor (FR)",
   "description": "Système de jeu pour le JDR du Monde d'Arlénor (seulement en FR)",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "compatibleCoreVersion": "10",
   "compatibility": {
     "minimum": "10",
@@ -80,7 +80,7 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
   "url": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM",
-  "manifest": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/releases/download/V1.0.2/system.json",
-  "download": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/archive/refs/tags/V1.0.2.zip",
+  "manifest": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/releases/download/V1.0.3/system.json",
+  "download": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/archive/refs/tags/V1.0.3.zip",
   "bugs": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/issues"
 }

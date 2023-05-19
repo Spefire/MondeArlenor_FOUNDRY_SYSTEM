@@ -4,6 +4,36 @@ Tous les changements sur ce projet `Le Monde d'Arlénor - Foundry Game System` s
 
 ---
 
+## [1.0.3] - Mai 2023
+
+Patch correctif sur la vie des personnage et les difficultés
+
+### *Nouvelles fonctionnalités*
+
+- Ajout d'un texte d'aide pour gérer les lancés de dés
+Un bonus et un malus sont liés à la santé, aux équipements et aux compétences.
+Ce qui relève de la situation ou de l'action, c'est lié au niveau de difficulté.
+
+### *Modifications*
+
+- Changement de label pour les difficultés :
+
+Simple passe en "Standard", Standard passe à "Complexe", Complexe passe à "Epique" et Légendaire reste "Légendaire".
+
+- Changement des différents états selon les points de vie
+
+L'état "Blessé" est séparé en 2 : "Légèrement blessé" qui ne donne pas de malus et "Gravement blessé" qui donne -1D6.
+
+Au seuil de la mort est définie à 1 PV.
+Indemne est défini à PV max.
+
+
+### *Corrections*
+
+- Correction sur la vie des fiches de créature
+
+---
+
 ## [1.0.2] - Mai 2023
 
 Patch correctif sur la fiche de personnage
