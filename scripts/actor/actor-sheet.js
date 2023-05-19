@@ -79,7 +79,7 @@ export class ArlenorActorSheet extends ActorSheet {
    *
    * @return {undefined}
    */
-  _prepareCharacterHealth(actor, withRaces = false) {
+  _prepareCharacterHealth(actor, isPJ = false) {
     const data = actor.system;
 
     const caracts = data.caracts;
@@ -88,14 +88,15 @@ export class ArlenorActorSheet extends ActorSheet {
     const injured = { name: "", value: 0, max: 0 };
     const underdeath = { name: "", value: 0, max: 0 };
 
-    data.health.max = 5 + Math.floor(data.level / 2);
-
-    if (withRaces) {
+    if (isPJ) {
+      data.health.max = 5 + Math.floor(data.level / 2);
       const race = data.race;
       if (race === races[1].code
         || race === races[4].code) {
         data.health.max += 1;
       }
+    } else {
+      data.health.max = 5;
     }
 
     if (caracts.ten.value === 0) {
