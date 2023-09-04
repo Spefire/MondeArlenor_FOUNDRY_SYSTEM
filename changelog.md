@@ -4,6 +4,33 @@ Tous les changements sur ce projet `Le Monde d'Arlénor - Foundry Game System` s
 
 ---
 
+## [1.1.0] - Septembre 2023
+
+Changement sur les spécialités et les classes
+
+### *Nouvelles fonctionnalités*
+
+
+
+### *Modifications*
+
+- Suppression des spécialités pour les fusionner entre groupes
+
+- Ajout d'un nouveau type de compétence :
+
+"Compétence de race" remplace "Port d'armure" (qui n'est plus utilisable)
+
+- Changement des types de pouvoirs :
+
+Altération n'est plus, pour avoir "Soin" et "Contrôle"
+
+
+### *Corrections*
+
+- Aucune pour l'instant
+
+---
+
 ## [1.0.3] - Mai 2023
 
 Patch correctif sur la vie des personnage et les difficultés
@@ -26,7 +53,6 @@ L'état "Blessé" est séparé en 2 : "Légèrement blessé" qui ne donne pas de
 
 Au seuil de la mort est définie à 1 PV.
 Indemne est défini à PV max.
-
 
 ### *Corrections*
 
