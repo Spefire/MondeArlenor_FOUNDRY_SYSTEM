@@ -8,11 +8,15 @@
         "code": "DEF"
     },
     {
-        "name": "Utilitaire",
-        "code": "UTIL"
+        "name": "Soin",
+        "code": "HEAL"
     },
     {
-        "name": "Altération",
-        "code": "ALT"
+        "name": "Contrôle",
+        "code": "CTRL"
+    },
+    {
+        "name": "Utilitaire",
+        "code": "UTIL"
     }
 ]
