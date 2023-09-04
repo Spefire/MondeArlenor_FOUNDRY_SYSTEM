@@ -119,7 +119,7 @@
             <option value=""><i>Choix de la première classe...</i></option>
             {{#select system.speciality01 }}
               {{#each specialities }}
-                <option value="{{this.code}}">{{toUpperCase this.group}} - {{this.name}}</option>
+                <option value="{{this.code}}">{{toUpperCase this.name}}</option>
               {{/each}}
             {{/select}}
           </select>
@@ -129,7 +129,7 @@
             <option value=""><i>Choix de la seconde classe...</i></option>
             {{#select system.speciality02 }}
               {{#each specialities }}
-                <option value="{{this.code}}">{{toUpperCase this.group}} - {{this.name}}</option>
+                <option value="{{this.code}}">{{toUpperCase this.name}}</option>
               {{/each}}
             {{/select}}
           </select>

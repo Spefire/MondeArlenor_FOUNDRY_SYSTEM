@@ -1,107 +1,42 @@
 [
   {
-    "name": "Paladin",
-    "code": "PALADIN",
-    "group": "Gardien"
+    "name": "Gardien",
+    "code": "GARDIEN"
   },
   {
-    "name": "Chevalier",
-    "code": "CHEVALIER",
-    "group": "Gardien"
+    "name": "Moine",
+    "code": "MOINE"
   },
   {
-    "name": "Danseur Martial",
-    "code": "DANSEURMARTIAL",
-    "group": "Moine"
+    "name": "Assassin",
+    "code": "ASSASSIN"
   },
   {
-    "name": "Derviche",
-    "code": "DERVICHE",
-    "group": "Moine"
+    "name": "Bretteur",
+    "code": "BRETTEUR"
   },
   {
-    "name": "Lame de l'Ombre",
-    "code": "LAMEOMBRE",
-    "group": "Assassin"
+    "name": "Sorcier",
+    "code": "SORCIER"
   },
   {
-    "name": "Chasseur",
-    "code": "CHASSEUR",
-    "group": "Assassin"
+    "name": "Invocateur",
+    "code": "INVOCATEUR"
   },
   {
-    "name": "Danseur au Sabre",
-    "code": "DANSEURSABRE",
-    "group": "Assassin"
+    "name": "Enchanteur",
+    "code": "ENCHANTEUR"
   },
   {
-    "name": "Double Lame",
-    "code": "DOUBLELAME",
-    "group": "Bretteur"
+    "name": "Druide",
+    "code": "DRUIDE"
   },
   {
-    "name": "Escrimeur",
-    "code": "ESCRIMEUR",
-    "group": "Bretteur"
+    "name": "Prêtre",
+    "code": "PRETRE"
   },
   {
-    "name": "Météorologue",
-    "code": "METEOROLOGUE",
-    "group": "Sorcier"
-  },
-  {
-    "name": "Créateur",
-    "code": "CREATEUR",
-    "group": "Sorcier"
-  },
-  {
-    "name": "Pèlerin",
-    "code": "PELERIN",
-    "group": "Invocateur"
-  },
-  {
-    "name": "Dompteur",
-    "code": "DOMPTEUR",
-    "group": "Invocateur"
-  },
-  {
-    "name": "Illusionniste",
-    "code": "ILLUSIONNISTE",
-    "group": "Enchanteur"
-  },
-  {
-    "name": "Envoûteur",
-    "code": "ENVOUTEUR",
-    "group": "Enchanteur"
-  },
-  {
-    "name": "Chaman",
-    "code": "CHAMAN",
-    "group": "Druide"
-  },
-  {
-    "name": "Guérisseur",
-    "code": "GUERISSEUR",
-    "group": "Druide"
-  },
-  {
-    "name": "Prêtre d'Arlenor",
-    "code": "PRETREARLENOR",
-    "group": "Prêtre"
-  },
-  {
-    "name": "Nécromancien",
-    "code": "NECROMANCIEN",
-    "group": "Prêtre"
-  },
-  {
-    "name": "Virtuose",
-    "code": "VIRTUOSE",
-    "group": "Barde"
-  },
-  {
-    "name": "Banshee",
-    "code": "BANSHEE",
-    "group": "Barde"
+    "name": "Barde",
+    "code": "BARDE"
   }
 ]
