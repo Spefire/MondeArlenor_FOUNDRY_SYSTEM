@@ -12,7 +12,6 @@
           "value": 0,
           "max": 0
         },
-        "healthLevels": [],
         "caracts": {
           "for": {
             "name": "Force",
@@ -79,20 +78,20 @@
       "templates": [
         "base"
       ],
-      "itemType": "AUTREITEM",
+      "itemType": "AUTRE",
       "quantity": 1
     },
     "skill": {
       "templates": [
         "base"
       ],
-      "skillType": "AUTRESKILL"
+      "skillType": "AUTRE"
     },
     "equipment": {
       "templates": [
         "base"
       ],
-      "equipmentType": "EQUIP0"
+      "equipmentType": "CAC"
     },
     "power": {
       "templates": [
@@ -101,8 +100,8 @@
       "powerType": "EVO",
       "speciality": "PALADIN",
       "family": "OFF",
-      "rank": "RANK1",
-      "duration": "DUR0",
+      "rank": "I",
+      "duration": "INSTA",
       "range": "RANG0",
       "chaneling": false
     }

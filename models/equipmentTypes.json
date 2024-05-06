@@ -1,22 +1,22 @@
 [
     {
         "name": "Arme au corps à corps",
-        "code": "EQUIP0"
+        "code": "CAC"
     },
     {
         "name": "Arme à distance",
-        "code": "EQUIP1"
+        "code": "DIST"
     },
     {
         "name": "Armure",
-        "code": "EQUIP2"
+        "code": "ARMURE"
     },
     {
         "name": "Bouclier",
-        "code": "EQUIP3"
+        "code": "BOUCLIER"
     },
     {
         "name": "Autre (bijou, ...)",
-        "code": "AUTREEQUIP"
+        "code": "AUTRE"
     }
 ]

@@ -63,9 +63,9 @@
           </div>
         </div>
         <div class="flex-group-center grid-tiers-2">
-          <label class="title-up-label">État : {{system.health.indic}}</label>
+          <label class="title-up-label">État : {{healthIndic}}</label>
           <div class="flexrow flex-center">
-            {{#each system.healthLevels as |healthLevel key|}}
+            {{#each healthLevels as |healthLevel key|}}
               |
               {{#if (gte healthLevel.max 1)}}
                 <input type='checkbox' {{#if (gte healthLevel.value 1)}}checked{{/if}} disabled>
@@ -80,6 +80,18 @@
                 <input type='checkbox' {{#if (gte healthLevel.value 4)}}checked{{/if}} disabled>
               {{/if}}
               {{#if (gte healthLevel.max 5)}}
+                <input type='checkbox' {{#if (gte healthLevel.value 5)}}checked{{/if}} disabled>
+              {{/if}}
+              {{#if (gte healthLevel.max 6)}}
+                <input type='checkbox' {{#if (gte healthLevel.value 6)}}checked{{/if}} disabled>
+              {{/if}}
+              {{#if (gte healthLevel.max 7)}}
+                <input type='checkbox' {{#if (gte healthLevel.value 7)}}checked{{/if}} disabled>
+              {{/if}}
+              {{#if (gte healthLevel.max 8)}}
+                <input type='checkbox' {{#if (gte healthLevel.value 8)}}checked{{/if}} disabled>
+              {{/if}}
+              {{#if (gte healthLevel.max 9)}}
                 ...
               {{/if}}
             {{/each}}

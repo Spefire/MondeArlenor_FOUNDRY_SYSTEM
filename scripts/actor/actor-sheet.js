@@ -47,6 +47,7 @@ export class ArlenorActorSheet extends ActorSheet {
       this._prepareCharacterItems(baseData.actor);
     }
 
+    const healthStats = this._getHealthStats(baseData.actor.system.health);
     const enrichedBiography = await TextEditor.enrichHTML(this.actor.system.biography, { async: true });
 
     // Return data for the "actor-sheet.hbs"
@@ -54,6 +55,8 @@ export class ArlenorActorSheet extends ActorSheet {
       editable: this.isEditable,
       actor: this.actor,
       system: this.actor.system,
+      healthIndic: healthStats.indic,
+      healthLevels: healthStats.levels,
       enrichedBiography,
       difficulties,
       divinities,
@@ -83,10 +86,6 @@ export class ArlenorActorSheet extends ActorSheet {
     const data = actor.system;
 
     const caracts = data.caracts;
-    const safe = { name: "", value: 0, max: 0 };
-    const critical = { name: "", value: 0, max: 0 };
-    const injured = { name: "", value: 0, max: 0 };
-    const underdeath = { name: "", value: 0, max: 0 };
 
     if (isPJ) {
       data.health.max = 5 + Math.floor(data.level / 2);
@@ -105,48 +104,6 @@ export class ArlenorActorSheet extends ActorSheet {
       data.health.max += 1;
     }
 
-    safe.name = "Indemne";
-    safe.max = 1;
-    injured.name = "Légèrement blessé";
-    injured.max = Math.round((data.health.max - 2) * 50 / 100);
-    critical.name = "Gravemment blessé";
-    critical.max = Math.floor((data.health.max - 2) * 50 / 100);
-    underdeath.name = "Au seuil de la mort";
-    underdeath.max = 1;
-
-    if (data.health.value === 0) {
-      data.health.indic = "Décédé";
-      safe.value = 0;
-      injured.value = 0;
-      critical.value = 0;
-      underdeath.value = 0;
-    } else if (data.health.value <= underdeath.max) {
-      data.health.indic = underdeath.name;
-      safe.value = 0;
-      injured.value = 0;
-      critical.value = 0;
-      underdeath.value = data.health.value;
-    } else if (data.health.value <= underdeath.max + critical.max) {
-      data.health.indic = critical.name;
-      safe.value = 0;
-      injured.value = 0;
-      critical.value = data.health.value - underdeath.max;
-      underdeath.value = underdeath.max;
-    } else if (data.health.value <= underdeath.max + critical.max + injured.max) {
-      data.health.indic = injured.name;
-      safe.value = 0;
-      injured.value = data.health.value - underdeath.max - critical.max;
-      critical.value = critical.max;
-      underdeath.value = underdeath.max;
-    } else {
-      data.health.indic = safe.name;
-      safe.value = data.health.value - underdeath.max - critical.max - injured.max;
-      injured.value = injured.max;
-      critical.value = critical.max;
-      underdeath.value = underdeath.max;
-    }
-
-    data.healthLevels = [underdeath, critical, injured, safe];
   }
 
   /**
@@ -207,6 +164,44 @@ export class ArlenorActorSheet extends ActorSheet {
     actor.skills = skills;
     actor.powers = powers;
     actor.otherPowers = otherPowers;
+  }
+
+  /**
+   * Update health stats.
+   *
+   * @param {Object} actor The actor to prepare.
+   *
+   * @return {undefined}
+   */
+  _getHealthStats(health) {
+    let indic;
+    const safe = { value: 0, max: 1 };
+    const injured = { value: 0, max: (health.max - 2) };
+    const underdeath = { value: 0, max: 1 };
+
+    if (health.value === 0) {
+      indic = "Décédé";
+      safe.value = 0;
+      injured.value = 0;
+      underdeath.value = 0;
+    } else if (health.value <= underdeath.max) {
+      indic = "Au seuil de la mort";
+      safe.value = 0;
+      injured.value = 0;
+      underdeath.value = health.value;
+    } else if (health.value <= underdeath.max + injured.max) {
+      indic = "Blessé";
+      safe.value = 0;
+      injured.value = health.value - underdeath.max;
+      underdeath.value = underdeath.max;
+    } else {
+      indic = "Indemne";
+      safe.value = health.value - underdeath.max - injured.max;
+      injured.value = injured.max;
+      underdeath.value = underdeath.max;
+    }
+
+    return { indic, levels: [underdeath, injured, safe] };
   }
 
   /* -------------------------------------------- */
