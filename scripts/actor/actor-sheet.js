@@ -84,7 +84,6 @@ export class ArlenorActorSheet extends ActorSheet {
    */
   _prepareCharacterHealth(actor, isPJ = false) {
     const data = actor.system;
-
     const caracts = data.caracts;
 
     if (isPJ) {
@@ -98,12 +97,11 @@ export class ArlenorActorSheet extends ActorSheet {
       data.health.max = 5;
     }
 
-    if (caracts.ten.value === 0) {
+    if (caracts.ten.value === 1) {
       data.health.max -= 1;
-    } else if (caracts.ten.value > 2) {
+    } else if (caracts.ten.value > 3) {
       data.health.max += 1;
     }
-
   }
 
   /**

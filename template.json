@@ -15,27 +15,27 @@
         "caracts": {
           "for": {
             "name": "Force",
-            "value": 0
+            "value": 1
           },
           "hab": {
             "name": "Habileté",
-            "value": 0
+            "value": 1
           },
           "int": {
             "name": "Intellect",
-            "value": 0
+            "value": 1
           },
           "ten": {
             "name": "Ténacité",
-            "value": 0
+            "value": 1
           },
           "cha": {
             "name": "Charisme",
-            "value": 0
+            "value": 1
           },
           "mag": {
             "name": "Magie",
-            "value": 0
+            "value": 1
           }
         }
       }
@@ -45,7 +45,7 @@
         "commun"
       ],
       "biography": "",
-      "level": 0,
+      "level": 1,
       "race": "",
       "divinity": "",
       "speciality01": "",
