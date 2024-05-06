@@ -4,13 +4,27 @@ Tous les changements sur ce projet `Le Monde d'Arlénor - Foundry Game System` s
 
 ---
 
+## [1.1.1] - Mai 2024
+
+Corrections sur le système (points de vie, caractéristiques)
+
+### *Modifications*
+
+- Fusion des états "Légèrement blessé" et "Gravement blessé" avec aucun malus aux actions désormais.
+
+- Changement des codes (type d'équipement, de pouvoirs, etc) : **risques de régression !**
+
+- Base des caractéristiques passée à 1
+
+### *Corrections*
+
+- Génération automatique des états de santé sur la fiche
+
+---
+
 ## [1.1.0] - Septembre 2023
 
 Changement sur les spécialités et les classes
-
-### *Nouvelles fonctionnalités*
-
-
 
 ### *Modifications*
 
@@ -23,7 +37,6 @@ Changement sur les spécialités et les classes
 - Changement des types de pouvoirs :
 
 Altération n'est plus, pour avoir "Soin" et "Contrôle"
-
 
 ### *Corrections*
 
