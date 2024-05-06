@@ -47,9 +47,9 @@ export class ArlenorActor extends Actor {
       }
     }
 
-    if (caracts.ten.value === 0) {
+    if (caracts.ten.value === 1) {
       data.health.max -= 1;
-    } else if (caracts.ten.value > 2) {
+    } else if (caracts.ten.value > 3) {
       data.health.max += 1;
     }
 
@@ -57,9 +57,9 @@ export class ArlenorActor extends Actor {
     safe.max = 1;
     injured.name = "Légèrement blessé";
     injured.max = Math.round((data.health.max - 2) * 50 / 100);
-    critical.name = "Gravemment blessé (-1D6)";
+    critical.name = "Gravemment blessé";
     critical.max = Math.floor((data.health.max - 2) * 50 / 100);
-    underdeath.name = "Au seuil de la mort (-2D6)";
+    underdeath.name = "Au seuil de la mort";
     underdeath.max = 1;
 
     data.healthLevels = [underdeath, critical, injured, safe];

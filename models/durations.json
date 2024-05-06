@@ -1,18 +1,18 @@
 [
     {
         "name": "Instantanée",
-        "code": "DUR0"
+        "code": "INSTA"
     },
     {
-        "name": "Scène / combat",
-        "code": "DUR1"
+        "name": "Scène",
+        "code": "SCENE"
     },
     {
         "name": "Journée",
-        "code": "DUR2"
+        "code": "JOURNEE"
     },
     {
         "name": "Illimitée",
-        "code": "DUR3"
+        "code": "ILLIMITEE"
     }
 ]

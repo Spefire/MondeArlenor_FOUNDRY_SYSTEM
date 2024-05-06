@@ -1,18 +1,18 @@
 [
     {
         "name": "Nourriture",
-        "code": "ITEM0"
+        "code": "NOURRITURE"
     },
     {
         "name": "Plante",
-        "code": "ITEM1"
+        "code": "PLANTE"
     },
     {
         "name": "Potion",
-        "code": "ITEM2"
+        "code": "POTION"
     },
     {
         "name": "Autre",
-        "code": "AUTREITEM"
+        "code": "AUTRE"
     }
 ]

@@ -1,14 +1,14 @@
 [
     {
         "name": "I",
-        "code": "RANK1"
+        "code": "I"
     },
     {
         "name": "II",
-        "code": "RANK2"
+        "code": "II"
     },
     {
         "name": "III",
-        "code": "RANK3"
+        "code": "III"
     }
 ]

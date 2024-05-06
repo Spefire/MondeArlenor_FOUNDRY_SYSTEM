@@ -1,18 +1,22 @@
 [
     {
         "name": "Personnelle",
-        "code": "RANG0"
+        "code": "PERSO"
     },
     {
         "name": "Toucher",
-        "code": "RANG1"
+        "code": "TOUCHER"
     },
     {
-        "name": "À vue",
-        "code": "RANG2"
+        "name": "Vision",
+        "code": "VISION"
+    },
+    {
+        "name": "Zone",
+        "code": "ZONE"
     },
     {
         "name": "Infinie",
-        "code": "RANG3"
+        "code": "INFINIE"
     }
 ]

@@ -109,9 +109,9 @@ export class ArlenorActorSheet extends ActorSheet {
     safe.max = 1;
     injured.name = "Légèrement blessé";
     injured.max = Math.round((data.health.max - 2) * 50 / 100);
-    critical.name = "Gravemment blessé (-1D6)";
+    critical.name = "Gravemment blessé";
     critical.max = Math.floor((data.health.max - 2) * 50 / 100);
-    underdeath.name = "Au seuil de la mort (-2D6)";
+    underdeath.name = "Au seuil de la mort";
     underdeath.max = 1;
 
     if (data.health.value === 0) {

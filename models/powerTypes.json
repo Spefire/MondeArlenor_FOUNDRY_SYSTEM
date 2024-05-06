@@ -5,11 +5,11 @@
     },
     {
         "name": "Cristal instantané",
-        "code": "INSTA"
+        "code": "INS"
     },
     {
-        "name": "Parchemin",
-        "code": "PARCH"
+        "name": "Objet magique",
+        "code": "OBJ"
     },
     {
         "name": "Pouvoir inné",

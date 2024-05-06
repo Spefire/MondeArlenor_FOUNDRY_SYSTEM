@@ -1,14 +1,14 @@
 [
     {
         "name": "Compétence d'arme",
-        "code": "SKILL0"
+        "code": "ARME"
     },
     {
         "name": "Compétence de race",
-        "code": "SKILL1"
+        "code": "RACE"
     },
     {
         "name": "Autre compétence",
-        "code": "AUTRESKILL"
+        "code": "AUTRE"
     }
 ]
