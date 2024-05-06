@@ -3,7 +3,6 @@
   "title": "Le Monde d'Arlénor (FR)",
   "description": "Système de jeu pour le JDR du Monde d'Arlénor (seulement en FR)",
   "version": "1.1.0",
-  "compatibleCoreVersion": "10",
   "compatibility": {
     "minimum": "10",
     "verified": "10",
@@ -13,10 +12,10 @@
     {
       "name": "Nicholas Brun, Spefire",
       "url": "https://www.arlenor.com",
-      "email": "spefire@gmail.com"
+      "email": "spefire@gmail.com",
+      "flags": {}
     }
   ],
-  "scripts": [],
   "esmodules": [
     "scripts/arlenor.js"
   ],
@@ -28,53 +27,74 @@
       "name": "characters",
       "label": "Personnages principaux",
       "path": "packs/characters.db",
-      "type": "Actor"
+      "type": "Actor",
+      "private": false,
+      "system": "arlenor",
+      "flags": {}
     },
     {
       "name": "pretires",
       "label": "Personnages pré-tirés",
       "path": "packs/pretires.db",
-      "type": "Actor"
+      "type": "Actor",
+      "private": false,
+      "system": "arlenor",
+      "flags": {}
     },
     {
       "name": "creatures",
       "label": "Créatures",
       "path": "packs/creatures.db",
-      "type": "Actor"
+      "type": "Actor",
+      "private": false,
+      "system": "arlenor",
+      "flags": {}
     },
     {
       "name": "skills",
       "label": "Compétences",
       "path": "packs/skills.db",
-      "type": "Item"
+      "type": "Item",
+      "private": false,
+      "system": "arlenor",
+      "flags": {}
     },
     {
       "name": "equipment",
       "label": "Equipement",
       "path": "packs/equipment.db",
-      "type": "Item"
+      "type": "Item",
+      "private": false,
+      "system": "arlenor",
+      "flags": {}
     },
     {
       "name": "items",
       "label": "Objets",
       "path": "packs/items.db",
-      "type": "Item"
+      "type": "Item",
+      "private": false,
+      "system": "arlenor",
+      "flags": {}
     },
     {
       "name": "powers",
       "label": "Pouvoirs",
       "path": "packs/powers.db",
-      "type": "Item"
+      "type": "Item",
+      "private": false,
+      "system": "arlenor",
+      "flags": {}
     }
   ],
   "languages": [
     {
       "lang": "fr",
       "name": "French",
-      "path": "lang/fr.json"
+      "path": "lang/fr.json",
+      "flags": {}
     }
   ],
-  "socket": false,
   "initiative": "1d6",
   "gridDistance": 1.5,
   "gridUnits": "m",
