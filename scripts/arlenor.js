@@ -3,8 +3,8 @@ import { ArlenorActor } from "./actor/actor.js";
 import { ArlenorActorSheet } from "./actor/actor-sheet.js";
 import { ArlenorItem } from "./item/item.js";
 import { ArlenorItemSheet } from "./item/item-sheet.js";
-import difficulties from "./../models/difficulties.json" assert { type: "json" };
-import results from "./../models/results.json" assert { type: "json" };
+import difficulties from "./../models/difficulties.js";
+import results from "./../models/results.js";
 
 Hooks.once('init', async function () {
 

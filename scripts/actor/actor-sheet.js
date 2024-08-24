@@ -1,17 +1,17 @@
 import { rollSkill } from "./../arlenor.js";
-import bonusMalusList from "./../../models/bonusMalusList.json" assert { type: "json" };
-import difficulties from "./../../models/difficulties.json" assert { type: "json" };
-import divinities from "./../../models/divinities.json" assert { type: "json" };
-import durations from "./../../models/durations.json" assert { type: "json" };
-import equipmentTypes from "./../../models/equipmentTypes.json" assert { type: "json" };
-import families from "./../../models/families.json" assert { type: "json" };
-import itemTypes from "./../../models/itemTypes.json" assert { type: "json" };
-import powerTypes from "./../../models/powerTypes.json" assert { type: "json" };
-import races from "./../../models/races.json" assert { type: "json" };
-import ranges from "./../../models/ranges.json" assert { type: "json" };
-import ranks from "./../../models/ranks.json" assert { type: "json" };
-import specialities from "./../../models/specialities.json" assert { type: "json" };
-import skillTypes from "./../../models/skillTypes.json" assert { type: "json" };
+import bonusMalusList from "../../models/bonusMalusList.js";
+import difficulties from "../../models/difficulties.js";
+import divinities from "../../models/divinities.js";
+import durations from "../../models/durations.js";
+import equipmentTypes from "../../models/equipmentTypes.js";
+import families from "../../models/families.js";
+import itemTypes from "../../models/itemTypes.js";
+import powerTypes from "../../models/powerTypes.js";
+import races from "../../models/races.js";
+import ranges from "../../models/ranges.js";
+import ranks from "../../models/ranks.js";
+import specialities from "../../models/specialities.js";
+import skillTypes from "../../models/skillTypes.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
