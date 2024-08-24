@@ -1,0 +1,7 @@
+2024/08/25-01:14:42.302 14c30 Recovering log #7
+2024/08/25-01:14:42.307 14c30 Delete type=0 #7
+2024/08/25-01:14:42.307 14c30 Delete type=3 #4
+2024/08/25-01:15:18.600 a14 Level-0 table #13: started
+2024/08/25-01:15:18.600 a14 Level-0 table #13: 0 bytes OK
+2024/08/25-01:15:18.603 a14 Delete type=0 #11
+2024/08/25-01:15:18.610 a14 Manual compaction at level-0 from '!actors!gPWJiPY9kG3pHadk' @ 72057594037927935 : 1 .. '!actors!gPWJiPY9kG3pHadk' @ 0 : 0; will stop at (end)
