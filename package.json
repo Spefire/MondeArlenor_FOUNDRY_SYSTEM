@@ -6,13 +6,16 @@
     "build": "gulp",
     "compile": "gulp css",
     "watch": "gulp",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "pack": "node ./tools/pack-to-ldb.mjs",
+    "unpack": "node ./tools/unpack-to-json.mjs"
   },
   "browserslist": [
     "last 3 versions"
   ],
   "author": "Nicholas Brun, Spefire",
   "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-sass": "^5.1.0",
