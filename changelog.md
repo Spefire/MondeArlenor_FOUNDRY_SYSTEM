@@ -4,6 +4,16 @@ Tous les changements sur ce projet `Le Monde d'Arlénor - Foundry Game System` s
 
 ---
 
+## [1.2.0] - Août 2024
+
+Compatible avec la version 11 de Foundry
+
+### *Nouvelles fonctionnalités*
+
+- Préparation des Compendiums
+
+---
+
 ## [1.1.2] - Août 2024
 
 Corrections majeure sur le système (chargement)

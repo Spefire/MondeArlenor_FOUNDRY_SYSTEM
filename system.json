@@ -2,11 +2,11 @@
   "id": "arlenor",
   "title": "Le Monde d'Arlénor (FR)",
   "description": "Système de jeu pour le JDR du Monde d'Arlénor (seulement en FR)",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "compatibility": {
-    "minimum": "10",
-    "verified": "10",
-    "maximum": "10"
+    "minimum": "11",
+    "verified": "11",
+    "maximum": "11"
   },
   "authors": [
     {
@@ -26,7 +26,6 @@
     {
       "name": "characters",
       "label": "Personnages principaux",
-      "path": "packs/characters.db",
       "type": "Actor",
       "private": false,
       "system": "arlenor",
@@ -35,7 +34,6 @@
     {
       "name": "pretires",
       "label": "Personnages pré-tirés",
-      "path": "packs/pretires.db",
       "type": "Actor",
       "private": false,
       "system": "arlenor",
@@ -44,7 +42,6 @@
     {
       "name": "creatures",
       "label": "Créatures",
-      "path": "packs/creatures.db",
       "type": "Actor",
       "private": false,
       "system": "arlenor",
@@ -53,7 +50,6 @@
     {
       "name": "skills",
       "label": "Compétences",
-      "path": "packs/skills.db",
       "type": "Item",
       "private": false,
       "system": "arlenor",
@@ -62,7 +58,6 @@
     {
       "name": "equipment",
       "label": "Equipement",
-      "path": "packs/equipment.db",
       "type": "Item",
       "private": false,
       "system": "arlenor",
@@ -71,7 +66,6 @@
     {
       "name": "items",
       "label": "Objets",
-      "path": "packs/items.db",
       "type": "Item",
       "private": false,
       "system": "arlenor",
@@ -80,7 +74,6 @@
     {
       "name": "powers",
       "label": "Pouvoirs",
-      "path": "packs/powers.db",
       "type": "Item",
       "private": false,
       "system": "arlenor",
@@ -100,7 +93,7 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
   "url": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM",
-  "manifest": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/releases/download/V1.1.2/system.json",
-  "download": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/archive/refs/tags/V1.1.2.zip",
+  "manifest": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/releases/download/V1.2.0/system.json",
+  "download": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/archive/refs/tags/V1.2.0.zip",
   "bugs": "https://github.com/Spefire/MondeArlenor_FOUNDRY_SYSTEM/issues"
 }
