@@ -4,6 +4,16 @@ Tous les changements sur ce projet `Le Monde d'Arlénor - Foundry Game System` s
 
 ---
 
+## [1.1.2] - Août 2024
+
+Corrections majeure sur le système (chargement)
+
+### *Corrections*
+
+- Correction d'un bug empêchant le chargement du système de jeu
+
+---
+
 ## [1.1.1] - Mai 2024
 
 Corrections sur le système (points de vie, caractéristiques)
