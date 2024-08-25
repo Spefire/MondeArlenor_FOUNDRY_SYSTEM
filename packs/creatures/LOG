@@ -1,5 +1,0 @@
-2024/08/25-18:10:43.911 f990 Delete type=3 #1
-2024/08/25-18:10:43.914 4830 Level-0 table #5: started
-2024/08/25-18:10:43.915 4830 Level-0 table #5: 1198 bytes OK
-2024/08/25-18:10:43.916 4830 Delete type=0 #3
-2024/08/25-18:10:43.916 4830 Manual compaction at level-0 from '!actors!OpX0K52ERlX2i6zK' @ 72057594037927935 : 1 .. '!actors!OpX0K52ERlX2i6zK' @ 0 : 0; will stop at (end)
