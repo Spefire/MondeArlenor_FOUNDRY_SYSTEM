@@ -1,0 +1,26 @@
+{
+  "name": "Végétarien ou Végan",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/race_42.png",
+  "system": {
+    "description": "Les pans ne peut pas infliger des souffrances ou la mort à des animaux, même dans le but de s'en nourrir.",
+    "skillType": "RACE"
+  },
+  "effects": [],
+  "folder": "OGqG5V6Fsp3o0RTI",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "oxsj7xhuRkE2Pkf8",
+  "sort": 0,
+  "_key": "!items!oxsj7xhuRkE2Pkf8"
+}

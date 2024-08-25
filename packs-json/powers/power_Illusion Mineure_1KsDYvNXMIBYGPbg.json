@@ -1,0 +1,32 @@
+{
+  "name": "Illusion Mineure",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/control.png",
+  "system": {
+    "description": "Crée de petites illusions pour détourner l'attention des ennemis pendant un court instant.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "SPELL",
+    "family": "CTRL",
+    "rank": "C",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "S80G5bEZRV63UViF",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "1KsDYvNXMIBYGPbg",
+  "sort": 0,
+  "_key": "!items!1KsDYvNXMIBYGPbg"
+}

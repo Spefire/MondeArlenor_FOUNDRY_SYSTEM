@@ -1,0 +1,32 @@
+{
+  "name": "Bouclier Protecteur",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Crée un bouclier, un mur magique devant soi pour bloquer les attaques ennemies (projectiles physiques ou magiques...).",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "CHANELING",
+    "family": "DEF",
+    "rank": "C",
+    "duration": "1",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "Ja1ZUIoWj7imc3NW",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "EPkVgOeNS2kzVkAV",
+  "sort": 0,
+  "_key": "!items!EPkVgOeNS2kzVkAV"
+}

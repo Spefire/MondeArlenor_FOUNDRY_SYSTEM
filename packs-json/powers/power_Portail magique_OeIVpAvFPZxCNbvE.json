@@ -1,0 +1,32 @@
+{
+  "name": "Portail magique",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Crée un passage qui téléporte ceux qui le traversent et qui y sont autorisés, à l'endroit souhaité et déjà connu par l'Enchanteur.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "CHANELING",
+    "family": "UTIL",
+    "rank": "A",
+    "duration": "1",
+    "range": "4"
+  },
+  "effects": [],
+  "folder": "S80G5bEZRV63UViF",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "OeIVpAvFPZxCNbvE",
+  "sort": 0,
+  "_key": "!items!OeIVpAvFPZxCNbvE"
+}

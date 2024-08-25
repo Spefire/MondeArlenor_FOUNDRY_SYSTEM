@@ -1,0 +1,32 @@
+{
+  "name": "Pluie",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Invoque la pluie, trempant les ennemis sur une zone définie.",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "CHANELING",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "PEnLiDRQw5svaVDG",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "6RcAKUBSN605lzht",
+  "sort": 0,
+  "_key": "!items!6RcAKUBSN605lzht"
+}

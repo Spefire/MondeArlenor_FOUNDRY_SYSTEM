@@ -1,0 +1,32 @@
+{
+  "name": "Permutation du vide",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Echange deux cibles visibles et consentantes de place.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "S80G5bEZRV63UViF",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "9N7T60u7W503qXOi",
+  "sort": 0,
+  "_key": "!items!9N7T60u7W503qXOi"
+}

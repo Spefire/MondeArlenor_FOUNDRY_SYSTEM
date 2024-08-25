@@ -1,0 +1,32 @@
+{
+  "name": "Bouclier Arcanique",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Crée un bouclier de magie autour de la cible pour se protéger contre les attaques magiques ennemies, réduisant leurs dégâts.",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "SPELL",
+    "family": "DEF",
+    "rank": "B",
+    "duration": "1",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "PEnLiDRQw5svaVDG",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "poNMZZWak59N1wKy",
+  "sort": 0,
+  "_key": "!items!poNMZZWak59N1wKy"
+}

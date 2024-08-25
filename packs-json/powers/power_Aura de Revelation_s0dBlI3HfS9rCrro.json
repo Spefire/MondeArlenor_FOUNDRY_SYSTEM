@@ -1,0 +1,32 @@
+{
+  "name": "Aura de Révélation",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Active une aura de lumière qui révèle les éléments cachés ou magiques dans la zone.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "S80G5bEZRV63UViF",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "s0dBlI3HfS9rCrro",
+  "sort": 0,
+  "_key": "!items!s0dBlI3HfS9rCrro"
+}

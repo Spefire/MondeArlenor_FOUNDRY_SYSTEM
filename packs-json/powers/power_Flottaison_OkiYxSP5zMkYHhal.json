@@ -1,0 +1,32 @@
+{
+  "name": "Flottaison",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Annule la gravité sur son propre corps.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "CHANELING",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "S80G5bEZRV63UViF",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "OkiYxSP5zMkYHhal",
+  "sort": 0,
+  "_key": "!items!OkiYxSP5zMkYHhal"
+}

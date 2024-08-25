@@ -1,0 +1,32 @@
+{
+  "name": "Forme Éthérée",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Le Moine entre en transe, quittant son corps sous une forme éthéré (comme un fantôme).",
+    "powerType": "EVO",
+    "speciality": "MOINE",
+    "category": "CHANELING",
+    "family": "UTIL",
+    "rank": "B",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "EF4xWJQ90HMwcQTy",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "Bmlj6qXmroZTredU",
+  "sort": 0,
+  "_key": "!items!Bmlj6qXmroZTredU"
+}

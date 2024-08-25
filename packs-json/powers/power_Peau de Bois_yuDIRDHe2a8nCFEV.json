@@ -1,0 +1,32 @@
+{
+  "name": "Peau de Bois",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Renforce la peau du druide en la transformant en écorce, augmentant sa résistance aux dégâts physiques sur un coup reçu.",
+    "powerType": "EVO",
+    "speciality": "DRUIDE",
+    "category": "SPELL",
+    "family": "DEF",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "8jz46W1v9zFUAuvi",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "yuDIRDHe2a8nCFEV",
+  "sort": 0,
+  "_key": "!items!yuDIRDHe2a8nCFEV"
+}

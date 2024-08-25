@@ -1,0 +1,32 @@
+{
+  "name": "Riposte Précise",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Bloque avec précision la future attaque d'un ennemi et riposte instantanément avec une attaque puissante.",
+    "powerType": "EVO",
+    "speciality": "BRETTEUR",
+    "category": "CHANELING",
+    "family": "DEF",
+    "rank": "B",
+    "duration": "0",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "BuFxa1KvAEgqOHfK",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "E5zty9v5mJRSEKbP",
+  "sort": 0,
+  "_key": "!items!E5zty9v5mJRSEKbP"
+}

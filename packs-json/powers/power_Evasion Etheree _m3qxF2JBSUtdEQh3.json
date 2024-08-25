@@ -1,0 +1,32 @@
+{
+  "name": "Évasion Éthérée ",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Se dématérialise brièvement pour éviter les dégâts d'une prochaine attaque ennemie.",
+    "powerType": "EVO",
+    "speciality": "ASSASSIN",
+    "category": "CHANELING",
+    "family": "DEF",
+    "rank": "C",
+    "duration": "0",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "a6MICvivQeIlddKL",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "m3qxF2JBSUtdEQh3",
+  "sort": 0,
+  "_key": "!items!m3qxF2JBSUtdEQh3"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Potion de Codariocalyx",
+  "type": "item",
+  "img": "systems/arlenor/assets/images_filled/stuffs/potion02.png",
+  "system": {
+    "description": "\n    Effet : +1 en Habileté sur une scène\n    Préparation : Codariocalyx + Alcool Blanc + Fiole de verre\n    Même effet non cumulable\n  ",
+    "itemType": "POTION",
+    "quantity": 1
+  },
+  "effects": [],
+  "folder": "m4k5LUomNWgMFiJc",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "ZnJmJUPXmq8t1xm2",
+  "sort": 0,
+  "_key": "!items!ZnJmJUPXmq8t1xm2"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Danse de l'Esprit",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/control.png",
+  "system": {
+    "description": "Le Moine entre dans une danse gracieuse qui charme et désoriente les ennemis proches.",
+    "powerType": "EVO",
+    "speciality": "MOINE",
+    "category": "CHANELING",
+    "family": "CTRL",
+    "rank": "C",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "EF4xWJQ90HMwcQTy",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "lN5yIKKbBFZJ6KOU",
+  "sort": 0,
+  "_key": "!items!lN5yIKKbBFZJ6KOU"
+}

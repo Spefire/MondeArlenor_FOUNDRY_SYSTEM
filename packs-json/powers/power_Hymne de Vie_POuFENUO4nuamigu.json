@@ -1,0 +1,32 @@
+{
+  "name": "Hymne de Vie",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/heal.png",
+  "system": {
+    "description": "Chante un hymne vibrant qui donne un bonus de soin sur tous les soins reçus par les alliés dans la zone.",
+    "powerType": "EVO",
+    "speciality": "BARDE",
+    "category": "CHANELING",
+    "family": "HEAL",
+    "rank": "C",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "cRbfcX0BTimMVFj9",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "POuFENUO4nuamigu",
+  "sort": 0,
+  "_key": "!items!POuFENUO4nuamigu"
+}

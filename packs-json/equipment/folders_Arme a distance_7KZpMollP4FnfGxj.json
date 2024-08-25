@@ -1,0 +1,19 @@
+{
+  "name": "Arme à distance",
+  "type": "Item",
+  "sorting": "a",
+  "folder": null,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "7KZpMollP4FnfGxj",
+  "sort": 100000,
+  "_key": "!folders!7KZpMollP4FnfGxj"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Arrêt cardiaque",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Manipule le sang pour arrêter le coeur de la cible s'il en a un, le rendant hors combat, pouvant aussi le mener à la mort.",
+    "powerType": "EVO",
+    "speciality": "PRETRE",
+    "category": "CHANELING",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "1",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "w40qyH6eW8dlhkx4",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "ug7e4E0X4kajDRJO",
+  "sort": 0,
+  "_key": "!items!ug7e4E0X4kajDRJO"
+}

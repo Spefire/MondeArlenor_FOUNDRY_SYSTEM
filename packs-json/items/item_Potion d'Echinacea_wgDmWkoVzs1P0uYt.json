@@ -1,0 +1,27 @@
+{
+  "name": "Potion d'Echinacea",
+  "type": "item",
+  "img": "systems/arlenor/assets/images_filled/stuffs/potion01.png",
+  "system": {
+    "description": "\n    Effet : +1 en Ténacité sur une scène\n    (avec limite corporelle : 1 marqueur de blessure par dépassement)\n    Préparation : Echinacea + Alcool Brun + Fiole de verre\n    Même effet non cumulable\n  ",
+    "itemType": "POTION",
+    "quantity": 1
+  },
+  "effects": [],
+  "folder": "m4k5LUomNWgMFiJc",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "wgDmWkoVzs1P0uYt",
+  "sort": 0,
+  "_key": "!items!wgDmWkoVzs1P0uYt"
+}

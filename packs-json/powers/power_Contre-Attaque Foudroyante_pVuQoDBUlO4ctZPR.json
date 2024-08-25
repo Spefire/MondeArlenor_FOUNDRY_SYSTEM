@@ -1,0 +1,32 @@
+{
+  "name": "Contre-Attaque Foudroyante",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Répond instantanément à la prochaine attaque ennemie avec une contre-attaque rapide et puissante.",
+    "powerType": "EVO",
+    "speciality": "ASSASSIN",
+    "category": "CHANELING",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "1",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "a6MICvivQeIlddKL",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "pVuQoDBUlO4ctZPR",
+  "sort": 0,
+  "_key": "!items!pVuQoDBUlO4ctZPR"
+}

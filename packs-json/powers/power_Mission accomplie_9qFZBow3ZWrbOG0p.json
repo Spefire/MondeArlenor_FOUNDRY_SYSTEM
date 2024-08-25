@@ -1,0 +1,32 @@
+{
+  "name": "Mission accomplie",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/control.png",
+  "system": {
+    "description": "Donne un ordre à la cible qui s'exécutera, ou elle sera plongé dans un coma si elle ne veut / peut pas le réaliser.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "SPELL",
+    "family": "CTRL",
+    "rank": "A",
+    "duration": "3",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "S80G5bEZRV63UViF",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "9qFZBow3ZWrbOG0p",
+  "sort": 0,
+  "_key": "!items!9qFZBow3ZWrbOG0p"
+}

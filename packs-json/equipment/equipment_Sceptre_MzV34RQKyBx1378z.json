@@ -1,0 +1,26 @@
+{
+  "name": "Sceptre",
+  "type": "equipment",
+  "img": "systems/arlenor/assets/images_filled/stuffs/bow.png",
+  "system": {
+    "description": "",
+    "equipmentType": "WEAPON_LONG"
+  },
+  "effects": [],
+  "folder": "7KZpMollP4FnfGxj",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "MzV34RQKyBx1378z",
+  "sort": 0,
+  "_key": "!items!MzV34RQKyBx1378z"
+}

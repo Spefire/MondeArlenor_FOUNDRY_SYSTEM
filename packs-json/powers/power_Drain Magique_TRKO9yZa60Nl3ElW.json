@@ -1,0 +1,32 @@
+{
+  "name": "Drain Magique",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/control.png",
+  "system": {
+    "description": "Invoque une lien d'énergie magique pour drainer les pouvoirs magiques d'un ennemi, l’empêchant d’en utiliser tant que l'Enchanteur n'en utilise pas d'autres.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "CHANELING",
+    "family": "CTRL",
+    "rank": "B",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "S80G5bEZRV63UViF",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "TRKO9yZa60Nl3ElW",
+  "sort": 0,
+  "_key": "!items!TRKO9yZa60Nl3ElW"
+}

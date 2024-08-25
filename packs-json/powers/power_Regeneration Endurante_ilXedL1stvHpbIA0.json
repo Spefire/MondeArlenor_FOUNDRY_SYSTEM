@@ -1,0 +1,32 @@
+{
+  "name": "Régénération Endurante",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/heal.png",
+  "system": {
+    "description": "Active la régénération naturelle du Gardien, redonnant un peu de points de vie.",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "CHANELING",
+    "family": "HEAL",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "Ja1ZUIoWj7imc3NW",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "ilXedL1stvHpbIA0",
+  "sort": 0,
+  "_key": "!items!ilXedL1stvHpbIA0"
+}

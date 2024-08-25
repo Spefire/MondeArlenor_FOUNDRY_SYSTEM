@@ -1,0 +1,32 @@
+{
+  "name": "Mise en Garde",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Se concentre sur la défense, augmentant considérablement la résistance aux dégâts.",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "SPELL",
+    "family": "DEF",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "Ja1ZUIoWj7imc3NW",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "TwYcofx3uqIAO5dm",
+  "sort": 0,
+  "_key": "!items!TwYcofx3uqIAO5dm"
+}

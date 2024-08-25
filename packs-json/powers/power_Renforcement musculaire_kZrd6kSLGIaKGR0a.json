@@ -1,0 +1,32 @@
+{
+  "name": "Renforcement musculaire",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Augmente la Vigueur temporairement.",
+    "powerType": "EVO",
+    "speciality": "MOINE",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "EF4xWJQ90HMwcQTy",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "kZrd6kSLGIaKGR0a",
+  "sort": 0,
+  "_key": "!items!kZrd6kSLGIaKGR0a"
+}

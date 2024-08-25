@@ -1,0 +1,32 @@
+{
+  "name": "Loi Céleste",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Invoque un fléau divin qui inflige des dégâts puissants à une cible ennemie si son alignement est mauvais.",
+    "powerType": "EVO",
+    "speciality": "PRETRE",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "w40qyH6eW8dlhkx4",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "r7KMIgviIJ7xuB7q",
+  "sort": 0,
+  "_key": "!items!r7KMIgviIJ7xuB7q"
+}

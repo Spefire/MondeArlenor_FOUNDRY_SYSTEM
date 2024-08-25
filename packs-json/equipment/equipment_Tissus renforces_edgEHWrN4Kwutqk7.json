@@ -1,0 +1,26 @@
+{
+  "name": "Tissus renforcés",
+  "type": "equipment",
+  "img": "systems/arlenor/assets/images_filled/stuffs/armor.png",
+  "system": {
+    "description": "",
+    "equipmentType": "ARMOR"
+  },
+  "effects": [],
+  "folder": "zH51OoYwFBuxKIjr",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "edgEHWrN4Kwutqk7",
+  "sort": 0,
+  "_key": "!items!edgEHWrN4Kwutqk7"
+}

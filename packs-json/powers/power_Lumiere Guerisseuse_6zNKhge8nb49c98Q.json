@@ -1,0 +1,32 @@
+{
+  "name": "Lumière Guérisseuse",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Canalise la lumière divine pour guérir les alliés blessés et restaurer leur santé.",
+    "powerType": "EVO",
+    "speciality": "PRETRE",
+    "category": "CHANELING",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "w40qyH6eW8dlhkx4",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "6zNKhge8nb49c98Q",
+  "sort": 0,
+  "_key": "!items!6zNKhge8nb49c98Q"
+}

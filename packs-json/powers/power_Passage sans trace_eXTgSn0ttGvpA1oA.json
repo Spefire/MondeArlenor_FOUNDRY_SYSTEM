@@ -1,0 +1,32 @@
+{
+  "name": "Passage sans trace",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Crée une mini-zone de vide sur chaque pas, ne laissant aucune trace et donnant un bonus de discrétion.",
+    "powerType": "EVO",
+    "speciality": "ASSASSIN",
+    "category": "CHANELING",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "a6MICvivQeIlddKL",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "eXTgSn0ttGvpA1oA",
+  "sort": 0,
+  "_key": "!items!eXTgSn0ttGvpA1oA"
+}

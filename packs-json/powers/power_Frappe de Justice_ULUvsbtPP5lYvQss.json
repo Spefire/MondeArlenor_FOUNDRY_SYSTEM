@@ -1,0 +1,32 @@
+{
+  "name": "Frappe de Justice",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Effectue une attaque titanesque qui inflige d'énormes dégâts à la cible et étourdit tous les ennemis proches.",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "Ja1ZUIoWj7imc3NW",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "ULUvsbtPP5lYvQss",
+  "sort": 0,
+  "_key": "!items!ULUvsbtPP5lYvQss"
+}

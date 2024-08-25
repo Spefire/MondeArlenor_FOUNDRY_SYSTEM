@@ -1,0 +1,32 @@
+{
+  "name": "Dévouement Héroïque",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/heal.png",
+  "system": {
+    "description": "Sacrifie temporairement une partie des points de vie du Gardien pour restaurer ceux d'un allié.",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "SPELL",
+    "family": "HEAL",
+    "rank": "B",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "Ja1ZUIoWj7imc3NW",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "MqkzNZURSswSxpHm",
+  "sort": 0,
+  "_key": "!items!MqkzNZURSswSxpHm"
+}

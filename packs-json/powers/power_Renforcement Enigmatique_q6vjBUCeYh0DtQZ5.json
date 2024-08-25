@@ -1,0 +1,32 @@
+{
+  "name": "Renforcement Énigmatique",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Accorde une protection mystique aux alliés, les empêchant de subir des altérations, des charmes.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "SPELL",
+    "family": "DEF",
+    "rank": "B",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "S80G5bEZRV63UViF",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "q6vjBUCeYh0DtQZ5",
+  "sort": 0,
+  "_key": "!items!q6vjBUCeYh0DtQZ5"
+}

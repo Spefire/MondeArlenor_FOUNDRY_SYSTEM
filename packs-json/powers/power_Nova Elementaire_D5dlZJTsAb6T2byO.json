@@ -1,0 +1,32 @@
+{
+  "name": "Nova Élémentaire",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Libère une explosion d'énergie élémentaire qui inflige des dégâts de feu, de foudre et de glace à tous les ennemis dans une zone étendue.",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "PEnLiDRQw5svaVDG",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "D5dlZJTsAb6T2byO",
+  "sort": 0,
+  "_key": "!items!D5dlZJTsAb6T2byO"
+}

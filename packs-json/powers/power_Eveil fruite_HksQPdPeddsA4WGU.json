@@ -1,0 +1,32 @@
+{
+  "name": "Eveil fruité",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Créé un arbre ou un buisson fruitier, pouvant donner une altération positive à celui qui en mange.",
+    "powerType": "EVO",
+    "speciality": "DRUIDE",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "8jz46W1v9zFUAuvi",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "HksQPdPeddsA4WGU",
+  "sort": 0,
+  "_key": "!items!HksQPdPeddsA4WGU"
+}
