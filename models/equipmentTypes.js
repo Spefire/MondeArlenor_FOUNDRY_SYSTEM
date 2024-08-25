@@ -1,22 +1,18 @@
 export default [
     {
         name: "Arme au corps à corps",
-        code: "CAC"
+        code: "WEAPON_SHORT"
     },
     {
         name: "Arme à distance",
-        code: "DIST"
+        code: "WEAPON_LONG"
     },
     {
         name: "Armure",
-        code: "ARMURE"
+        code: "ARMOR"
     },
     {
-        name: "Bouclier",
-        code: "BOUCLIER"
-    },
-    {
-        name: "Autre (bijou, ...)",
-        code: "AUTRE"
+        name: "Accessoire",
+        code: "ACCESSORIE"
     }
 ];
