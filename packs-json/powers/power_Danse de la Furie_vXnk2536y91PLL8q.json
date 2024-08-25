@@ -1,0 +1,32 @@
+{
+  "name": "Danse de la Furie",
+  "type": "power",
+  "_id": "vXnk2536y91PLL8q",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Exécute une danse mortelle avec une rapidité surhumaine, attaquant tous les ennemis autour du Bretteur avec des coups critiques.",
+    "powerType": "EVO",
+    "speciality": "BRETTEUR",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "SGusu7eHEgieuJHy",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!vXnk2536y91PLL8q"
+}

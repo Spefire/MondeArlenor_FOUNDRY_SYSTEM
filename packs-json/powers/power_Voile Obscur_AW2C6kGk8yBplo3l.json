@@ -1,0 +1,32 @@
+{
+  "name": "Voile Obscur",
+  "type": "power",
+  "_id": "AW2C6kGk8yBplo3l",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Crée un voile d'ombre pour dissimuler l’Enchanteur ou un allié, le rendant partiellement invisible.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "CHANELING",
+    "family": "OFF",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "U0WrpDaxphaMFsxx",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!AW2C6kGk8yBplo3l"
+}

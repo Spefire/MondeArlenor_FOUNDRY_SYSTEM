@@ -1,0 +1,19 @@
+{
+  "name": "Enchanteur",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "U0WrpDaxphaMFsxx",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!U0WrpDaxphaMFsxx"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Frénésie Meurtrière",
+  "type": "power",
+  "_id": "p91bWTqSg7MGcLMF",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Entre dans un état de frénésie meurtrière, augmentant la vitesse d'attaque et les dégâts des attaques de dagues pendant plusieurs tours.",
+    "powerType": "EVO",
+    "speciality": "ASSASSIN",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "kLb5IgSurgr4xKT4",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!p91bWTqSg7MGcLMF"
+}

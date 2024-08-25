@@ -1,0 +1,32 @@
+{
+  "name": "Salve Mortelle",
+  "type": "power",
+  "_id": "FcZZHgH38O9JUXJ9",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Libère une salve de flèches enflammées qui se répandent sur une zone, infligeant des dégâts à tous les ennemis touchés et les brûlant sur plusieurs tours.",
+    "powerType": "EVO",
+    "speciality": "ASSASSIN",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "kLb5IgSurgr4xKT4",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!FcZZHgH38O9JUXJ9"
+}

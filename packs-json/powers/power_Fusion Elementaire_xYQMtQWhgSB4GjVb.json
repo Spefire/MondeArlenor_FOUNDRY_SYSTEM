@@ -1,0 +1,32 @@
+{
+  "name": "Fusion Élémentaire",
+  "type": "power",
+  "_id": "xYQMtQWhgSB4GjVb",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Transforme une petite partie de son corps en l’énergie élémentaire souhaité.",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "CHANELING",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "QnW8aiqbYXutvrS0",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!xYQMtQWhgSB4GjVb"
+}

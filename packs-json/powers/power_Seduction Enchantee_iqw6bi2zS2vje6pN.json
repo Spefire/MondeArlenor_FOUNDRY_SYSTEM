@@ -1,0 +1,32 @@
+{
+  "name": "Séduction Enchantée",
+  "type": "power",
+  "_id": "iqw6bi2zS2vje6pN",
+  "img": "systems/arlenor/assets/images_filled/powers/control.png",
+  "system": {
+    "description": "Projette une aura de charme irrésistible sur soi, attirant l'attention des ennemis et les incitant à ignorer les alliés.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "CHANELING",
+    "family": "CTRL",
+    "rank": "C",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "U0WrpDaxphaMFsxx",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!iqw6bi2zS2vje6pN"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Inv.Contrôle mineure",
+  "type": "power",
+  "_id": "KJ8qNFlmPO59iX4i",
+  "img": "systems/arlenor/assets/images_filled/powers/control.png",
+  "system": {
+    "description": "Invoque une entité de difficulté Simple ou Standard, liée par un contrat, en lui donnant un ordre de contrôle.",
+    "powerType": "EVO",
+    "speciality": "INVOCATEUR",
+    "category": "SPELL",
+    "family": "CTRL",
+    "rank": "C",
+    "duration": "1",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "BCvBBPfFectDzUIH",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!KJ8qNFlmPO59iX4i"
+}

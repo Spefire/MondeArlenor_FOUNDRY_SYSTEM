@@ -1,0 +1,32 @@
+{
+  "name": "Rituel d'Invocation",
+  "type": "power",
+  "_id": "99xQmLwCwFkyK11O",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Entame un rituel complexe pour invoquer temporairement un esprit élémentaire allié qui aide le lanceur en combat.",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "CHANELING",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "QnW8aiqbYXutvrS0",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!99xQmLwCwFkyK11O"
+}

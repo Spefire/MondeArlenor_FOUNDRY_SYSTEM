@@ -1,0 +1,32 @@
+{
+  "name": "Moisson d'Âmes",
+  "type": "power",
+  "_id": "REsv6gSo014kAesu",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Le Moine libère une vague d'énergie sinistre en frappant avec une arme, drainant la vie des ennemis autour pour se soigner et infligeant des dégâts considérables.",
+    "powerType": "EVO",
+    "speciality": "MOINE",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "yfF213N1lb6DTgoi",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!REsv6gSo014kAesu"
+}

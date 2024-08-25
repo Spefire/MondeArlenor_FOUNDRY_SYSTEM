@@ -1,0 +1,32 @@
+{
+  "name": "Gel Glacial",
+  "type": "power",
+  "_id": "M0nMzf0ARRGi51HM",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Gèle temporairement une surface ou un ennemi l'empêchant d'agir.",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "C",
+    "duration": "1",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "QnW8aiqbYXutvrS0",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!M0nMzf0ARRGi51HM"
+}

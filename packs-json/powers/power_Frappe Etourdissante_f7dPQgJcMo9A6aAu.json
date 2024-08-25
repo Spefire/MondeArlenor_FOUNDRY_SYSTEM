@@ -1,0 +1,32 @@
+{
+  "name": "Frappe Étourdissante",
+  "type": "power",
+  "_id": "f7dPQgJcMo9A6aAu",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Effectue une frappe précise visant à étourdir l'ennemi, le laissant incapable d'agir pendant un tour.",
+    "powerType": "EVO",
+    "speciality": "BRETTEUR",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "C",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "SGusu7eHEgieuJHy",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!f7dPQgJcMo9A6aAu"
+}

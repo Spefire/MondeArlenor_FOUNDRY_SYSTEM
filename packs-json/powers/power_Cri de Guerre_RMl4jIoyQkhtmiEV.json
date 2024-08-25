@@ -1,0 +1,32 @@
+{
+  "name": "Cri de Guerre",
+  "type": "power",
+  "_id": "RMl4jIoyQkhtmiEV",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Émet un puissant cri qui effraie les ennemis proches, les faisant fuir jusqu'au tour suivant.",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "C",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "UA1WctRa13w2GNkO",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!RMl4jIoyQkhtmiEV"
+}

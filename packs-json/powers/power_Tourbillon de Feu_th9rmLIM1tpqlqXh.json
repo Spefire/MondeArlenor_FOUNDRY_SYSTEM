@@ -1,0 +1,32 @@
+{
+  "name": "Tourbillon de Feu",
+  "type": "power",
+  "_id": "th9rmLIM1tpqlqXh",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Effectue un tourbillon d'attaque enflammé, infligeant des faibles dégâts de feu à tous les ennemis autour du Bretteur, les enflammant.",
+    "powerType": "EVO",
+    "speciality": "BRETTEUR",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "SGusu7eHEgieuJHy",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!th9rmLIM1tpqlqXh"
+}

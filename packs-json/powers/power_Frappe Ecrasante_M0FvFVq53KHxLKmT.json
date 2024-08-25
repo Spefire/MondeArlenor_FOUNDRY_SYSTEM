@@ -1,0 +1,32 @@
+{
+  "name": "Frappe Écrasante",
+  "type": "power",
+  "_id": "M0FvFVq53KHxLKmT",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Effectue une attaque qui inflige des dégâts supplémentaires et étourdit l'ennemi.",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "C",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "UA1WctRa13w2GNkO",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!M0FvFVq53KHxLKmT"
+}

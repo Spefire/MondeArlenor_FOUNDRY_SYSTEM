@@ -1,0 +1,32 @@
+{
+  "name": "Bond Agile",
+  "type": "power",
+  "_id": "n9lSkGN2np814hxc",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "S'élance rapidement vers un ennemi ou un point désigné.",
+    "powerType": "EVO",
+    "speciality": "BRETTEUR",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "SGusu7eHEgieuJHy",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!n9lSkGN2np814hxc"
+}

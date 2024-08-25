@@ -1,0 +1,32 @@
+{
+  "name": "Vœu de Protection",
+  "type": "power",
+  "_id": "qRFCGDaNDu015wfB",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Lie le Gardien à un allié, partageant les dégâts subis entre eux.",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "SPELL",
+    "family": "DEF",
+    "rank": "C",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "UA1WctRa13w2GNkO",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!qRFCGDaNDu015wfB"
+}

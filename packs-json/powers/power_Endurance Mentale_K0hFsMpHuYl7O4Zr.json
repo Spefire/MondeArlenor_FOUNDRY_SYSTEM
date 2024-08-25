@@ -1,0 +1,32 @@
+{
+  "name": "Endurance Mentale",
+  "type": "power",
+  "_id": "K0hFsMpHuYl7O4Zr",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Augmente la résistance aux effets de contrôle et aux altérations.",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "SPELL",
+    "family": "DEF",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "UA1WctRa13w2GNkO",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!K0hFsMpHuYl7O4Zr"
+}

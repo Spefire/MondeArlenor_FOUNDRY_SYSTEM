@@ -1,0 +1,32 @@
+{
+  "name": "Chant de l'Au-Delà",
+  "type": "power",
+  "_id": "mX2qH6IKyoStaL9G",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Ouvre un canal de communication avec les esprits des défunts, permettant de poser des questions et d'obtenir des réponses.",
+    "powerType": "EVO",
+    "speciality": "DRUIDE",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "0",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "P4CXaEYw9EOgyWpE",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!mX2qH6IKyoStaL9G"
+}

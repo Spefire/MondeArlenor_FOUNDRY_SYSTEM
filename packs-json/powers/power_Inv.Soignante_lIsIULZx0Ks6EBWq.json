@@ -1,0 +1,32 @@
+{
+  "name": "Inv.Soignante",
+  "type": "power",
+  "_id": "lIsIULZx0Ks6EBWq",
+  "img": "systems/arlenor/assets/images_filled/powers/heal.png",
+  "system": {
+    "description": "Invoque une entité de difficulté Complexe, liée par un contrat, en lui donnant un ordre de soin.",
+    "powerType": "EVO",
+    "speciality": "INVOCATEUR",
+    "category": "SPELL",
+    "family": "HEAL",
+    "rank": "B",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "BCvBBPfFectDzUIH",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!lIsIULZx0Ks6EBWq"
+}

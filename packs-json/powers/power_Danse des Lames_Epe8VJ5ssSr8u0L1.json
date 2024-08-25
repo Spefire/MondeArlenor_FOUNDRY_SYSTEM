@@ -1,0 +1,32 @@
+{
+  "name": "Danse des Lames",
+  "type": "power",
+  "_id": "Epe8VJ5ssSr8u0L1",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Effectue une danse complexe avec les dagues, attaquant tous les ennemis à portée avec une série de coups rapides et précis.",
+    "powerType": "EVO",
+    "speciality": "ASSASSIN",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "kLb5IgSurgr4xKT4",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Epe8VJ5ssSr8u0L1"
+}

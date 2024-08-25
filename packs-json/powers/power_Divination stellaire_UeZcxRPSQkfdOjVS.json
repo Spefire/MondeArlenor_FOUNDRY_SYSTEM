@@ -1,0 +1,32 @@
+{
+  "name": "Divination stellaire",
+  "type": "power",
+  "_id": "UeZcxRPSQkfdOjVS",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Lance une prédiction sur un signe astrologique, grâce à l'aide des étoiles.",
+    "powerType": "EVO",
+    "speciality": "INVOCATEUR",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "0",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "BCvBBPfFectDzUIH",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!UeZcxRPSQkfdOjVS"
+}

@@ -1,9 +1,9 @@
 {
-  "name": "Guardians",
+  "name": "Assassin",
   "sorting": "a",
   "folder": null,
   "type": "Item",
-  "_id": "6q2eHdXOcMKZJMD3",
+  "_id": "kLb5IgSurgr4xKT4",
   "sort": 100000,
   "color": null,
   "flags": {},
@@ -11,9 +11,9 @@
     "systemId": "arlenor",
     "systemVersion": "1.2.0",
     "coreVersion": "11.315",
-    "createdTime": 1724540169375,
-    "modifiedTime": 1724540333102,
-    "lastModifiedBy": "gpxsbjrw7C8TXPbR"
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
   },
-  "_key": "!folders!6q2eHdXOcMKZJMD3"
+  "_key": "!folders!kLb5IgSurgr4xKT4"
 }

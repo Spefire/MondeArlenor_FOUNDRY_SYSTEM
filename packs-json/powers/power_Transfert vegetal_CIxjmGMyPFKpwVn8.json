@@ -1,0 +1,32 @@
+{
+  "name": "Transfert végétal",
+  "type": "power",
+  "_id": "CIxjmGMyPFKpwVn8",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Utilise les arbres et leurs racines comme portail pour le Druide.",
+    "powerType": "EVO",
+    "speciality": "DRUIDE",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "B",
+    "duration": "1",
+    "range": "4"
+  },
+  "effects": [],
+  "folder": "P4CXaEYw9EOgyWpE",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!CIxjmGMyPFKpwVn8"
+}

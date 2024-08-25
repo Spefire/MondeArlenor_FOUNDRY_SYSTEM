@@ -1,0 +1,32 @@
+{
+  "name": "Rafale de Coups",
+  "type": "power",
+  "_id": "11r0JLNiXm33UAJV",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Effectue une rafale de coups rapides sur une cible unique : les dégâts sur calant sur celui du meilleur coup.",
+    "powerType": "EVO",
+    "speciality": "MOINE",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "yfF213N1lb6DTgoi",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!11r0JLNiXm33UAJV"
+}

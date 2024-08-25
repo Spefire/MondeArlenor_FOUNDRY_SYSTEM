@@ -1,0 +1,19 @@
+{
+  "name": "Moine",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "yfF213N1lb6DTgoi",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!yfF213N1lb6DTgoi"
+}

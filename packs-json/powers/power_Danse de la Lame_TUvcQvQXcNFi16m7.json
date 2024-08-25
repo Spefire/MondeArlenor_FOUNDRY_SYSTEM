@@ -1,0 +1,32 @@
+{
+  "name": "Danse de la Lame",
+  "type": "power",
+  "_id": "TUvcQvQXcNFi16m7",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Enchaîne une série de mouvements rapides et précis avec l'épée, infligeant des dégâts conséquents à un ennemi ciblé.",
+    "powerType": "EVO",
+    "speciality": "BRETTEUR",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "SGusu7eHEgieuJHy",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!TUvcQvQXcNFi16m7"
+}

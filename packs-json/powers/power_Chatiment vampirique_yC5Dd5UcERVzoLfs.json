@@ -1,0 +1,32 @@
+{
+  "name": "Châtiment vampirique",
+  "type": "power",
+  "_id": "yC5Dd5UcERVzoLfs",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Invoque une énergie vampirique pour drainer lentement la force vitale de l'ennemi pour se soigner.",
+    "powerType": "EVO",
+    "speciality": "PRETRE",
+    "category": "CHANELING",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "1",
+    "range": "2"
+  },
+  "effects": [],
+  "folder": "czHIbGQEsdbrLLcR",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!yC5Dd5UcERVzoLfs"
+}

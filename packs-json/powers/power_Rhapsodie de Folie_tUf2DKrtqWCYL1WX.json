@@ -1,0 +1,32 @@
+{
+  "name": "Rhapsodie de Folie",
+  "type": "power",
+  "_id": "tUf2DKrtqWCYL1WX",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Entonne une rhapsodie qui plonge les ennemis dans un état de confusion totale, les faisant agir de manière imprévisible.",
+    "powerType": "EVO",
+    "speciality": "BARDE",
+    "category": "CHANELING",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "ZmD34YOApz4zP43N",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!tUf2DKrtqWCYL1WX"
+}

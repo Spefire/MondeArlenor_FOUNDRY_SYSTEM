@@ -1,0 +1,32 @@
+{
+  "name": "Sérénade Funeste",
+  "type": "power",
+  "_id": "EDXVv7gNOR4sKn9m",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Joue une mélodie sinistre qui maudit les ennemis, réduisant l'effet de leurs attaques pendant plusieurs tours.",
+    "powerType": "EVO",
+    "speciality": "BARDE",
+    "category": "CHANELING",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "ZmD34YOApz4zP43N",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!EDXVv7gNOR4sKn9m"
+}

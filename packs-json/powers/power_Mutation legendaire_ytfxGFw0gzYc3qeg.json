@@ -1,0 +1,32 @@
+{
+  "name": "Mutation légendaire",
+  "type": "power",
+  "_id": "ytfxGFw0gzYc3qeg",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Se transforme en animal de grande taille, adoptant ses attributs et compétences.",
+    "powerType": "EVO",
+    "speciality": "DRUIDE",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "A",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "P4CXaEYw9EOgyWpE",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ytfxGFw0gzYc3qeg"
+}

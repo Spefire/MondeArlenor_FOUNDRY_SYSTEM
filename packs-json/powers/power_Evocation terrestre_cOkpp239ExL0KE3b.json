@@ -1,0 +1,32 @@
+{
+  "name": "Evocation terrestre",
+  "type": "power",
+  "_id": "cOkpp239ExL0KE3b",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Crée un volume de terre solide et peu complexe à partir de rien.",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "QnW8aiqbYXutvrS0",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!cOkpp239ExL0KE3b"
+}

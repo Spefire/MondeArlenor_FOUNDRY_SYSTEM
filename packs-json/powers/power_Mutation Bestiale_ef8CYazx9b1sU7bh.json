@@ -1,0 +1,32 @@
+{
+  "name": "Mutation Bestiale",
+  "type": "power",
+  "_id": "ef8CYazx9b1sU7bh",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Se transforme en animal de taille humaine, adoptant ses attributs et compétences.",
+    "powerType": "EVO",
+    "speciality": "DRUIDE",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "B",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "P4CXaEYw9EOgyWpE",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ef8CYazx9b1sU7bh"
+}
