@@ -4,6 +4,16 @@ Tous les changements sur ce projet `Le Monde d'Arlénor - Foundry Game System` s
 
 ---
 
+## [1.3.1] - Août 2024
+
+Correction sur les Compendiums
+
+### *Corrections*
+
+- Correction des versions non compatibles
+
+---
+
 ## [1.3.0] - Août 2024
 
 Premiers Compendiums !!!
