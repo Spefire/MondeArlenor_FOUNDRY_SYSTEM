@@ -25,15 +25,7 @@
   "packs": [
     {
       "name": "characters",
-      "label": "Personnages principaux",
-      "type": "Actor",
-      "private": false,
-      "system": "arlenor",
-      "flags": {}
-    },
-    {
-      "name": "pretires",
-      "label": "Personnages pré-tirés",
+      "label": "Personnages jouables",
       "type": "Actor",
       "private": false,
       "system": "arlenor",
@@ -48,8 +40,24 @@
       "flags": {}
     },
     {
+      "name": "pnjs",
+      "label": "Personnages non-jouables",
+      "type": "Actor",
+      "private": false,
+      "system": "arlenor",
+      "flags": {}
+    },
+    {
       "name": "skills",
       "label": "Compétences",
+      "type": "Item",
+      "private": false,
+      "system": "arlenor",
+      "flags": {}
+    },
+    {
+      "name": "powers",
+      "label": "Pouvoirs",
       "type": "Item",
       "private": false,
       "system": "arlenor",
@@ -66,14 +74,6 @@
     {
       "name": "items",
       "label": "Objets",
-      "type": "Item",
-      "private": false,
-      "system": "arlenor",
-      "flags": {}
-    },
-    {
-      "name": "powers",
-      "label": "Pouvoirs",
       "type": "Item",
       "private": false,
       "system": "arlenor",
