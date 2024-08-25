@@ -1,0 +1,29 @@
+{
+  "name": "Haine des races",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/race_51.png",
+  "system": {
+    "description": "Les arléniens ne peuvent pas supporter la présence d'autres races que les pans, à leurs côtés.",
+    "skillType": "RACE"
+  },
+  "effects": [],
+  "folder": null,
+  "ownership": {
+    "default": 0,
+    "administrator": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1724540122163,
+    "modifiedTime": 1724540346773,
+    "lastModifiedBy": "administrator"
+  },
+  "_id": "sji94itE4Zgdc1xB",
+  "sort": 0,
+  "_key": "!items!sji94itE4Zgdc1xB"
+}

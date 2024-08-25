@@ -1,0 +1,19 @@
+{
+  "name": "Guardians",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "6q2eHdXOcMKZJMD3",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1724540169375,
+    "modifiedTime": 1724540333102,
+    "lastModifiedBy": "gpxsbjrw7C8TXPbR"
+  },
+  "_key": "!folders!6q2eHdXOcMKZJMD3"
+}

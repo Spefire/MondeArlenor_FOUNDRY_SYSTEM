@@ -1,0 +1,29 @@
+{
+  "name": "Viande crue",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/race_20.png",
+  "system": {
+    "description": "Les nains doivent manger de la viande crue à chaque repas. Ils trouvent que le cuit est un véritable gâchi.",
+    "skillType": "RACE"
+  },
+  "effects": [],
+  "folder": null,
+  "ownership": {
+    "default": 0,
+    "administrator": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1724540122163,
+    "modifiedTime": 1724540346773,
+    "lastModifiedBy": "administrator"
+  },
+  "_id": "LF5lLc4nj5q0awKd",
+  "sort": 0,
+  "_key": "!items!LF5lLc4nj5q0awKd"
+}

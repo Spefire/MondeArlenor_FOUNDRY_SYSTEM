@@ -1,0 +1,129 @@
+{
+  "name": "CreatureEx",
+  "type": "creature",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "health": {
+      "name": "Points de Vie",
+      "value": 0,
+      "max": 0
+    },
+    "caracts": {
+      "for": {
+        "name": "Force",
+        "value": 1,
+        "base": null
+      },
+      "hab": {
+        "name": "Habileté",
+        "value": 1,
+        "base": null
+      },
+      "int": {
+        "name": "Intellect",
+        "value": 1,
+        "base": null
+      },
+      "ten": {
+        "name": "Ténacité",
+        "value": 1,
+        "base": null
+      },
+      "cha": {
+        "name": "Charisme",
+        "value": 1,
+        "base": null
+      },
+      "mag": {
+        "name": "Magie",
+        "value": 1,
+        "base": null
+      }
+    },
+    "biography": ""
+  },
+  "prototypeToken": {
+    "name": "CreatureEx",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "ownership": {
+    "default": 0,
+    "gpxsbjrw7C8TXPbR": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1724540051382,
+    "modifiedTime": 1724540293772,
+    "lastModifiedBy": "gpxsbjrw7C8TXPbR"
+  },
+  "_id": "OpX0K52ERlX2i6zK",
+  "sort": 0,
+  "_key": "!actors!OpX0K52ERlX2i6zK"
+}

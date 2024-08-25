@@ -1,7 +1,7 @@
 export default [
     {
         name: "Compétence d'arme",
-        code: "ARME"
+        code: "WEAPON"
     },
     {
         name: "Compétence de race",
@@ -9,6 +9,6 @@ export default [
     },
     {
         name: "Autre compétence",
-        code: "AUTRE"
+        code: "OTHER"
     }
 ];
