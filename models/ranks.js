@@ -1,14 +1,14 @@
 export default [
     {
         name: "I",
-        code: "I"
+        code: "C"
     },
     {
         name: "II",
-        code: "II"
+        code: "B"
     },
     {
         name: "III",
-        code: "III"
+        code: "A"
     }
 ];

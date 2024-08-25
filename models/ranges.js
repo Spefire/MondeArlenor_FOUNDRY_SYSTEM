@@ -1,22 +1,22 @@
 export default [
     {
         name: "Personnelle",
-        code: "PERSO"
+        code: "0"
     },
     {
         name: "Toucher",
-        code: "TOUCHER"
+        code: "1"
     },
     {
         name: "Vision",
-        code: "VISION"
+        code: "2"
     },
     {
         name: "Zone",
-        code: "ZONE"
+        code: "3"
     },
     {
         name: "Infinie",
-        code: "INFINIE"
+        code: "4"
     }
 ];

@@ -1,3 +1,4 @@
+import categories from "../../models/categories.js";
 import difficulties from "../../models/divinities.js";
 import equipmentTypes from "../../models/equipmentTypes.js";
 import durations from "../../models/durations.js";
@@ -50,6 +51,7 @@ export class ArlenorItemSheet extends ItemSheet {
       item: this.item,
       system: this.item.system,
       enrichedBiography,
+      categories,
       difficulties,
       durations,
       equipmentTypes,

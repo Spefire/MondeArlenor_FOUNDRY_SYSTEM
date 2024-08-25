@@ -1,5 +1,6 @@
 import { rollSkill } from "./../arlenor.js";
 import bonusMalusList from "../../models/bonusMalusList.js";
+import categories from "../../models/categories.js";
 import difficulties from "../../models/difficulties.js";
 import divinities from "../../models/divinities.js";
 import durations from "../../models/durations.js";
@@ -58,6 +59,7 @@ export class ArlenorActorSheet extends ActorSheet {
       healthIndic: healthStats.indic,
       healthLevels: healthStats.levels,
       enrichedBiography,
+      categories,
       difficulties,
       divinities,
       durations,

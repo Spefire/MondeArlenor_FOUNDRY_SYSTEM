@@ -42,7 +42,22 @@
                         </select>
                     </div>
                 </div>
+            {{/if}}
 
+            <div class="grid grid-1col">
+                <div class="flexrow flex-group-center">
+                    <label for="system.category" class="title-up-label">Catégorie</label>
+                    <select name="system.category">
+                        {{#select system.category }}
+                            {{#each categories }}
+                                <option value="{{this.code}}">{{this.name}}</option>
+                            {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+            </div>
+
+            {{#if (eq system.powerType "EVO" )}}
                 <div class="grid grid-1col">
                     <div class="flexrow flex-group-center">
                         Le rang d'un pouvoir indique sa puissance
@@ -98,14 +113,6 @@
                             {{/each}}
                         {{/select}}
                     </select>
-                </div>
-            </div>
-
-            <div class="grid grid-1col">
-                <div class="flexrow flex-group-center">
-                    <input type='checkbox' name="system.chaneling" {{checked system.chaneling}}>
-                    {{#if (eq system.chaneling true )}}Avec canalisation{{/if}}
-                        {{#if (eq system.chaneling false )}}Sans canalisation{{/if}}
                 </div>
             </div>
         </div>

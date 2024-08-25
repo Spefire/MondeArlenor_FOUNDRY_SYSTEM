@@ -1,18 +1,18 @@
 export default [
     {
         name: "Instantanée",
-        code: "INSTA"
+        code: "0"
     },
     {
         name: "Scène",
-        code: "SCENE"
+        code: "1"
     },
     {
         name: "Journée",
-        code: "JOURNEE"
+        code: "2"
     },
     {
         name: "Illimitée",
-        code: "ILLIMITEE"
+        code: "3"
     }
 ];
