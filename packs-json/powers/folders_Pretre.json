@@ -1,0 +1,19 @@
+{
+  "name": "Prêtre",
+  "type": "Item",
+  "sorting": "a",
+  "folder": null,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "mLw4LyBuuoMOB6oi",
+  "sort": 100000,
+  "_key": "!folders!mLw4LyBuuoMOB6oi"
+}

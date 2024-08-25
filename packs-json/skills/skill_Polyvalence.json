@@ -1,0 +1,26 @@
+{
+  "name": "Polyvalence",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/race_00.png",
+  "system": {
+    "description": "Les humains ne possèdent aucune capacité, positive ou négative.",
+    "skillType": "RACE"
+  },
+  "effects": [],
+  "folder": "dxSXSWEVibeTy1wA",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "mD4BrxRX8TdfWW5S",
+  "sort": 0,
+  "_key": "!items!mD4BrxRX8TdfWW5S"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Evocation incendiaire",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Crée une flamme sur une surface à partir de rien.",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "9fi9XOSCNIDIJZHe",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "ovTHbl2v659mOmhI",
+  "sort": 0,
+  "_key": "!items!ovTHbl2v659mOmhI"
+}

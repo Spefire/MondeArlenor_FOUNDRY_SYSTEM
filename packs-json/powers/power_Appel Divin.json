@@ -1,0 +1,32 @@
+{
+  "name": "Appel Divin",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Appelle les puissances divines pour obtenir des conseils et des prédictions sur les événements à venir.",
+    "powerType": "EVO",
+    "speciality": "PRETRE",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "B",
+    "duration": "0",
+    "range": "4"
+  },
+  "effects": [],
+  "folder": "mLw4LyBuuoMOB6oi",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "p1amJL8cUqiHz9QU",
+  "sort": 0,
+  "_key": "!items!p1amJL8cUqiHz9QU"
+}

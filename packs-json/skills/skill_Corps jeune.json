@@ -1,0 +1,26 @@
+{
+  "name": "Corps jeune",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/race_40.png",
+  "system": {
+    "description": "Les pans ont + 1 PV max grâce à la magie de leur jeunesse.",
+    "skillType": "RACE"
+  },
+  "effects": [],
+  "folder": "dxSXSWEVibeTy1wA",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "lNeKyrVQS4JMzQjI",
+  "sort": 0,
+  "_key": "!items!lNeKyrVQS4JMzQjI"
+}

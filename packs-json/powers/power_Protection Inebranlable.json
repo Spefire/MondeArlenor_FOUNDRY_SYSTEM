@@ -1,0 +1,32 @@
+{
+  "name": "Protection Inébranlable",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Crée un dôme de protection absolue autour du Gardien, annulant tous les dégâts et les effets négatifs venant de l'extérieur.",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "CHANELING",
+    "family": "DEF",
+    "rank": "A",
+    "duration": "1",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "4XK25PtOaL2dQnL1",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "yzFn8nFcQzjwXm9m",
+  "sort": 0,
+  "_key": "!items!yzFn8nFcQzjwXm9m"
+}

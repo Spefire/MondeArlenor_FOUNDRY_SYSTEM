@@ -1,0 +1,32 @@
+{
+  "name": "Téléportation Éthérée",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Se téléporte instantanément vers un emplacement désigné sur le champ de bataille.",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "9fi9XOSCNIDIJZHe",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "ddTOdLsQUXEo4MHv",
+  "sort": 0,
+  "_key": "!items!ddTOdLsQUXEo4MHv"
+}

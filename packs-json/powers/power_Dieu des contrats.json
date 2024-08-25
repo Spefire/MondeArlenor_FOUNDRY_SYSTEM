@@ -1,0 +1,32 @@
+{
+  "name": "Dieu des contrats",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Passif qui permet d'invoquer 3 entités sous contrat à la fois.",
+    "powerType": "EVO",
+    "speciality": "INVOCATEUR",
+    "category": "SPECIAL",
+    "family": "UTIL",
+    "rank": "A",
+    "duration": "3",
+    "range": "4"
+  },
+  "effects": [],
+  "folder": "hnvrAA9N2qzKXCSY",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "xi5cECGXlNs3YFxg",
+  "sort": 0,
+  "_key": "!items!xi5cECGXlNs3YFxg"
+}

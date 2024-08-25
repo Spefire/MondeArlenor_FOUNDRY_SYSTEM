@@ -1,0 +1,32 @@
+{
+  "name": "Dernier Appel",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Appelle l'esprit d'un mort dans son ancien corps pour qu’il combattre aux côtés du Prêtre.",
+    "powerType": "EVO",
+    "speciality": "PRETRE",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "B",
+    "duration": "1",
+    "range": "4"
+  },
+  "effects": [],
+  "folder": "mLw4LyBuuoMOB6oi",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "RHNuLGTZvXtnAIBH",
+  "sort": 0,
+  "_key": "!items!RHNuLGTZvXtnAIBH"
+}

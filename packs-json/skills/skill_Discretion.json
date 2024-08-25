@@ -1,0 +1,26 @@
+{
+  "name": "Discrétion",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/./other.png",
+  "system": {
+    "description": "Bonus +1D6 pour toute action de camouflage, se faire discret.",
+    "skillType": "OTHER"
+  },
+  "effects": [],
+  "folder": "AilW8R5CFvgqgwZR",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "X1blPE46UnEkB1yA",
+  "sort": 0,
+  "_key": "!items!X1blPE46UnEkB1yA"
+}

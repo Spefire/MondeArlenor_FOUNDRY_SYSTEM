@@ -1,0 +1,27 @@
+{
+  "name": "Potion de Finell",
+  "type": "item",
+  "img": "systems/arlenor/assets/images_filled/stuffs/potion03.png",
+  "system": {
+    "description": "\n    Effet : +1 en Magie sur une scène\n    Préparation : Finell + Alcool Brun + Fiole de verre\n    Même effet non cumulable\n  ",
+    "itemType": "POTION",
+    "quantity": 1
+  },
+  "effects": [],
+  "folder": "C7gFNdhcc8fg8Bhg",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "vO0Gxkkp4iyA45fc",
+  "sort": 0,
+  "_key": "!items!vO0Gxkkp4iyA45fc"
+}

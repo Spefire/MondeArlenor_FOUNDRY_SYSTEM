@@ -1,0 +1,32 @@
+{
+  "name": "Défense Équilibrée",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Adopte une posture équilibrée qui réduit les dégâts subis et confère une chance de bloquer les attaques ennemies.",
+    "powerType": "EVO",
+    "speciality": "BRETTEUR",
+    "category": "CHANELING",
+    "family": "DEF",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "vevVTdBUWGwqDAb1",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "4SKXRzkQOSs23IP0",
+  "sort": 0,
+  "_key": "!items!4SKXRzkQOSs23IP0"
+}

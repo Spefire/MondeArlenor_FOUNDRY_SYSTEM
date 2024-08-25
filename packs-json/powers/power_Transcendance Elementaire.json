@@ -1,0 +1,32 @@
+{
+  "name": "Transcendance Élémentaire",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Transforme le lanceur en une entité élémentaire puissante. Gagne une immunité temporaire et augmente considérablement ses capacités magiques lié à son élément.",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "9fi9XOSCNIDIJZHe",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "wRmriWVCc5ElX6O2",
+  "sort": 0,
+  "_key": "!items!wRmriWVCc5ElX6O2"
+}

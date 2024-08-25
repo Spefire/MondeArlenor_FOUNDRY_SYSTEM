@@ -1,0 +1,32 @@
+{
+  "name": "Danse Eclair",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Le Moine se déplace à une vitesse étonnante, attaquant chaque ennemi sur son passage.",
+    "powerType": "EVO",
+    "speciality": "MOINE",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "Ys1pHY0DwjOp4Vao",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "1JcFXbP1utNCAYdM",
+  "sort": 0,
+  "_key": "!items!1JcFXbP1utNCAYdM"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Bâton magique",
+  "type": "equipment",
+  "img": "systems/arlenor/assets/images_filled/stuffs/bow.png",
+  "system": {
+    "description": "",
+    "equipmentType": "WEAPON_LONG"
+  },
+  "effects": [],
+  "folder": "9n9MHEceDRzU1sC1",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "DzZIzJ3UDrPn8W1n",
+  "sort": 0,
+  "_key": "!items!DzZIzJ3UDrPn8W1n"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Communication stellaire",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Permet de communiquer télépathiquement avec les étoiles primordiales et de passer des contrats.",
+    "powerType": "EVO",
+    "speciality": "INVOCATEUR",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "B",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "hnvrAA9N2qzKXCSY",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "fkOTG8fUyWTPwthC",
+  "sort": 0,
+  "_key": "!items!fkOTG8fUyWTPwthC"
+}

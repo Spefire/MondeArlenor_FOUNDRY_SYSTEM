@@ -1,0 +1,32 @@
+{
+  "name": "Accords de Glace",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Joue des accords de glace qui dépriment jusqu’à geler les ennemis dans la zone, les ralentissant et baissant leur garde.",
+    "powerType": "EVO",
+    "speciality": "BARDE",
+    "category": "CHANELING",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "7wn5fNuWZmT77Egm",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "QSjzKr4xn52fBrTE",
+  "sort": 0,
+  "_key": "!items!QSjzKr4xn52fBrTE"
+}

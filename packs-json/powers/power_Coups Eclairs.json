@@ -1,0 +1,32 @@
+{
+  "name": "Coups Éclairs",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Effectue une série de coups rapides en un instant, infligeant des dégâts rapides mais faibles à l'ennemi.",
+    "powerType": "EVO",
+    "speciality": "MOINE",
+    "category": "SPECIAL",
+    "family": "OFF",
+    "rank": "C",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "Ys1pHY0DwjOp4Vao",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "O8MBjZiqwGTHH4hl",
+  "sort": 0,
+  "_key": "!items!O8MBjZiqwGTHH4hl"
+}

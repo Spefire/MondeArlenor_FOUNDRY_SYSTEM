@@ -1,0 +1,32 @@
+{
+  "name": "Altération Illusoire",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Crée des illusions déroutantes pour tromper les ennemis, les rendant moins susceptibles de cibler le groupe.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "CHANELING",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "9JWW16jhIYRUWhqy",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "jVmQHI44PRe12gJZ",
+  "sort": 0,
+  "_key": "!items!jVmQHI44PRe12gJZ"
+}

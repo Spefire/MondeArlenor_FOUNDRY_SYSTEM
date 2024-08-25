@@ -1,0 +1,32 @@
+{
+  "name": "Frappe Éternelle",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Déclenche une frappe d'une puissance étonnante, infligeant des dégâts considérables et ignorant partiellement la défense ennemie.",
+    "powerType": "EVO",
+    "speciality": "MOINE",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "Ys1pHY0DwjOp4Vao",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "0J0Ysabo3Zb8ecJK",
+  "sort": 0,
+  "_key": "!items!0J0Ysabo3Zb8ecJK"
+}

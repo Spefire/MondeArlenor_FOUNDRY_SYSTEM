@@ -1,0 +1,26 @@
+{
+  "name": "Végétarien ou Végan",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/race_53.png",
+  "system": {
+    "description": "Les arléniens ne peut pas infliger des souffrances ou la mort à des animaux, même dans le but de s'en nourrir.",
+    "skillType": "RACE"
+  },
+  "effects": [],
+  "folder": "dxSXSWEVibeTy1wA",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "WthM2eMDYdjb9shJ",
+  "sort": 0,
+  "_key": "!items!WthM2eMDYdjb9shJ"
+}

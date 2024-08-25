@@ -1,0 +1,32 @@
+{
+  "name": "Sceau explosif",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Applique un sceau élémentaire invisible sur une surface, qui explose au vouloir du lanceur.",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "2",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "9fi9XOSCNIDIJZHe",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "WnKyQMhRvYKNEOfi",
+  "sort": 0,
+  "_key": "!items!WnKyQMhRvYKNEOfi"
+}

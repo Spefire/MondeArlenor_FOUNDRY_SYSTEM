@@ -1,0 +1,32 @@
+{
+  "name": "Perception Affinée",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Aiguise les sens du Bretteur, trouvant les points faibles d'une cible et augmentant la précision des prochains coups sur celle-ci.",
+    "powerType": "EVO",
+    "speciality": "BRETTEUR",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "B",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "vevVTdBUWGwqDAb1",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "TOusGwu1fUqN0B7A",
+  "sort": 0,
+  "_key": "!items!TOusGwu1fUqN0B7A"
+}

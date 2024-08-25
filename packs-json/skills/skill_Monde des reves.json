@@ -1,0 +1,26 @@
+{
+  "name": "Monde des rêves",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/race_11.png",
+  "system": {
+    "description": "Les elfes ont la capacité de communiquer entre eux via des rêves lors d'une séance de méditation.",
+    "skillType": "RACE"
+  },
+  "effects": [],
+  "folder": "dxSXSWEVibeTy1wA",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "dQFOgG85hfel7FSl",
+  "sort": 0,
+  "_key": "!items!dQFOgG85hfel7FSl"
+}

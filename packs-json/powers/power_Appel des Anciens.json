@@ -1,0 +1,32 @@
+{
+  "name": "Appel des Anciens",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/control.png",
+  "system": {
+    "description": "Invoque l'esprit des anciens gardiens, immobilisant tous les ennemis sur le champ de bataille et réduisant leurs résistances.",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "CHANELING",
+    "family": "CTRL",
+    "rank": "B",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "4XK25PtOaL2dQnL1",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "zPNXv6Nqf6yqDY5d",
+  "sort": 0,
+  "_key": "!items!zPNXv6Nqf6yqDY5d"
+}

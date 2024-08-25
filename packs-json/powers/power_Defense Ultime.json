@@ -1,0 +1,32 @@
+{
+  "name": "Défense Ultime",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Libère toute la puissance du Gardien, augmentant massivement sa défense et bloquant tous les dégâts.",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "CHANELING",
+    "family": "DEF",
+    "rank": "B",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "4XK25PtOaL2dQnL1",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "pVOUCB4TV4hyN85t",
+  "sort": 0,
+  "_key": "!items!pVOUCB4TV4hyN85t"
+}

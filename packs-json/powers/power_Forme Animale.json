@@ -1,0 +1,32 @@
+{
+  "name": "Forme Animale",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Se transforme partiellement en un animal, gagnant des attributs spécifiques à cette forme (par exemple, griffes pour les attaques, ailes pour voler).",
+    "powerType": "EVO",
+    "speciality": "DRUIDE",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "DYP5IZ0S2MCm3HH0",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "T9ozdLCRpYhgvxoq",
+  "sort": 0,
+  "_key": "!items!T9ozdLCRpYhgvxoq"
+}

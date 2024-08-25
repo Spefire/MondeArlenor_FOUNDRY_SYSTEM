@@ -1,0 +1,32 @@
+{
+  "name": "Poisons Mortels",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Applique un poison mortel à une arme qui infligera des dégâts continus à la cible pendant un certain temps.",
+    "powerType": "EVO",
+    "speciality": "ASSASSIN",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "1",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "DexUfsOBbXcEBCB6",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "W8ZQhkbbYgtM8PYe",
+  "sort": 0,
+  "_key": "!items!W8ZQhkbbYgtM8PYe"
+}

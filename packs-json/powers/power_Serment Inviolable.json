@@ -1,0 +1,32 @@
+{
+  "name": "Serment Inviolable",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Crée un accord volontaire entre deux personnes qui ne peut pas être rompu hormis par la mort.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "A",
+    "duration": "3",
+    "range": "4"
+  },
+  "effects": [],
+  "folder": "9JWW16jhIYRUWhqy",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "zD5oBzAS9CNxTlQQ",
+  "sort": 0,
+  "_key": "!items!zD5oBzAS9CNxTlQQ"
+}

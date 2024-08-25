@@ -1,0 +1,32 @@
+{
+  "name": "Assassinat Silencieux",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Inflige une attaque mortelle à une cible isolée, ignorant sa défense et causant des dégâts critiques.",
+    "powerType": "EVO",
+    "speciality": "ASSASSIN",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "DexUfsOBbXcEBCB6",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "QfFm30qRmPRWtolG",
+  "sort": 0,
+  "_key": "!items!QfFm30qRmPRWtolG"
+}

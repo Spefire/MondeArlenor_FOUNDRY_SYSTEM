@@ -1,0 +1,32 @@
+{
+  "name": "Mélodie Apaisante",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/heal.png",
+  "system": {
+    "description": "Joue une mélodie apaisante qui réduit les tensions et les blessures des alliés dans la zone, annulant les malus engendrés par elles.",
+    "powerType": "EVO",
+    "speciality": "BARDE",
+    "category": "CHANELING",
+    "family": "HEAL",
+    "rank": "C",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "7wn5fNuWZmT77Egm",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "s7RSYswtt6I4N93A",
+  "sort": 0,
+  "_key": "!items!s7RSYswtt6I4N93A"
+}

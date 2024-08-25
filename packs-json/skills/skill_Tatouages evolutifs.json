@@ -1,0 +1,26 @@
+{
+  "name": "Tatouages évolutifs",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/race_50.png",
+  "system": {
+    "description": "Les arléniens ne peuvent pas utiliser de cristaux, mais ont des tatouages évolutifs sur leur corps.",
+    "skillType": "RACE"
+  },
+  "effects": [],
+  "folder": "dxSXSWEVibeTy1wA",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "6SEKBKu8qx1wvzXQ",
+  "sort": 0,
+  "_key": "!items!6SEKBKu8qx1wvzXQ"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Transmutation majeure",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Transforme temporairement un grand objet inanimé en un autre objet de même taille, offrant des possibilités créatives et tactiques.",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "B",
+    "duration": "1",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "9fi9XOSCNIDIJZHe",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "1fQ1poZVHGAu9aBF",
+  "sort": 0,
+  "_key": "!items!1fQ1poZVHGAu9aBF"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Méditation Profonde",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/heal.png",
+  "system": {
+    "description": "Se retire du combat pour méditer, régénérant un peu de points de vie et réduisant les dégâts subis.",
+    "powerType": "EVO",
+    "speciality": "MOINE",
+    "category": "CHANELING",
+    "family": "HEAL",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "Ys1pHY0DwjOp4Vao",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "2RwqHLdvIEi2TF1V",
+  "sort": 0,
+  "_key": "!items!2RwqHLdvIEi2TF1V"
+}

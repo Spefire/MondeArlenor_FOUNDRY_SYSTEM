@@ -1,0 +1,32 @@
+{
+  "name": "Inv.Utilitaire majeure",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Invoque une entité de difficulté Épique, liée par un contrat, en lui donnant un ordre utilitaire.",
+    "powerType": "EVO",
+    "speciality": "INVOCATEUR",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "A",
+    "duration": "1",
+    "range": "4"
+  },
+  "effects": [],
+  "folder": "hnvrAA9N2qzKXCSY",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "ka41ojCQtH2lRt8R",
+  "sort": 0,
+  "_key": "!items!ka41ojCQtH2lRt8R"
+}

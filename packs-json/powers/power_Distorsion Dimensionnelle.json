@@ -1,0 +1,32 @@
+{
+  "name": "Distorsion Dimensionnelle",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Crée une distorsion dans l'espace-temps pour désorienter les ennemis, les téléportant aléatoirement sur le champ de bataille.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "C",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "9JWW16jhIYRUWhqy",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "zjNa23FsNzlEbG5k",
+  "sort": 0,
+  "_key": "!items!zjNa23FsNzlEbG5k"
+}

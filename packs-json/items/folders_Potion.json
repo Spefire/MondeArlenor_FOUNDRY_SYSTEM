@@ -1,0 +1,19 @@
+{
+  "name": "Potion",
+  "type": "Item",
+  "sorting": "a",
+  "folder": null,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "C7gFNdhcc8fg8Bhg",
+  "sort": 100000,
+  "_key": "!folders!C7gFNdhcc8fg8Bhg"
+}

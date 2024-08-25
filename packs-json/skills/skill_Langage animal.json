@@ -1,0 +1,26 @@
+{
+  "name": "Langage animal",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/race_30.png",
+  "system": {
+    "description": "Les mutants peuvent communiquer sans difficulté avec les animaux auxquels leur mutation est affiliée.",
+    "skillType": "RACE"
+  },
+  "effects": [],
+  "folder": "dxSXSWEVibeTy1wA",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "BEFHf4yRkJoP1tLl",
+  "sort": 0,
+  "_key": "!items!BEFHf4yRkJoP1tLl"
+}

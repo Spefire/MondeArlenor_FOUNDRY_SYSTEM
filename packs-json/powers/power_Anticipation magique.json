@@ -1,0 +1,32 @@
+{
+  "name": "Anticipation magique",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Permet d'analyser une situation en utilisant la magie pour entrevoir des possibilités d'avenir.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "0",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "9JWW16jhIYRUWhqy",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "gfJ9VS198pHBLW46",
+  "sort": 0,
+  "_key": "!items!gfJ9VS198pHBLW46"
+}

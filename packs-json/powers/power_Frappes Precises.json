@@ -1,0 +1,32 @@
+{
+  "name": "Frappes Précises",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Effectue deux frappes rapides et précises, prenant comme résultat le meilleur des deux.",
+    "powerType": "EVO",
+    "speciality": "ASSASSIN",
+    "category": "SPECIAL",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "DexUfsOBbXcEBCB6",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "yzRVyzmfWCGD5lTx",
+  "sort": 0,
+  "_key": "!items!yzRVyzmfWCGD5lTx"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Cercle Sacré",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Trace un cercle sacré au sol qui repousse les ennemis et les empêche d'entrer mais pas les projectiles ou la magie.",
+    "powerType": "EVO",
+    "speciality": "PRETRE",
+    "category": "SPELL",
+    "family": "DEF",
+    "rank": "C",
+    "duration": "1",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "mLw4LyBuuoMOB6oi",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "jmxEezvgZ1Hxqf6X",
+  "sort": 0,
+  "_key": "!items!jmxEezvgZ1Hxqf6X"
+}

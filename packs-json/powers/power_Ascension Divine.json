@@ -1,0 +1,32 @@
+{
+  "name": "Ascension Divine",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Le Moine atteint un état de transcendance, augmentant massivement ses dégâts à mains nues et son initiative.",
+    "powerType": "EVO",
+    "speciality": "MOINE",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "Ys1pHY0DwjOp4Vao",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "pR0EgbY1ZN9e0leA",
+  "sort": 0,
+  "_key": "!items!pR0EgbY1ZN9e0leA"
+}

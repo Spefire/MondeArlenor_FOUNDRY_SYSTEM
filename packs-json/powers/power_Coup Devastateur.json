@@ -1,0 +1,32 @@
+{
+  "name": "Coup Dévastateur",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Accumule de l'énergie pour délivrer un coup puissant avec l'épée, infligeant des dégâts massifs à une cible unique.",
+    "powerType": "EVO",
+    "speciality": "BRETTEUR",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "vevVTdBUWGwqDAb1",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "FEcLDGZgzx9czc4O",
+  "sort": 0,
+  "_key": "!items!FEcLDGZgzx9czc4O"
+}

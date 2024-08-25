@@ -1,0 +1,26 @@
+{
+  "name": "Arc court",
+  "type": "equipment",
+  "img": "systems/arlenor/assets/images_filled/stuffs/bow.png",
+  "system": {
+    "description": "",
+    "equipmentType": "WEAPON_LONG"
+  },
+  "effects": [],
+  "folder": "9n9MHEceDRzU1sC1",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "v0X7GIAxwofV3HHm",
+  "sort": 0,
+  "_key": "!items!v0X7GIAxwofV3HHm"
+}

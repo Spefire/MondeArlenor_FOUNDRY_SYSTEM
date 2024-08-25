@@ -1,0 +1,32 @@
+{
+  "name": "Réparation temporelle",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Permet de retourner un objet à son état passé (réparé, neuf...).",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "9JWW16jhIYRUWhqy",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "2mQ9SvQEtG95OZxH",
+  "sort": 0,
+  "_key": "!items!2mQ9SvQEtG95OZxH"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Cryorégénération",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/heal.png",
+  "system": {
+    "description": "Rend la cible totalement gelée, l'immunisant contre la magie et soigne ses blessures critiques (premiers soins).",
+    "powerType": "EVO",
+    "speciality": "SORCIER",
+    "category": "SPELL",
+    "family": "HEAL",
+    "rank": "B",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "9fi9XOSCNIDIJZHe",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "m0guHGjf7LaP5SPn",
+  "sort": 0,
+  "_key": "!items!m0guHGjf7LaP5SPn"
+}

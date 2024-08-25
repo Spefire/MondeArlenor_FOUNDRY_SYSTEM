@@ -1,0 +1,26 @@
+{
+  "name": "Coeur de cristal",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/race_60.png",
+  "system": {
+    "description": "Les célestiens possèdent des pouvoirs élémentaires particuliers, donnés par une mutation génétique au coeur.",
+    "skillType": "RACE"
+  },
+  "effects": [],
+  "folder": "dxSXSWEVibeTy1wA",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "BHryXlYTQYr1jroa",
+  "sort": 0,
+  "_key": "!items!BHryXlYTQYr1jroa"
+}

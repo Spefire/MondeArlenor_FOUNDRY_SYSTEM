@@ -1,0 +1,32 @@
+{
+  "name": "Création sanguine",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Solidifie le sang existant, en une forme choisie.",
+    "powerType": "EVO",
+    "speciality": "PRETRE",
+    "category": "SPELL",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "mLw4LyBuuoMOB6oi",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "Vvj3JnY5t0jZE2Ri",
+  "sort": 0,
+  "_key": "!items!Vvj3JnY5t0jZE2Ri"
+}

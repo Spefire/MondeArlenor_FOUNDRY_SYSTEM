@@ -1,0 +1,32 @@
+{
+  "name": "Inspiration Hâtive",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Joue une mélodie inspirante qui augmente la vitesse d'action, en donnant un bonus d'initiative aux alliés dans la zone.",
+    "powerType": "EVO",
+    "speciality": "BARDE",
+    "category": "CHANELING",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "7wn5fNuWZmT77Egm",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "71EEMzq9OBrF8qAv",
+  "sort": 0,
+  "_key": "!items!71EEMzq9OBrF8qAv"
+}

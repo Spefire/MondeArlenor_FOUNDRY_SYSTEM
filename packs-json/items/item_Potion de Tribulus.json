@@ -1,0 +1,27 @@
+{
+  "name": "Potion de Tribulus",
+  "type": "item",
+  "img": "systems/arlenor/assets/images_filled/stuffs/potion06.png",
+  "system": {
+    "description": "\n    Effet : +1 en Force sur une scène\n    Préparation : Tribulus + Alcool Brun + Fiole de verre\n    Même effet non cumulable\n  ",
+    "itemType": "POTION",
+    "quantity": 1
+  },
+  "effects": [],
+  "folder": "C7gFNdhcc8fg8Bhg",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "2I7dtyA6eeq9Xr3k",
+  "sort": 0,
+  "_key": "!items!2I7dtyA6eeq9Xr3k"
+}

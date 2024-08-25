@@ -1,0 +1,32 @@
+{
+  "name": "Monde illusoire",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/control.png",
+  "system": {
+    "description": "Crée un environnement illusoire pour toutes les personnes présentes dans cette zone.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "SPELL",
+    "family": "CTRL",
+    "rank": "A",
+    "duration": "2",
+    "range": "4"
+  },
+  "effects": [],
+  "folder": "9JWW16jhIYRUWhqy",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "GlnkyW3eUF9nDAbl",
+  "sort": 0,
+  "_key": "!items!GlnkyW3eUF9nDAbl"
+}

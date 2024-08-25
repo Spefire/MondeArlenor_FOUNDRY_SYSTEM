@@ -1,0 +1,32 @@
+{
+  "name": "Langage universel",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/utility.png",
+  "system": {
+    "description": "Permet de communiquer n'importe quelle créature sans en avoir appris la langue.",
+    "powerType": "EVO",
+    "speciality": "INVOCATEUR",
+    "category": "CHANELING",
+    "family": "UTIL",
+    "rank": "C",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "hnvrAA9N2qzKXCSY",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "K2DYSEF2eSaKDy8R",
+  "sort": 0,
+  "_key": "!items!K2DYSEF2eSaKDy8R"
+}

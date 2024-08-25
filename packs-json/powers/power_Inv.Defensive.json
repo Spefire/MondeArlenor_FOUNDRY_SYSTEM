@@ -1,0 +1,32 @@
+{
+  "name": "Inv.Défensive",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Invoque une entité de difficulté Complexe, liée par un contrat, en lui donnant un ordre défensif.",
+    "powerType": "EVO",
+    "speciality": "INVOCATEUR",
+    "category": "SPELL",
+    "family": "DEF",
+    "rank": "B",
+    "duration": "1",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "hnvrAA9N2qzKXCSY",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "yxw2bChxbJVB02C9",
+  "sort": 0,
+  "_key": "!items!yxw2bChxbJVB02C9"
+}

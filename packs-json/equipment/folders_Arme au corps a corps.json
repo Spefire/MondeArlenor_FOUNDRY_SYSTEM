@@ -1,0 +1,19 @@
+{
+  "name": "Arme au corps à corps",
+  "type": "Item",
+  "sorting": "a",
+  "folder": null,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "s0jSuZTxMaR7TGPZ",
+  "sort": 100000,
+  "_key": "!folders!s0jSuZTxMaR7TGPZ"
+}

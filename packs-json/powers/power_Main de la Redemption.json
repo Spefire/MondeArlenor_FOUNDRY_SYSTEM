@@ -1,0 +1,32 @@
+{
+  "name": "Main de la Rédemption",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/heal.png",
+  "system": {
+    "description": "Place sa main sur un allié blessé pour purifier ses blessures et restaurer une partie de sa santé.",
+    "powerType": "EVO",
+    "speciality": "PRETRE",
+    "category": "SPELL",
+    "family": "HEAL",
+    "rank": "B",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "mLw4LyBuuoMOB6oi",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "GS4VACTxGaKy3NjP",
+  "sort": 0,
+  "_key": "!items!GS4VACTxGaKy3NjP"
+}

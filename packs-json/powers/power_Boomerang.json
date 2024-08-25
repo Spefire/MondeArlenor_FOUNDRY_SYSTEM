@@ -1,0 +1,32 @@
+{
+  "name": "Boomerang",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/defense.png",
+  "system": {
+    "description": "Octroie un bouclier magique qui renvoie toutes les attaques physiques ou magiques ennemies.",
+    "powerType": "EVO",
+    "speciality": "GARDIEN",
+    "category": "CHANELING",
+    "family": "DEF",
+    "rank": "A",
+    "duration": "1",
+    "range": "0"
+  },
+  "effects": [],
+  "folder": "4XK25PtOaL2dQnL1",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "b4wbDFXzPObFrMY9",
+  "sort": 0,
+  "_key": "!items!b4wbDFXzPObFrMY9"
+}

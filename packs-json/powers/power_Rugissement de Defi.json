@@ -1,0 +1,32 @@
+{
+  "name": "Rugissement de Défi",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/control.png",
+  "system": {
+    "description": "Émet un rugissement sauvage et provocateur qui attire l'attention des ennemis, les forçant à attaquer le Bretteur pour un tour.",
+    "powerType": "EVO",
+    "speciality": "BRETTEUR",
+    "category": "SPELL",
+    "family": "CTRL",
+    "rank": "C",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "vevVTdBUWGwqDAb1",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "8TespiHMzTsLNnYv",
+  "sort": 0,
+  "_key": "!items!8TespiHMzTsLNnYv"
+}

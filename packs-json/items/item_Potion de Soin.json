@@ -1,0 +1,27 @@
+{
+  "name": "Potion de Soin",
+  "type": "item",
+  "img": "systems/arlenor/assets/images_filled/stuffs/potion07.png",
+  "system": {
+    "description": "\n    Effet : Restaure 1D6 points de vie et arrête les hémorragies\n    Préparation : Armoisie + Miel + Sang de créature magique + Alcool Blanc + Fiole de verre\n  ",
+    "itemType": "POTION",
+    "quantity": 1
+  },
+  "effects": [],
+  "folder": "C7gFNdhcc8fg8Bhg",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "PSlBo21wDl2Ys0X5",
+  "sort": 0,
+  "_key": "!items!PSlBo21wDl2Ys0X5"
+}

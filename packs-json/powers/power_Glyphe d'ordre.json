@@ -1,0 +1,32 @@
+{
+  "name": "Glyphe d'ordre",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Pose un glyphe sur une surface/une personne en imposant une règle : si elle est rompu, le glyphe explose. Un glyphe à la fois.",
+    "powerType": "EVO",
+    "speciality": "ENCHANTEUR",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "B",
+    "duration": "0",
+    "range": "1"
+  },
+  "effects": [],
+  "folder": "9JWW16jhIYRUWhqy",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "aDIXiWjmeevGxj81",
+  "sort": 0,
+  "_key": "!items!aDIXiWjmeevGxj81"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Frappe Précise Dévastatrice",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Concentre toute la précision de l'archer pour décocher une flèche extrêmement puissante, infligeant des dégâts massifs à une cible unique.",
+    "powerType": "EVO",
+    "speciality": "ASSASSIN",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "DexUfsOBbXcEBCB6",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "NFA1WSetbZhKxRhv",
+  "sort": 0,
+  "_key": "!items!NFA1WSetbZhKxRhv"
+}

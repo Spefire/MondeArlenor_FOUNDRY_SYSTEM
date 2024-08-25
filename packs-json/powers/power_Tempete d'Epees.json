@@ -1,0 +1,32 @@
+{
+  "name": "Tempête d'Épées",
+  "type": "power",
+  "img": "systems/arlenor/assets/images_filled/powers/attack.png",
+  "system": {
+    "description": "Engage une série d'attaques rapides et précises avec des épées illusoires qui infligent des dégâts massifs à tous les ennemis dans une zone étendue. ",
+    "powerType": "EVO",
+    "speciality": "BRETTEUR",
+    "category": "SPELL",
+    "family": "OFF",
+    "rank": "A",
+    "duration": "0",
+    "range": "3"
+  },
+  "effects": [],
+  "folder": "vevVTdBUWGwqDAb1",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "pOrBZI2u19oLsGPe",
+  "sort": 0,
+  "_key": "!items!pOrBZI2u19oLsGPe"
+}

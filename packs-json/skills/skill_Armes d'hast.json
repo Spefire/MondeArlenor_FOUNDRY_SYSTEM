@@ -1,0 +1,26 @@
+{
+  "name": "Armes d'hast",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/weapon.png",
+  "system": {
+    "description": "Bonus +1D6 pour toute action avec.",
+    "skillType": "WEAPON"
+  },
+  "effects": [],
+  "folder": "rUbVG23slrQipfry",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "oFrEyzPKMiqxaMm4",
+  "sort": 0,
+  "_key": "!items!oFrEyzPKMiqxaMm4"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Peau nuitée",
+  "type": "skill",
+  "img": "systems/arlenor/assets/images_filled/skills/race_43.png",
+  "system": {
+    "description": "Les pans ont, la nuit, une peau qui reflète l'état actuel du ciel, pouvant les rendre quasi invisibles.",
+    "skillType": "RACE"
+  },
+  "effects": [],
+  "folder": "dxSXSWEVibeTy1wA",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "arlenor",
+    "systemVersion": "1.2.0",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "suyIG65WmjC8kZzU",
+  "sort": 0,
+  "_key": "!items!suyIG65WmjC8kZzU"
+}
