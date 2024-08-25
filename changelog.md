@@ -4,6 +4,20 @@ Tous les changements sur ce projet `Le Monde d'Arlénor - Foundry Game System` s
 
 ---
 
+## [1.3.0] - Août 2024
+
+Premiers Compendiums !!!
+
+### *Nouvelles fonctionnalités*
+
+- Ajout des Compendiums d'items (équipements, items, sorts, compétences)
+
+### *Modifications*
+
+- Modification des codes les concernant **#BreakingChanges**
+
+---
+
 ## [1.2.0] - Août 2024
 
 Compatible avec la version 11 de Foundry
