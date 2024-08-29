@@ -90,11 +90,6 @@ export class ArlenorActorSheet extends ActorSheet {
 
     if (isPJ) {
       data.health.max = 5 + Math.floor(data.level / 2);
-      const race = data.race;
-      if (race === races[1].code
-        || race === races[4].code) {
-        data.health.max += 1;
-      }
     } else {
       data.health.max = 5;
     }
