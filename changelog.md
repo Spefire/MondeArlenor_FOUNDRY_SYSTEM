@@ -4,6 +4,17 @@ Tous les changements sur ce projet `Le Monde d'Arlénor - Foundry Game System` s
 
 ---
 
+## [1.3.3] - Août 2024
+
+Correction "Dice so Nice"
+
+### *Corrections*
+
+- Correction sur le lancement des dés
+
+
+---
+
 ## [1.3.2] - Août 2024
 
 Correction de bugs et mise à jour des races

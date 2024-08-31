@@ -2,7 +2,7 @@
   "id": "arlenor",
   "title": "Le Monde d'Arlénor (FR)",
   "description": "Système de jeu pour le JDR du Monde d'Arlénor (seulement en FR)",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "compatibility": {
     "minimum": "11",
     "verified": "11",
