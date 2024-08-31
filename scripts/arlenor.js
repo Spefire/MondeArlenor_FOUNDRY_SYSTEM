@@ -185,24 +185,13 @@ export async function rollSkill(data) {
       });
 
     ChatMessage.create({
+      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
       user: game.user._id,
       speaker: ChatMessage.getSpeaker({ actor: data.actor }),
       content: templateMessage,
+      rolls: [roll],
     });
   }
-}
-
-function convertHTMLToText(html) {
-  html = html.replace(/<style([\s\S]*?)<\/style>/gi, '');
-  html = html.replace(/<script([\s\S]*?)<\/script>/gi, '');
-  html = html.replace(/<\/div>/ig, '\n');
-  html = html.replace(/<\/li>/ig, '\n');
-  html = html.replace(/<li>/ig, '  *  ');
-  html = html.replace(/<\/ul>/ig, '\n');
-  html = html.replace(/<\/p>/ig, '\n');
-  html = html.replace(/<br\s*[\/]?>/gi, "\n");
-  html = html.replace(/<[^>]+>/ig, '');
-  return html;
 }
 
 function convertToPlain(html) {
