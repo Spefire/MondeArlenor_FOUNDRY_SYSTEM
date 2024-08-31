@@ -1,26 +1,26 @@
 {
   "name": "Séduction",
   "type": "skill",
-  "img": "systems/arlenor/assets/images_filled/skills/./other.png",
+  "img": "systems/arlenor/assets/images_filled/skills/other.png",
   "system": {
     "description": "Bonus +1D6 pour séduire, charmer, draguer.",
     "skillType": "OTHER"
   },
   "effects": [],
-  "folder": "AilW8R5CFvgqgwZR",
+  "folder": "I385HyQlau7FExdN",
   "ownership": {
     "default": 0
   },
   "flags": {},
   "_stats": {
     "systemId": "arlenor",
-    "systemVersion": "1.3.1",
+    "systemVersion": "1.3.2",
     "coreVersion": "11.315",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null
   },
-  "_id": "ASEGMNMpA1ThISe6",
+  "_id": "MuAePkuPjk5F74sS",
   "sort": 0,
-  "_key": "!items!ASEGMNMpA1ThISe6"
+  "_key": "!items!MuAePkuPjk5F74sS"
 }

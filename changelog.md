@@ -4,6 +4,22 @@ Tous les changements sur ce projet `Le Monde d'Arlénor - Foundry Game System` s
 
 ---
 
+## [1.3.2] - Août 2024
+
+Correction de bugs et mise à jour des races
+
+### *Modifications*
+
+- Modification des compétences raciales pour les Pans, les Arléniens et les Elfes
+- Plus de Point de Vie rajouté par les compétences raciales
+
+### *Corrections*
+
+- Correction sur l'affichage des Points de Vie
+- Correction sur la création des Items (valeurs par défaut et codes)
+
+---
+
 ## [1.3.1] - Août 2024
 
 Correction sur les Compendiums

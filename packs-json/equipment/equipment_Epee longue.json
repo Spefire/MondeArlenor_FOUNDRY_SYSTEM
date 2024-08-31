@@ -7,20 +7,20 @@
     "equipmentType": "WEAPON_SHORT"
   },
   "effects": [],
-  "folder": "s0jSuZTxMaR7TGPZ",
+  "folder": "EnIl8hca0gyNbqXv",
   "ownership": {
     "default": 0
   },
   "flags": {},
   "_stats": {
     "systemId": "arlenor",
-    "systemVersion": "1.3.1",
+    "systemVersion": "1.3.2",
     "coreVersion": "11.315",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null
   },
-  "_id": "huYQfRHqObF38s2A",
+  "_id": "7CSwUCaaVEl5jjy4",
   "sort": 0,
-  "_key": "!items!huYQfRHqObF38s2A"
+  "_key": "!items!7CSwUCaaVEl5jjy4"
 }

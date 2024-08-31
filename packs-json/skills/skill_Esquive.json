@@ -1,26 +1,26 @@
 {
   "name": "Esquive",
   "type": "skill",
-  "img": "systems/arlenor/assets/images_filled/skills/./other.png",
+  "img": "systems/arlenor/assets/images_filled/skills/other.png",
   "system": {
     "description": "Bonus +1D6 pour toute action d'esquive.",
     "skillType": "OTHER"
   },
   "effects": [],
-  "folder": "AilW8R5CFvgqgwZR",
+  "folder": "I385HyQlau7FExdN",
   "ownership": {
     "default": 0
   },
   "flags": {},
   "_stats": {
     "systemId": "arlenor",
-    "systemVersion": "1.3.1",
+    "systemVersion": "1.3.2",
     "coreVersion": "11.315",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null
   },
-  "_id": "cI8X42V5MTTUfwUb",
+  "_id": "g5jJwFO6aRgQl0QZ",
   "sort": 0,
-  "_key": "!items!cI8X42V5MTTUfwUb"
+  "_key": "!items!g5jJwFO6aRgQl0QZ"
 }

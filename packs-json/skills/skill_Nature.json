@@ -1,26 +1,26 @@
 {
   "name": "Nature",
   "type": "skill",
-  "img": "systems/arlenor/assets/images_filled/skills/./other.png",
+  "img": "systems/arlenor/assets/images_filled/skills/other.png",
   "system": {
     "description": "Bonus +1D6 pour pister, traquer, pêcher ou monter des chevaux / créatures.",
     "skillType": "OTHER"
   },
   "effects": [],
-  "folder": "AilW8R5CFvgqgwZR",
+  "folder": "I385HyQlau7FExdN",
   "ownership": {
     "default": 0
   },
   "flags": {},
   "_stats": {
     "systemId": "arlenor",
-    "systemVersion": "1.3.1",
+    "systemVersion": "1.3.2",
     "coreVersion": "11.315",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null
   },
-  "_id": "zLNSJ7VvtIaPHsJg",
+  "_id": "JKVY8Eq0J6NSZxuk",
   "sort": 0,
-  "_key": "!items!zLNSJ7VvtIaPHsJg"
+  "_key": "!items!JKVY8Eq0J6NSZxuk"
 }

@@ -7,20 +7,20 @@
     "equipmentType": "WEAPON_LONG"
   },
   "effects": [],
-  "folder": "9n9MHEceDRzU1sC1",
+  "folder": "iIVcQJEUCxqp6ZmA",
   "ownership": {
     "default": 0
   },
   "flags": {},
   "_stats": {
     "systemId": "arlenor",
-    "systemVersion": "1.3.1",
+    "systemVersion": "1.3.2",
     "coreVersion": "11.315",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null
   },
-  "_id": "DzZIzJ3UDrPn8W1n",
+  "_id": "UeEvvdOhO8cUok0E",
   "sort": 0,
-  "_key": "!items!DzZIzJ3UDrPn8W1n"
+  "_key": "!items!UeEvvdOhO8cUok0E"
 }

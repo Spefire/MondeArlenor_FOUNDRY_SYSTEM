@@ -1,26 +1,26 @@
 {
-  "name": "Corps jeune",
+  "name": "Connexion spirituelle",
   "type": "skill",
   "img": "systems/arlenor/assets/images_filled/skills/race_40.png",
   "system": {
-    "description": "Les pans ont + 1 PV max grâce à la magie de leur jeunesse.",
+    "description": "Les pans peuvent communiquer avec Nébulys, même à distance.",
     "skillType": "RACE"
   },
   "effects": [],
-  "folder": "dxSXSWEVibeTy1wA",
+  "folder": "IhiosglDs36jmlJG",
   "ownership": {
     "default": 0
   },
   "flags": {},
   "_stats": {
     "systemId": "arlenor",
-    "systemVersion": "1.3.1",
+    "systemVersion": "1.3.2",
     "coreVersion": "11.315",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null
   },
-  "_id": "lNeKyrVQS4JMzQjI",
+  "_id": "EIfILq86454uCiPa",
   "sort": 0,
-  "_key": "!items!lNeKyrVQS4JMzQjI"
+  "_key": "!items!EIfILq86454uCiPa"
 }

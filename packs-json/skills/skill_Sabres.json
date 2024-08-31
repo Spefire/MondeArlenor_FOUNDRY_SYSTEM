@@ -7,20 +7,20 @@
     "skillType": "WEAPON"
   },
   "effects": [],
-  "folder": "rUbVG23slrQipfry",
+  "folder": "bSAMlQXvKOKjsVKK",
   "ownership": {
     "default": 0
   },
   "flags": {},
   "_stats": {
     "systemId": "arlenor",
-    "systemVersion": "1.3.1",
+    "systemVersion": "1.3.2",
     "coreVersion": "11.315",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null
   },
-  "_id": "pyJVd2EqReE9iEiw",
+  "_id": "bv3n5Td1eYldeZTe",
   "sort": 0,
-  "_key": "!items!pyJVd2EqReE9iEiw"
+  "_key": "!items!bv3n5Td1eYldeZTe"
 }
